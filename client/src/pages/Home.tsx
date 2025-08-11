@@ -74,6 +74,101 @@ export default function Home() {
       <StructuredData type="softwareApplication" />
       <StructuredData type="product" />
       <StructuredData type="localBusiness" />
+      
+      {/* FAQ Structured Data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqItems.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.answer
+            }
+          }))
+        })
+      }} />
+      
+      {/* Product Structured Data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Dentrix Connector - PMS to GoHighLevel Integration",
+          "description": "Seamless real-time data synchronization between dental practice management systems (Dentrix, Open Dental, EagleSoft, Curve Dental) and GoHighLevel CRM for marketing agencies.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Dentrix Connector LLC"
+          },
+          "category": "Software Integration Tool",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Dentrix → GoHighLevel Connector",
+              "description": "Real-time bidirectional sync between Dentrix PMS and GoHighLevel CRM",
+              "price": "299",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "name": "Dentrix Connector LLC"
+              }
+            },
+            {
+              "@type": "Offer", 
+              "name": "Open Dental → GoHighLevel Connector",
+              "description": "Real-time bidirectional sync between Open Dental PMS and GoHighLevel CRM",
+              "price": "299",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "name": "Dentrix Connector LLC"
+              }
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": testimonials.map(testimonial => ({
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": testimonial.rating,
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": testimonial.name
+            },
+            "reviewBody": testimonial.text,
+            "publisher": {
+              "@type": "Organization",
+              "name": testimonial.company
+            }
+          })),
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web-based",
+          "softwareRequirements": "Internet connection, Dentrix/Open Dental/EagleSoft/Curve Dental access, GoHighLevel account",
+          "featureList": [
+            "Real-time bidirectional data sync",
+            "Patient contact information sync",
+            "Provider and staff sync", 
+            "Appointment scheduling sync",
+            "Payment and billing sync",
+            "HIPAA-conscious data handling",
+            "Automated conflict resolution",
+            "45-minute setup process",
+            "24/7 monitoring and support"
+          ]
+        })
+      }} />
       {/* Hero Section */}
       <section className="hero-gradient py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
