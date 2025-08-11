@@ -18,17 +18,17 @@ export default function Navbar() {
 
   const NavLink = ({ href, label, mobile = false }: { href: string; label: string; mobile?: boolean }) => (
     <Link href={href}>
-      <a
+      <span
         className={`${
           mobile ? "block px-4 py-2" : "inline-block"
-        } text-gray-700 hover:text-primary font-medium transition-colors ${
+        } text-gray-700 hover:text-primary font-medium transition-colors cursor-pointer ${
           location === href ? "text-primary" : ""
         }`}
         onClick={mobile ? () => setIsOpen(false) : undefined}
         data-testid={`nav-${href.replace("/", "home")}`}
       >
         {label}
-      </a>
+      </span>
     </Link>
   );
 
@@ -37,12 +37,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/">
-            <a className="flex items-center" data-testid="logo">
+            <span className="flex items-center cursor-pointer" data-testid="logo">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-3">
                 <FolderSync className="text-white" size={16} />
               </div>
               <span className="text-xl font-bold text-gray-900">Dentrix Connector</span>
-            </a>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -61,9 +61,9 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <a className="hover:text-white transition-colors" data-testid={`link-footer-${link.label.toLowerCase().replace(/\s+/g, "-")}`}>
+                    <span className="hover:text-white transition-colors cursor-pointer" data-testid={`link-footer-${link.label.toLowerCase().replace(/\s+/g, "-")}`}>
                       {link.label}
-                    </a>
+                    </span>
                   </Link>
                 </li>
               ))}

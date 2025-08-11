@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedDataFlow from "@/components/AnimatedDataFlow";
 import FAQ from "@/components/FAQ";
+import StructuredData from "@/components/StructuredData";
 import {
   Zap,
   Megaphone,
@@ -68,6 +69,11 @@ const testimonials = [
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* Structured Data for SEO */}
+      <StructuredData type="organization" />
+      <StructuredData type="softwareApplication" />
+      <StructuredData type="product" />
+      <StructuredData type="localBusiness" />
       {/* Hero Section */}
       <section className="hero-gradient py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +84,7 @@ export default function Home() {
                 <span data-testid="text-trusted-badge">Trusted by 500+ Marketing Agencies</span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6" data-testid="text-hero-headline">
-                Seamless Patient Data FolderSync for{" "}
+                Seamless Patient Data Sync for{" "}
                 <span className="text-primary">Dental Marketing Agencies</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed" data-testid="text-hero-subheading">
