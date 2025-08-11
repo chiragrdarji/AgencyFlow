@@ -1,0 +1,162 @@
+Got it — you want this to be a multi-page modern SaaS-style site instead of a single-pager, with:
+
+Hero & benefits updated as you described
+
+Agency-first copy but still including clinic benefits
+
+Multiple pages: Home, Supported Platforms, Onboarding, Education Materials, Contact
+
+Bold colors (blue + white, no yellow/orange)
+
+Animated data flow in hero
+
+PMS logos for trust
+
+Footer with quick links, contact info, and form
+
+Randomized testimonials for “Why Agencies Love It”
+
+Here’s the full site structure & content outline for you:
+
+Site Map
+Home
+
+Supported Platforms
+
+Onboarding (step-by-step setup + FAQ)
+
+Education Materials (guides, videos, best practices)
+
+Contact Us
+
+Page-by-Page Content
+1. Home
+Hero
+Headline:
+Seamless Patient Data Sync for Dental Marketing Agencies
+Dentrix, Open Dental, EagleSoft, Curve Dental → GoHighLevel CRM
+
+Subheadline:
+Stop wasting time on manual data entry. Automatically sync patients, providers, appointments, and payments between your dental PMS and GoHighLevel so you can focus on growing your clients’ practices.
+
+CTA Buttons:
+
+Buy Dentrix → GHL (link)
+
+Buy Open Dental → GHL (link)
+
+Book a Demo (for other PMS)
+
+Who This Is For
+For Marketing Agencies:
+
+Run smarter, data-driven campaigns with real-time patient info
+
+No more CSV imports or outdated contact lists
+
+Automate reminders, confirmations, and offers with accurate data
+
+Provide new patients, reactivations, appointments booked, and revenue generated to dental practices
+
+For Dental Clinics:
+
+Reduce admin work and eliminate double entry
+
+Keep schedules, patients, and payments in sync automatically
+
+Improve patient experience with real-time appointment availability
+
+Supported Platforms
+(Current and coming soon list, with PMS logos + “Buy” or “Book a Demo” CTAs)
+
+Features & Benefits
+Sync What Matters Most
+Connect and automatically sync your client’s Dentrix data — including patients, providers, appointments, and payment history — directly into GoHighLevel.
+
+Display Real-Time Availability on Landing Pages
+Keep appointment calendars up to date in real time.
+
+Trigger Campaigns Based on Real Practice Activity
+Automate reminders, reactivation prompts, or post-treatment follow-ups from live PMS data.
+
+Prove ROI with Confidence
+Show dental clients exactly what they’re getting: new patients, reactivations, total revenue, pending balances.
+
+Set It and Forget It
+One-time setup (~45 minutes) with our team — we handle everything from there.
+
+HIPAA-Conscious Design
+Only essential business data is synced and auto-deleted after secure delivery.
+
+Why Agencies Love It
+BluePeak Dental Marketing – Sarah L.
+“The connector made our campaigns 10x more effective. We finally have accurate patient data without manual updates.”
+
+Smile Growth Partners – Jason K.
+“Our reactivation campaigns now hit at the perfect time. ROI is clear and client retention is higher.”
+
+Dental Reach Agency – Melissa D.
+“No more delays in data syncing — everything runs in real time. Our clients noticed the difference immediately.”
+
+BrightBite Media – Aaron P.
+“Before this, our data was always a week behind. Now, GoHighLevel is always in sync with the practice’s PMS.”
+
+ToothTrack Marketing – Rachel S.
+“We can finally show our clients exactly how many new patients and how much revenue came from our work.”
+
+Final CTA
+Get Your Dental Client Data Flowing Into GoHighLevel — Automatically.
+
+CTA Buttons:
+
+Buy Dentrix → GHL
+
+Buy Open Dental → GHL
+
+Book a Demo
+
+Footer
+Quick Links: Home | Supported Platforms | Onboarding | Education Materials | Contact
+
+Contact Info:
+Dentrix Connector LLC
+123 Main Street, Suite 456
+Austin, TX 78701
+Email: support@dentrixconnector.com
+Phone: (555) 123-4567
+
+Contact Form: Name, Email, Phone
+
+2. Supported Platforms
+Detailed explanation of each PMS integration
+
+Current PMS: Dentrix (all versions), Open Dental
+
+Coming soon: EagleSoft, Curve Dental, more
+
+Marketplace links for Buy Now where available
+
+Demo booking form for “coming soon”
+
+3. Onboarding
+Step-by-step installation with screenshots
+
+45-minute setup call booking link
+
+FAQ (sync frequency, HIPAA compliance, troubleshooting)
+
+4. Education Materials
+Video walkthroughs for setup
+
+Guides for agencies on campaign automation ideas
+
+ROI calculation templates for showing value to clinics
+
+Best practices for field mapping
+
+5. Contact Us
+Short form with Name, Email, Phone, Message
+
+Address & email repeated
+
+Map embed (optional)

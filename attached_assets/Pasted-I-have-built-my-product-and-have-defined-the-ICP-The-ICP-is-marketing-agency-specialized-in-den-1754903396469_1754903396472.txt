@@ -1,0 +1,79 @@
+I have built my product and have defined the ICP. 
+The ICP is 'marketing agency' specialized in dental industry based out of the United states and who are using GoHighLevel CRM to work with theirs partner dentists. 
+understand the ICP and the description and ask any clarification questions if you have. All our discussions in the future will be based on these. The product description is as follows. 
+
+---
+About Dentrix / Open Dental / EagleSoft / Curve Dental Connector
+
+Dentrix Connector App
+Effortless Two-Way Sync Between Dentrix & Your CRM
+
+The Dentrix Connector App is designed to help dental practices and marketing agencies seamlessly sync important data between Dentrix (including Dentrix Ascend and Dentrix Enterprise) and your CRM.
+
+Whether you're a dental clinic looking to simplify scheduling and reduce admin work, or a marketing agency aiming to run smarter campaigns with real-time patient data — this app is built for you.
+
+With two-way data transfer, the app keeps your patients, providers, appointments, and payments perfectly in sync between systems — automatically.
+
+ 
+
+Key Benefits
+Real-Time Scheduling: Show live appointment availability on your website to attract more patients
+
+Smarter Marketing: Use synced Dentrix data to send reminders, confirmations, and promotional offers
+
+One-Way or Two-Way Sync: Choose the setup that fits your workflow
+
+Analytics Dashboard: Monitor sync activity and view pending updates
+
+No More Double Entry: Keep your data clean, current, and connected
+
+Privacy First: The Connector App does not access or transfer any treatment or medical data related to patients. All data is automatically deleted from the connector once it has been successfully transferred to the destination system.
+ 
+
+How It Works
+Install the App from the Marketplace
+
+Choose Your Sync Direction
+
+One-way sync from Dentrix to CRM, or
+
+Two-way sync between Dentrix and CRM
+
+Select What to Sync
+
+Patients
+
+Providers
+
+Appointments
+
+Payments
+
+Map Fields between Dentrix and CRM — just once during setup
+
+Start Syncing – and let the app take it from there
+
+ 
+
+Application Flow
+Once the app is set up and running:
+
+It uses webhooks to detect newly created or modified records in both Dentrix and your CRM
+
+The data is transformed automatically based on your field mapping selections
+
+The app then syncs the updated data to the destination system
+
+If the sync fails for any reason, it will retry multiple times to ensure the data is delivered successfully
+
+When the same data is modified in both systems, the app compares the last modified timestamp and syncs the most recent version
+
+If both changes occur at the exact same time, Dentrix is treated as the source of truth
+
+Study websites 
+https://ghldental.com/ 
+https://www.drdds.com/products/ghl-dental 
+https://www.varianceinfotech.com/open-dental-gohighlevel-integration
+https://www.varianceinfotech.com/dentrix-gohighlevel-integration
+
+Based on above reference of above sites I want to create a simple website to promote this product. 
