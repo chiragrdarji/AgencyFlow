@@ -576,7 +576,7 @@ export default function Home() {
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Choose FolderSync Direction</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Choose Sync Direction</h3>
               <p className="text-gray-600">
                 Select one-way from Dentrix to CRM, or two-way sync between both systems.
               </p>
