@@ -29,7 +29,7 @@ const faqItems = [
   },
   {
     question: "Is patient data secure and HIPAA compliant?",
-    answer: "Yes, absolutely. We only sync essential business data (no medical records), use encrypted connections, and automatically delete data from our connector once it's successfully transferred. No treatment or medical data is ever accessed or stored."
+    answer: "We are HIPAA conscious. We only sync essential business data (no medical records), use encrypted connections, and automatically delete data from our connector once it's successfully transferred. No treatment or medical data is ever accessed or stored."
   },
   {
     question: "What data gets synced?",
