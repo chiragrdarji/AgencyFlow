@@ -196,7 +196,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-primary text-primary hover:bg-primary-light text-lg px-8 py-4"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-4"
                   data-testid="button-buy-open-dental"
                 >
                   Buy Open Dental → GHL

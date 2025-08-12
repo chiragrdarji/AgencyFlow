@@ -41,6 +41,8 @@ Preferred communication style: Simple, everyday language.
 - **Conversion Optimization**: Clear CTAs for platform-specific connectors and demo booking
 - **SEO Optimization**: Comprehensive structured data (JSON-LD), Open Graph, Twitter Cards, and geo-targeting
 - **Bidirectional Data Flow**: Enhanced animated visualization showing PMS → Connector App → GoHighLevel sync
+- **Email Integration**: SMTP-powered contact form with dual notifications (admin + user confirmation)
+- **HIPAA Messaging**: Updated messaging to emphasize "HIPAA conscious" approach to data handling
 
 ### Component Design Patterns
 - **Reusable UI Components**: Modular component library with consistent styling
