@@ -74,7 +74,6 @@ export default function Home() {
       <StructuredData type="softwareApplication" />
       <StructuredData type="product" />
       <StructuredData type="localBusiness" />
-      
       {/* FAQ Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
@@ -90,7 +89,6 @@ export default function Home() {
           }))
         })
       }} />
-      
       {/* Product Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
@@ -176,7 +174,7 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
                 <Zap size={16} className="mr-2" />
-                <span data-testid="text-trusted-badge">Trusted by 500+ Marketing Agencies</span>
+                <span data-testid="text-trusted-badge">Trusted by 50+ Marketing Agencies</span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6" data-testid="text-hero-headline">
                 Seamless Patient Data Sync for{" "}
@@ -215,7 +213,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Who This Is For */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -297,7 +294,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Problem Statement */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -349,7 +345,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Solution Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -461,7 +456,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Key Features */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -555,7 +549,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* How It Works */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -611,7 +604,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-20 bg-primary-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -646,7 +638,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -660,7 +651,6 @@ export default function Home() {
           <FAQ items={faqItems} />
         </div>
       </section>
-
       {/* Final CTA */}
       <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
