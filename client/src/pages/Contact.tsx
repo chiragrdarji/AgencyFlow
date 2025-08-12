@@ -1,48 +1,70 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { MapPin, Phone, Mail, Clock, MessageSquare, Calendar, HeadphonesIcon } from "lucide-react";
+import { contactFormSchema, type ContactFormData } from "@shared/schema";
+import { apiRequest } from "@/lib/queryClient";
+import { MapPin, Phone, Mail, Clock, MessageSquare, Calendar, HeadphonesIcon, Loader2 } from "lucide-react";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    subject: "",
-    message: ""
-  });
   const { toast } = useToast();
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    // Reset form
-    setFormData({
+  
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
       name: "",
       email: "",
       phone: "",
       company: "",
       subject: "",
       message: ""
-    });
+    }
+  });
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: ContactFormData) => {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+      });
+      
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || "Failed to send message");
+      }
+      
+      return response.json();
+    },
+    onSuccess: (data: any) => {
+      toast({
+        title: "Message Sent!",
+        description: data.message || "We'll get back to you within 24 hours.",
+      });
+      form.reset();
+    },
+    onError: (error: any) => {
+      console.error("Contact form error:", error);
+      toast({
+        title: "Error",
+        description: error.message || "Sorry, there was an error sending your message. Please try again.",
+        variant: "destructive"
+      });
+    }
+  });
+
+  const handleSubmit = (data: ContactFormData) => {
+    contactMutation.mutate(data);
   };
 
   const contactMethods = [
@@ -143,92 +165,129 @@ export default function Contact() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="name">Name *</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => handleInputChange('name', e.target.value)}
-                        required
-                        data-testid="input-name"
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Name *</FormLabel>
+                            <FormControl>
+                              <Input {...field} data-testid="input-name" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="company"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Company *</FormLabel>
+                            <FormControl>
+                              <Input {...field} data-testid="input-company" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
                     </div>
-                    <div>
-                      <Label htmlFor="company">Company</Label>
-                      <Input
-                        id="company"
-                        value={formData.company}
-                        onChange={(e) => handleInputChange('company', e.target.value)}
-                        data-testid="input-company"
-                      />
-                    </div>
-                  </div>
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="email">Email *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleInputChange('email', e.target.value)}
-                        required
-                        data-testid="input-email"
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Email *</FormLabel>
+                            <FormControl>
+                              <Input type="email" {...field} data-testid="input-email" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Phone *</FormLabel>
+                            <FormControl>
+                              <Input type="tel" {...field} data-testid="input-phone" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
                     </div>
-                    <div>
-                      <Label htmlFor="phone">Phone</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => handleInputChange('phone', e.target.value)}
-                        data-testid="input-phone"
-                      />
-                    </div>
-                  </div>
 
-                  <div>
-                    <Label htmlFor="subject">Subject</Label>
-                    <Select onValueChange={(value) => handleInputChange('subject', value)}>
-                      <SelectTrigger data-testid="select-subject">
-                        <SelectValue placeholder="Select a subject" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="general">General Inquiry</SelectItem>
-                        <SelectItem value="sales">Sales Question</SelectItem>
-                        <SelectItem value="support">Technical Support</SelectItem>
-                        <SelectItem value="demo">Request Demo</SelectItem>
-                        <SelectItem value="integration">Integration Help</SelectItem>
-                        <SelectItem value="billing">Billing Question</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea
-                      id="message"
-                      rows={6}
-                      value={formData.message}
-                      onChange={(e) => handleInputChange('message', e.target.value)}
-                      placeholder="Tell us how we can help you..."
-                      required
-                      data-testid="textarea-message"
+                    <FormField
+                      control={form.control}
+                      name="subject"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Subject *</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger data-testid="select-subject">
+                                <SelectValue placeholder="Select a subject" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="General Inquiry">General Inquiry</SelectItem>
+                              <SelectItem value="Sales Question">Sales Question</SelectItem>
+                              <SelectItem value="Technical Support">Technical Support</SelectItem>
+                              <SelectItem value="Request Demo">Request Demo</SelectItem>
+                              <SelectItem value="Integration Help">Integration Help</SelectItem>
+                              <SelectItem value="Billing Question">Billing Question</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                  </div>
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full bg-primary text-white hover:bg-primary-dark"
-                    data-testid="button-submit"
-                  >
-                    Send Message
-                  </Button>
-                </form>
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message *</FormLabel>
+                          <FormControl>
+                            <Textarea 
+                              rows={6} 
+                              placeholder="Tell us how we can help you..." 
+                              {...field} 
+                              data-testid="textarea-message" 
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full bg-primary text-white hover:bg-primary-dark"
+                      disabled={contactMutation.isPending}
+                      data-testid="button-submit"
+                    >
+                      {contactMutation.isPending ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        "Send Message"
+                      )}
+                    </Button>
+                  </form>
+                </Form>
               </CardContent>
             </Card>
           </div>
