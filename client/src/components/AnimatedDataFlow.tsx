@@ -9,7 +9,7 @@ export default function AnimatedDataFlow() {
           <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2">
             <Laptop className="text-white" size={20} />
           </div>
-          <div className="text-xs font-semibold text-gray-900">Dentrix</div>
+          <div className="text-xs font-semibold text-gray-900">PMS</div>
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-4 animate-float text-center" style={{ animationDelay: "0.2s" }} data-testid="opendental-system">

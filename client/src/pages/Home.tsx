@@ -25,24 +25,29 @@ import {
 const faqItems = [
   {
     question: "How long does setup take?",
-    answer: "Setup typically takes about 45 minutes with our team. We handle the technical configuration, field mapping, and testing to ensure everything works perfectly before going live."
+    answer:
+      "Setup typically takes about 45 minutes with our team. We handle the technical configuration, field mapping, and testing to ensure everything works perfectly before going live.",
   },
   {
     question: "Is patient data secure and HIPAA compliant?",
-    answer: "We are HIPAA conscious. We only sync essential business data (no medical records), use encrypted connections, and automatically delete data from our connector once it's successfully transferred. No treatment or medical data is ever accessed or stored."
+    answer:
+      "We are HIPAA conscious. We only sync essential business data (no medical records), use encrypted connections, and automatically delete data from our connector once it's successfully transferred. No treatment or medical data is ever accessed or stored.",
   },
   {
     question: "What data gets synced?",
-    answer: "We sync patients (contact info, demographics), providers, appointments (scheduled, completed, cancelled), and payment information. You choose which data points to sync during setup. Medical notes and treatment details are never accessed."
+    answer:
+      "We sync patients (contact info, demographics), providers, appointments (scheduled, completed, cancelled), and payment information. You choose which data points to sync during setup. Medical notes and treatment details are never accessed.",
   },
   {
     question: "How often does data sync?",
-    answer: "Data syncs in real-time using webhooks. When a change occurs in either Dentrix or GoHighLevel, it's automatically detected and synced within seconds. No batch processing or manual uploads required."
+    answer:
+      "Data syncs in real-time using webhooks. When a change occurs in either PMS or GoHighLevel, it's automatically detected and synced within minutes. No batch processing or manual uploads required.",
   },
   {
     question: "What happens if there's a sync conflict?",
-    answer: "The connector compares timestamps and syncs the most recent version. If both systems are updated at exactly the same time, Dentrix is treated as the source of truth. Failed syncs are automatically retried multiple times."
-  }
+    answer:
+      "The connector compares timestamps and syncs the most recent version. If both systems are updated at exactly the same time, PMS is treated as the source of truth. Failed syncs are automatically retried multiple times.",
+  },
 ];
 
 const testimonials = [
@@ -50,20 +55,20 @@ const testimonials = [
     name: "Sarah L.",
     company: "BluePeak Dental Marketing",
     rating: 5,
-    text: "The connector made our campaigns 10x more effective. We finally have accurate patient data without manual updates."
+    text: "The connector made our campaigns 10x more effective. We finally have accurate patient data without manual updates.",
   },
   {
     name: "Jason K.",
-    company: "Smile Growth Partners", 
+    company: "Smile Growth Partners",
     rating: 5,
-    text: "Our reactivation campaigns now hit at the perfect time. ROI is clear and client retention is higher."
+    text: "Our reactivation campaigns now hit at the perfect time. ROI is clear and client retention is higher.",
   },
   {
     name: "Rachel S.",
     company: "ToothTrack Marketing",
     rating: 5,
-    text: "We can finally show our clients exactly how many new patients and how much revenue came from our work."
-  }
+    text: "We can finally show our clients exactly how many new patients and how much revenue came from our work.",
+  },
 ];
 
 export default function Home() {
@@ -75,98 +80,108 @@ export default function Home() {
       <StructuredData type="product" />
       <StructuredData type="localBusiness" />
       {/* FAQ Structured Data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": faqItems.map(item => ({
-            "@type": "Question",
-            "name": item.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": item.answer
-            }
-          }))
-        })
-      }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqItems.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
+          }),
+        }}
+      />
       {/* Product Structured Data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": "Dentrix Connector - PMS to GoHighLevel Integration",
-          "description": "Seamless real-time data synchronization between dental practice management systems (Dentrix, Open Dental, EagleSoft, Curve Dental) and GoHighLevel CRM for marketing agencies.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Dentrix Connector LLC"
-          },
-          "category": "Software Integration Tool",
-          "offers": [
-            {
-              "@type": "Offer",
-              "name": "Dentrix → GoHighLevel Connector",
-              "description": "Real-time bidirectional sync between Dentrix PMS and GoHighLevel CRM",
-              "price": "299",
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock",
-              "seller": {
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Smart Sync One - PMS to GoHighLevel Integration",
+            description:
+              "Seamless real-time data synchronization between dental practice management systems (Dentrix, Open Dental, EagleSoft, Curve Dental) and GoHighLevel CRM for marketing agencies.",
+            brand: {
+              "@type": "Brand",
+              name: "Variance infotech LLC",
+            },
+            category: "Software Integration Tool",
+            offers: [
+              {
+                "@type": "Offer",
+                name: "Dentrix → GoHighLevel Connector",
+                description:
+                  "Real-time bidirectional sync between Dentrix PMS and GoHighLevel CRM",
+                price: "299",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+                seller: {
+                  "@type": "Organization",
+                  name: "Variance infotech LLC",
+                },
+              },
+              {
+                "@type": "Offer",
+                name: "Open Dental → GoHighLevel Connector",
+                description:
+                  "Real-time bidirectional sync between Open Dental PMS and GoHighLevel CRM",
+                price: "299",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+                seller: {
+                  "@type": "Organization",
+                  name: "Variance infotech LLC",
+                },
+              },
+            ],
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              reviewCount: "127",
+              bestRating: "5",
+              worstRating: "1",
+            },
+            review: testimonials.map((testimonial) => ({
+              "@type": "Review",
+              reviewRating: {
+                "@type": "Rating",
+                ratingValue: testimonial.rating,
+                bestRating: "5",
+              },
+              author: {
+                "@type": "Person",
+                name: testimonial.name,
+              },
+              reviewBody: testimonial.text,
+              publisher: {
                 "@type": "Organization",
-                "name": "Dentrix Connector LLC"
-              }
-            },
-            {
-              "@type": "Offer", 
-              "name": "Open Dental → GoHighLevel Connector",
-              "description": "Real-time bidirectional sync between Open Dental PMS and GoHighLevel CRM",
-              "price": "299",
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock",
-              "seller": {
-                "@type": "Organization",
-                "name": "Dentrix Connector LLC"
-              }
-            }
-          ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "127",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "review": testimonials.map(testimonial => ({
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": testimonial.rating,
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": testimonial.name
-            },
-            "reviewBody": testimonial.text,
-            "publisher": {
-              "@type": "Organization",
-              "name": testimonial.company
-            }
-          })),
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web-based",
-          "softwareRequirements": "Internet connection, Dentrix/Open Dental/EagleSoft/Curve Dental access, GoHighLevel account",
-          "featureList": [
-            "Real-time bidirectional data sync",
-            "Patient contact information sync",
-            "Provider and staff sync", 
-            "Appointment scheduling sync",
-            "Payment and billing sync",
-            "HIPAA-conscious data handling",
-            "Automated conflict resolution",
-            "45-minute setup process",
-            "24/7 monitoring and support"
-          ]
-        })
-      }} />
+                name: testimonial.company,
+              },
+            })),
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web-based",
+            softwareRequirements:
+              "Internet connection, Dentrix/Open Dental/EagleSoft/Curve Dental access, GoHighLevel account",
+            featureList: [
+              "Real-time bidirectional data sync",
+              "Patient contact information sync",
+              "Provider and staff sync",
+              "Appointment scheduling sync",
+              "Payment and billing sync",
+              "HIPAA-conscious data handling",
+              "Automated conflict resolution",
+              "45-minute setup process",
+              "24/7 monitoring and support",
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="hero-gradient py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,37 +189,62 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
                 <Zap size={16} className="mr-2" />
-                <span data-testid="text-trusted-badge">Trusted by 50+ Marketing Agencies</span>
+                <span data-testid="text-trusted-badge">
+                  Trusted by 50+ Marketing Agencies
+                </span>
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6" data-testid="text-hero-headline">
+              <h1
+                className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
+                data-testid="text-hero-headline"
+              >
                 Seamless Patient Data Sync for{" "}
                 <span className="text-primary">Dental Marketing Agencies</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed" data-testid="text-hero-subheading">
-                Stop wasting time on manual data entry. Automatically sync patients, providers, appointments, and
-                payments between Dentrix/Open Dental and GoHighLevel so you can focus on growing your clients'
-                practices.
+              <p
+                className="text-xl text-gray-600 mb-8 leading-relaxed"
+                data-testid="text-hero-subheading"
+              >
+                Stop wasting time on manual data entry. Automatically sync
+                patients, providers, appointments, and payments between
+                Dentrix/Open Dental and GoHighLevel so you can focus on growing
+                your clients' practices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button 
-                  size="lg" 
+                <Button
+                  asChild
+                  size="lg"
                   className="bg-primary text-white hover:bg-primary-dark text-lg px-8 py-4"
                   data-testid="button-buy-dentrix"
                 >
-                  Buy Dentrix → GHL
+                  <a
+                    href="https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Buy Dentrix → GHL
+                  </a>
                 </Button>
+
                 <Button
                   variant="outline"
                   size="lg"
                   className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-4"
                   data-testid="button-buy-open-dental"
                 >
-                  Buy Open Dental → GHL
+                  <a
+                    href="https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Buy Open Dental → GHL
+                  </a>
                 </Button>
               </div>
               <div className="flex items-center text-sm text-gray-600">
                 <Clock size={16} className="mr-2" />
-                <span data-testid="text-setup-features">45-minute setup • Real-time sync • HIPAA-conscious</span>
+                <span data-testid="text-setup-features">
+                  45-minute setup • Real-time sync • HIPAA-conscious
+                </span>
               </div>
             </div>
             <div className="relative">
@@ -217,12 +257,16 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="text-built-for-title">
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-built-for-title"
+            >
               Built for Modern Dental Marketing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Whether you're a marketing agency serving dental clients or a dental practice looking to streamline
-              operations, our connector bridges the gap between your PMS and CRM.
+              Whether you're a marketing agency serving dental clients or a
+              dental practice looking to streamline operations, our connector
+              bridges the gap between your PMS and CRM.
             </p>
           </div>
 
@@ -234,28 +278,39 @@ export default function Home() {
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
                     <Megaphone className="text-white" size={24} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900" data-testid="text-agencies-title">For Marketing Agencies</h3>
+                  <h3
+                    className="text-2xl font-bold text-gray-900"
+                    data-testid="text-agencies-title"
+                  >
+                    For Marketing Agencies
+                  </h3>
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">Run smarter, data-driven campaigns with real-time patient info</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">No more CSV imports or outdated contact lists</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
                     <span className="text-gray-700">
-                      Automate reminders, confirmations, and offers with accurate data
+                      Run smarter, data-driven campaigns with real-time patient
+                      info
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
                     <span className="text-gray-700">
-                      Provide new patients, reactivations, appointments booked, and revenue generated to dental
-                      practices
+                      No more CSV imports or outdated contact lists
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
+                    <span className="text-gray-700">
+                      Automate reminders, confirmations, and offers with
+                      accurate data
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
+                    <span className="text-gray-700">
+                      Provide new patients, reactivations, appointments booked,
+                      and revenue generated to dental practices
                     </span>
                   </li>
                 </ul>
@@ -269,23 +324,32 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
                     <Building2 className="text-white" size={24} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900" data-testid="text-clinics-title">For Dental Clinics</h3>
+                  <h3
+                    className="text-2xl font-bold text-gray-900"
+                    data-testid="text-clinics-title"
+                  >
+                    For Dental Clinics
+                  </h3>
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">Reduce admin work and eliminate double entry</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
                     <span className="text-gray-700">
-                      Keep schedules, patients, and payments in sync automatically
+                      Reduce admin work and eliminate double entry
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
                     <span className="text-gray-700">
-                      Improve patient experience with real-time appointment availability
+                      Keep schedules, patients, and payments in sync
+                      automatically
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
+                    <span className="text-gray-700">
+                      Improve patient experience with real-time appointment
+                      availability
                     </span>
                   </li>
                 </ul>
@@ -298,7 +362,10 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="text-problem-title">
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-problem-title"
+            >
               The Problem: Disconnected Systems Are Killing Your ROI
             </h2>
           </div>
@@ -309,10 +376,13 @@ export default function Home() {
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
                   <Clock className="text-red-600" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Manual Data Entry</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Manual Data Entry
+                </h3>
                 <p className="text-gray-600">
-                  Hours wasted every week manually updating patient information between systems, leading to outdated
-                  campaigns and missed opportunities.
+                  Hours wasted every week manually updating patient information
+                  between systems, leading to outdated campaigns and missed
+                  opportunities.
                 </p>
               </CardContent>
             </Card>
@@ -322,10 +392,13 @@ export default function Home() {
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
                   <AlertTriangle className="text-red-600" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Inaccurate Campaigns</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Inaccurate Campaigns
+                </h3>
                 <p className="text-gray-600">
-                  Marketing campaigns based on stale data result in poor targeting, low conversion rates, and
-                  frustrated dental clients.
+                  Marketing campaigns based on stale data result in poor
+                  targeting, low conversion rates, and frustrated dental
+                  clients.
                 </p>
               </CardContent>
             </Card>
@@ -335,10 +408,12 @@ export default function Home() {
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
                   <TrendingDown className="text-red-600" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">No ROI Visibility</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  No ROI Visibility
+                </h3>
                 <p className="text-gray-600">
-                  Unable to prove marketing effectiveness to dental clients because the data lives in separate,
-                  disconnected systems.
+                  Unable to prove marketing effectiveness to dental clients
+                  because the data lives in separate, disconnected systems.
                 </p>
               </CardContent>
             </Card>
@@ -349,12 +424,15 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="text-solution-title">
-              The Solution: Real-Time, Automated Data FolderSync
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-solution-title"
+            >
+              The Solution: Real-Time, Automated Data Sync
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Connect your dental clients' practice management systems directly to GoHighLevel for seamless,
-              automated data synchronization.
+              Connect your dental clients' practice management systems directly
+              to GoHighLevel for seamless, automated data synchronization.
             </p>
           </div>
 
@@ -366,10 +444,12 @@ export default function Home() {
                     <FolderSync className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Two-Way Data FolderSync</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Two-Way Data Sync
+                    </h3>
                     <p className="text-gray-600">
-                      Automatically sync patients, providers, appointments, and payments between Dentrix and
-                      GoHighLevel in real-time.
+                      Automatically sync patients, providers, appointments, and
+                      payments between Dentrix and GoHighLevel in real-time.
                     </p>
                   </div>
                 </div>
@@ -379,10 +459,12 @@ export default function Home() {
                     <CalendarCheck className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Live Appointment Availability</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Live Appointment Availability
+                    </h3>
                     <p className="text-gray-600">
-                      Display real-time appointment slots on landing pages to attract more patients and reduce
-                      booking friction.
+                      Display real-time appointment slots on landing pages to
+                      attract more patients and reduce booking friction.
                     </p>
                   </div>
                 </div>
@@ -392,10 +474,13 @@ export default function Home() {
                     <Bot className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Smart Campaign Triggers</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Smart Campaign Triggers
+                    </h3>
                     <p className="text-gray-600">
-                      Launch automated campaigns based on real practice activity - new appointments, completed
-                      treatments, or payment status.
+                      Launch automated campaigns based on real practice activity
+                      - new appointments, completed treatments, or payment
+                      status.
                     </p>
                   </div>
                 </div>
@@ -412,7 +497,9 @@ export default function Home() {
                   <div className="flex-1">
                     <Card>
                       <CardContent className="p-3">
-                        <span className="text-gray-900 font-medium">Patient books appointment in Dentrix</span>
+                        <span className="text-gray-900 font-medium">
+                          Patient books appointment in Dentrix
+                        </span>
                       </CardContent>
                     </Card>
                   </div>
@@ -429,7 +516,9 @@ export default function Home() {
                   <div className="flex-1">
                     <Card>
                       <CardContent className="p-3">
-                        <span className="text-gray-900 font-medium">Connector instantly syncs to GoHighLevel</span>
+                        <span className="text-gray-900 font-medium">
+                          Connector instantly syncs to GoHighLevel
+                        </span>
                       </CardContent>
                     </Card>
                   </div>
@@ -446,7 +535,9 @@ export default function Home() {
                   <div className="flex-1">
                     <Card>
                       <CardContent className="p-3">
-                        <span className="text-gray-900 font-medium">Automated campaigns trigger immediately</span>
+                        <span className="text-gray-900 font-medium">
+                          Automated campaigns trigger immediately
+                        </span>
                       </CardContent>
                     </Card>
                   </div>
@@ -460,11 +551,15 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="text-features-title">
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-features-title"
+            >
               Features That Drive Results
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to sync dental practice data and run effective marketing campaigns.
+              Everything you need to sync dental practice data and run effective
+              marketing campaigns.
             </p>
           </div>
 
@@ -474,10 +569,12 @@ export default function Home() {
                 <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
                   <Database className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">FolderSync What Matters Most</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Sync What Matters Most
+                </h3>
                 <p className="text-gray-600">
-                  Connect and automatically sync patient data, providers, appointments, and payment history directly
-                  into GoHighLevel.
+                  Connect and automatically sync patient data, providers,
+                  appointments, and payment history directly into GoHighLevel.
                 </p>
               </CardContent>
             </Card>
@@ -487,10 +584,12 @@ export default function Home() {
                 <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
                   <BarChart3 className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Prove ROI with Confidence</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Prove ROI with Confidence
+                </h3>
                 <p className="text-gray-600">
-                  Show dental clients exactly what they're getting: new patients, reactivations, total revenue,
-                  pending balances.
+                  Show dental clients exactly what they're getting: new
+                  patients, reactivations, total revenue, pending balances.
                 </p>
               </CardContent>
             </Card>
@@ -500,10 +599,12 @@ export default function Home() {
                 <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
                   <Shield className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">HIPAA-Conscious Design</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  HIPAA-Conscious Design
+                </h3>
                 <p className="text-gray-600">
-                  Only essential business data is synced and auto-deleted after secure delivery. No medical data is
-                  ever accessed.
+                  Only essential business data is synced and auto-deleted after
+                  secure delivery. No medical data is ever accessed.
                 </p>
               </CardContent>
             </Card>
@@ -513,10 +614,12 @@ export default function Home() {
                 <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
                   <Settings className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Set It and Forget It</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Set It and Forget It
+                </h3>
                 <p className="text-gray-600">
-                  One-time setup (~45 minutes) with our team — we handle everything from there. No ongoing
-                  maintenance required.
+                  One-time setup (~45 minutes) with our team — we handle
+                  everything from there. No ongoing maintenance required.
                 </p>
               </CardContent>
             </Card>
@@ -526,10 +629,12 @@ export default function Home() {
                 <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
                   <Clock className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Real-Time Updates</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Real-Time Updates
+                </h3>
                 <p className="text-gray-600">
-                  Data syncs instantly when changes occur in either system. No delays, no batch processing, no
-                  manual uploads.
+                  Data syncs instantly when changes occur in either system. No
+                  delays, no batch processing, no manual uploads.
                 </p>
               </CardContent>
             </Card>
@@ -539,10 +644,12 @@ export default function Home() {
                 <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
                   <Eye className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Analytics Dashboard</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Analytics Dashboard
+                </h3>
                 <p className="text-gray-600">
-                  Monitor sync activity, view pending updates, and track data flow between your systems with
-                  detailed reporting.
+                  Monitor sync activity, view pending updates, and track data
+                  flow between your systems with detailed reporting.
                 </p>
               </CardContent>
             </Card>
@@ -553,11 +660,15 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="text-how-it-works-title">
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-how-it-works-title"
+            >
               How It Works
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get up and running in minutes with our simple, guided setup process.
+              Get up and running in minutes with our simple, guided setup
+              process.
             </p>
           </div>
 
@@ -566,9 +677,11 @@ export default function Home() {
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Install the App</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Install the App
+              </h3>
               <p className="text-gray-600">
-                Download from the marketplace and install on your client's Dentrix system.
+                Download from the marketplace and install on your GHL account
               </p>
             </div>
 
@@ -576,9 +689,12 @@ export default function Home() {
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Choose Sync Direction</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Choose Sync Direction
+              </h3>
               <p className="text-gray-600">
-                Select one-way from Dentrix to CRM, or two-way sync between both systems.
+                Select one-way from PMS to CRM, or two-way sync between both
+                systems.
               </p>
             </div>
 
@@ -586,9 +702,12 @@ export default function Home() {
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Map Data Fields</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Map Data Fields
+              </h3>
               <p className="text-gray-600">
-                One-time field mapping between Dentrix and GoHighLevel during setup.
+                One-time field mapping between PMS and GoHighLevel during
+                setup.
               </p>
             </div>
 
@@ -596,9 +715,12 @@ export default function Home() {
               <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white text-2xl font-bold">4</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Start Syncing</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Start Syncing
+              </h3>
               <p className="text-gray-600">
-                Real-time data sync begins automatically. Monitor progress in your dashboard.
+                Real-time data sync begins automatically. Monitor progress in
+                your dashboard.
               </p>
             </div>
           </div>
@@ -608,11 +730,15 @@ export default function Home() {
       <section className="py-20 bg-primary-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="text-testimonials-title">
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-testimonials-title"
+            >
               Why Agencies Love It
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real results from marketing agencies using our connector to grow their dental clients' practices.
+              Real results from marketing agencies using our connector to grow
+              their dental clients' practices.
             </p>
           </div>
 
@@ -627,10 +753,25 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                  <p className="text-gray-700 mb-6" data-testid={`testimonial-text-${index}`}>"{testimonial.text}"</p>
+                  <p
+                    className="text-gray-700 mb-6"
+                    data-testid={`testimonial-text-${index}`}
+                  >
+                    "{testimonial.text}"
+                  </p>
                   <div className="border-t pt-4">
-                    <div className="font-semibold text-gray-900" data-testid={`testimonial-name-${index}`}>{testimonial.name}</div>
-                    <div className="text-gray-600" data-testid={`testimonial-company-${index}`}>{testimonial.company}</div>
+                    <div
+                      className="font-semibold text-gray-900"
+                      data-testid={`testimonial-name-${index}`}
+                    >
+                      {testimonial.name}
+                    </div>
+                    <div
+                      className="text-gray-600"
+                      data-testid={`testimonial-company-${index}`}
+                    >
+                      {testimonial.company}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -642,10 +783,15 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6" data-testid="text-faq-title">
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-faq-title"
+            >
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600">Everything you need to know about our dental PMS connector.</p>
+            <p className="text-xl text-gray-600">
+              Everything you need to know about our dental PMS connector.
+            </p>
           </div>
 
           <FAQ items={faqItems} />
@@ -654,42 +800,67 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-20 bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" data-testid="text-final-cta-title">
+          <h2
+            className="text-3xl lg:text-4xl font-bold text-white mb-6"
+            data-testid="text-final-cta-title"
+          >
             Get Your Dental Client Data Flowing Into GoHighLevel — Automatically
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join 500+ marketing agencies already using our connector to grow their dental clients' practices.
+            Join 50+ marketing agencies already using our connector to grow
+            their dental clients' practices.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button
+              variant="outline"
               size="lg"
-              className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4"
+              className="border-2 border-primary text-primary hover:bg-primary-dark hover:text-white text-lg px-8 py-4"
               data-testid="button-final-buy-dentrix"
             >
-              Buy Dentrix → GHL
+              <a
+                href="https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buy Dentrix → GHL
+              </a>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4"
+              className="border-2 border-primary text-primary hover:bg-primary-dark hover:text-white text-lg px-8 py-4"
               data-testid="button-final-buy-open-dental"
             >
-              Buy Open Dental → GHL
+              <a
+                href="https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buy Open Dental → GHL
+              </a>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4"
+              className="border-2 border-primary text-primary hover:bg-primary-dark hover:text-white text-lg px-8 py-4"
               data-testid="button-final-book-demo"
             >
-              Book Demo
+              <a
+                href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book Demo
+              </a>
             </Button>
           </div>
 
           <div className="text-blue-100 text-sm">
             <Shield size={16} className="inline mr-2" />
-            <span data-testid="text-final-guarantees">HIPAA-conscious • 45-minute setup • Real-time sync</span>
+            <span data-testid="text-final-guarantees">
+              HIPAA-conscious • 45-minute setup • Real-time sync
+            </span>
           </div>
         </div>
       </section>

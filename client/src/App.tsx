@@ -10,8 +10,15 @@ import Onboarding from "@/pages/Onboarding";
 import EducationMaterials from "@/pages/EducationMaterials";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import { useLocation } from "wouter";
+import { useEffect } from "react";
 
 function Router() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <Layout>
       <Switch>
