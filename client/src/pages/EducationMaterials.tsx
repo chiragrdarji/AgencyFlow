@@ -36,14 +36,14 @@ const videoTutorials = [
     category: "Marketing",
     url: "https://www.youtube.com/watch?v=RoFXn45J6ts",
   },
-  {
-    title: "Troubleshooting Common Issues",
-    duration: "",
-    description: "Resolve sync problems and optimize performance",
-    thumbnail: "troubleshooting",
-    category: "Support",
-    url: null, // no link
-  },
+  // {
+  //   title: "Troubleshooting Common Issues",
+  //   duration: "",
+  //   description: "Resolve sync problems and optimize performance",
+  //   thumbnail: "troubleshooting",
+  //   category: "Support",
+  //   url: null, // no link
+  // },
 ];
 
 const guides = [
@@ -181,7 +181,7 @@ export default function EducationMaterials() {
         </section>
 
         {/* Guides & Documentation */}
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Guides & Documentation
           </h2>
@@ -213,7 +213,7 @@ export default function EducationMaterials() {
                     <p className="text-gray-600 mb-6">{guide.description}</p>
                     <Button
                       variant="outline"
-                      className="w-full hover:bg-primary"
+                      className="w-full hover:bg-primary hover:text-white"
                       data-testid={`button-download-${index}`}
                     >
                       <Download size={16} className="mr-2" />
@@ -224,10 +224,10 @@ export default function EducationMaterials() {
               );
             })}
           </div>
-        </section>
+        </section> */}
 
         {/* Campaign Templates */}
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Campaign Templates
           </h2>
@@ -255,7 +255,7 @@ export default function EducationMaterials() {
                     <Button
                       size="sm"
                       variant="outline"
-                      className="w-full hover:bg-primary"
+                      className="w-full hover:bg-primary hover:text-white" 
                       data-testid={`button-template-${index}`}
                     >
                       <Download size={14} className="mr-2" />
@@ -266,10 +266,10 @@ export default function EducationMaterials() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ROI Calculator */}
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <Card className="bg-primary text-white">
             <CardContent className="p-8 text-center">
               <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -292,7 +292,7 @@ export default function EducationMaterials() {
               </Button>
             </CardContent>
           </Card>
-        </section>
+        </section> */}
 
         {/* Best Practices */}
         <section className="mb-20">

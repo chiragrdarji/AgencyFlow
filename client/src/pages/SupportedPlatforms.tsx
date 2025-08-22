@@ -107,24 +107,23 @@ export default function SupportedPlatforms() {
                 </p>
 
                 <div className="mb-6">
-                  {platform.status === "available" ? (
-                    <Badge
-                      className="bg-green-100 text-green-800"
-                      data-testid={`status-${platform.name.toLowerCase()}`}
-                    >
-                      <CheckCircle size={12} className="mr-1" />
-                      Available Now
-                    </Badge>
-                  ) : (
-                    <Badge
-                      variant="secondary"
-                      className="bg-yellow-100 text-yellow-800"
-                      data-testid={`status-${platform.name.toLowerCase()}`}
-                    >
-                      <Clock size={12} className="mr-1" />
-                      Coming Soon
-                    </Badge>
-                  )}
+                 {platform.status === "available" ? (
+                      <Badge
+                        className="bg-green-100 text-green-800"
+                        data-testid={`status-${platform.name.toLowerCase()}`}
+                      >
+                        <CheckCircle size={12} className="mr-1" />
+                        Available Now
+                      </Badge>
+                    ) : (
+                      <Badge
+                        variant="secondary"
+                        className="bg-green-100 text-green-800"
+                        data-testid={`status-${platform.name.toLowerCase()}`}
+                      >
+                        <Clock size={12} className="mr-1" />2 months Free Trial
+                      </Badge>
+                    )}
                 </div>
 
                 <ul className="text-sm text-gray-600 mb-6 space-y-2 h-[100px]">
@@ -146,17 +145,30 @@ export default function SupportedPlatforms() {
                   ))}
                 </ul>
 
-                <Button
-                  className={`w-full ${
-                    platform.status === "available"
-                      ? "bg-primary text-white hover:bg-primary-dark"
-                      : "bg-gray-300 text-gray-600 cursor-not-allowed"
-                  }`}
-                  disabled={platform.status === "coming-soon"}
-                  data-testid={`button-${platform.name.toLowerCase()}`}
-                >
-                  {platform.status === "available" ? "Buy Now" : "Book Demo"}
-                </Button>
+                {platform.status === "available" ? (
+                    <Button
+                      asChild
+                      className="w-full bg-primary text-white hover:bg-primary-dark"
+                    >
+                      <a
+                        href={platform?.url || ""}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Buy Now
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button className="w-full bg-primary text-white hover:bg-primary-dark">
+                      <a
+                        href={platform?.url || ""}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Book Demo
+                      </a>
+                    </Button>
+                  )}
               </CardContent>
             </Card>
           ))}

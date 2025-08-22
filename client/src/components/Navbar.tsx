@@ -48,7 +48,7 @@ export default function Navbar() {
               </div>
 
               <span className="text-xl font-bold text-gray-900">
-                Smart Sync One
+                Smart Sync
               </span>
             </span>
           </Link>

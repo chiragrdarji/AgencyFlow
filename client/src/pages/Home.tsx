@@ -740,7 +740,7 @@ export default function Home() {
                 Install the App
               </h3>
               <p className="text-gray-600">
-                Download from the marketplace and install on your GHL account
+                Download from the marketplace and install on your CRM account
               </p>
             </div>
 
@@ -765,7 +765,7 @@ export default function Home() {
                 Map Data Fields
               </h3>
               <p className="text-gray-600">
-                One-time field mapping between PMS and GoHighLevel during
+                One-time field mapping between PMS and CRM during
                 setup.
               </p>
             </div>
