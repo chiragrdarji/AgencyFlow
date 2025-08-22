@@ -17,7 +17,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
-     url:"/Dentrix-icon.png"
+     imgUrl:"/Dentrix-icon.png"
   },
   {
     name: "Open Dental",
@@ -26,7 +26,7 @@ const platforms = [
     color: "green-600",
     url: "https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af",
     features: ["Real-time sync", "Two-way data flow", "Custom field mapping"],
-    url:"/Open-Dental-icon.png"
+    imgUrl:"/Open-Dental-icon.png"
   },
   {
     name: "EagleSoft",
@@ -40,7 +40,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
-     url:"/EagleSoft-icon.png"
+     imgUrl:"/EagleSoft-icon.png"
   },
   {
     name: "Curve Dental",
@@ -54,7 +54,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
-     url:"/Curve-Dental.png"
+     imgUrl:"/Curve-Dental.png"
   },
 ];
 
@@ -91,7 +91,7 @@ export default function SupportedPlatforms() {
                   className={`w-16  rounded-lg flex items-center justify-center mx-auto mb-4`}
                 >
                   <img
-                    src={platform.url}
+                    src={platform.imgUrl}
                     alt="Dentrix iocn"
                     className="w-9 h-9" // adjust size as needed
                   />
@@ -127,7 +127,7 @@ export default function SupportedPlatforms() {
                   )}
                 </div>
 
-                <ul className="text-sm text-gray-600 mb-6 space-y-2">
+                <ul className="text-sm text-gray-600 mb-6 space-y-2 h-{100px}">
                   {platform.features.map((feature, index) => (
                     <li
                       key={index}

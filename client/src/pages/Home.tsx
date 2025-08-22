@@ -301,7 +301,7 @@ export default function Home() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-success mt-1 mr-3" size={24} />
+                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
                     <span className="text-gray-700">
                       No more CSV imports or outdated contact lists
                     </span>
@@ -314,7 +314,7 @@ export default function Home() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
+                    <CheckCircle className="text-success mt-1 mr-3" size={24} />
                     <span className="text-gray-700">
                       Provide new patients, reactivations, appointments booked,
                       and revenue generated to dental practices
