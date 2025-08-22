@@ -138,7 +138,7 @@ export default function Contact() {
                           </p>
                           {method.title === "Schedule a Demo" ? (
                             <a
-                              href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                              href="https://calendly.com/smart-sync/meeting"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="mt-1 text-sm font-medium text-blue-600 hover:underline"

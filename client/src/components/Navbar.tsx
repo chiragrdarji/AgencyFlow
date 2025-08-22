@@ -66,7 +66,7 @@ export default function Navbar() {
               className="bg-primary text-white hover:bg-primary-dark"
             >
               <a
-                href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                href="https://calendly.com/smart-sync/meeting"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -101,7 +101,7 @@ export default function Navbar() {
                       data-testid="button-mobile-demo"
                     >
                       <a
-                        href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                        href="https://calendly.com/smart-sync/meeting"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

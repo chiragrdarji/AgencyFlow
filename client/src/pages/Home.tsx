@@ -621,8 +621,13 @@ export default function Home() {
             <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-8">
                 <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-0">
-                  <img
+                  {/* <img
                   src="/Prove-ROI-with-Confidence.svg"
+                  alt="Prove ROI with Confidence"
+                  className="w-9 h-9" // adjust size as needed
+                /> */}
+                 <img
+                  src="/Prove-ROI-with-Confidence1.svg"
                   alt="Prove ROI with Confidence"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -906,7 +911,7 @@ export default function Home() {
               data-testid="button-final-book-demo"
             >
               <a
-                href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                href="https://calendly.com/smart-sync/meeting"
                 target="_blank"
                 rel="noopener noreferrer"
               >

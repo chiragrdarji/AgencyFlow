@@ -289,7 +289,7 @@ export default function Onboarding() {
             data-testid="button-book-setup-call"
           >
             <a
-              href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+              href="https://calendly.com/smart-sync/meeting"
               target="_blank"
               rel="noopener noreferrer"
             >

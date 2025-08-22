@@ -33,7 +33,7 @@ const platforms = [
     description: "Patterson Dental",
     status: "coming-soon",
     color: "gray-400",
-    url: "https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08",
+    url: "https://calendly.com/smart-sync/meeting",
     features: [
       "Real-time sync",
       "Two-way data flow",
@@ -47,7 +47,7 @@ const platforms = [
     description: "Cloud-based PMS",
     status: "coming-soon",
     color: "gray-400",
-    url: "https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08",
+    url: "https://calendly.com/smart-sync/meeting",
     features: [
       "Real-time sync",
       "Two-way data flow",
@@ -236,7 +236,7 @@ export default function SupportedPlatforms() {
               data-testid="button-book-demo"
             >
               <a
-                href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                href="https://calendly.com/smart-sync/meeting"
                 target="_blank"
                 rel="noopener noreferrer"
               >
