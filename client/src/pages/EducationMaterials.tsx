@@ -228,8 +228,11 @@ export default function EducationMaterials() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card>
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-white" size={32} />
+                <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
+                 <img
+                  src="/Patient-Segmentatio.svg"
+                  alt="Patient Segmentation" // adjust size as needed
+                />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-4">Patient Segmentation</h3>
                 <p className="text-sm text-gray-600">
@@ -240,8 +243,11 @@ export default function EducationMaterials() {
             
             <Card>
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-white" size={32} />
+                <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <img
+                  src="/Timing-Optimization.svg"
+                  alt="Timing Optimization" // adjust size as needed
+                />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-4">Timing Optimization</h3>
                 <p className="text-sm text-gray-600">
@@ -252,8 +258,11 @@ export default function EducationMaterials() {
             
             <Card>
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Calculator className="text-white" size={32} />
+                <div className="w-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <img
+                  src="/Performance-Tracking.png"
+                  alt="Performance Tracking" // adjust size as needed
+                />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-4">Performance Tracking</h3>
                 <p className="text-sm text-gray-600">

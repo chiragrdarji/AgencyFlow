@@ -9,28 +9,32 @@ const platforms = [
     description: "All versions supported",
     status: "available",
     color: "blue-600",
-    features: ["Real-time sync", "Two-way data flow", "All modules supported", "Cloud & On-premise"]
+    features: ["Real-time sync", "Two-way data flow", "All modules supported", "Cloud & On-premise"],
+    url:"/Dentrix-icon.png"
   },
   {
     name: "Open Dental",
     description: "Cloud & On-premise",
     status: "available", 
     color: "green-600",
-    features: ["Real-time sync", "Two-way data flow", "Custom field mapping", "MySQL compatible"]
+    features: ["Real-time sync", "Two-way data flow", "Custom field mapping", "MySQL compatible"],
+    url:"/Open-Dental-icon.png"
   },
   {
     name: "EagleSoft",
     description: "Patterson Dental",
     status: "coming-soon",
     color: "gray-400",
-    features: ["Real-time sync (planned)", "Two-way data flow", "Practice management", "Imaging integration"]
+    features: ["Real-time sync (planned)", "Two-way data flow", "Practice management", "Imaging integration"],
+    url:"/EagleSoft-icon.png"
   },
   {
     name: "Curve Dental",
     description: "Cloud-based PMS",
     status: "coming-soon",
     color: "gray-400", 
-    features: ["Cloud-native sync", "API integration", "Real-time updates", "Mobile compatible"]
+    features: ["Cloud-native sync", "API integration", "Real-time updates", "Mobile compatible"],
+    url:"/Curve-Dental.png"
   }
 ];
 
@@ -56,8 +60,12 @@ export default function SupportedPlatforms() {
               }`}
             >
               <CardContent className="p-8 text-center">
-                <div className={`w-16 h-16 bg-${platform.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                  <Laptop className="text-white" size={32} />
+                <div className={`w-16  rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                  <img
+                  src={platform.url}
+                  alt="Dentrix iocn"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2" data-testid={`platform-name-${platform.name.toLowerCase()}`}>
                   {platform.name}
@@ -108,22 +116,31 @@ export default function SupportedPlatforms() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Integration Details</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="text-white" size={32} />
+              <div className="w-12 h-12  rounded-lg flex items-center justify-center mx-auto mb-4">
+                 <img
+                  src="/Data-Security.png"
+                  alt="Data Security" // adjust size as needed
+                />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Data Security</h3>
               <p className="text-sm text-gray-600">HIPAA-conscious design with encrypted connections and automatic data deletion</p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-white" size={32} />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                 <img
+                  src="/Setup-Time.svg"
+                  alt="Setup Time" // adjust size as needed
+                />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Setup Time</h3>
               <p className="text-sm text-gray-600">45-minute guided setup with our technical team</p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Laptop className="text-white" size={32} />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                 <img
+                  src="/Real-time-Sync.svg"
+                  alt="Real-time Sync" // adjust size as needed
+                />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Real-time Sync</h3>
               <p className="text-sm text-gray-600">Instant data synchronization using webhooks and API connections</p>

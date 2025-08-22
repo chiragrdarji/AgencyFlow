@@ -69,21 +69,21 @@ export default function Contact() {
 
   const contactMethods = [
     {
-      icon: Phone,
+      icon: "/Phone-Support.svg",
       title: "Phone Support",
       description: "Speak with our technical team",
       contact: "(555) 123-4567",
       availability: "Mon-Fri, 9am-6pm EST"
     },
     {
-      icon: Mail,
+      icon: "/Email-Support.svg",
       title: "Email Support",
       description: "Get help via email",
       contact: "support@dentrixconnector.com",
       availability: "Response within 24 hours"
     },
     {
-      icon: Calendar,
+      icon: "/Schedule-a-Demo.svg",
       title: "Schedule a Demo",
       description: "Book a personalized demonstration",
       contact: "Book online",
@@ -109,13 +109,15 @@ export default function Contact() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
             <div className="space-y-6">
               {contactMethods.map((method, index) => {
-                const IconComponent = method.icon;
+                const url = method.icon;
                 return (
                   <Card key={index}>
                     <CardContent className="p-6">
                       <div className="flex items-start">
-                        <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
-                          <IconComponent className="text-white" size={24} />
+                        <div className="w-9 h-9  rounded-lg flex items-center justify-center mr-4">
+                          <img src={url}
+                            alt="icon" // adjust size as needed
+                          />
                         </div>
                         <div className="flex-1">
                           <h3 className="font-bold text-gray-900 mb-1" data-testid={`contact-method-${index}`}>
@@ -326,8 +328,11 @@ export default function Contact() {
         {/* Emergency Support */}
         <Card className="bg-red-50 border-red-200">
           <CardContent className="p-8 text-center">
-            <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <HeadphonesIcon className="text-red-600" size={32} />
+            <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto mb-4">
+              <img
+                  src="/Need-Emergency-Support.png"
+                  alt="Emergency Support icon" // adjust size as needed
+                />
             </div>
             <h2 className="text-xl font-bold text-gray-900 mb-4">Need Emergency Support?</h2>
             <p className="text-gray-600 mb-6">

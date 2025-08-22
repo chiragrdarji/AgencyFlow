@@ -8,7 +8,7 @@ const onboardingSteps = [
     step: 1,
     title: "Initial Consultation",
     description: "Schedule a 45-minute setup call with our technical team",
-    icon: Phone,
+    icon: "/Initial-Consultation.svg",
     details: [
       "Assess your current PMS configuration",
       "Discuss data synchronization requirements",
@@ -20,7 +20,7 @@ const onboardingSteps = [
     step: 2,
     title: "App Installation",
     description: "Download and install the connector on your PMS system",
-    icon: Download,
+    icon: "/App-Installation.png",
     details: [
       "Download from official marketplace",
       "Install with administrator privileges", 
@@ -32,7 +32,7 @@ const onboardingSteps = [
     step: 3,
     title: "Field Mapping",
     description: "Map data fields between your PMS and GoHighLevel",
-    icon: MapPin,
+    icon: "/Field-Mapping.svg",
     details: [
       "Patient information mapping",
       "Provider and appointment fields",
@@ -44,7 +44,7 @@ const onboardingSteps = [
     step: 4,
     title: "Testing & Launch",
     description: "Test the integration and go live with real-time sync",
-    icon: Play,
+    icon: "/Testing-&-Launch.svg",
     details: [
       "Test data synchronization",
       "Verify field mappings",
@@ -95,13 +95,14 @@ export default function Onboarding() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Step-by-Step Setup Process</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {onboardingSteps.map((step) => {
-              const IconComponent = step.icon;
+              const url = step.icon;
               return (
                 <Card key={step.step} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
-                        <IconComponent className="text-white" size={24} />
+                      <div className="w-9 h-9  rounded-lg flex items-center justify-center mr-4">
+                         <img src={url} alt="icon" // adjust size as needed 
+                         />
                       </div>
                       <div>
                         <div className="text-sm font-medium text-primary">Step {step.step}</div>
@@ -188,8 +189,11 @@ export default function Onboarding() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Clock className="text-white" size={32} />
+                <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
+                   <img
+                  src="/45-Minute-Setup-Call.svg"
+                  alt="45-Minute Setup Call" // adjust size as needed
+                />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">45-Minute Setup Call</h3>
                 <p className="text-sm text-gray-600">Dedicated technical consultation with our experts</p>
@@ -198,8 +202,11 @@ export default function Onboarding() {
             
             <Card className="text-center">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Settings className="text-white" size={32} />
+                <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <img
+                  src="/Complete-Configuration.svg"
+                  alt="Complete Configuration" // adjust size as needed
+                />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Complete Configuration</h3>
                 <p className="text-sm text-gray-600">Full setup and field mapping handled by our team</p>
@@ -208,8 +215,11 @@ export default function Onboarding() {
             
             <Card className="text-center">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Shield className="text-white" size={32} />
+                <div className="w-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <img
+                  src="/Ongoing-Support.svg"
+                  alt="Ongoing Support" // adjust size as needed
+                />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Ongoing Support</h3>
                 <p className="text-sm text-gray-600">Continued technical support after launch</p>
