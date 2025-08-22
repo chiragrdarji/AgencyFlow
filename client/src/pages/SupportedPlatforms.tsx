@@ -17,6 +17,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
+     url:"/Dentrix-icon.png"
   },
   {
     name: "Open Dental",
@@ -25,6 +26,7 @@ const platforms = [
     color: "green-600",
     url: "https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af",
     features: ["Real-time sync", "Two-way data flow", "Custom field mapping"],
+    url:"/Open-Dental-icon.png"
   },
   {
     name: "EagleSoft",
@@ -38,6 +40,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
+     url:"/EagleSoft-icon.png"
   },
   {
     name: "Curve Dental",
@@ -51,6 +54,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
+     url:"/Curve-Dental.png"
   },
 ];
 
@@ -82,93 +86,77 @@ export default function SupportedPlatforms() {
                   : "border-gray-200 bg-gray-50"
               }`}
             >
-              <CardContent className="p-8 flex flex-col h-full">
-                {" "}
-                {/* 👈 make card full height & column layout */}
-                <div className="text-center">
-                  <div
-                    className={`w-16 h-16 bg-${platform.color} rounded-lg flex items-center justify-center mx-auto mb-4`}
-                  >
-                    <Laptop className="text-white" size={32} />
-                  </div>
-                  <h3
-                    className="text-2xl font-bold text-gray-900 mb-2"
-                    data-testid={`platform-name-${platform.name.toLowerCase()}`}
-                  >
-                    {platform.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    {platform.description}
-                  </p>
-
-                  <div className="mb-6">
-                    {platform.status === "available" ? (
-                      <Badge
-                        className="bg-green-100 text-green-800"
-                        data-testid={`status-${platform.name.toLowerCase()}`}
-                      >
-                        <CheckCircle size={12} className="mr-1" />
-                        Available Now
-                      </Badge>
-                    ) : (
-                      <Badge
-                        variant="secondary"
-                        className="bg-green-100 text-green-800"
-                        data-testid={`status-${platform.name.toLowerCase()}`}
-                      >
-                        <Clock size={12} className="mr-1" />2 months Free Trial
-                      </Badge>
-                    )}
-                  </div>
-
-                  {/* ✅ Fixed alignment */}
-                  <ul className="text-sm text-gray-600 mb-6 space-y-2">
-                    {platform.features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className="flex items-center justify-center"
-                      >
-                        <CheckCircle
-                          size={14}
-                          // className={`mr-2 ${
-                          //   platform.status === "available"
-                          //     ? "text-green-500"
-                          //     : "text-gray-400"
-                          // }`}
-                          className="mr-2 text-green-500"
-                        />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+              <CardContent className="p-8 text-center">
+                <div
+                  className={`w-16  rounded-lg flex items-center justify-center mx-auto mb-4`}
+                >
+                  <img
+                    src={platform.url}
+                    alt="Dentrix iocn"
+                    className="w-9 h-9" // adjust size as needed
+                  />
                 </div>
-                {/* ✅ Always stays at bottom */}
-                <div className="mt-auto">
+                <h3
+                  className="text-2xl font-bold text-gray-900 mb-2"
+                  data-testid={`platform-name-${platform.name.toLowerCase()}`}
+                >
+                  {platform.name}
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  {platform.description}
+                </p>
+
+                <div className="mb-6">
                   {platform.status === "available" ? (
-                    <Button
-                      asChild
-                      className="w-full bg-primary text-white hover:bg-primary-dark"
+                    <Badge
+                      className="bg-green-100 text-green-800"
+                      data-testid={`status-${platform.name.toLowerCase()}`}
                     >
-                      <a
-                        href={platform?.url || ""}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Buy Now
-                      </a>
-                    </Button>
+                      <CheckCircle size={12} className="mr-1" />
+                      Available Now
+                    </Badge>
                   ) : (
-                    <Button className="w-full bg-primary text-white hover:bg-primary-dark">
-                      <a
-                        href={platform?.url || ""}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Book Demo
-                      </a>
-                    </Button>
+                    <Badge
+                      variant="secondary"
+                      className="bg-yellow-100 text-yellow-800"
+                      data-testid={`status-${platform.name.toLowerCase()}`}
+                    >
+                      <Clock size={12} className="mr-1" />
+                      Coming Soon
+                    </Badge>
                   )}
                 </div>
+
+                <ul className="text-sm text-gray-600 mb-6 space-y-2">
+                  {platform.features.map((feature, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center justify-center"
+                    >
+                      <CheckCircle
+                        size={14}
+                        className={`mr-2 ${
+                          platform.status === "available"
+                            ? "text-green-500"
+                            : "text-gray-400"
+                        }`}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  className={`w-full ${
+                    platform.status === "available"
+                      ? "bg-primary text-white hover:bg-primary-dark"
+                      : "bg-gray-300 text-gray-600 cursor-not-allowed"
+                  }`}
+                  disabled={platform.status === "coming-soon"}
+                  data-testid={`button-${platform.name.toLowerCase()}`}
+                >
+                  {platform.status === "available" ? "Buy Now" : "Book Demo"}
+                </Button>
               </CardContent>
             </Card>
           ))}
@@ -181,8 +169,11 @@ export default function SupportedPlatforms() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="text-white" size={32} />
+              <div className="w-12 h-12  rounded-lg flex items-center justify-center mx-auto mb-4">
+                <img
+                  src="/Data-Security.png"
+                  alt="Data Security" // adjust size as needed
+                />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Data Security</h3>
               <p className="text-sm text-gray-600">
@@ -191,8 +182,11 @@ export default function SupportedPlatforms() {
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-white" size={32} />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <img
+                  src="/Setup-Time.svg"
+                  alt="Setup Time" // adjust size as needed
+                />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Setup Time</h3>
               <p className="text-sm text-gray-600">
@@ -200,8 +194,11 @@ export default function SupportedPlatforms() {
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Laptop className="text-white" size={32} />
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <img
+                  src="/Real-time-Sync.svg"
+                  alt="Real-time Sync" // adjust size as needed
+                />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Real-time Sync</h3>
               <p className="text-sm text-gray-600">

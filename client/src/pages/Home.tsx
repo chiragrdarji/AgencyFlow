@@ -183,7 +183,7 @@ export default function Home() {
         }}
       />
       {/* Hero Section */}
-      <section className="hero-gradient py-20 overflow-hidden">
+      <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -248,7 +248,10 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <AnimatedDataFlow />
+             <img
+                  src="/Smart-Sync-One.gif"
+                  alt="Smart sync Flow Dagram" // adjust size as needed
+                />
             </div>
           </div>
         </div>
@@ -275,8 +278,12 @@ export default function Home() {
             <Card className="bg-primary-light border-0">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
-                    <Megaphone className="text-white" size={24} />
+                  <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-4">
+                     <img
+                  src="/For-Marketing-Agencies.svg"
+                  alt="For Marketing Agencies"
+                  className="w-9 h-9" // adjust size as needed
+                />
                   </div>
                   <h3
                     className="text-2xl font-bold text-gray-900"
@@ -294,7 +301,7 @@ export default function Home() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
+                    <CheckCircle className="text-success mt-1 mr-3" size={24} />
                     <span className="text-gray-700">
                       No more CSV imports or outdated contact lists
                     </span>
@@ -321,8 +328,12 @@ export default function Home() {
             <Card className="bg-gray-50 border-0">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
-                    <Building2 className="text-white" size={24} />
+                  <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-4">
+                     <img
+                  src="/For-Dental-Clinics.png"
+                  alt="For Dental Clinics"
+                  className="w-9 h-9" // adjust size as needed
+                />
                   </div>
                   <h3
                     className="text-2xl font-bold text-gray-900"
@@ -374,7 +385,11 @@ export default function Home() {
             <Card className="border-red-100">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
-                  <Clock className="text-red-600" size={32} />
+                   <img
+                  src="/Manual Data Entry.svg"
+                  alt="Manual Data Entry"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Manual Data Entry
@@ -390,7 +405,11 @@ export default function Home() {
             <Card className="border-red-100">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
-                  <AlertTriangle className="text-red-600" size={32} />
+                   <img
+                  src="/Inaccurate-Campaigns.svg"
+                  alt="Inaccurate Campaigns"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Inaccurate Campaigns
@@ -406,7 +425,11 @@ export default function Home() {
             <Card className="border-red-100">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
-                  <TrendingDown className="text-red-600" size={32} />
+                  <img
+                  src="/No-ROI-Visibility.svg"
+                  alt="No ROI Visibility"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   No ROI Visibility
@@ -440,8 +463,12 @@ export default function Home() {
             <div>
               <div className="space-y-8">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 mt-1">
-                    <FolderSync className="text-white" size={24} />
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <img
+                  src="/Two-Way-Data-Sync.svg"
+                  alt="Two-Way Data FolderSync"
+                  className="w-9 h-9" // adjust size as needed
+                />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -455,8 +482,12 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 mt-1">
-                    <CalendarCheck className="text-white" size={24} />
+                  <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <img
+                  src="/Live-Appointment-Availability.png"
+                  alt="Live Appointment Availability"
+                  className="w-9 h-9" // adjust size as needed
+                />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -470,8 +501,12 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 mt-1">
-                    <Bot className="text-white" size={24} />
+                  <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <img
+                  src="/Smart-Campaign-Triggers.svg"
+                  alt="Smart Campaign Triggers"
+                  className="w-9 h-9" // adjust size as needed
+                />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -566,8 +601,12 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                  <Database className="text-white" size={32} />
+                <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
+                   <img
+                  src="/Sync-What-Matters-Most.svg"
+                  alt="FolderSync What Matters Most"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Sync What Matters Most
@@ -581,8 +620,12 @@ export default function Home() {
 
             <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                  <BarChart3 className="text-white" size={32} />
+                <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-0">
+                  <img
+                  src="/Prove-ROI-with-Confidence.svg"
+                  alt="Prove ROI with Confidence"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Prove ROI with Confidence
@@ -596,8 +639,12 @@ export default function Home() {
 
             <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="text-white" size={32} />
+                <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
+                   <img
+                  src="/HIPAA-Conscious-Design.svg"
+                  alt="HIPAA-Conscious Design"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   HIPAA-Conscious Design
@@ -611,8 +658,12 @@ export default function Home() {
 
             <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                  <Settings className="text-white" size={32} />
+                <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
+                   <img
+                  src="/Set-It-and-Forget-It .svg"
+                  alt="Set It and Forget It"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Set It and Forget It
@@ -626,8 +677,12 @@ export default function Home() {
 
             <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                  <Clock className="text-white" size={32} />
+                <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
+                   <img
+                  src="/Real-Time-Updates.png"
+                  alt="Real-Time Updates"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Real-Time Updates
@@ -641,8 +696,12 @@ export default function Home() {
 
             <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6">
-                  <Eye className="text-white" size={32} />
+                <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
+                   <img
+                  src="/Analytics-Dashboard.png"
+                  alt="Analytics Dashboard"
+                  className="w-9 h-9" // adjust size as needed
+                />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Analytics Dashboard
