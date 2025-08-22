@@ -127,7 +127,7 @@ export default function SupportedPlatforms() {
                   )}
                 </div>
 
-                <ul className="text-sm text-gray-600 mb-6 space-y-2 h-{100px}">
+                <ul className="text-sm text-gray-600 mb-6 space-y-2 h-[100px]">
                   {platform.features.map((feature, index) => (
                     <li
                       key={index}
