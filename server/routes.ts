@@ -8,12 +8,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Configure SMTP transporter
 
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.elasticemail.com",
-    port: parseInt(process.env.SMTP_PORT || "2525"),
+    host: process.env.SMTP_HOST || "",
+    port: parseInt(process.env.SMTP_PORT || ""),
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "info@smartsync.one",
-      pass: "8741EEDFC9A3E7BDC435610B77191C78B8B2",
+      user: process.env.SMTP_USER || "",
+      pass:  process.env.SMTP_PASS || "",
     },
   });
   // Contact form submission route
@@ -39,8 +39,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     `;
       // Send email to admin
       const adminMailOptions = {
-        from: process.env.SMTP_FROM || "info@smartsync.one",
-        to: process.env.CONTACT_EMAIL || "support@smartsync.one",
+        from: process.env.SMTP_FROM || "",
+        to: process.env.CONTACT_EMAIL || "",
         subject: `New Contact: ${data.subject}`,
         text: emailContent,
         html: `
@@ -65,7 +65,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Send confirmation email to user
       const userMailOptions = {
-        from: process.env.SMTP_FROM || "info@smartsync.one",
+        from: process.env.SMTP_FROM || "",
         to: data.email,
         subject: "Thank you for contacting Smart Sync One",
         html: `

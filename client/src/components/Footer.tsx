@@ -98,7 +98,7 @@ export default function Footer() {
             <div className="flex items-center mb-6">
               <div className="w-9 h-9 rounded-lg flex items-center justify-center mr-3">
                 <img
-                  src="/sso_logo.svg"
+                  src="/img/sso_logo.svg"
                   alt="SSo Logo"
                   className="w-9 h-9" // adjust size as needed
                 />

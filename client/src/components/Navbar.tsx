@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {  Menu } from "lucide-react";
+import {  Download, Menu } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -41,7 +42,7 @@ export default function Navbar() {
             >
               <div className="w-9 h-9 rounded-lg flex items-center justify-center mr-3">
                 <img
-                  src="/sso_logo.svg"
+                  src="/img/sso_logo.svg"
                   alt="SSo Logo"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -61,6 +62,21 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center space-x-4">
+                 {/* <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button variant="outline" asChild>
+            <a href="/pdfs/Smart_sync.pdf" download className="flex items-center gap-2 hover:bg-primary hover:text-white">
+              <Download size={16} />
+             
+            </a>
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Business Associate Agreement</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider> */}
             <Button
               data-testid="button-book-demo"
               className="bg-primary text-white hover:bg-primary-dark"
