@@ -17,7 +17,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
-     imgUrl:"/Dentrix-icon.png"
+     imgUrl:"/img/Dentrix-icon.png"
   },
   {
     name: "Open Dental",
@@ -26,7 +26,7 @@ const platforms = [
     color: "green-600",
     url: "https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af",
     features: ["Real-time sync", "Two-way data flow", "Custom field mapping"],
-    imgUrl:"/Open-Dental-icon.png"
+    imgUrl:"/img/Open-Dental-icon.png"
   },
   {
     name: "EagleSoft",
@@ -40,7 +40,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
-     imgUrl:"/EagleSoft-icon.png"
+     imgUrl:"/img/EagleSoft-icon.png"
   },
   {
     name: "Curve Dental",
@@ -54,7 +54,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
-     imgUrl:"/Curve-Dental.png"
+     imgUrl:"/img/Curve-Dental.png"
   },
 ];
 
@@ -183,7 +183,7 @@ export default function SupportedPlatforms() {
             <div>
               <div className="w-12 h-12  rounded-lg flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/Data-Security.png"
+                  src="/img/Data-Security.png"
                   alt="Data Security" // adjust size as needed
                 />
               </div>
@@ -196,7 +196,7 @@ export default function SupportedPlatforms() {
             <div>
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/Setup-Time.svg"
+                  src="/img/Setup-Time.svg"
                   alt="Setup Time" // adjust size as needed
                 />
               </div>
@@ -208,7 +208,7 @@ export default function SupportedPlatforms() {
             <div>
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/Real-time-Sync.svg"
+                  src="/img/Real-time-Sync.svg"
                   alt="Real-time Sync" // adjust size as needed
                 />
               </div>

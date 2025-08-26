@@ -311,7 +311,7 @@ export default function EducationMaterials() {
               <CardContent className="p-8 text-center">
                 <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
                  <img
-                  src="/Patient-Segmentatio.svg"
+                  src="/img/Patient-Segmentatio.svg"
                   alt="Patient Segmentation" // adjust size as needed
                 />
                 </div>
@@ -329,7 +329,7 @@ export default function EducationMaterials() {
               <CardContent className="p-8 text-center">
                 <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
                   <img
-                  src="/Timing-Optimization.svg"
+                  src="/img/Timing-Optimization.svg"
                   alt="Timing Optimization" // adjust size as needed
                 />
                 </div>
@@ -347,7 +347,7 @@ export default function EducationMaterials() {
               <CardContent className="p-8 text-center">
                 <div className="w-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <img
-                  src="/Performance-Tracking.png"
+                  src="/img/Performance-Tracking.png"
                   alt="Performance Tracking" // adjust size as needed
                 />
                 </div>

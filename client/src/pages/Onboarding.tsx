@@ -8,7 +8,7 @@ const onboardingSteps = [
     step: 1,
     title: "Initial Consultation",
     description: "Schedule a 45-minute setup call with our technical team",
-    icon: "/Initial-Consultation.svg",
+    icon: "/img/Initial-Consultation.svg",
     details: [
       "Assess your current PMS configuration",
       "Discuss data synchronization requirements",
@@ -20,7 +20,7 @@ const onboardingSteps = [
     step: 2,
     title: "App Installation",
     description: "Download and install the connector on your PMS system",
-    icon: "/App-Installation.png",
+    icon: "/img/App-Installation.png",
     details: [
       "Download from official marketplace",
       "Install with administrator privileges", 
@@ -32,7 +32,7 @@ const onboardingSteps = [
     step: 3,
     title: "Field Mapping",
     description: "Map data fields between your PMS and GoHighLevel",
-    icon: "/Field-Mapping.svg",
+    icon: "/img/Field-Mapping.svg",
     details: [
       "Patient information mapping",
       "Provider and appointment fields",
@@ -44,7 +44,7 @@ const onboardingSteps = [
     step: 4,
     title: "Testing & Launch",
     description: "Test the integration and go live with real-time sync",
-    icon: "/Testing-&-Launch.svg",
+    icon: "/img/Testing-&-Launch.svg",
     details: [
       "Test data synchronization",
       "Verify field mappings",
@@ -226,7 +226,7 @@ export default function Onboarding() {
               <CardContent className="p-8">
                 <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
                    <img
-                  src="/45-Minute-Setup-Call.svg"
+                  src="/img/45-Minute-Setup-Call.svg"
                   alt="45-Minute Setup Call" // adjust size as needed
                 />
                 </div>
@@ -243,7 +243,7 @@ export default function Onboarding() {
               <CardContent className="p-8">
                 <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
                   <img
-                  src="/Complete-Configuration.svg"
+                  src="/img/Complete-Configuration.svg"
                   alt="Complete Configuration" // adjust size as needed
                 />
                 </div>
@@ -260,7 +260,7 @@ export default function Onboarding() {
               <CardContent className="p-8">
                 <div className="w-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <img
-                  src="/Ongoing-Support.svg"
+                  src="/img/Ongoing-Support.svg"
                   alt="Ongoing Support" // adjust size as needed
                 />
                 </div>
