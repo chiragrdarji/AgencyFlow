@@ -27,6 +27,7 @@ function Router() {
         <Route path="/onboarding" component={Onboarding} />
         <Route path="/education" component={EducationMaterials} />
         <Route path="/contact" component={Contact} />
+        <Route path="/SmartSync-Synchronizer.exe" component={DownloadPage} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
@@ -45,3 +46,24 @@ function App() {
 }
 
 export default App;
+
+export const DownloadPage = () => {
+  const [, setLocation] = useLocation();
+ 
+  useEffect(() => {
+    // Trigger download
+    const link = document.createElement("a");
+    link.href = "/pdfs/SmartSync-Synchronizer.exe"; // Path in public folder
+    link.download = "SmartSync-Synchronizer.exe";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+ 
+    // Redirect after short delay
+    setTimeout(() => {
+      setLocation("/"); // Redirect to home page
+    }, 500); // 0.5s delay
+  }, [setLocation]);
+ 
+  return <h2>Your download should start shortly...</h2>;
+};
