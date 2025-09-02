@@ -5,6 +5,12 @@ export default {
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      zIndex: {
+        99: '99',
+        999: '999',
+        9999: '9999',
+        99999: '99999',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -17,6 +23,7 @@ export default {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
         },
+        customBlue: "#EAF5FF",
         popover: {
           DEFAULT: "var(--popover)",
           foreground: "var(--popover-foreground)",
@@ -57,6 +64,7 @@ export default {
         "slide-right": "slideRight 2s ease-in-out infinite",
         "pulse-slow": "pulse 3s ease-in-out infinite",
       },
+
       keyframes: {
         float: {
           "0%, 100%": {

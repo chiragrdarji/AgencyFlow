@@ -62,7 +62,7 @@ const guides = [
     category: "Marketing"
   },
   {
-    title: "ROI Tracking Manual", 
+    title: "ROI Tracking Manual",
     description: "How to measure and report marketing effectiveness to dental clients",
     icon: Calculator,
     pages: 18,
@@ -85,7 +85,7 @@ const templates = [
   },
   {
     name: "Reactivation Campaign",
-    description: "Win back inactive patients with targeted messaging", 
+    description: "Win back inactive patients with targeted messaging",
     type: "Multi-channel"
   },
   {
@@ -94,7 +94,7 @@ const templates = [
     type: "Automation"
   },
   {
-    name: "Monthly ROI Report Template", 
+    name: "Monthly ROI Report Template",
     description: "Professional client reporting template",
     type: "Report"
   }
@@ -124,17 +124,73 @@ export default function EducationMaterials() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {videoTutorials.map((video, index) => (
+              // <Card key={index} className="hover:shadow-lg transition-shadow">
+              //   <CardHeader className="pb-4">
+              //     <div className="relative bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
+              //       {/* Show thumbnail or placeholder */}
+              //       {video.url ? (
+              //         <img
+              //           src={`https://img.youtube.com/vi/${
+              //             video.url.split("v=")[1]
+              //           }/hqdefault.jpg`}
+              //           alt={video.title}
+              //           className="w-full h-full object-cover rounded-lg"
+              //         />
+              //       ) : (
+              //         <PlayCircle className="text-primary" size={64} />
+              //       )}
+
+              //       {/* Duration Badge */}
+              //       {video.duration && (
+              //         <div className="absolute top-4 right-4">
+              //           <Badge
+              //             variant="secondary"
+              //             className="bg-black/50 text-white"
+              //           >
+              //             <Clock size={12} className="mr-1" />
+              //             {video.duration}
+              //           </Badge>
+              //         </div>
+              //       )}
+
+              //       {/* Category Badge */}
+              //       {/* <div className="absolute bottom-4 left-4">
+              //         <Badge className="bg-primary text-white">
+              //           {video.category}
+              //         </Badge>
+              //       </div> */}
+              //     </div>
+              //     <CardTitle className="text-lg">{video.title}</CardTitle>
+              //   </CardHeader>
+              //   <CardContent className="pt-0">
+              //     <p className="text-gray-600 mb-4">{video.description}</p>
+              //     <Button
+              //       className="w-full bg-primary text-white hover:bg-primary-dark"
+              //       onClick={() =>
+              //         video.url && window.open(video.url, "_blank")
+              //       }
+              //       disabled={!video.url}
+              //     >
+              //       <PlayCircle size={16} className="mr-2" />
+              //       {video.url ? "Watch Now" : "Coming Soon"}
+              //     </Button>
+              //   </CardContent>
+              // </Card>
+
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
-                  <div className="relative bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
-                    {/* Show thumbnail or placeholder */}
+                  <div className="relative bg-gray-100 rounded-lg h-[260px] flex items-center justify-center mb-4 overflow-hidden">
                     {video.url ? (
-                      <img
-                        src={`https://img.youtube.com/vi/${
-                          video.url.split("v=")[1]
-                        }/hqdefault.jpg`}
-                        alt={video.title}
-                        className="w-full h-full object-cover rounded-lg"
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${video.url.split("v=")[1]
+                          }`}
+                        title={video.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="rounded-lg"
                       />
                     ) : (
                       <PlayCircle className="text-primary" size={64} />
@@ -152,30 +208,14 @@ export default function EducationMaterials() {
                         </Badge>
                       </div>
                     )}
-
-                    {/* Category Badge */}
-                    {/* <div className="absolute bottom-4 left-4">
-                      <Badge className="bg-primary text-white">
-                        {video.category}
-                      </Badge>
-                    </div> */}
                   </div>
                   <CardTitle className="text-lg">{video.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-gray-600 mb-4">{video.description}</p>
-                  <Button
-                    className="w-full bg-primary text-white hover:bg-primary-dark"
-                    onClick={() =>
-                      video.url && window.open(video.url, "_blank")
-                    }
-                    disabled={!video.url}
-                  >
-                    <PlayCircle size={16} className="mr-2" />
-                    {video.url ? "Watch Now" : "Coming Soon"}
-                  </Button>
+                  <p className="text-gray-600 mb-0">{video.description}</p>
                 </CardContent>
               </Card>
+
             ))}
           </div>
         </section>
