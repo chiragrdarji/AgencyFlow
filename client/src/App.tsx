@@ -9,6 +9,8 @@ import SupportedPlatforms from "@/pages/SupportedPlatforms";
 import Onboarding from "@/pages/Onboarding";
 import EducationMaterials from "@/pages/EducationMaterials";
 import Contact from "@/pages/Contact";
+import DentrixIntegration from "@/pages/agency-dentrix";
+import AgencyOpenDental from "@/pages/agency-open-dental";
 import NotFound from "@/pages/not-found";
 import { useLocation } from "wouter";
 import { useEffect } from "react";
@@ -27,6 +29,9 @@ function Router() {
         <Route path="/onboarding" component={Onboarding} />
         <Route path="/education" component={EducationMaterials} />
         <Route path="/contact" component={Contact} />
+        <Route path="/dentrix-gohighlevel-integration" component={DentrixIntegration} />
+        <Route path="/open-dental-gohighlevel-integration" component={AgencyOpenDental} />
+       
         <Route component={NotFound} />
       </Switch>
     </Layout>
@@ -45,3 +50,5 @@ function App() {
 }
 
 export default App;
+
+

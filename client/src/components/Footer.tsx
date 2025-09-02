@@ -98,22 +98,22 @@ export default function Footer() {
             <div className="flex items-center mb-6">
               <div className="w-9 h-9 rounded-lg flex items-center justify-center mr-3">
                 <img
-                  src="/sso_logo.svg"
+                  src="/img/sso_logo.svg"
                   alt="SSo Logo"
                   className="w-9 h-9" // adjust size as needed
                 />
               </div>
-              <span className="text-xl font-bold">Smart Sync One</span>
+              <span className="text-xl font-bold">Smart Sync</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Seamless data sync between dental practice management systems and
-              GoHighLevel CRM for marketing agencies and dental practices.
+               CRM for marketing agencies and dental practices.
             </p>
 
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center">
                 <Building2 size={16} className="mr-3 w-4" />
-                <span data-testid="text-company-name">Smart Sync One</span>
+                <span data-testid="text-company-name">Smart Sync </span>
               </div>
               <div className="flex items-center">
                 <MapPin size={16} className="mr-3 w-4" />
@@ -235,7 +235,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
           <p data-testid="text-copyright">
-            &copy; Smart Sync One. All rights reserved.
+            &copy; Smart Sync . All rights reserved.
           </p>
         </div>
       </div>

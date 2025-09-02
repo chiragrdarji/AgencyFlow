@@ -69,7 +69,7 @@ export default function Contact() {
 
   const contactMethods = [
     {
-      icon: "/Phone-Support.svg",
+      icon: "/img/Phone-Support.svg",
       title: "Phone Support",
       description: "Speak with our technical team",
       contact: "+1 630 861 8263",
@@ -77,14 +77,14 @@ export default function Contact() {
       // availability: "Mon-Fri, 9am-6pm EST",
     },
     {
-      icon: "/Email-Support.svg",
+      icon: "/img/Email-Support.svg",
       title: "Email Support",
       description: "Get help via email",
       contact: "support@smartsync.one",
       availability: "Response within 24 hours",
     },
     {
-      icon: "/Schedule-a-Demo.svg",
+      icon: "/img/Schedule-a-Demo.svg",
       title: "Schedule a Demo",
       description: "Book a personalized demonstration",
       contact: "Book online",
@@ -138,7 +138,7 @@ export default function Contact() {
                           </p>
                           {method.title === "Schedule a Demo" ? (
                             <a
-                              href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                              href="https://calendly.com/smart-sync/meeting"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="mt-1 text-sm font-medium text-blue-600 hover:underline"
@@ -409,7 +409,7 @@ export default function Contact() {
           <CardContent className="p-8 text-center">
             <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto mb-4">
               <img
-                  src="/Need-Emergency-Support.png"
+                  src="/img/Need-Emergency-Support.png"
                   alt="Emergency Support icon" // adjust size as needed
                 />
             </div>

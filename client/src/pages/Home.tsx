@@ -249,7 +249,7 @@ export default function Home() {
             </div>
             <div className="relative">
              <img
-                  src="/Smart-Sync-One.gif"
+                  src="/img/Smart-Sync-One.gif"
                   alt="Smart sync Flow Dagram" // adjust size as needed
                 />
             </div>
@@ -280,7 +280,7 @@ export default function Home() {
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-4">
                      <img
-                  src="/For-Marketing-Agencies.svg"
+                  src="/img/For-Marketing-Agencies.svg"
                   alt="For Marketing Agencies"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -330,7 +330,7 @@ export default function Home() {
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-4">
                      <img
-                  src="/For-Dental-Clinics.png"
+                  src="/img/For-Dental-Clinics.png"
                   alt="For Dental Clinics"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -386,7 +386,7 @@ export default function Home() {
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
                    <img
-                  src="/Manual Data Entry.svg"
+                  src="/img/Manual Data Entry.svg"
                   alt="Manual Data Entry"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -406,7 +406,7 @@ export default function Home() {
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
                    <img
-                  src="/Inaccurate-Campaigns.svg"
+                  src="/img/Inaccurate-Campaigns.svg"
                   alt="Inaccurate Campaigns"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -426,7 +426,7 @@ export default function Home() {
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
                   <img
-                  src="/No-ROI-Visibility.svg"
+                  src="/img/No-ROI-Visibility.svg"
                   alt="No ROI Visibility"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -465,7 +465,7 @@ export default function Home() {
                 <div className="flex items-start">
                   <div className="w-12 h-12 rounded-lg flex items-center justify-center mr-4 mt-1">
                     <img
-                  src="/Two-Way-Data-Sync.svg"
+                  src="/img/Two-Way-Data-Sync.svg"
                   alt="Two-Way Data FolderSync"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -484,7 +484,7 @@ export default function Home() {
                 <div className="flex items-start">
                   <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-4 mt-1">
                     <img
-                  src="/Live-Appointment-Availability.png"
+                  src="/img/Live-Appointment-Availability.png"
                   alt="Live Appointment Availability"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -503,7 +503,7 @@ export default function Home() {
                 <div className="flex items-start">
                   <div className="w-12 h-12  rounded-lg flex items-center justify-center mr-4 mt-1">
                     <img
-                  src="/Smart-Campaign-Triggers.svg"
+                  src="/img/Smart-Campaign-Triggers.svg"
                   alt="Smart Campaign Triggers"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -603,7 +603,7 @@ export default function Home() {
               <CardContent className="p-8">
                 <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
                    <img
-                  src="/Sync-What-Matters-Most.svg"
+                  src="/img/Sync-What-Matters-Most.svg"
                   alt="FolderSync What Matters Most"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -621,8 +621,13 @@ export default function Home() {
             <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-8">
                 <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-0">
-                  <img
+                  {/* <img
                   src="/Prove-ROI-with-Confidence.svg"
+                  alt="Prove ROI with Confidence"
+                  className="w-9 h-9" // adjust size as needed
+                /> */}
+                 <img
+                  src="/img/Prove-ROI-with-Confidence1.svg"
                   alt="Prove ROI with Confidence"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -641,7 +646,7 @@ export default function Home() {
               <CardContent className="p-8">
                 <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
                    <img
-                  src="/HIPAA-Conscious-Design.svg"
+                  src="/img/HIPAA-Conscious-Design.svg"
                   alt="HIPAA-Conscious Design"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -660,7 +665,7 @@ export default function Home() {
               <CardContent className="p-8">
                 <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
                    <img
-                  src="/Set-It-and-Forget-It .svg"
+                  src="/img/Set-It-and-Forget-It .svg"
                   alt="Set It and Forget It"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -679,7 +684,7 @@ export default function Home() {
               <CardContent className="p-8">
                 <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
                    <img
-                  src="/Real-Time-Updates.png"
+                  src="/img/Real-Time-Updates.png"
                   alt="Real-Time Updates"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -698,7 +703,7 @@ export default function Home() {
               <CardContent className="p-8">
                 <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
                    <img
-                  src="/Analytics-Dashboard.png"
+                  src="/img/Analytics-Dashboard.png"
                   alt="Analytics Dashboard"
                   className="w-9 h-9" // adjust size as needed
                 />
@@ -740,7 +745,7 @@ export default function Home() {
                 Install the App
               </h3>
               <p className="text-gray-600">
-                Download from the marketplace and install on your GHL account
+                Download from the marketplace and install on your CRM account
               </p>
             </div>
 
@@ -765,7 +770,7 @@ export default function Home() {
                 Map Data Fields
               </h3>
               <p className="text-gray-600">
-                One-time field mapping between PMS and GoHighLevel during
+                One-time field mapping between PMS and CRM during
                 setup.
               </p>
             </div>
@@ -906,7 +911,7 @@ export default function Home() {
               data-testid="button-final-book-demo"
             >
               <a
-                href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                href="https://calendly.com/smart-sync/meeting"
                 target="_blank"
                 rel="noopener noreferrer"
               >

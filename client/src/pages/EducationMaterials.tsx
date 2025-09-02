@@ -36,14 +36,14 @@ const videoTutorials = [
     category: "Marketing",
     url: "https://www.youtube.com/watch?v=RoFXn45J6ts",
   },
-  {
-    title: "Troubleshooting Common Issues",
-    duration: "",
-    description: "Resolve sync problems and optimize performance",
-    thumbnail: "troubleshooting",
-    category: "Support",
-    url: null, // no link
-  },
+  // {
+  //   title: "Troubleshooting Common Issues",
+  //   duration: "",
+  //   description: "Resolve sync problems and optimize performance",
+  //   thumbnail: "troubleshooting",
+  //   category: "Support",
+  //   url: null, // no link
+  // },
 ];
 
 const guides = [
@@ -62,7 +62,7 @@ const guides = [
     category: "Marketing"
   },
   {
-    title: "ROI Tracking Manual", 
+    title: "ROI Tracking Manual",
     description: "How to measure and report marketing effectiveness to dental clients",
     icon: Calculator,
     pages: 18,
@@ -85,7 +85,7 @@ const templates = [
   },
   {
     name: "Reactivation Campaign",
-    description: "Win back inactive patients with targeted messaging", 
+    description: "Win back inactive patients with targeted messaging",
     type: "Multi-channel"
   },
   {
@@ -94,7 +94,7 @@ const templates = [
     type: "Automation"
   },
   {
-    name: "Monthly ROI Report Template", 
+    name: "Monthly ROI Report Template",
     description: "Professional client reporting template",
     type: "Report"
   }
@@ -124,17 +124,73 @@ export default function EducationMaterials() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {videoTutorials.map((video, index) => (
+              // <Card key={index} className="hover:shadow-lg transition-shadow">
+              //   <CardHeader className="pb-4">
+              //     <div className="relative bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
+              //       {/* Show thumbnail or placeholder */}
+              //       {video.url ? (
+              //         <img
+              //           src={`https://img.youtube.com/vi/${
+              //             video.url.split("v=")[1]
+              //           }/hqdefault.jpg`}
+              //           alt={video.title}
+              //           className="w-full h-full object-cover rounded-lg"
+              //         />
+              //       ) : (
+              //         <PlayCircle className="text-primary" size={64} />
+              //       )}
+
+              //       {/* Duration Badge */}
+              //       {video.duration && (
+              //         <div className="absolute top-4 right-4">
+              //           <Badge
+              //             variant="secondary"
+              //             className="bg-black/50 text-white"
+              //           >
+              //             <Clock size={12} className="mr-1" />
+              //             {video.duration}
+              //           </Badge>
+              //         </div>
+              //       )}
+
+              //       {/* Category Badge */}
+              //       {/* <div className="absolute bottom-4 left-4">
+              //         <Badge className="bg-primary text-white">
+              //           {video.category}
+              //         </Badge>
+              //       </div> */}
+              //     </div>
+              //     <CardTitle className="text-lg">{video.title}</CardTitle>
+              //   </CardHeader>
+              //   <CardContent className="pt-0">
+              //     <p className="text-gray-600 mb-4">{video.description}</p>
+              //     <Button
+              //       className="w-full bg-primary text-white hover:bg-primary-dark"
+              //       onClick={() =>
+              //         video.url && window.open(video.url, "_blank")
+              //       }
+              //       disabled={!video.url}
+              //     >
+              //       <PlayCircle size={16} className="mr-2" />
+              //       {video.url ? "Watch Now" : "Coming Soon"}
+              //     </Button>
+              //   </CardContent>
+              // </Card>
+
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader className="pb-4">
-                  <div className="relative bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
-                    {/* Show thumbnail or placeholder */}
+                  <div className="relative bg-gray-100 rounded-lg h-[260px] flex items-center justify-center mb-4 overflow-hidden">
                     {video.url ? (
-                      <img
-                        src={`https://img.youtube.com/vi/${
-                          video.url.split("v=")[1]
-                        }/hqdefault.jpg`}
-                        alt={video.title}
-                        className="w-full h-full object-cover rounded-lg"
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${video.url.split("v=")[1]
+                          }`}
+                        title={video.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="rounded-lg"
                       />
                     ) : (
                       <PlayCircle className="text-primary" size={64} />
@@ -152,36 +208,20 @@ export default function EducationMaterials() {
                         </Badge>
                       </div>
                     )}
-
-                    {/* Category Badge */}
-                    {/* <div className="absolute bottom-4 left-4">
-                      <Badge className="bg-primary text-white">
-                        {video.category}
-                      </Badge>
-                    </div> */}
                   </div>
                   <CardTitle className="text-lg">{video.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-gray-600 mb-4">{video.description}</p>
-                  <Button
-                    className="w-full bg-primary text-white hover:bg-primary-dark"
-                    onClick={() =>
-                      video.url && window.open(video.url, "_blank")
-                    }
-                    disabled={!video.url}
-                  >
-                    <PlayCircle size={16} className="mr-2" />
-                    {video.url ? "Watch Now" : "Coming Soon"}
-                  </Button>
+                  <p className="text-gray-600 mb-0">{video.description}</p>
                 </CardContent>
               </Card>
+
             ))}
           </div>
         </section>
 
         {/* Guides & Documentation */}
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Guides & Documentation
           </h2>
@@ -213,7 +253,7 @@ export default function EducationMaterials() {
                     <p className="text-gray-600 mb-6">{guide.description}</p>
                     <Button
                       variant="outline"
-                      className="w-full hover:bg-primary"
+                      className="w-full hover:bg-primary hover:text-white"
                       data-testid={`button-download-${index}`}
                     >
                       <Download size={16} className="mr-2" />
@@ -224,10 +264,10 @@ export default function EducationMaterials() {
               );
             })}
           </div>
-        </section>
+        </section> */}
 
         {/* Campaign Templates */}
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Campaign Templates
           </h2>
@@ -255,7 +295,7 @@ export default function EducationMaterials() {
                     <Button
                       size="sm"
                       variant="outline"
-                      className="w-full hover:bg-primary"
+                      className="w-full hover:bg-primary hover:text-white" 
                       data-testid={`button-template-${index}`}
                     >
                       <Download size={14} className="mr-2" />
@@ -266,10 +306,10 @@ export default function EducationMaterials() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ROI Calculator */}
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <Card className="bg-primary text-white">
             <CardContent className="p-8 text-center">
               <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -292,7 +332,7 @@ export default function EducationMaterials() {
               </Button>
             </CardContent>
           </Card>
-        </section>
+        </section> */}
 
         {/* Best Practices */}
         <section className="mb-20">
@@ -310,10 +350,10 @@ export default function EducationMaterials() {
             <Card>
               <CardContent className="p-8 text-center">
                 <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
-                 <img
-                  src="/Patient-Segmentatio.svg"
-                  alt="Patient Segmentation" // adjust size as needed
-                />
+                  <img
+                    src="/img/Patient-Segmentatio.svg"
+                    alt="Patient Segmentation" // adjust size as needed
+                  />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-4">
                   Patient Segmentation
@@ -329,9 +369,9 @@ export default function EducationMaterials() {
               <CardContent className="p-8 text-center">
                 <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
                   <img
-                  src="/Timing-Optimization.svg"
-                  alt="Timing Optimization" // adjust size as needed
-                />
+                    src="/img/Timing-Optimization.svg"
+                    alt="Timing Optimization" // adjust size as needed
+                  />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-4">
                   Timing Optimization
@@ -347,9 +387,9 @@ export default function EducationMaterials() {
               <CardContent className="p-8 text-center">
                 <div className="w-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <img
-                  src="/Performance-Tracking.png"
-                  alt="Performance Tracking" // adjust size as needed
-                />
+                    src="/img/Performance-Tracking.png"
+                    alt="Performance Tracking" // adjust size as needed
+                  />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-4">
                   Performance Tracking

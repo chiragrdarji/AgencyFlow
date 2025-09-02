@@ -10,7 +10,7 @@ interface FAQProps {
   items: FAQItem[];
 }
 
-export default function FAQ({ items }: FAQProps) {
+export default function FAQ({ items }: any) {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 
   const toggleItem = (index: number) => {
@@ -25,7 +25,7 @@ export default function FAQ({ items }: FAQProps) {
 
   return (
     <div className="space-y-6">
-      {items.map((item, index) => (
+      {items.map((item:any, index:any) => (
         <div key={index} className="bg-white rounded-lg border border-gray-200">
           <button
             className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors"
@@ -40,7 +40,7 @@ export default function FAQ({ items }: FAQProps) {
             )}
           </button>
           {openItems.has(index) && (
-            <div className="p-6 pt-0 border-t border-gray-100" data-testid={`faq-answer-${index}`}>
+            <div className="p-6 pt-4 border-t border-gray-100" data-testid={`faq-answer-${index}`}>
               <p className="text-gray-600">{item.answer}</p>
             </div>
           )}

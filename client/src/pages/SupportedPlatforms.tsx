@@ -17,7 +17,7 @@ const platforms = [
       "All modules supported",
       "Cloud & On-premise",
     ],
-     imgUrl:"/Dentrix-icon.png"
+     imgUrl:"/img/Dentrix-icon.png"
   },
   {
     name: "Open Dental",
@@ -26,35 +26,35 @@ const platforms = [
     color: "green-600",
     url: "https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af",
     features: ["Real-time sync", "Two-way data flow", "Custom field mapping"],
-    imgUrl:"/Open-Dental-icon.png"
+    imgUrl:"/img/Open-Dental-icon.png"
   },
   {
     name: "EagleSoft",
     description: "Patterson Dental",
     status: "coming-soon",
     color: "gray-400",
-    url: "https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08",
+    url: "https://calendly.com/smart-sync/meeting",
     features: [
       "Real-time sync",
       "Two-way data flow",
       "All modules supported",
       "Cloud & On-premise",
     ],
-     imgUrl:"/EagleSoft-icon.png"
+     imgUrl:"/img/EagleSoft-icon.png"
   },
   {
     name: "Curve Dental",
     description: "Cloud-based PMS",
     status: "coming-soon",
     color: "gray-400",
-    url: "https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08",
+    url: "https://calendly.com/smart-sync/meeting",
     features: [
       "Real-time sync",
       "Two-way data flow",
       "All modules supported",
       "Cloud & On-premise",
     ],
-     imgUrl:"/Curve-Dental.png"
+     imgUrl:"/img/Curve-Dental.png"
   },
 ];
 
@@ -107,24 +107,23 @@ export default function SupportedPlatforms() {
                 </p>
 
                 <div className="mb-6">
-                  {platform.status === "available" ? (
-                    <Badge
-                      className="bg-green-100 text-green-800"
-                      data-testid={`status-${platform.name.toLowerCase()}`}
-                    >
-                      <CheckCircle size={12} className="mr-1" />
-                      Available Now
-                    </Badge>
-                  ) : (
-                    <Badge
-                      variant="secondary"
-                      className="bg-yellow-100 text-yellow-800"
-                      data-testid={`status-${platform.name.toLowerCase()}`}
-                    >
-                      <Clock size={12} className="mr-1" />
-                      Coming Soon
-                    </Badge>
-                  )}
+                 {platform.status === "available" ? (
+                      <Badge
+                        className="bg-green-100 text-green-800"
+                        data-testid={`status-${platform.name.toLowerCase()}`}
+                      >
+                        <CheckCircle size={12} className="mr-1" />
+                        Available Now
+                      </Badge>
+                    ) : (
+                      <Badge
+                        variant="secondary"
+                        className="bg-green-100 text-green-800"
+                        data-testid={`status-${platform.name.toLowerCase()}`}
+                      >
+                        <Clock size={12} className="mr-1" />2 months Free Trial
+                      </Badge>
+                    )}
                 </div>
 
                 <ul className="text-sm text-gray-600 mb-6 space-y-2 h-[100px]">
@@ -146,17 +145,30 @@ export default function SupportedPlatforms() {
                   ))}
                 </ul>
 
-                <Button
-                  className={`w-full ${
-                    platform.status === "available"
-                      ? "bg-primary text-white hover:bg-primary-dark"
-                      : "bg-gray-300 text-gray-600 cursor-not-allowed"
-                  }`}
-                  disabled={platform.status === "coming-soon"}
-                  data-testid={`button-${platform.name.toLowerCase()}`}
-                >
-                  {platform.status === "available" ? "Buy Now" : "Book Demo"}
-                </Button>
+                {platform.status === "available" ? (
+                    <Button
+                      asChild
+                      className="w-full bg-primary text-white hover:bg-primary-dark"
+                    >
+                      <a
+                        href={platform?.url || ""}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Buy Now
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button className="w-full bg-primary text-white hover:bg-primary-dark">
+                      <a
+                        href={platform?.url || ""}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Book Demo
+                      </a>
+                    </Button>
+                  )}
               </CardContent>
             </Card>
           ))}
@@ -171,7 +183,7 @@ export default function SupportedPlatforms() {
             <div>
               <div className="w-12 h-12  rounded-lg flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/Data-Security.png"
+                  src="/img/Data-Security.png"
                   alt="Data Security" // adjust size as needed
                 />
               </div>
@@ -184,7 +196,7 @@ export default function SupportedPlatforms() {
             <div>
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/Setup-Time.svg"
+                  src="/img/Setup-Time.svg"
                   alt="Setup Time" // adjust size as needed
                 />
               </div>
@@ -196,7 +208,7 @@ export default function SupportedPlatforms() {
             <div>
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/Real-time-Sync.svg"
+                  src="/img/Real-time-Sync.svg"
                   alt="Real-time Sync" // adjust size as needed
                 />
               </div>
@@ -224,7 +236,7 @@ export default function SupportedPlatforms() {
               data-testid="button-book-demo"
             >
               <a
-                href="https://calendly.com/dental-support-varianceinfotech/book-a-demo?month=2025-08"
+                href="https://calendly.com/smart-sync/meeting"
                 target="_blank"
                 rel="noopener noreferrer"
               >
