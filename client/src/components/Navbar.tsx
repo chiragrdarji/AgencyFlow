@@ -158,7 +158,7 @@ export default function Navbar() {
     </TooltipProvider> */}
             <Button
               data-testid="button-book-demo"
-              className="bg-primary text-white hover:bg-primary-dark"
+              className="bg-primary text-white hover:bg-primary-dark hidden lg:block"
             >
               <a
                 href="https://calendly.com/smart-sync/meeting"

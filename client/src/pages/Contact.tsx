@@ -20,6 +20,7 @@ export default function Contact() {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
+      firstname: "",
       name: "",
       email: "",
       phone: "",
@@ -222,12 +223,25 @@ export default function Contact() {
                     className="space-y-6"
                   >
                     <div className="grid md:grid-cols-2 gap-4">
+                       <FormField
+                        control={form.control}
+                        name="firstname"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>First Name *</FormLabel>
+                            <FormControl>
+                              <Input {...field} data-testid="input-name" />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                        />
                       <FormField
                         control={form.control}
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Name *</FormLabel>
+                            <FormLabel>Last Name *</FormLabel>
                             <FormControl>
                               <Input {...field} data-testid="input-name" />
                             </FormControl>

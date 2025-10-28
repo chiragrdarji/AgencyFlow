@@ -44,7 +44,7 @@ export default function SetupFlow({ steps }: SetupFlowProps) {
             </div>
 
             {/* Right Column */}
-            <div className="lg:w-[60%] h-[320px]">
+            <div className="lg:w-[60%] lg-h-[320px]">
                 <Card className="shadow-lg border-0">
                     <CardContent className="p-6 bg-gradient-to-br from-primary-light to-blue-50 rounded-lg ">
                         {selectedStep.image && (

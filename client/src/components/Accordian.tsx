@@ -9,7 +9,7 @@ export default function Accordian() {
   };
 
   return (
-    <div className="w-full md:hidden"> {/* only visible on mobile */}
+    <div className="w-full lg:hidden"> {/* only visible on mobile */}
       {/* Menu Section */}
       <div>
         <button
@@ -45,7 +45,7 @@ export default function Accordian() {
               className="block text-sm text-slate-700 py-2 hover:text-primary"
               onClick={() => setOpenSection(null)}
             >
-              Support Platforms
+              Other Platforms
             </Link>
           </div>
         )}

@@ -13,6 +13,7 @@ import { useEffect } from "react";
 
 // 1️⃣ Define schema
 const footerFormSchema = z.object({
+  firstname: z.string().min(2, "Name must be at least 2 characters"),
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   phone: z
@@ -41,6 +42,7 @@ export default function Footer() {
   const form = useForm<FooterFormData>({
     resolver: zodResolver(footerFormSchema),
     defaultValues: {
+      firstname: "",
       name: "",
       email: "",
       phone: "",
@@ -167,12 +169,30 @@ export default function Footer() {
               >
                 <FormField
                   control={form.control}
+                  name="firstname"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder="First Name"
+                          className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
+                          data-testid="input-footer-name"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
                         <Input
-                          placeholder="Name"
+                          placeholder="Last Name"
                           className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
                           data-testid="input-footer-name"
                           {...field}

@@ -29,7 +29,7 @@ const faqItems = [
       "Setup typically takes about 45 minutes with our team. We handle the technical configuration, field mapping, and testing to ensure everything works perfectly before going live.",
   },
   {
-    question: "Is patient data secure and HIPAA compliant?",
+    question: "Is patient data secure and HIPAA conscious?",
     answer:
       "We are HIPAA conscious. We only sync essential business data (no medical records), use encrypted connections, and automatically delete data from our connector once it's successfully transferred. No treatment or medical data is ever accessed or stored.",
   },
@@ -75,10 +75,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Structured Data for SEO */}
-      <StructuredData type="organization" />
+      {/* <StructuredData type="organization" />
       <StructuredData type="softwareApplication" />
       <StructuredData type="product" />
-      <StructuredData type="localBusiness" />
+      <StructuredData type="localBusiness" /> */}
       {/* FAQ Structured Data */}
       <script
         type="application/ld+json"
@@ -109,7 +109,7 @@ export default function Home() {
               "Seamless real-time data synchronization between dental practice management systems (Dentrix, Open Dental, EagleSoft, Curve Dental) and GoHighLevel CRM for marketing agencies.",
             brand: {
               "@type": "Brand",
-              name: "Variance infotech LLC",
+              name: "Smart Sync",
             },
             category: "Software Integration Tool",
             offers: [
@@ -123,7 +123,7 @@ export default function Home() {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "Variance infotech LLC",
+                  name: "Smart Sync",
                 },
               },
               {
@@ -136,7 +136,7 @@ export default function Home() {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "Variance infotech LLC",
+                  name: "Smart Sync",
                 },
               },
             ],
@@ -295,27 +295,27 @@ export default function Home() {
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 w-fit">
                       Run smarter, data-driven campaigns with real-time patient
                       info
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 w-fit">
                       No more CSV imports or outdated contact lists
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 w-fit">
                       Automate reminders, confirmations, and offers with
                       accurate data
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-success mt-1 mr-3" size={24} />
-                    <span className="text-gray-700">
+                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
+                    <span className="text-gray-700 w-fit">
                       Provide new patients, reactivations, appointments booked,
                       and revenue generated to dental practices
                     </span>
@@ -345,20 +345,20 @@ export default function Home() {
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 w-fit">
                       Reduce admin work and eliminate double entry
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">
+                    <CheckCircle className="text-success mt-1 mr-3 " size={16} />
+                    <span className="text-gray-700 w-fit">
                       Keep schedules, patients, and payments in sync
                       automatically
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-success mt-1 mr-3" size={16} />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 w-fit">
                       Improve patient experience with real-time appointment
                       availability
                     </span>

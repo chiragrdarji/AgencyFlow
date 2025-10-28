@@ -12,7 +12,7 @@ export default function DentrixIntegration() {
         name: "What does this integration do?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It automatically syncs patient data, appointments, contacts, companies and more from Dentrix to GoHighLevel—streamlining operations and enabling smarter marketing automation.",
+          text: "Smart Sync application syncs patients, providers, appointments, and payments between Dentrix and GoHighLevel so you can focus on growing your clients' practices.",
         },
       },
       {
@@ -68,7 +68,7 @@ export default function DentrixIntegration() {
         name: "How much does the Dentrix to GoHighLevel integration cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It's just 149$ per Dentrix instance per month, which includes full access to automated syncing, support, and updates. Volume pricing is available for multiple instances.",
+          text: "Pricing starts at $150 per Dentrix instance per month and goes up to $200, depending on the plan.",
         },
       },
     ],
@@ -111,8 +111,17 @@ export default function DentrixIntegration() {
     ],
     publisher: {
       "@type": "Organization",
-      name: "Variance Infotech",
+      name: "Smart Sync",
     },
+
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "10% off when purchased annually"
+    }
   };
 
   return (

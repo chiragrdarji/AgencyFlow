@@ -172,7 +172,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
       {
         question: "What does this integration do?",
         answer:
-          "This integration seamlessly syncs patient data, appointments, contacts, and company records from OpenDental into GoHighLevel. It reduces manual work, keeps your data consistent, and helps you run smarter, automated marketing and communication campaigns.",
+          "Smart Sync application syncs patients, providers, appointments, and payments between Open Dental and GoHighLevel so you can focus on growing your clients' practices.",
       },
       {
         question: "Is the data sync real-time?",
@@ -219,7 +219,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
       {
         question: "How much does the OpenDental to GoHighLevel integration cost?",
         answer:
-          "The integration is $99 per OpenDental instance per month. This includes automated syncing, ongoing updates, and full support. Discounts are available for multiple instances.",
+          "Pricing starts at $79 per OpenDental instance per month and goes up to $129, depending on the plan.",
       },
       // {
       //   question: "How long does setup take?",
@@ -251,7 +251,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
       {
         question: "What does this integration do?",
         answer:
-          "The integration automatically syncs patient data, appointments, contacts, companies, and more from Dentrix into GoHighLevel—streamlining operations and powering smarter marketing automation.",
+          "Smart Sync application syncs patients, providers, appointments, and payments between Open Dental and GoHighLevel so you can focus on growing your clients practices.",
       },
       {
         question: "Is the data sync real-time?",
@@ -298,7 +298,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
       {
         question: "How much does the Dentrix to GoHighLevel integration cost?",
         answer:
-          "The integration is $149 per Dentrix instance per month and includes automated syncing, full support, and ongoing updates. Discounted pricing is available for multiple instances.",
+          "Pricing starts at $150 per Dentrix instance per month and goes up to $200, depending on the plan.",
       },
       // {
       //   question: "How long does setup take?",
@@ -378,7 +378,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
         stepNo:"Step 3:-",
         title: " Choose the required module to sync with GHL and set up the calendar",
         description: "Select the module to sync with GHL and configure the calendar.",
-        image: "/img/dentrix/dentrix-gohighlevel-calendar-mapping-step2 (1).png",
+        image: "/img/dentrix/dentrix-gohighlevel-calendar-mapping-step3.png",
         alt: "Dentix Connector calendar mapping screen in GoHighLevel showing provider-to-calendar synchronization setup",
       },
       {
@@ -677,7 +677,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
             </h2>
           </div>
           <SetupFlow steps={steps} />
-          <div className="flex flex-col sm:flex-row  gap-4 justify-start mb-8 mt-[-20px] ms-4">
+          <div className="flex flex-col sm:flex-row  gap-4 justify-start mb-8 mt-[20px] lg:mt-[-20px] ms-4">
             <Button
               className="bg-primary text-white px-8 py-4 text-lg hover:bg-blue-600 transition-all shadow-lg hover:shadow-xl"
               data-testid="button-start-trial-cta"
@@ -790,11 +790,11 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
               {isOpenDental
-                ? "Get started with Open Dental + GoHighLevel integration for just $149/month. Includes setup, ongoing support, and regular updates."
-                : "Start with Dentrix + GoHighLevel integration from $75/month per practice. Includes HIPAA conscious, multi-practice support, and ROI tracking."}
+                ? "Get started with Open Dental + GoHighLevel integration today. Includes setup, ongoing support, and regular updates."
+                : "Start with Dentrix + GoHighLevel integration today. Includes HIPAA conscious, multi-practice support, and ROI tracking."}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+            {/* <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm border border-white/20">
                 <div className="text-3xl font-bold text-white mb-2">
                   {isOpenDental ? "$79" : "$150"}
@@ -836,7 +836,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
                   </div>
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

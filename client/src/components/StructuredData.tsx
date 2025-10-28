@@ -12,29 +12,28 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
         return {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Variance infotech LLC",
-          "url": baseUrl,
-          "logo": `${baseUrl}/logo.png`,
+          "name": "Smart Sync",
+          "url": "https://smartsync.one",
+          "logo": `/img/sso_logo.svg`,
           "description": "Seamless data sync between dental practice management systems and GoHighLevel CRM for marketing agencies and dental practices.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Main Street, Suite 456",
-            "addressLocality": "Austin",
-            "addressRegion": "TX",
-            "postalCode": "78701",
-            "addressCountry": "US"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-555-123-4567",
-            "contactType": "customer service",
-            "email": "support@dentrixconnector.com",
-            "availableLanguage": "English"
-          },
-          "sameAs": [
-            "https://linkedin.com/company/dentrix-connector",
-            "https://twitter.com/dentrixconnector"
-          ]
+           "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30 N Gould St. Sheridan, WY 82801 USA",
+        "addressLocality": "Sheridan",
+        "addressRegion": "WY",
+        "postalCode": "82801",
+        "addressCountry": "USA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1 630 861 8263",
+        "contactType": "customer service",
+        "email": "info@smartsync.one",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/smart-sync-one/"
+      ]
         };
 
       case 'softwareApplication':

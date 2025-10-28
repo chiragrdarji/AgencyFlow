@@ -11,7 +11,7 @@ export default function OpenDentalIntegration() {
         name: "What does this integration do?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It automatically syncs patient data, appointments, contacts, companies, and more from OpenDental to GoHighLevel—streamlining operations and enabling smarter marketing automation.",
+          text: "Smart Sync application syncs patients, providers, appointments, and payments between Open Dental and GoHighLevel so you can focus on growing your clients' practices.",
         },
       },
       {
@@ -67,7 +67,7 @@ export default function OpenDentalIntegration() {
         name: "How much does the OpenDental to GoHighLevel integration cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It’s just $99 per OpenDental instance per month, which includes full access to automated syncing, support, and updates. Volume pricing is available for multiple instances.",
+          text: "Pricing starts at $79 per OpenDental instance per month and goes up to $129, depending on the plan.",
         },
       },
     ],
@@ -110,8 +110,16 @@ export default function OpenDentalIntegration() {
     ],
     publisher: {
       "@type": "Organization",
-      name: "Variance Infotech",
+      name: "Smart Sync",
     },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "10% off when purchased annually"
+    }
   };
 
   return (

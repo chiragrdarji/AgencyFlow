@@ -28,7 +28,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #2563eb;">New Contact Form Submission</h2>
             <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Firstname:</strong> ${data.firstname}</p>
+              <p><strong>LastName:</strong> ${data.name}</p>
               <p><strong>Email:</strong> ${data.email}</p>
               <p><strong>Phone:</strong> ${data.phone}</p>
               <p><strong>Company:</strong> ${data?.company || 'N/A'}</p>
@@ -52,12 +53,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <h2 style="color: #2563eb;">Thank You for Your Message</h2>
-            <p>Hi ${data.name},</p>
+            <p>Hi ${data.firstname + data.name},</p>
             <p>Thank you for reaching out to Smart Sync One. We've received your message and will get back to you within 24 hours.</p>
            
             <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="margin-top: 0;">Your Message Summary:</h3>
-               <p><strong>Name:</strong> ${data.name}</p>
+              <p><strong>Firstname:</strong> ${data.firstname}</p>
+               <p><strong>Lastname:</strong> ${data.name}</p>
               <p><strong>Email:</strong> ${data.email}</p>
               <p><strong>Phone:</strong> ${data.phone}</p>
               <p><strong>Subject:</strong> ${data?.subject || "N/A"}</p>
@@ -74,7 +76,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
            
             <hr style="margin: 20px 0; border: none; border-top: 1px solid #e5e7eb;">
             <p style="color: #6b7280; font-size: 14px;">
-              Smart Sync One Powered By   Variance infotech LLC<br>
+              Smart Sync<br>
               30 N Gould St. Sheridan,WY 82801 USA<br>
               info@smartsync.one
             </p>
@@ -94,6 +96,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       formData.append("publicid", "ce7759c959365d3a4a58bdf69305bcf8");
       formData.append("urlencodeenable", "1");
       formData.append("name", "Lead Capture smartsync");
+       formData.append("firstname", data.firstname || "");
       formData.append("lastname", data.name || "");
       formData.append("cf_1154", data.subject || "");
       formData.append("company", data.company || "");
