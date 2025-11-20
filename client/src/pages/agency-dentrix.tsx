@@ -7,6 +7,23 @@ export default function DentrixIntegration() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
+       {
+        "@type": "Question",
+        name: "WWhat is a PMS API?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A PMS API is a secure interface that allows dental practice management systems to sync data with external tools like CRMs.",
+        },
+      },
+       {
+        "@type": "Question",
+        name: "Do we support Dentrix Ascend API?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we currently support the Dentrix Ascend API.",
+        },
+      },
+
       {
         "@type": "Question",
         name: "What does this integration do?",
@@ -140,24 +157,24 @@ export default function DentrixIntegration() {
         </script>
 
         {/* SEO Meta Tags */}
-        <title>Dentrix to GoHighLevel Integration - SmartSync</title>
+        <title>Dentrix to GoHighLevel Integration | Dental PMS-CRM Sync</title>
         <meta
           name="description"
-          content="Seamlessly integrate Dentrix with GoHighLevel. Sync patients, appointments, and automate your dental practice workflows."
+          content="Seamless Dentrix integration into GoHighLevel for dental agencies Sync patients, appointments & payments from your dental PMS into CRM in real-time."
         />
         <meta
           name="keywords"
-          content="dentrix integration, gohighlevel, dental software, practice management, patient sync, appointment sync"
+          content="dentrix integration, dental pms ghl integration, dental agencies, practices needing sync, dentrix to gohighlevel, dental pms to crm"
         />
 
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Dentrix to GoHighLevel Integration - SmartSync"
+          content="Dentrix to GoHighLevel Integration | Dental PMS-CRM Sync"
         />
         <meta
           property="og:description"
-          content="Automate your dental practice with seamless Dentrix to GoHighLevel integration. Real-time patient and appointment syncing."
+          content="Seamless Dentrix integration into GoHighLevel for dental agencies Sync patients, appointments & payments from your dental PMS into CRM in real-time."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -169,11 +186,11 @@ export default function DentrixIntegration() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Dentrix to GoHighLevel Integration"
+          content=" Dentrix to GoHighLevel Integration | Dental PMS-CRM Sync"
         />
         <meta
           name="twitter:description"
-          content="Seamless integration between Dentrix and GoHighLevel for dental practices"
+          content="Seamless Dentrix integration into GoHighLevel for dental agencies Sync patients, appointments & payments from your dental PMS into CRM in real-time."
         />
       </Helmet>
 

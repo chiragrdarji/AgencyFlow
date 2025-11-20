@@ -16,6 +16,22 @@
     "mainEntity": [
       {
         "@type": "Question",
+        name: "WWhat is a PMS API?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A PMS API is a secure interface that allows dental practice management systems to sync data with external tools like CRMs.",
+        },
+      },
+       {
+        "@type": "Question",
+        name: "Do we support Dentrix Ascend API?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we currently support the Dentrix Ascend API.",
+        },
+      },
+      {
+        "@type": "Question",
         "name": "What does this integration do?",
         "acceptedAnswer": {
           "@type": "Answer",
