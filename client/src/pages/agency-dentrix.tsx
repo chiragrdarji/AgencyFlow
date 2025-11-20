@@ -98,7 +98,7 @@ export default function DentrixIntegration() {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Dentix To GHL Integration",
+        name: "Dentrix to GoHighLevel Integration | Dental PMS-CRM Sync",
         item: "https://smartsync.one/dentrix-gohighlevel-integration",
       },
       {
@@ -113,13 +113,13 @@ export default function DentrixIntegration() {
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Dentrix to GoHighLevel Integration",
+    name: "Dentrix to GoHighLevel Integration | Dental PMS-CRM Sync",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     softwareVersion: "1.0",
     url: "https://smartsync.one/dentrix-gohighlevel-integration",
     description:
-      "Seamlessly integrate Dentrix with GoHighLevel CRM. Sync patients, appointments, providers, and payments to automate your dental practice workflows.",
+      "Seamless Dentrix integration into GoHighLevel for dental agencies Sync patients, appointments & payments from your dental PMS into CRM in real-time.",
     featureList: [
       "Real-time scheduling",
       "Two-way data sync",
