@@ -60,7 +60,8 @@ export async function setupVite(app: Express, server: Server) {
       // Get the template for reference
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
       
-      // Transform through Vite which will inject CSS and HMR
+      // Transform through Vite which will inject CSS, HMR, and preload assets
+      // This needs the original template with the link/script tags for Vite to process
       html = await vite.transformIndexHtml(url, html);
       
       res.status(200).set({ "Content-Type": "text/html" }).end(html);

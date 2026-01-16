@@ -9,7 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from "@/component
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // 1️⃣ Define schema
 const footerFormSchema = z.object({
@@ -27,8 +27,11 @@ const footerFormSchema = z.object({
 type FooterFormData = z.infer<typeof footerFormSchema>;
 
 export default function Footer() {
+  const [isClient, setIsClient] = useState(false);
 
-    const [location] = useLocation();
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const quickLinks = [
     { href: "/", label: "Home" },
@@ -162,94 +165,96 @@ export default function Footer() {
           {/* Contact Form with Validation */}
           <div>
             <h3 className="font-semibold mb-4">Get In Touch</h3>
-            <Form {...form}>
-              <form
-                className="space-y-3"
-                onSubmit={form.handleSubmit(handleSubmit)}
-              >
-                <FormField
-                  control={form.control}
-                  name="firstname"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          placeholder="First Name"
-                          className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
-                          data-testid="input-footer-name"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          placeholder="Last Name"
-                          className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
-                          data-testid="input-footer-name"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          type="text"
-                          placeholder="Email"
-                          className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
-                          data-testid="input-footer-email"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          type="tel"
-                          placeholder="Phone"
-                          className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
-                          data-testid="input-footer-phone"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button
-                  type="submit"
-                  className="w-full bg-primary text-white hover:bg-primary-dark"
-                  data-testid="button-footer-send"
+            {isClient && (
+              <Form {...form}>
+                <form
+                  className="space-y-3"
+                  onSubmit={form.handleSubmit(handleSubmit)}
                 >
-                  Send Message
-                </Button>
-              </form>
-            </Form>
+                  <FormField
+                    control={form.control}
+                    name="firstname"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder="First Name"
+                            className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
+                            data-testid="input-footer-name"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder="Last Name"
+                            className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
+                            data-testid="input-footer-name"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            type="text"
+                            placeholder="Email"
+                            className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
+                            data-testid="input-footer-email"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            type="tel"
+                            placeholder="Phone"
+                            className="bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-primary"
+                            data-testid="input-footer-phone"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-primary text-white hover:bg-primary-dark"
+                    data-testid="button-footer-send"
+                  >
+                    Send Message
+                  </Button>
+                </form>
+              </Form>
+            )}
           </div>
         </div>
 

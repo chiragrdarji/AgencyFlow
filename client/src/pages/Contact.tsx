@@ -39,7 +39,7 @@ export default function Contact() {
     }
   });
 
-  const contactMutation = useMutation({
+  const contactMutation = useMutation<any, Error, ContactFormData>({
     mutationFn: async (data: ContactFormData) => {
       const response = await fetch("/api/contact", {
         method: "POST",
