@@ -1,10 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <script type="module">
+import { createHotContext } from "/@vite/client";
+const hot = createHotContext("/__dummy__runtime-error-plugin");
+
+function sendError(error) {
+  if (!(error instanceof Error)) {
+    error = new Error("(unknown runtime error)");
+  }
+  const serialized = {
+    message: error.message,
+    stack: error.stack,
+  };
+  hot.send("runtime-error-plugin:error", serialized);
+}
+
+window.addEventListener("error", (evt) => {
+  sendError(evt.error);
+});
+
+window.addEventListener("unhandledrejection", (evt) => {
+  sendError(evt.reason);
+});
+</script>
+
+  <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+  <script type="module" src="/@vite/client"></script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title></title>
+  <title>Smart Sync One – Patient Data Sync for Dental Agencies</title>
   <meta name="description"
     content="Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients' dental practices.">
 
@@ -115,7 +150,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH6TJ27T" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <div id="root"></div>
-  <script type="module" src="/src/entry-client.tsx"></script>
+  <script type="module" src="/src/main.tsx?v=0j4NPNnGydBn1W-9wb4wG"></script>
   <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
   <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
   <!-- <script type="text/javascript" src="/js/opendental-json.js"></script>

@@ -25,13 +25,28 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    target: "ES2020",
+    outDir: path.resolve(import.meta.dirname, "dist/client"),
     emptyOutDir: true,
+    // Generate manifest for SSR
+    manifest: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(import.meta.dirname, "client", "index.html"),
+      },
+      output: {
+        format: "es",
+      },
+    },
   },
   server: {
+    middlewareMode: true,
     fs: {
       strict: true,
       deny: ["**/.*"],
     },
+  },
+  ssr: {
+    external: ["express"],
   },
 });

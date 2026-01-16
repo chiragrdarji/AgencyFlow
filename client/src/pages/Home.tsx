@@ -3,6 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import AnimatedDataFlow from "@/components/AnimatedDataFlow";
 import FAQ from "@/components/FAQ";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
+import SchemaMarkup, { getFAQSchema, getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import { getMetaTags } from "@/lib/seoMeta";
 import {
   Zap,
   Megaphone,
@@ -71,117 +74,21 @@ const testimonials = [
   },
 ];
 
+const metaTags = getMetaTags('home');
+
 export default function Home() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://smartsync.one/' },
+  ]);
+
+  const faqSchema = getFAQSchema(faqItems);
+
   return (
-    <div className="min-h-screen">
-      {/* Structured Data for SEO */}
-      {/* <StructuredData type="organization" />
-      <StructuredData type="softwareApplication" />
-      <StructuredData type="product" />
-      <StructuredData type="localBusiness" /> */}
-      {/* FAQ Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqItems.map((item) => ({
-              "@type": "Question",
-              name: item.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: item.answer,
-              },
-            })),
-          }),
-        }}
-      />
-      {/* Product Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "Smart Sync One - PMS to GoHighLevel Integration",
-            description:
-              "Seamless real-time data synchronization between dental practice management systems (Dentrix, Open Dental, EagleSoft, Curve Dental) and GoHighLevel CRM for marketing agencies.",
-            brand: {
-              "@type": "Brand",
-              name: "Smart Sync",
-            },
-            category: "Software Integration Tool",
-            offers: [
-              {
-                "@type": "Offer",
-                name: "Dentrix → GoHighLevel Connector",
-                description:
-                  "Real-time bidirectional sync between Dentrix PMS and GoHighLevel CRM",
-                price: "299",
-                priceCurrency: "USD",
-                availability: "https://schema.org/InStock",
-                seller: {
-                  "@type": "Organization",
-                  name: "Smart Sync",
-                },
-              },
-              {
-                "@type": "Offer",
-                name: "Open Dental → GoHighLevel Connector",
-                description:
-                  "Real-time bidirectional sync between Open Dental PMS and GoHighLevel CRM",
-                price: "299",
-                priceCurrency: "USD",
-                availability: "https://schema.org/InStock",
-                seller: {
-                  "@type": "Organization",
-                  name: "Smart Sync",
-                },
-              },
-            ],
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              reviewCount: "127",
-              bestRating: "5",
-              worstRating: "1",
-            },
-            review: testimonials.map((testimonial) => ({
-              "@type": "Review",
-              reviewRating: {
-                "@type": "Rating",
-                ratingValue: testimonial.rating,
-                bestRating: "5",
-              },
-              author: {
-                "@type": "Person",
-                name: testimonial.name,
-              },
-              reviewBody: testimonial.text,
-              publisher: {
-                "@type": "Organization",
-                name: testimonial.company,
-              },
-            })),
-            applicationCategory: "BusinessApplication",
-            operatingSystem: "Web-based",
-            softwareRequirements:
-              "Internet connection, Dentrix/Open Dental/EagleSoft/Curve Dental access, GoHighLevel account",
-            featureList: [
-              "Real-time bidirectional data sync",
-              "Patient contact information sync",
-              "Provider and staff sync",
-              "Appointment scheduling sync",
-              "Payment and billing sync",
-              "HIPAA-conscious data handling",
-              "Automated conflict resolution",
-              "45-minute setup process",
-              "24/7 monitoring and support",
-            ],
-          }),
-        }}
-      />
+    <>
+      <SEO {...metaTags} />
+      <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -928,6 +835,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

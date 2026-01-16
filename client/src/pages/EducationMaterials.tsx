@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import SEO from "@/components/SEO";
+import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import { getMetaTags } from "@/lib/seoMeta";
 import {
   PlayCircle,
   BookOpen,
@@ -101,8 +104,18 @@ const templates = [
 ];
 
 export default function EducationMaterials() {
+  const metaTags = getMetaTags('education');
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://smartsync.one/' },
+    { name: 'Education', url: 'https://smartsync.one/education' },
+  ]);
+
   return (
-    <div className="min-h-screen py-20">
+    <>
+      <SEO {...metaTags} />
+      <SchemaMarkup schema={breadcrumbSchema} />
+      <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1
@@ -431,6 +444,7 @@ export default function EducationMaterials() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

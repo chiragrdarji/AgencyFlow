@@ -1,107 +1,64 @@
 import IntegrationLayout from "@/components/integration-layout";
-import { Helmet } from "react-helmet-async";
+import FAQ from "@/components/FAQ";
+import SEO from "@/components/SEO";
+import SchemaMarkup, { getBreadcrumbSchema, getFAQSchema } from "@/components/SchemaMarkup";
+import { getMetaTags } from "@/lib/seoMeta";
 
 export default function OpenDentalIntegration() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What does this integration do?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Smart Sync application syncs patients, providers, appointments, and payments between Open Dental and GoHighLevel so you can focus on growing your clients' practices.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is the data sync real-time?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, the integration supports real-time or near real-time syncing to keep your data continuously updated.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do I need any technical skills to set it up?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "No coding needed! The setup is simple, user-friendly, and fully guided.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can I choose what data gets synced?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, you can customize which fields and types of data get synced between platforms.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Does it support multi-location practices?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, the integration handles multiple providers and locations seamlessly.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What OpenDental versions are supported?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Most recent versions of OpenDental are supported. Contact us for version-specific compatibility.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How can I get started?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Click the “Connect OpenDental to GHL” button or visit our Marketplace listing to begin.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How much does the OpenDental to GoHighLevel integration cost?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Pricing starts at $79 per OpenDental instance per month and goes up to $129, depending on the plan.",
-        },
-      },
-    ],
-  };
+  const metaTags = getMetaTags('openDentalIntegration');
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Open Dental to GoHighLevel Integration",
-        item: "https://smartsync.one/open-dental-gohighlevel-integration",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Dentrix to GoHighLevel Integration",
-        item: "https://smartsync.one/dentrix-gohighlevel-integration",
-      },
-    ],
-  };
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://smartsync.one/' },
+    { name: 'Open Dental Integration', url: 'https://smartsync.one/open-dental-gohighlevel-integration' },
+  ]);
+
+  const faqItems = [
+    {
+      question: "What does this integration do?",
+      answer: "Smart Sync application syncs patients, providers, appointments, and payments between Open Dental and GoHighLevel so you can focus on growing your clients' practices.",
+    },
+    {
+      question: "Is the data sync real-time?",
+      answer: "Yes, the integration supports real-time or near real-time syncing to keep your data continuously updated.",
+    },
+    {
+      question: "Do I need any technical skills to set it up?",
+      answer: "No coding needed! The setup is simple, user-friendly, and fully guided.",
+    },
+    {
+      question: "Can I choose what data gets synced?",
+      answer: "Yes, you can customize which fields and types of data get synced between platforms.",
+    },
+    {
+      question: "Does it support multi-location practices?",
+      answer: "Yes, the integration handles multiple providers and locations seamlessly.",
+    },
+    {
+      question: "What Open Dental versions are supported?",
+      answer: "Most recent versions of Open Dental are supported. Contact us for version-specific compatibility.",
+    },
+    {
+      question: "How can I get started?",
+      answer: 'Click the "Connect Open Dental to GHL" button or visit our Marketplace listing to begin.',
+    },
+    {
+      question: "How much does the Open Dental to GoHighLevel integration cost?",
+      answer: "Pricing is available through our marketplace or contact us for custom quotes.",
+    },
+  ];
+
+  const faqSchema = getFAQSchema(faqItems);
 
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Open Dental Connector App",
+    name: "Open Dental to GoHighLevel Integration | Dental PMS-CRM Sync",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     softwareVersion: "1.0",
     url: "https://smartsync.one/open-dental-gohighlevel-integration",
     description:
-      "Two-way sync of patients, appointments, providers, and payments between Open Dental (including Ascend/Enterprise) and your CRM.",
+      "Seamless Open Dental integration into GoHighLevel for dental agencies. Sync patients, appointments & payments from your dental PMS into CRM in real-time.",
     featureList: [
       "Real-time scheduling",
       "Two-way data sync",
@@ -112,29 +69,34 @@ export default function OpenDentalIntegration() {
       "@type": "Organization",
       name: "Smart Sync",
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "4.9"
+      ratingValue: "4.9",
     },
-    "offers": {
-      "@type": "Offer",
-      "description": "10% off when purchased annually"
-    }
   };
 
   return (
     <>
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(softwareSchema)}
-        </script>
-      </Helmet>
-
+      <SEO {...metaTags} />
+      <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <IntegrationLayout type="open-dental" />
+      
+      {/* FAQ Section */}
+      <div className="min-h-screen py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Open Dental Integration FAQ
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Get answers to common questions about integrating Open Dental with GoHighLevel
+            </p>
+          </div>
+          <FAQ items={faqItems} />
+        </div>
+      </div>
     </>
   );
 }

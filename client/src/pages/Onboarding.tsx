@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import FAQ from "@/components/FAQ";
+import SEO from "@/components/SEO";
+import SchemaMarkup, { getBreadcrumbSchema, getFAQSchema } from "@/components/SchemaMarkup";
+import { getMetaTags } from "@/lib/seoMeta";
 import { CheckCircle, Download, Settings, MapPin, Play, Clock, Shield, Phone } from "lucide-react";
 
 const onboardingSteps = [
@@ -78,8 +81,21 @@ const faqItems = [
 ];
 
 export default function Onboarding() {
+  const metaTags = getMetaTags('onboarding');
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://smartsync.one/' },
+    { name: 'Onboarding', url: 'https://smartsync.one/onboarding' },
+  ]);
+
+  const faqSchema = getFAQSchema(faqItems);
+
   return (
-    <div className="min-h-screen py-20">
+    <>
+      <SEO {...metaTags} />
+      <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1
@@ -312,6 +328,7 @@ export default function Onboarding() {
           <FAQ items={faqItems} />
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

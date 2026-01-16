@@ -5,6 +5,7 @@ import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
 import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
+import { renderPage } from "./ssr";
 
 const viteLogger = createLogger();
 
@@ -45,21 +46,24 @@ export async function setupVite(app: Express, server: Server) {
     const url = req.originalUrl;
 
     try {
+      // Use SSR to render the page
+      let html = await renderPage(url);
+      
+      // Transform the HTML through Vite to inject CSS, HMR client, etc.
       const clientTemplate = path.resolve(
         import.meta.dirname,
         "..",
         "client",
         "index.html",
       );
-
-      // always reload the index.html file from disk incase it changes
+      
+      // Get the template for reference
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
-      template = template.replace(
-        `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`,
-      );
-      const page = await vite.transformIndexHtml(url, template);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+      
+      // Transform through Vite which will inject CSS and HMR
+      html = await vite.transformIndexHtml(url, html);
+      
+      res.status(200).set({ "Content-Type": "text/html" }).end(html);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);

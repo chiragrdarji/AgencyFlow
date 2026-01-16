@@ -12,10 +12,19 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { contactFormSchema, type ContactFormData } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
+import SEO from "@/components/SEO";
+import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import { getMetaTags } from "@/lib/seoMeta";
 import { MapPin, Phone, Mail, Clock, MessageSquare, Calendar, HeadphonesIcon, Loader2 } from "lucide-react";
 
 export default function Contact() {
   const { toast } = useToast();
+  const metaTags = getMetaTags('contact');
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://smartsync.one/' },
+    { name: 'Contact', url: 'https://smartsync.one/contact' },
+  ]);
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -94,7 +103,10 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <>
+      <SEO {...metaTags} />
+      <SchemaMarkup schema={breadcrumbSchema} />
+      <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1
@@ -448,5 +460,6 @@ export default function Contact() {
         </Card>
       </div>
     </div>
+    </>
   );
 }

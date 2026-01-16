@@ -1,8 +1,47 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import FAQ from "@/components/FAQ";
+import SEO from "@/components/SEO";
+import SchemaMarkup, { getBreadcrumbSchema, getFAQSchema } from "@/components/SchemaMarkup";
+import { getMetaTags } from "@/lib/seoMeta";
 import { Laptop, CheckCircle, Clock } from "lucide-react";
 import { useLocation } from "wouter";
+
+const faqItems = [
+  {
+    question: "Which dental PMS systems does Smart Sync support?",
+    answer: "Smart Sync currently supports Dentrix and Open Dental with real-time bidirectional sync. EagleSoft and Curve Dental integrations are coming soon.",
+  },
+  {
+    question: "What's the difference between Dentrix and Open Dental?",
+    answer: "Dentrix is a desktop-based or cloud PMS with enterprise features, while Open Dental is a flexible PMS supporting both cloud and on-premise deployments. Both sync seamlessly with GoHighLevel through Smart Sync.",
+  },
+  {
+    question: "Are there other PMS systems coming?",
+    answer: "Yes! We're working on EagleSoft and Curve Dental integrations. Sign up for our newsletter or book a demo to get early access.",
+  },
+  {
+    question: "Can I sync multiple PMS systems at once?",
+    answer: "Yes, if you manage multiple dental practices with different PMS systems, each can be connected independently through Smart Sync.",
+  },
+  {
+    question: "How does real-time sync work?",
+    answer: "Our integrations use webhooks and API connections to detect changes in your PMS instantly and sync them to GoHighLevel within minutes.",
+  },
+  {
+    question: "Is the sync two-way?",
+    answer: "Yes! Data flows bidirectionally - changes in your PMS sync to GHL, and updates made in GHL sync back to your PMS.",
+  },
+  {
+    question: "How long does setup take?",
+    answer: "Our guided 45-minute setup process covers platform selection, API configuration, field mapping, and testing. Our team handles the technical details.",
+  },
+  {
+    question: "What data can I sync?",
+    answer: "You can sync patients (contact info, demographics), providers, appointments (all statuses), and payment information. Medical records are never accessed.",
+  },
+];
 
 const platforms = [
   {
@@ -60,8 +99,63 @@ const platforms = [
 
 export default function SupportedPlatforms() {
   const [, setLocation] = useLocation(); // <-- hook for navigation
+  const metaTags = getMetaTags('supportedPlatforms');
+
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Home', url: 'https://smartsync.one/' },
+    { name: 'Supported Platforms', url: 'https://smartsync.one/supported-platforms' },
+  ]);
+
+  const faqSchema = getFAQSchema(faqItems);
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Supported PMS Platforms",
+    description: "Smart Sync connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM with real-time bidirectional sync.",
+    url: "https://smartsync.one/supported-platforms",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: [
+        {
+          "@type": "SoftwareApplication",
+          position: 1,
+          name: "Dentrix Integration",
+          description: "Connect Dentrix PMS to GoHighLevel with real-time bidirectional sync",
+          url: "https://smartsync.one/dentrix-gohighlevel-integration",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            ratingCount: "50",
+          },
+        },
+        {
+          "@type": "SoftwareApplication",
+          position: 2,
+          name: "Open Dental Integration",
+          description: "Connect Open Dental PMS to GoHighLevel with real-time bidirectional sync",
+          url: "https://smartsync.one/open-dental-gohighlevel-integration",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            ratingCount: "50",
+          },
+        },
+      ],
+    },
+  };
+
   return (
-    <div className="min-h-screen py-20">
+    <>
+      <SEO {...metaTags} />
+      <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={organizationSchema} />
+      <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1
@@ -254,7 +348,21 @@ export default function SupportedPlatforms() {
             </Button>
           </div>
         </div>
+
+        {/* FAQ Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Find answers to common questions about our PMS integrations and how Smart Sync works
+            </p>
+          </div>
+          <FAQ items={faqItems} />
+        </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

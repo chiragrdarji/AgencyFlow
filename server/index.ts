@@ -3,6 +3,7 @@ import "dotenv/config";
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { renderPage } from "./ssr";
 
 const app = express();
 app.use(express.json());
@@ -55,6 +56,16 @@ app.use((req, res, next) => {
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
+    // SSR middleware - only in production
+    app.get("*", async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const html = await renderPage(req.originalUrl);
+        res.set("Content-Type", "text/html");
+        res.send(html);
+      } catch (err) {
+        next(err);
+      }
+    });
     serveStatic(app);
   }
 
