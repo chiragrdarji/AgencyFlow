@@ -8,7 +8,7 @@ export const seoConfig = {
     home: {
       title: 'Smart Sync One – Patient Data Sync for Dental Agencies',
       description: 'Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients\' dental practices.',
-      keywords: 'dentrix integration, open dental api, GoHighLevel Integration, dental pms integration',
+      keywords: 'dentrix integration, open dental api, GoHighLevel Integration, GHL Integration, opendental api, open dental integration, dental pms ghl integration, dental pms integration, eaglesoft api, api dental, dentrix api',
       path: '/',
     },
     supportedPlatforms: {

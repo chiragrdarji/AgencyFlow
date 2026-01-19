@@ -387,6 +387,8 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
 
   // Update document head for SEO
   useEffect(() => {
+    if (typeof document === 'undefined') return;
+    
     document.title = seoData.title;
 
     // Update meta description

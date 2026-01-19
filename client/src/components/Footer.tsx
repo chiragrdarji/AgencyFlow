@@ -92,7 +92,7 @@ export default function Footer() {
  
     useEffect(() => { 
       form.reset();
-    }, [location, form]);
+    }, [form]);
   
   return (
     <footer className="bg-gray-900 text-white py-16">

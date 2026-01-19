@@ -1,6 +1,4 @@
-import * as HelmetPackage from 'react-helmet-async';
-
-const { Helmet } = HelmetPackage;
+import { Helmet } from 'react-helmet-async';
 
 
 interface SchemaMarkupProps {

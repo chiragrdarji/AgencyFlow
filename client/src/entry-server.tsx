@@ -56,9 +56,7 @@ import { renderToString } from 'react-dom/server';
 
 import App from './App';
 
-import HelmetAsync from 'react-helmet-async';
- 
-const { HelmetProvider } = HelmetAsync;
+import { HelmetProvider } from 'react-helmet-async';
  
 interface RenderOptions {
 
