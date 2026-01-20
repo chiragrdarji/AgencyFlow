@@ -350,7 +350,7 @@ export default function SupportedPlatforms() {
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
@@ -360,7 +360,7 @@ export default function SupportedPlatforms() {
             </p>
           </div>
           <FAQ items={faqItems} />
-        </div>
+        </div> */}
       </div>
       </div>
     </>

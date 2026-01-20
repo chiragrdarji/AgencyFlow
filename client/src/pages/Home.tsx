@@ -155,10 +155,24 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-             <img
+             {/* <img
                   src="/img/Smart-Sync-One.gif"
-                  alt="Smart sync Flow Dagram" // adjust size as needed
-                />
+                  alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow" 
+                /> */}
+
+                <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className=" h-auto"
+            style={{ visibility: "visible" }}
+          >
+            <source
+              src="/img/Smart-Sync-One.webm"
+              type="video/webm"
+            />
+          </video>
             </div>
           </div>
         </div>
