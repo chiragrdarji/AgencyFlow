@@ -8,19 +8,19 @@ export const seoConfig = {
     home: {
       title: 'Smart Sync One – Patient Data Sync for Dental Agencies',
       description: 'Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients dental practices.',
-      keywords: 'dentrix integration, open dental api, GoHighLevel Integration, GHL Integration, opendental api, open dental integration, dental pms ghl integration, dental pms integration, eaglesoft api, api dental, dentrix api',
+      keywords: 'dentrix integration, open dental api, GoHighLevel Integration, GHL Integration, opendental api, open dental integration, dental pms ghl integration, dental pms integration, eaglesoft api, api dental, dentrix api, dentrix developer program',
       path: '/',
     },
     supportedPlatforms: {
       title: 'Supported PMS Platforms | Smart Sync One',
       description: 'Smart Sync connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM. Real-time bidirectional sync for dental practices.',
-      keywords: 'dentrix api, open dental api, eaglesoft integration, curve dental ghl',
+      keywords: 'dentrix api, open dental api, eaglesoft integration, curve dental ghl, eaglesoft api',
       path: '/supported-platforms',
     },
     dentrixIntegration: {
       title: 'Dentrix to GoHighLevel Integration | Smart Sync One',
       description: 'Seamlessly sync Dentrix data to GoHighLevel CRM. Automate patient data, appointments, and payment sync for dental marketing agencies.',
-      keywords: 'dentrix gohighlevel integration, dentrix api, dentrix ghl connector',
+      keywords: 'dentrix gohighlevel integration, dentrix api, dentrix ghl connector, dentrix integration, Dentrix ascend api',
       path: '/dentrix-gohighlevel-integration',
     },
     openDentalIntegration: {
@@ -32,7 +32,7 @@ export const seoConfig = {
     onboarding: {
       title: 'Onboarding and Setup | Smart Sync One',
       description: 'Get started with Smart Sync in minutes. Our guided onboarding process ensures smooth setup and configuration of your dental practice data sync.',
-      keywords: 'smart sync setup, integration onboarding, ghl dental setup',
+      keywords: 'smart sync setup, integration onboarding, ghl dental setup, dental pms',
       path: '/onboarding',
     },
     education: {
