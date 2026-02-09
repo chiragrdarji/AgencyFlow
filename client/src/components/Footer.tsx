@@ -95,7 +95,7 @@ export default function Footer() {
     }, [form]);
   
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-900 text-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -258,7 +258,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-gray-800 mt-12 py-8 text-center text-sm text-gray-400">
+          <p className="mb-2">
+            All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply endorsement.
+          </p>
           <p data-testid="text-copyright">
             &copy; Smart Sync . All rights reserved.
           </p>
