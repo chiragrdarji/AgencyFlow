@@ -70,9 +70,9 @@ const platforms = [
   {
     name: "EagleSoft",
     description: "Patterson Dental",
-    status: "coming-soon",
+    status: "available",
     color: "gray-400",
-    url: "https://calendly.com/smart-sync/meeting",
+    url: "https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b",
     features: [
       "Real-time sync",
       "Two-way data flow",
@@ -84,9 +84,9 @@ const platforms = [
   {
     name: "Curve Dental",
     description: "Cloud-based PMS",
-    status: "coming-soon",
+    status: "available",
     color: "gray-400",
-    url: "https://calendly.com/smart-sync/meeting",
+    url: "https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b",
     features: [
       "Real-time sync",
       "Two-way data flow",
@@ -184,11 +184,11 @@ export default function SupportedPlatforms() {
                 <div
                   className={`w-16  rounded-lg flex items-center justify-center mx-auto mb-4`}
                 >
-                  <img
+                  {/* <img
                     src={platform.imgUrl}
                     alt="Dentrix iocn"
                     className="w-9 h-9" // adjust size as needed
-                  />
+                  /> */}
                 </div>
                 <h3
                   className="text-2xl font-bold text-gray-900 mb-2"
