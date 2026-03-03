@@ -155,7 +155,7 @@ export default function SupportedPlatforms() {
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={organizationSchema} />
-      <div className="min-h-screen py-20">
+      <div className="min-h-screen pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1
@@ -315,7 +315,7 @@ export default function SupportedPlatforms() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 pb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Ready to Connect Your PMS?
           </h2>
@@ -348,7 +348,22 @@ export default function SupportedPlatforms() {
             </Button>
           </div>
         </div>
-
+      </div>
+        <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-features-title"
+            >
+              Seamless Dental PMS Data Integration & Platform Support
+            </h2>
+            <p className="text-xl text-gray-600 max-w-7xl mx-auto">
+             SmartSync enables seamless Dental PMS Data Integration with leading PMS dental platforms, including powerful Dentrix Ascend API, Open Dental integrations, and Eaglesoft integrations. Whether you need Open Dental install, complete Open Dental installation, or want to explore a Dentrix software demo, our platform ensures secure, real-time connectivity to streamline your dental practice operations.
+            </p>
+          </div>
+        </div>
+      </section>
         {/* FAQ Section */}
         {/* <div className="mt-20">
           <div className="text-center mb-12">
@@ -361,7 +376,7 @@ export default function SupportedPlatforms() {
           </div>
           <FAQ items={faqItems} />
         </div> */}
-      </div>
+      
       </div>
     </>
   );

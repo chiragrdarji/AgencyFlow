@@ -14,7 +14,7 @@ export const seoConfig = {
     supportedPlatforms: {
       title: 'Supported PMS Platforms | Smart Sync One',
       description: 'Smart Sync connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM. Real-time bidirectional sync for dental practices.',
-      keywords: 'dentrix api, open dental api, eaglesoft integration, curve dental ghl, eaglesoft api',
+      keywords: 'dentrix api, open dental api, eaglesoft integration, curve dental ghl, eaglesoft api , dentrix integration, open dental api, GoHighLevel Integration, GHL Integration, opendental api, open dental integration, dental pms ghl integration, dental pms integration, eaglesoft api, api dental, dentrix api, dentrix developer program, pms dental, Dentrix ascend api, open dental integrations, Dentrix software demo, eaglesoft integrations, open dental install, install open dental, open dental installation, Dental PMS Data Integration',
       path: '/supported-platforms',
     },
     dentrixIntegration: {
