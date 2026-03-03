@@ -72,6 +72,7 @@ export default function OpenDentalIntegration() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
+      ratingCount: "50",
     },
   };
 

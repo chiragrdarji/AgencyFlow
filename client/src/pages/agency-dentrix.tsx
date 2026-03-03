@@ -81,6 +81,7 @@ export default function DentrixIntegration() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
+       ratingCount: "50",
     },
     offers: {
       "@type": "Offer",

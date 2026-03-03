@@ -849,6 +849,22 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/*  */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2
+              className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+              data-testid="text-features-title"
+            >
+              Dentrix, Eaglesoft & Open Dental API Integration by SmartSync
+            </h2>
+            <p className="text-xl text-gray-600 max-w-7xl mx-auto">
+              Dental APIs and PMS Integrations for Modern Practices Integration of Dentrix, Eaglesoft, and Open Dental APIs by SmartSync SmartSync facilitates seamless connectivity for dental practices, SaaS businesses, and healthcare ecosystems with Dental Practice Management Systems (PMS) via secure and scalable Dental APIs. SmartSync.one effortlessly and compliantly manages your data flow, whether you require Dentrix API, Eaglesoft API, or Open Dental integration.
+            </p>
+          </div>
+        </div>
+      </section>
       </div>
     </>
   );
