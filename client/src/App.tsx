@@ -13,6 +13,7 @@ import Contact from "@/pages/Contact";
 import DentrixIntegration from "@/pages/agency-dentrix";
 import AgencyOpenDental from "@/pages/agency-open-dental";
 import NotFound from "@/pages/not-found";
+import DentalMarketingAttributionSoftware from "./pages/DentalMarketingAttributionSoftware";
 import { useLocation } from "wouter";
 import { useEffect } from "react";
 
@@ -54,6 +55,7 @@ function Router() {
         <Route path="/SmartSync-Synchronizer.exe" component={DownloadPage} />
         <Route path="/dentrix-gohighlevel-integration" component={DentrixIntegration} />
         <Route path="/open-dental-gohighlevel-integration" component={AgencyOpenDental} />
+        <Route path="/dental-marketing-attribution" component={DentalMarketingAttributionSoftware} />
        
         <Route component={NotFound} />
       </Switch>

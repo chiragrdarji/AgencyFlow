@@ -47,6 +47,13 @@ export const seoConfig = {
       keywords: 'contact smart sync, dental integration support, customer service',
       path: '/contact',
     },
+    dentalmarketingattributionsoftware: {
+      title: 'Dental Marketing Attribution Software for Agencies | Track Patient Revenue ROI',
+      description: 'Track real patient revenue generated from dental marketing campaigns using PMS data. SmartSync connects Dentrix, Open Dental and other systems with CRM platforms to prove true agency ROI.',
+      keywords: 'dental marketing attribution, dental ROI tracking software , prove dental marketing ROI , dental agency reporting software , dentrix marketing reporting , dental revenue analytics.',
+      path: '/dental-marketing-attribution',
+    },
+
   },
 };
 
