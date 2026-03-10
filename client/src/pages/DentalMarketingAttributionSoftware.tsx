@@ -11,6 +11,7 @@ import {
   Calendar,
   CalendarCheck,
   CheckCircle,
+  CheckCircle2,
   ChevronRight,
   ClipboardList,
   Clock,
@@ -60,10 +61,10 @@ const steps = [
   "Revenue generated after agency onboarding.",
 ];
 const steps2 = [
-    "Follow up when treatment is proposed",
-    "Recover missed appointments",
-    "Reactivate inactive patients",
-    "Trigger payment follow-ups",
+  "Follow up when treatment is proposed",
+  "Recover missed appointments",
+  "Reactivate inactive patients",
+  "Trigger payment follow-ups",
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 
@@ -174,7 +175,7 @@ export default function DentalMarketingAttributionSoftware() {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span
@@ -219,6 +220,65 @@ export default function DentalMarketingAttributionSoftware() {
               marketing performance to treatments or payments. This creates
               uncertainty during client reviews and renewals.
             </p>
+          </div>
+        </div>
+      </section> */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+            {/* LEFT - PROBLEM */}
+            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
+                <AlertTriangle className="h-4 w-4" /> The Problem
+              </span>
+
+              <p className="text-xl text-foreground mb-2 font-semibold">
+                Dental Agencies Struggle to Prove Real Results
+              </p>
+
+              <p className="text-muted-foreground mb-6">
+                Most dental marketing reports rely on :
+              </p>
+
+              <div className="space-y-4 grid lg:grid-cols-2 gap-5">
+                {[
+                  { icon: Users, label: "Lead counts" },
+                  { icon: Phone, label: "Call tracking" },
+                  { icon: CalendarCheck, label: "Appointment bookings" },
+                ].map(({ icon: Icon, label }) => (
+                  <div
+                    key={label}
+                    className="flex items-center gap-4 p-4 rounded-lg bg-gray-50 !mt-0"
+                  >
+                    <Icon className="h-5 w-5 text-primary" />
+                    <p className="font-medium text-foreground">{label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT - SOLUTION */}
+            <div className="bg-blue-50 rounded-2xl p-8 border border-primary/10 ">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-white/70 px-4 py-1.5 rounded-full mb-6 w-fit">
+                <CheckCircle2 className="h-4 w-4" /> The Solution
+              </span>
+
+              <p className="text-xl text-foreground mb-2 font-semibold">
+                But clinic owners ultimately care about one thing
+              </p>
+
+              <p className="text-4xl font-extrabold text-primary mb-4">
+                Revenue
+              </p>
+
+              <p className="text-muted-foreground max-w-lg">
+                Without PMS data integration, agencies cannot accurately connect
+                marketing performance to treatments or payments.
+              </p>
+              <p className="text-muted-foreground max-w-lg mt-2">
+                This creates uncertainty during client reviews and renewals.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -460,7 +520,7 @@ export default function DentalMarketingAttributionSoftware() {
             <p className="text-xl font-semibold  mt-4 mb-6 ">
               Examples include:
             </p>
-        
+
             <div className="space-y-4">
               {steps2.map((step, i) => (
                 <div
@@ -506,28 +566,34 @@ export default function DentalMarketingAttributionSoftware() {
               Works With Leading Dental PMS and CRM Platforms
             </h2>
           </div>
-          <div className="card  bg-gradient-to-br from-primary-light to-blue-50  rounded-2xl p-8   border-primary/10">
-            <h3 className="font-bold mb-2">PMS Systems :</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mt-[18px] text-center ">
-              {pmsSystems.map((system) => (
-                <div
-                  className="bg-white p-3 rounded-xl text-foreground text-md border border-white  font-semibold  hover:border-[#e1e7ef] hover:scale-[1.03] transition-all"
-                  key={system}
-                >
-                  {system}
-                </div>
-              ))}
+          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl p-8   border-primary/10">
+            <div className="p-6  bg-gradient-to-br from-primary-light to-blue-50 rounded-lg">
+              <h3 className="font-bold mb-2 p-2 text-lg">PMS Systems </h3>
+              <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-3  mt-[18px] text-center ">
+                {pmsSystems.map((system) => (
+                  <div
+                    className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
+                    key={system}
+                  >
+                   <CheckCircle2 className="h-4 w-4" /> {system}
+                  </div>
+                ))}
+              </div>
             </div>
-            <h3 className="font-bold mt-4 mb-2">CRM Platforms :</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-[18px] text-center">
-              {crmPlatforms.map((platform) => (
-                <div
-                  className="bg-white p-3 rounded-xl text-foreground text-md font-semibold hover:border-[#e1e7ef] hover:scale-[1.03] transition-all"
-                  key={platform}
-                >
-                  {platform}
-                </div>
-              ))}
+            <div  className="p-6  bg-gradient-to-br from-primary-light to-blue-50 rounded-lg">
+              <h3 className="font-bold mb-2 p-2  text-lg">
+                CRM Platforms 
+              </h3>
+              <div className="grid sm:grid-col-1  gap-4 mt-[18px] text-center">
+                {crmPlatforms.map((platform) => (
+                  <div
+                    className="p-2 bg-white  rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
+                    key={platform}
+                  >
+                   <CheckCircle2 className="h-4 w-4" /> {platform}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
