@@ -53,6 +53,12 @@ export const seoConfig = {
       keywords: 'dental marketing attribution, dental ROI tracking software , prove dental marketing ROI , dental agency reporting software , dentrix marketing reporting , dental revenue analytics.',
       path: '/dental-marketing-attribution',
     },
+    dentalanalyticsdashboard: {
+      title: 'Dental Analytics Dashboard Software | PMS Revenue & Patient Insights | SmartSync',
+      description: 'Track new patients, appointments, treatments, payments, and future revenue using SmartSync’s dental analytics dashboard integrated directly with Dentrix, Open Dental, Eaglesoft and leading CRMs.',
+      keywords: 'dental analytics dashboard , dental KPI software , dental production analytics , dental reporting software, dental practice analytics platform , dental revenue dashboard',
+      path: '/dental-analytics-dashboard',
+    },
 
   },
 };

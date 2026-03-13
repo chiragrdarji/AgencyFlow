@@ -16,6 +16,7 @@ import NotFound from "@/pages/not-found";
 import DentalMarketingAttributionSoftware from "./pages/DentalMarketingAttributionSoftware";
 import { useLocation } from "wouter";
 import { useEffect } from "react";
+import DentalAnalyticsDashboard from "./pages/DentalAnalyticsDashboard";
 
 export const DownloadPage = () => {
   const [, setLocation] = useLocation();
@@ -56,6 +57,7 @@ function Router() {
         <Route path="/dentrix-gohighlevel-integration" component={DentrixIntegration} />
         <Route path="/open-dental-gohighlevel-integration" component={AgencyOpenDental} />
         <Route path="/dental-marketing-attribution" component={DentalMarketingAttributionSoftware} />
+        <Route path="/dental-analytics-dashboard" component={DentalAnalyticsDashboard} />
        
         <Route component={NotFound} />
       </Switch>
