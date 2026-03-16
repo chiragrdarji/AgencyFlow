@@ -17,6 +17,8 @@ import DentalMarketingAttributionSoftware from "./pages/DentalMarketingAttributi
 import { useLocation } from "wouter";
 import { useEffect } from "react";
 import DentalAnalyticsDashboard from "./pages/DentalAnalyticsDashboard";
+import ForDentalMarketingAgencies from "./pages/ForDentalMarketingAgencies";
+import TreatmentTrackingRevenuePipelineIntelligence from "./pages/TreatmentTrackingRevenuePipelineIntelligence";
 
 export const DownloadPage = () => {
   const [, setLocation] = useLocation();
@@ -58,7 +60,8 @@ function Router() {
         <Route path="/open-dental-gohighlevel-integration" component={AgencyOpenDental} />
         <Route path="/dental-marketing-attribution" component={DentalMarketingAttributionSoftware} />
         <Route path="/dental-analytics-dashboard" component={DentalAnalyticsDashboard} />
-       
+        <Route path="/for-dental-marketing-agencies" component={ForDentalMarketingAgencies} />
+        <Route path="/treatment-tracking-software" component={TreatmentTrackingRevenuePipelineIntelligence} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

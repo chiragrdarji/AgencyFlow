@@ -59,6 +59,24 @@ export const seoConfig = {
       keywords: 'dental analytics dashboard , dental KPI software , dental production analytics , dental reporting software, dental practice analytics platform , dental revenue dashboard',
       path: '/dental-analytics-dashboard',
     },
+    fordentalmarketingagencies: {
+      title: 'Software for Dental Marketing Agencies | Prove Client ROI with SmartSync',
+      description: 'SmartSync helps dental marketing agencies track new patients, treatments, and real payments using PMS data integrated with GoHighLevel, HubSpot, and Salesforce.',
+      keywords: 'software for dental marketing agencies , dental agency reporting software , dental marketing ROI software, dental CRM integration agency,dental client reporting platform',
+      path: '/for-dental-marketing-agencies',
+    },
+    treatmenttrackingrevenuepipelineintelligence: {
+      title: 'Dental Treatment Tracking Software | Revenue Pipeline Intelligence | SmartSync',
+      description: 'Track treatment proposed, pending procedures, completed treatments, and expected future payments using SmartSync’s dental revenue pipeline intelligence platform integrated with leading PMS systems.',
+      keywords: 'dental treatment tracking software ,dental treatment acceptance tracking, pending procedures dental, dental revenue pipeline software, dental production forecasting.',
+      path: '/treatment-tracking-software',
+    },
+    dentalPMSintegrations: {
+      title: 'Dental PMS Integrations | Dentrix, Open Dental, Eaglesoft CRM Sync | SmartSync',
+      description: 'Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync’s real-time two-way synchronization platform.',
+      keywords: 'dentrix CRM integration, open dental CRM integration, dental PMS integration software , eaglesoft integration CRM , dental PMS sync software ,dentrix marketing integration ',
+      path: '/dental-pms-integrations',
+    },
 
   },
 };

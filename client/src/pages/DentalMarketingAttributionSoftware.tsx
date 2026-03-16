@@ -6,6 +6,7 @@ import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
   AlertTriangle,
+  ArrowRight,
   BarChart3,
   Bot,
   Calendar,
@@ -146,12 +147,12 @@ export default function DentalMarketingAttributionSoftwareOld() {
             <div className="relative">
               {/* <div className="p-6 bg-gradient-to-br from-primary-light to-blue-50 rounded-lg">
                 <img
-                  src="/img/Smart-Sync-One.gif"
+                  src="/img/dental-marketying-campaign.webp"
                   alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
                 />
               </div> */}
               <img
-                src="/img/Smart-Sync-One.gif"
+                src="/img/dental-marketying-campaign.webp"
                 alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
               />
             </div>
@@ -537,17 +538,32 @@ export default function DentalMarketingAttributionSoftwareOld() {
                 ))}
               </div>
             </div>
-            
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-start">
-            <Button
-              size="lg"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md bg-primary text-white hover:bg-primary-dark text-lg px-8 py-4"
-              data-testid="button-contact-support"
-              asChild
+          
+        </div>
+      </section>
+      <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Left Content */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-1">
+                Want to Talk to Us?
+              </h3>
+              <p className="text-blue-100">
+                Schedule a quick demo and see SmartSync in action.
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <a
+              href="https://calendly.com/smart-sync/meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-primary font-semibold px-8 py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2"
             >
-              <a href="https://calendly.com/smart-sync/meeting">Book a Demo</a>
-            </Button>
+              Let's Start <ArrowRight size={18} />
+            </a>
           </div>
         </div>
       </section>
@@ -734,17 +750,16 @@ export default function DentalMarketingAttributionSoftwareOld() {
             <div className="p-6 bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2  text-lg">CRM Platforms</h3>
               <div className="grid sm:grid-cols-1 gap-4 mt-[18px] text-center">
-                  {crmPlatforms.map((platform) => (
-                    <div
-                      key={platform}
-                      className={`p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px] font-semibold transition-all
+                {crmPlatforms.map((platform) => (
+                  <div
+                    key={platform}
+                    className={`p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px] font-semibold transition-all
                         ${platform === "GoHighLevel" ? "scale-[1.02] border border-primary shadow-md" : ""}
                       `}
-                    >
-                      <CheckCircle2 className="h-4 w-4 text-primary" /> {platform}
-                    </div>
-                  ))}
-              
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-primary" /> {platform}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
