@@ -152,8 +152,8 @@ export default function DentalMarketingAttributionSoftwareOld() {
                 />
               </div> */}
               <img
-                src="/img/dental-marketying-campaign.webp"
-                alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
+                src="/img/dental-marketing-campaign.webp"
+                alt="dental-marketing-campaign"
               />
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               With SmartSync You Can Track
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {metrics.map(({ icon: Icon, label }, i) => (
               <div
                 key={i}
@@ -189,108 +189,21 @@ export default function DentalMarketingAttributionSoftwareOld() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="text-center mb-10 md:mb-14">
-            <div className="inline-flex items-center gap-4 px-8 py-3.5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-full shadow-sm">
-              <span className="text-base md:text-lg font-bold text-primary">
+            <div className="inline-flex items-center gap-4 px-4 sm:px-8 py-1.5 sm:py-3.5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-full shadow-sm">
+              <span className="text-sm md:text-lg font-bold text-primary">
                 Problem
               </span>
               <span className="text-gray-400 text-xl">→</span>
-              <span className="text-base md:text-lg font-bold text-primary">
+              <span className="text-sm md:text-lg font-bold text-primary">
                 Expectation
               </span>
               <span className="text-gray-400 text-xl">→</span>
-              <span className="text-base md:text-lg font-bold text-primary">
+              <span className="text-sm md:text-lg font-bold text-primary">
                 Solution
               </span>
             </div>
           </div>
-          {/* <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-6 lg:gap-8 items-center relative">
-           
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
-                <AlertTriangle size={20} className="text-blue-600" />
-                The Problem
-              </div>
-
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-5">
-                Dental Agencies Struggle to Prove Real Results
-              </h2>
-
-              <p className="text-lg text-gray-600 mb-8">
-                Most dental marketing reports rely on:
-              </p>
-
-              <ul className="space-y-5">
-                {[
-                  {
-                    icon: BarChart3,
-                    text: "Lead counts",
-                    color: "text-blue-600 bg-blue-100",
-                  },
-                  {
-                    icon: Phone,
-                    text: "Call tracking",
-                    color: "text-blue-600 bg-blue-100",
-                  },
-                  {
-                    icon: Calendar,
-                    text: "Appointment bookings",
-                    color: "text-blue-600 bg-blue-100",
-                  },
-                ].map((item, i) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <li
-                      key={i}
-                      className="flex items-center gap-4 text-lg text-gray-700"
-                    >
-                      <div
-                        className={`w-12 h-12 flex items-center justify-center rounded-xl ${item.color} border border-gray-200 flex-shrink-0`}
-                      >
-                        <Icon size={22} strokeWidth={2} />
-                      </div>
-
-                      <span>{item.text}</span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div> 
-
-            
-            <div className="hidden lg:flex items-center justify-center w-20 relative">
-              <div className="h-1.5 w-full bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full" />
-              <div className="absolute right-0 w-0 h-0 border-t-[14px] border-t-transparent border-b-[14px] border-b-transparent border-l-[24px] border-l-blue-500" />
-            </div>
-
-           
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-primary rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative z-10">
-              <div className="inline-flex gap-2 items-center px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full mb-6">
-                <Target size={20} className="text-white" />
-                Expectation
-              </div>
-
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-6">
-                But clinic owners ultimately care about one thing
-              </h2>
-
-              <div className="my-5">
-                <div className="text-4xl md:text-4xl lg:text-4xl font-black bg-primary bg-clip-text text-transparent leading-none">
-                  Revenue
-                </div>
-              </div>
-
-              <p className="text-lg text-gray-700 leading-relaxed mb-5">
-                Without PMS data integration, agencies cannot accurately connect
-                marketing performance to treatments or payments.
-              </p>
-
-              <p className="text-lg font-semibold text-gray-900">
-                This creates uncertainty during client reviews and renewals.
-              </p>
-            </div>
-            */}
-
+          
           <div className="relative grid lg:grid-cols-3 gap-4 lg:gap-6 items-stretch">
             {/* Card 1 - Problem (light red/orange) */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 relative z-10">
@@ -480,7 +393,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
       </section> */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-10 items-center">
+          <div className="flex flex-wrap md:flex-nowrap gap-10 items-center">
             <div className="mb-8 w-full md:w-[50%]">
               <span
                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary 
@@ -585,7 +498,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               treatment and payment stages.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-col-2 md:grid-cols-3 gap-6">
             {[
               {
                 icon: UserPlus,
@@ -733,7 +646,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               Works With Leading Dental PMS and CRM Platforms
             </h2>
           </div>
-          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl p-8   border-primary">
+          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl sm:p-8   border-primary">
             <div className="p-6  bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg">PMS Systems </h3>
               <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-3  mt-[18px] text-center ">

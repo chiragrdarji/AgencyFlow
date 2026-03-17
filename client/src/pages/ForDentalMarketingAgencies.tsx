@@ -150,7 +150,7 @@ export default function ForDentalMarketingAgencies() {
                 />
               </div> */}
               <img
-                src="/img/Smart-Sync-One.gif"
+                src="/img/dental-marketing-agencies.webp"
                 alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
               />
             </div>
@@ -167,7 +167,7 @@ export default function ForDentalMarketingAgencies() {
               Agencies Use SmartSync To
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {metrics.map(({ icon: Icon, label }, i) => (
               <div
                 key={i}
@@ -187,7 +187,7 @@ export default function ForDentalMarketingAgencies() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className=" mb-10 md:mb-14">
-            <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-2 lg:gap-4 items-center relative">
+            <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-4 items-center relative">
               <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                 <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
                   <AlertTriangle size={20} className="text-blue-600" />
@@ -629,7 +629,7 @@ export default function ForDentalMarketingAgencies() {
               Works With the Tools Agencies Already Use
             </h2>
           </div>
-          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl p-8   border-primary">
+          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl sm:p-8   border-primary">
             <div className="p-6  bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg">
                 Supported PMS Systems
@@ -668,7 +668,7 @@ export default function ForDentalMarketingAgencies() {
       </section>
       <section className="py-20 bg-primary-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-10 items-center">
+          <div className="flex flex-wrap md:flex-nowrap gap-10 items-center">
             <div className="mb-8 w-full md:w-[50%]">
               <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
                 <LifeBuoy size={18} /> Onboarding Support

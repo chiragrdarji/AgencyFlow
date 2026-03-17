@@ -158,7 +158,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               With SmartSync You Can Track
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {metrics.map(({ icon: Icon, label }, i) => (
               <div
                 key={i}
@@ -406,7 +406,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               treatment and payment stages.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               {
                 icon: UserPlus,
@@ -566,7 +566,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               Works With Leading Dental PMS and CRM Platforms
             </h2>
           </div>
-          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl p-8   border-primary/10">
+          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl sm:p-8   border-primary/10">
             <div className="p-6  bg-gradient-to-br from-primary-light to-blue-50 rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg">PMS Systems </h3>
               <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-3  mt-[18px] text-center ">

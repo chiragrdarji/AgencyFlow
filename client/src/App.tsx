@@ -19,6 +19,9 @@ import { useEffect } from "react";
 import DentalAnalyticsDashboard from "./pages/DentalAnalyticsDashboard";
 import ForDentalMarketingAgencies from "./pages/ForDentalMarketingAgencies";
 import TreatmentTrackingRevenuePipelineIntelligence from "./pages/TreatmentTrackingRevenuePipelineIntelligence";
+import DentalPMSIntegrations from "./pages/DentalPMSIntegrations";
+import HowSmartSyncWorks from "./pages/HowSmartSyncWorks";
+import DentrixCRMIntegration from "./pages/DentrixCRMIntegration";
 
 export const DownloadPage = () => {
   const [, setLocation] = useLocation();
@@ -62,6 +65,10 @@ function Router() {
         <Route path="/dental-analytics-dashboard" component={DentalAnalyticsDashboard} />
         <Route path="/for-dental-marketing-agencies" component={ForDentalMarketingAgencies} />
         <Route path="/treatment-tracking-software" component={TreatmentTrackingRevenuePipelineIntelligence} />
+        <Route path="/dental-pms-integrations" component={DentalPMSIntegrations} />
+        <Route path="/how-smartsync-works" component={HowSmartSyncWorks} />
+        <Route path="/dentrix-crm-integration" component={DentrixCRMIntegration} />
+        
         <Route component={NotFound} />
       </Switch>
     </Layout>

@@ -162,7 +162,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 />
               </div> */}
               <img
-                src="/img/Smart-Sync-One.gif"
+                src="/img/revenue-pipeline-intelligence.webp"
                 alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
               />
             </div>
@@ -180,7 +180,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
               Track Treatment Intelligence Automatically
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {metrics.map(({ icon: Icon, label }, i) => (
               <div
                 key={i}
@@ -200,7 +200,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-10 items-center">
+          <div className="flex flex-wrap md:flex-nowrap gap-10 items-center">
             <div className="mb-8 w-full md:w-[50%]">
               <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
                 <EyeOff size={18} />
@@ -283,7 +283,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             </p>
           </div>
 
-          <div className="space-y-12 max-w-5xl mx-auto grid grid-cols-2 gap-4 ">
+          <div className="space-y-12 max-w-5xl px-4 mx-auto grid sm:grid-cols-2 gap-4 ">
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <div className=" items-start gap-4 mb-4">
                 <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
@@ -679,7 +679,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
               Works With Leading Dental PMS Platforms
             </h2>
           </div>
-          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl p-8   border-primary">
+          <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl sm:p-8   border-primary">
             <div className="p-6  bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg">
                 Supported systems include:{" "}
