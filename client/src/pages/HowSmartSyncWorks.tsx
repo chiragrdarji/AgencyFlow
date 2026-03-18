@@ -114,7 +114,7 @@ export default function HowSmartSyncWorks() {
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
     {
-      name: "Dental Analytics Dashboard",
+      name: "How SmartSync Works",
       url: "https://smartsync.one/how-smartsync-works",
     },
   ]);
@@ -256,6 +256,7 @@ export default function HowSmartSyncWorks() {
               How SmartSync Works
             </h2>
           </div>
+          <div className="grid sm:grid-cols-2 gap-6 mb-8">
           <div className="grid sm:grid-col-1 gap-6 mb-8">
             <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
@@ -273,10 +274,10 @@ export default function HowSmartSyncWorks() {
               <p className="text-gray-600 text-md mt-4 font-semibold">
                 Supported systems include:
               </p>
-              <div className="grid  sm:grid-cols-2 lg:grid-cols-4 gap-3  mt-[18px] text-center mb-4">
+              <div className="grid  sm:grid-cols-1 lg:grid-cols-3 gap-3  mt-[18px] text-center mb-4">
                 {pmsSystems.map((system) => (
                   <div
-                    className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
+                    className="  rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
                     key={system}
                   >
                     <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
@@ -305,10 +306,10 @@ export default function HowSmartSyncWorks() {
                 Next, SmartSync integrates with your CRM environment.
               </p>
               <p className="text-gray-600 text-md font-semibold mt-4">Supported CRMs include:</p>
-              <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-3  mt-[18px] text-center mb-4 ">
+              <div className="grid  sm:grid-cols-1 lg:grid-cols-1 gap-6  mt-[18px] text-center mb-4 ">
                 {crmPlatforms.map((system) => (
                   <div
-                    className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
+                    className=" rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
                     key={system}
                   >
                     <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
@@ -334,7 +335,7 @@ export default function HowSmartSyncWorks() {
               <p className="text-gray-600 text-md ">
                 SmartSync automatically prepares your CRM for synchronization.
               </p>
-              <div className="grid  sm:grid-cols-2 lg:grid-cols-2 gap-3  mt-[18px]  mb-4 ">
+              <div className="grid  sm:grid-cols-1  gap-3  mt-[18px]  mb-4 ">
                 <div>
                   <p className="text-gray-900 text-md font-semibold px-2">
                     During setup:
@@ -342,7 +343,7 @@ export default function HowSmartSyncWorks() {
                   <div className="grid    mt-[18px]  mb-4 ">
                     {crmsetup.map((system) => (
                       <div
-                        className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]     transition-all"
+                        className=" p-1 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]     transition-all"
                         key={system}
                       >
                         <CheckCircle2 className="h-4 w-4 text-primary" />{" "}
@@ -436,11 +437,11 @@ export default function HowSmartSyncWorks() {
                   ].map(({ icon: Icon, label, list }) => (
                     <div
                       key={label}
-                      className="rounded-lg bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow p-6"
+                      className="rounded-lg  text-card-foreground  "
                     >
-                      <div className="w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
+                      {/* <div className="w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                         <Icon className="h-6 w-6 text-primary mx-auto" />
-                      </div>
+                      </div> */}
 
                       <p className="font-bold text-lg mb-4 text-foreground">
                         {label}
@@ -462,6 +463,7 @@ export default function HowSmartSyncWorks() {
                 CRM workflows can automatically trigger using these updates.
               </p>
             </div>
+          </div>
           </div>
         </div>
       </section>

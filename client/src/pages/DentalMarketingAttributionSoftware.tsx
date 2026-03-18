@@ -79,7 +79,7 @@ const trackItems = [
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 
-export default function DentalMarketingAttributionSoftwareOld() {
+export default function DentalMarketingAttributionSoftware() {
   const metaTags = getMetaTags("dentalmarketingattributionsoftware");
 
   const breadcrumbSchema = getBreadcrumbSchema([

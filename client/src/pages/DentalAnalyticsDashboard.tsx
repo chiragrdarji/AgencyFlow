@@ -271,7 +271,7 @@ export default function DentalAnalyticsDashboard() {
         </div>
       </section>
       <section className="py-20  bg-primary-light">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl px-5  mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
               <BarChart3 size={20} />
@@ -286,8 +286,8 @@ export default function DentalAnalyticsDashboard() {
             </p>
           </div>
 
-          <div className="space-y-12 max-w-5xl px-4 mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
+          <div className="space-y-12  px-4 mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+            <div className="bg-white border rounded-2xl p-8 shadow-sm">
               <div className=" items-start gap-4 mb-4">
                 <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                   <Users className="text-primary" size={24} />
@@ -302,20 +302,28 @@ export default function DentalAnalyticsDashboard() {
                   <p className="text-gray-700 font-medium mb-3">Track:</p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">New Patients Added</span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          New Patients Added
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        First Visit Activity
-                      </span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          First Visit Activity
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Patient Visit Trends
-                      </span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          Patient Visit Trends
+                        </span>
+                      </div>
                     </li>
                   </ul>
                   <p className="text-gray-600 mt-4">
@@ -326,7 +334,7 @@ export default function DentalAnalyticsDashboard() {
               </div>
             </div>
 
-            <div className="bg-white  rounded-2xl p-8 shadow-sm !mt-0">
+            <div className="bg-white border rounded-2xl p-8 shadow-sm !mt-0">
               <div className="  gap-4 mb-4">
                 <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                   <Calendar className="text-primary" size={24} />
@@ -341,22 +349,34 @@ export default function DentalAnalyticsDashboard() {
                   <p className="text-gray-700 font-medium mb-3">Track:</p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        New Appointments Created
-                      </span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          New Appointments Created
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">Appointment Changes</span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          Appointment Changes
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">Missed Appointments</span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          Missed Appointments
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">Patient Show Rate</span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">Patient Show Rate</span>
+                      </div>
                     </li>
                   </ul>
                   <p className="text-gray-600 mt-4">
@@ -367,7 +387,7 @@ export default function DentalAnalyticsDashboard() {
               </div>
             </div>
 
-            <div className="bg-white  rounded-2xl p-8 shadow-sm !mt-0">
+            <div className="bg-white border  rounded-2xl p-8 shadow-sm !mt-0">
               <div className=" mb-4">
                 <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                   <FileText className="text-primary" size={24} />
@@ -383,16 +403,28 @@ export default function DentalAnalyticsDashboard() {
                   <p className="text-gray-700 mb-3">SmartSync tracks:</p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">Treatment Proposed</span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          Treatment Proposed
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">Pending Procedures</span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          Pending Procedures
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">Treatment Completed</span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          Treatment Completed
+                        </span>
+                      </div>
                     </li>
                   </ul>
                   <p className="text-gray-600 mt-4">
@@ -403,8 +435,8 @@ export default function DentalAnalyticsDashboard() {
               </div>
             </div>
           </div>
-          <div className="space-y-12 max-w-5xl px-4 mx-auto grid sm:grid-cols-2 gap-4 mt-4">
-            <div className="bg-white  rounded-2xl p-8 shadow-sm border-2 border-[#0095FF]">
+          <div className="space-y-12  px-4 max-w-4xl mx-auto grid sm:grid-cols-2 gap-4 mt-4">
+            <div className="bg-white   rounded-2xl p-8 shadow-sm border-2 border-[#0095FF]">
               <div className=" mb-4">
                 <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                   <DollarSign className="text-primary" size={24} />
@@ -422,26 +454,36 @@ export default function DentalAnalyticsDashboard() {
                   <p className="text-gray-700 font-medium mb-3">Monitor:</p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">Payments Received</span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">Payments Received</span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Outstanding Payments
-                      </span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          {" "}
+                          Outstanding Payments
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Patient Lifetime Value
-                      </span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          {" "}
+                          Patient Lifetime Value
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Revenue Generated After Agency Start Date
-                      </span>
+                      <div className="flex items-center space-x-3">
+                        <ChevronRight size={18} className="text-primary " />
+                        <span className="text-gray-700">
+                          Revenue Generated After Agency Start Date
+                        </span>
+                      </div>
                     </li>
                   </ul>
                   <p className="text-gray-600 mt-4">
@@ -452,7 +494,7 @@ export default function DentalAnalyticsDashboard() {
               </div>
             </div>
 
-            <div className="bg-white  rounded-2xl p-8 shadow-sm !mt-0">
+            <div className="bg-white border rounded-2xl p-8 shadow-sm !mt-0">
               <div className=" mb-4">
                 <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                   <TrendingUp className="text-primary" size={24} />
@@ -545,22 +587,30 @@ export default function DentalAnalyticsDashboard() {
               <p className="text-gray-700 font-medium my-3">Track:</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700">First Visit Date</span>
+                  <div className="flex items-center space-x-3">
+                    <ChevronRight size={18} className="text-primary " />
+                    <span className="text-gray-700">First Visit Date</span>
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700">Last Visit Date</span>
+                  <div className="flex items-center space-x-3">
+                    <ChevronRight size={18} className="text-primary " />
+                    <span className="text-gray-700">Last Visit Date</span>
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700">Next Appointment Date</span>
+                  <div className="flex items-center space-x-3">
+                    <ChevronRight size={18} className="text-primary " />
+                    <span className="text-gray-700">Next Appointment Date</span>
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700">
-                    Pending Treatment Opportunities
-                  </span>
+                  <div className="flex items-center space-x-3">
+                    <ChevronRight size={18} className="text-primary " />
+                    <span className="text-gray-700">
+                      Pending Treatment Opportunities
+                    </span>
+                  </div>
                 </li>
               </ul>
               <p className="mt-8  mx-auto   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
@@ -600,7 +650,7 @@ export default function DentalAnalyticsDashboard() {
           </div>
         </div>
       </section>
-       <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
+      <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Left Content */}
@@ -775,7 +825,7 @@ export default function DentalAnalyticsDashboard() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-             <CheckCircle2 size={18} />
+              <CheckCircle2 size={18} />
               <span className="font-medium">Why SmartSync Analytics</span>
             </span>
             <h2

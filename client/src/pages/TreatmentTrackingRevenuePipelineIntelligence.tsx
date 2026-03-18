@@ -295,17 +295,21 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                   </h3>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Identify treatment plans created for patients.
-                      </span>
+                      <div className="flex items-start space-x-3">
+                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <span className="text-gray-700">
+                          Identify treatment plans created for patients.
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Understand potential production opportunities entering
-                        the pipeline
-                      </span>
+                      <div className="flex items-start space-x-3">
+                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <span className="text-gray-700">
+                          Understand potential production opportunities entering
+                          the pipeline
+                        </span>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -323,24 +327,31 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                   </h3>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Detect treatments that remain unscheduled or incomplete.
-                      </span>
+                      <div className="flex items-start space-x-3">
+                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <span className="text-gray-700">
+                          Detect treatments that remain unscheduled or
+                          incomplete.
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        These opportunities often represent significant
-                        unrealized revenue.
-                      </span>
+                      <div className="flex items-start space-x-3">
+                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <span className="text-gray-700">
+                          These opportunities often represent significant
+                          unrealized revenue.
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Agencies and clinics can use this insight to trigger
-                        follow-ups or reactivation campaigns.
-                      </span>
+                      <div className="flex items-start space-x-3">
+                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <span className="text-gray-700">
+                          Agencies and clinics can use this insight to trigger
+                          follow-ups or reactivation campaigns.
+                        </span>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -358,17 +369,23 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                   </h3>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
-                        Track procedures completed inside the PMS automatically.
-                      </span>
+                      <div className="flex  items-start space-x-3">
+                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit " />
+                        <span className="text-gray-700">
+                          Track procedures completed inside the PMS
+                          automatically.
+                        </span>
+                      </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
+                      <div className="flex  items-start space-x-3">
+                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <span className="text-gray-700">
                         Measure operational performance and treatment acceptance
                         trends.
                       </span>
+                      </div>
+                      
                     </li>
                   </ul>
                 </div>
@@ -387,11 +404,14 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                   </div>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-[#0095FF] rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">
+                      <div className="flex items-start space-x-3">
+                        <ChevronRight size={18} className="text-primary min-w-fit mt-1" />
+                       <span className="text-gray-700">
                         Monitor payments collected after treatments are
                         completed and understand revenue conversion performance.
                       </span>
+                      </div>
+                      
                     </li>
                   </ul>
                 </div>
@@ -448,7 +468,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
           </p>
         </div>
       </section>
-       <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
+      <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Left Content */}
@@ -477,7 +497,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-6">
-            <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <TrendingUp size={20} />
               <span className="font-semibold text-sm">
                 Powerful for Marketing Agencies
@@ -531,7 +551,8 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             </div>
           </div>
           <p className="mt-8  mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            This strengthens agency positioning as a growth partner rather than a lead provider.
+            This strengthens agency positioning as a growth partner rather than
+            a lead provider.
           </p>
         </div>
       </section>
@@ -802,11 +823,12 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             Unlock Revenue Already Inside the Practice
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-2">
-           Track treatment opportunities, recover lost production, and forecast future payments automatically.
-
+            Track treatment opportunities, recover lost production, and forecast
+            future payments automatically.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-           Join agencies and clinics already using SmartSync across 80+ dental practices.
+            Join agencies and clinics already using SmartSync across 80+ dental
+            practices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

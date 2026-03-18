@@ -22,6 +22,9 @@ import TreatmentTrackingRevenuePipelineIntelligence from "./pages/TreatmentTrack
 import DentalPMSIntegrations from "./pages/DentalPMSIntegrations";
 import HowSmartSyncWorks from "./pages/HowSmartSyncWorks";
 import DentrixCRMIntegration from "./pages/DentrixCRMIntegration";
+import OpenDentalCRMIntegration from "./pages/OpenDentalCRMIntegration";
+import EaglesoftCRMIntegration from "./pages/EaglesoftCRMIntegration";
+import GoHighLevelDentalIntegration from "./pages/GoHighLevelDentalIntegration";
 
 export const DownloadPage = () => {
   const [, setLocation] = useLocation();
@@ -68,6 +71,9 @@ function Router() {
         <Route path="/dental-pms-integrations" component={DentalPMSIntegrations} />
         <Route path="/how-smartsync-works" component={HowSmartSyncWorks} />
         <Route path="/dentrix-crm-integration" component={DentrixCRMIntegration} />
+        <Route path="/open-dental-crm-integration" component={OpenDentalCRMIntegration} />
+        <Route path="/eaglesoft-crm-integration" component={EaglesoftCRMIntegration} />
+        <Route path="/gohighlevel-dental-integration" component={GoHighLevelDentalIntegration} />
         
         <Route component={NotFound} />
       </Switch>

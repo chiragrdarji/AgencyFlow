@@ -100,7 +100,7 @@ export default function DentrixCRMIntegration() {
     { name: "Home", url: "https://smartsync.one/" },
     {
       name: "Dentrix CRM Integration",
-      url: "https://smartsync.one/dental-marketing-attribution",
+      url: "https://smartsync.one/dentrix-crm-integration",
     },
   ]);
   return (
@@ -456,6 +456,31 @@ export default function DentrixCRMIntegration() {
           </p>
         </div>
       </section>
+       <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Left Content */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-1">
+                Want to Talk to Us?
+              </h3>
+              <p className="text-blue-100">
+                Schedule a quick demo and see SmartSync in action.
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <a
+              href="https://calendly.com/smart-sync/meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-primary font-semibold px-8 py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2"
+            >
+              Let's Start <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
       <section className="py-20 bg-primary-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap md:flex-nowrap gap-10 items-center">
@@ -538,6 +563,7 @@ export default function DentrixCRMIntegration() {
           </div>
         </div>
       </section>
+     
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8">

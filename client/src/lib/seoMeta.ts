@@ -89,6 +89,24 @@ export const seoConfig = {
       keywords: 'dentrix CRM integration, dentrix gohighlevel integration , dentrix hubspot integration , dentrix marketing automation , dentrix data sync',
       path: '/dentrix-crm-integration',
     },
+    opendentalCRMintegration: {
+      title: 'Open Dental CRM Integration | Sync Open Dental with GoHighLevel, HubSpot & Salesforce',
+      description: 'Connect Open Dental with GoHighLevel, HubSpot, and Salesforce using SmartSync. Automatically sync patients, appointments, treatments, and payments with real-time two-way integration.',
+      keywords: 'open dental CRM integration, open dental gohighlevel integration, open dental marketing automation , open dental data sync , open dental analytics integration',
+      path: '/open-dental-crm-integration',
+    },
+    eaglesoftCRMintegration: {
+      title: 'Eaglesoft CRM Integration | Connect Eaglesoft with GoHighLevel, HubSpot & Salesforce',
+      description: 'Integrate Eaglesoft with GoHighLevel, HubSpot, and Salesforce using SmartSync. Automatically sync patients, appointments, treatments, and payments with real-time two-way synchronization.',
+      keywords: 'eaglesoft CRM integration, eaglesoft gohighlevel integration, eaglesoft marketing integration , eaglesoft data sync CRM , eaglesoft analytics integration',
+      path: '/eaglesoft-crm-integration',
+    },
+    gohighleveldentalintegration: {
+      title: 'GoHighLevel Dental Integration | Connect Dentrix, Open Dental & PMS to GHL',
+      description: 'Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel using SmartSync. Sync patients, treatments, and payments to automate workflows and prove agency ROI.',
+      keywords: 'gohighlevel dental integration , dentrix gohighlevel integration , open dental gohighlevel integration , dental agency gohighlevel automation , dental CRM integration gohighlevel',
+      path: '/gohighlevel-dental-integration',
+    },
 
   },
 };
