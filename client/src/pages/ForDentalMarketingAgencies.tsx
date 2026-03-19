@@ -202,9 +202,7 @@ export default function ForDentalMarketingAgencies() {
                   Most agencies rely on fragmented data sources:
                 </p>
                 <p className="text-lg text-gray-600 font-semibold mb-4 mt-2">
-                  Manual spreadsheet reporting, Limited visibility into
-                  treatment performance, Delayed financial insights,
-                  Disconnected CRM reporting
+                  Call tracking tools, Lead forms, Appointment reports, Manual spreadsheets.
                 </p>
 
                 <p className="text-lg text-gray-600 mb-4">
@@ -320,7 +318,7 @@ export default function ForDentalMarketingAgencies() {
           </p>
         </div>
       </section>
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
@@ -361,7 +359,7 @@ export default function ForDentalMarketingAgencies() {
             Agency teams gain instant visibility without manual updates.
           </p>
         </div>
-      </section>
+      </section> */}
       <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">

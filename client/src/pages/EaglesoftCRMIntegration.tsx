@@ -289,7 +289,7 @@ export default function EaglesoftCRMIntegration() {
                   <ChevronRight size={18} className="text-primary " /> Upcoming Appointment Information.
                 </li>
               </ul>
-              <p className="text-md text-gray-600 mb-2">
+              <p className="text-md text-gray-900 mb-2">
                 Marketing and reporting systems stay accurate without manual updates.
               </p>
             </div>
@@ -325,7 +325,7 @@ export default function EaglesoftCRMIntegration() {
                   Patient Showed
                 </li>
               </ul>
-              <p className="text-md text-gray-600 mb-2">
+              <p className="text-md text-gray-900 mb-2">
                 Agencies can automate recovery workflows immediately.
               </p>
             </div>
@@ -359,7 +359,7 @@ export default function EaglesoftCRMIntegration() {
                   Treatment Completed
                 </li>
               </ul>
-              <p className="text-md text-gray-600 mb-2">
+              <p className="text-md text-gray-900 mb-2">
                 Identify production opportunities that may otherwise remain hidden.
               </p>
             </div>
@@ -395,7 +395,7 @@ export default function EaglesoftCRMIntegration() {
                   Expected Future Payments
                 </li>
               </ul>
-              <p className="text-md text-gray-600 mb-2">
+              <p className="text-md text-gray-900 mb-2">
                 Revenue reporting becomes automated and reliable.
               </p>
             </div>

@@ -506,22 +506,22 @@ export default function DentrixCRMIntegration() {
               <ul className="space-y-2 mt-4">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> New New
+                  <ChevronRight size={18} className="text-primary " />  New
                   patients are created
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> First
+                  <ChevronRight size={18} className="text-primary " /> 
                   Appointments are missed
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Last
+                  <ChevronRight size={18} className="text-primary " /> 
                   Treatments are proposed
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Last
+                  <ChevronRight size={18} className="text-primary " /> 
                   payments are recorded
                 </li>
               </ul>

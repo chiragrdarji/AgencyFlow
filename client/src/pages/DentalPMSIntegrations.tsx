@@ -720,22 +720,22 @@ export default function DentalPMSIntegrations() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> New
+                  <ChevronRight size={18} className="text-primary " /> 
                   Appointment Booked
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> First
+                  <ChevronRight size={18} className="text-primary " /> 
                   Appointment Modified
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Last
+                  <ChevronRight size={18} className="text-primary " /> 
                   Missed Appointment
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Last
+                  <ChevronRight size={18} className="text-primary " /> 
                   Patient Showed
                 </li>
               </ul>
@@ -751,17 +751,17 @@ export default function DentalPMSIntegrations() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> New
+                  <ChevronRight size={18} className="text-primary " /> 
                   Treatment Proposed
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> First
+                  <ChevronRight size={18} className="text-primary " /> 
                   Pending Procedures
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Last
+                  <ChevronRight size={18} className="text-primary " /> 
                   Treatment Completed
                 </li>
               </ul>
@@ -776,30 +776,28 @@ export default function DentalPMSIntegrations() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> New
+                  <ChevronRight size={18} className="text-primary " /> 
                   Payments Received
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> First
+                  <ChevronRight size={18} className="text-primary " /> 
                   Payment Due
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Last
+                  <ChevronRight size={18} className="text-primary " /> 
                   Lifetime Patient Value
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Last
+                  <ChevronRight size={18} className="text-primary " /> 
                   Expected Future Payments
                 </li>
               </ul>
             </div>
           </div>
-          <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            Client reporting becomes faster and significantly more accurate.
-          </p>
+         
         </div>
       </section>
       <section className="py-16 bg-primary-light">

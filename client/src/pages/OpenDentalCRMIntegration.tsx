@@ -28,11 +28,13 @@ import {
   FileDown,
   FileText,
   Gauge,
+  Globe,
   HeartPulse,
   Icon,
   IndianRupee,
   LifeBuoy,
   Lightbulb,
+  LineChart,
   Link,
   MapPin,
   Network,
@@ -281,7 +283,7 @@ export default function OpenDentalCRMIntegration() {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Sparkles size={18} />
               <span className="text-blue-600">
-                How SmartSync Integration Open Dental
+                How SmartSync Integrates Open Dental
               </span>
             </div>
 
@@ -334,7 +336,7 @@ export default function OpenDentalCRMIntegration() {
                   Appointment Date
                 </li>
               </ul>
-              <p className="text-md text-gray-600 mb-2">
+              <p className="text-md text-gray-900 mb-2">
                 CRM contacts remain aligned with clinic activity.
               </p>
             </div>
@@ -370,7 +372,7 @@ export default function OpenDentalCRMIntegration() {
                   Patient Showed
                 </li>
               </ul>
-              <p className="text-md text-gray-600 mb-2">
+              <p className="text-md text-gray-900 mb-2">
                 Agencies can instantly respond using CRM automation
               </p>
             </div>
@@ -405,7 +407,7 @@ export default function OpenDentalCRMIntegration() {
                   Treatment Completed
                 </li>
               </ul>
-              <p className="text-md text-gray-600 mb-2">
+              <p className="text-md text-gray-900 mb-2">
                 Identify unscheduled treatment opportunities directly inside CRM
                 dashboards.
               </p>
@@ -442,7 +444,7 @@ export default function OpenDentalCRMIntegration() {
                   Expected Future Payments
                 </li>
               </ul>
-              <p className="text-md text-gray-600 mb-2">
+              <p className="text-md text-gray-900 mb-2">
                 Revenue reporting becomes accurate and automated.
               </p>
             </div>
@@ -726,11 +728,92 @@ export default function OpenDentalCRMIntegration() {
           </p>
         </div>
       </section>
-      <section className="py-20 bg-white">
+       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
+              <Sparkles size={20} />
+              <span className="font-semibold text-sm">
+                Amalytics Powered by Open Dental
+              </span>
+            </div>
+
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Real-Time Dental Analytics Without Manual Reports
+            </h2>
+
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              SmartSync converts Open Dental activity into analytics dashboards.
+            </p>
+          </div>
+          <p className="font-bold p-2 text-lg text-center mb-6">
+            Track:
+          </p>
+
+          {/* Benefits */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                <FileText className="text-primary" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Automate reporting
+              </h3>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                <BarChart3 className="text-primary" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                New Patient Growth
+              </h3>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                <RotateCcw className="text-primary" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Appointment Trends
+              </h3>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                <Zap className="text-primary" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Treatment Pipeline Value
+              </h3>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                <LineChart className="text-primary" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Revenue Performance
+              </h3>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition-all">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+                <Globe className="text-primary" size={24} />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Future Production Forecast
+              </h3>
+            </div>
+          </div>
+          <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
+            Available inside SmartSync dashboards and CRM opportunities.
+          </p>
+        </div>
+      </section>
+      <section className="py-20 bg-primary-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="gap-8 grid md:grid-cols-2 ">
-            <div className="bg-white border-2 border-primary  shadow-lg p-8 rounded-2xl">
-              <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
+            <div className="bg-white   shadow-lg p-8 rounded-2xl">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
                 <Settings size={18} />
                 Implementation & Onboarding
               </span>
@@ -775,8 +858,8 @@ export default function OpenDentalCRMIntegration() {
                 </p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-primary shadow-lg p-8 rounded-2xl">
-              <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
+            <div className="bg-white shadow-lg p-8 rounded-2xl">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
                 <LifeBuoy size={18} />
                 Why SmartSync for Open Dental
               </span>
@@ -820,7 +903,7 @@ export default function OpenDentalCRMIntegration() {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-primary-light">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
