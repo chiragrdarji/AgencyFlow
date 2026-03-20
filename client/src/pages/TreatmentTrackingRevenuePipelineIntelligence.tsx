@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -50,6 +53,7 @@ import {
   X,
   Zap,
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: FilePlus, label: "Treatment Proposed" },
@@ -88,9 +92,37 @@ const steps2 = [
   "Revenue recovery automation",
 ];
 
+const faqItems = [
+  {
+    question: "What is dental treatment tracking software?",
+    answer:
+      "  Dental treatment tracking software helps clinics and agencies monitor treatment proposals, pending procedures, completed treatments, and related payments by syncing data directly from dental PMS systems.",
+  },
+  {
+    question: "How does dental revenue pipeline software improve practice growth?",
+    answer:
+      " Dental revenue pipeline software improves growth by identifying unscheduled or delayed treatments, allowing teams to recover lost opportunities and forecast future revenue more accurately.",
+  },
+  {
+    question: "What are pending procedures in dental analytics?",
+    answer:
+      " Pending procedures in dental analytics refer to treatments that have been proposed but not yet scheduled or completed, often representing significant unrealized revenue for the practice.",
+  },
+  {
+    question: " Can SmartSync help with dental treatment acceptance tracking?",
+    answer:
+      " Yes, SmartSync enables dental treatment acceptance tracking by monitoring which proposed treatments are completed and which remain pending, helping improve conversion and patient follow-up strategies.",
+  },
+  {
+    question: "How does SmartSync support dental production forecasting?",
+    answer:
+      " SmartSync supports dental production forecasting by analyzing pending treatments and scheduled procedures to estimate expected future payments and overall revenue potential.",
+  },
+];
+
 export default function TreatmentTrackingRevenuePipelineIntelligence() {
   const metaTags = getMetaTags("treatmenttrackingrevenuepipelineintelligence");
-
+  const faqSchema = getFAQSchema(faqItems);
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
     {
@@ -102,6 +134,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -162,7 +195,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 />
               </div> */}
               <img
-                src="/img/revenue-pipeline-intelligence.webp"
+                src="/img/treatment-tracking-software.webp"
                 alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
               />
             </div>
@@ -296,7 +329,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
                       <div className="flex items-start space-x-3">
-                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <ChevronRight
+                          size={18}
+                          className="text-primary mt-1 min-w-fit"
+                        />
                         <span className="text-gray-700">
                           Identify treatment plans created for patients.
                         </span>
@@ -304,7 +340,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="flex items-start space-x-3">
-                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <ChevronRight
+                          size={18}
+                          className="text-primary mt-1 min-w-fit"
+                        />
                         <span className="text-gray-700">
                           Understand potential production opportunities entering
                           the pipeline
@@ -328,7 +367,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
                       <div className="flex items-start space-x-3">
-                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <ChevronRight
+                          size={18}
+                          className="text-primary mt-1 min-w-fit"
+                        />
                         <span className="text-gray-700">
                           Detect treatments that remain unscheduled or
                           incomplete.
@@ -337,7 +379,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="flex items-start space-x-3">
-                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <ChevronRight
+                          size={18}
+                          className="text-primary mt-1 min-w-fit"
+                        />
                         <span className="text-gray-700">
                           These opportunities often represent significant
                           unrealized revenue.
@@ -346,7 +391,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="flex items-start space-x-3">
-                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <ChevronRight
+                          size={18}
+                          className="text-primary mt-1 min-w-fit"
+                        />
                         <span className="text-gray-700">
                           Agencies and clinics can use this insight to trigger
                           follow-ups or reactivation campaigns.
@@ -370,7 +418,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
                       <div className="flex  items-start space-x-3">
-                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit " />
+                        <ChevronRight
+                          size={18}
+                          className="text-primary mt-1 min-w-fit "
+                        />
                         <span className="text-gray-700">
                           Track procedures completed inside the PMS
                           automatically.
@@ -379,13 +430,15 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="flex  items-start space-x-3">
-                        <ChevronRight size={18} className="text-primary mt-1 min-w-fit" />
+                        <ChevronRight
+                          size={18}
+                          className="text-primary mt-1 min-w-fit"
+                        />
                         <span className="text-gray-700">
-                        Measure operational performance and treatment acceptance
-                        trends.
-                      </span>
+                          Measure operational performance and treatment
+                          acceptance trends.
+                        </span>
                       </div>
-                      
                     </li>
                   </ul>
                 </div>
@@ -405,13 +458,16 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
                       <div className="flex items-start space-x-3">
-                        <ChevronRight size={18} className="text-primary min-w-fit mt-1" />
-                       <span className="text-gray-700">
-                        Monitor payments collected after treatments are
-                        completed and understand revenue conversion performance.
-                      </span>
+                        <ChevronRight
+                          size={18}
+                          className="text-primary min-w-fit mt-1"
+                        />
+                        <span className="text-gray-700">
+                          Monitor payments collected after treatments are
+                          completed and understand revenue conversion
+                          performance.
+                        </span>
                       </div>
-                      
                     </li>
                   </ul>
                 </div>
@@ -815,6 +871,16 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             SmartSync bridges clinic operations and growth strategy.
           </p>
+        </div>
+      </section>
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
         </div>
       </section>
       <div className="py-16 bg-primary">

@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -42,6 +45,7 @@ import {
   X,
   Zap,
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: TrendingUp, label: "Prove marketing ROI" },
@@ -81,9 +85,37 @@ const steps2 = [
   "Revenue After Agency Onboarding",
 ];
 
+const faqItems = [
+  {
+    question: "What is software for dental marketing agencies?",
+    answer:
+      " Software for dental marketing agencies like SmartSync helps connect marketing efforts directly to real clinic performance by tracking patients, treatments, and payments using PMS and CRM integrations.",
+  },
+  {
+    question: "How can dental agencies prove marketing ROI to clients?",
+    answer:
+      " Dental agencies can prove marketing ROI by tracking actual revenue generated after onboarding a client, including patient payments and treatment value, instead of relying only on leads or appointment data.",
+  },
+  {
+    question: "What does dental agency reporting software track?",
+    answer:
+      "WDental agency reporting software tracks key metrics such as new patients, appointment activity, treatments proposed and completed, payments received, and future revenue to provide a complete performance view.",
+  },
+  {
+    question: " Does SmartSync support dental CRM integration for agencies?",
+    answer:
+      "Yes, SmartSync integrates with popular CRM platforms like GoHighLevel, HubSpot, and Salesforce, allowing agencies to sync real-time PMS data directly into their existing workflows.",
+  },
+  {
+    question: "How does SmartSync help improve client retention for agencies?",
+    answer:
+      " SmartSync improves client retention by providing transparent, data-driven reports that clearly show revenue growth and marketing impact, making it easier to build trust and justify ongoing services.",
+  },
+];
+
 export default function ForDentalMarketingAgencies() {
   const metaTags = getMetaTags("fordentalmarketingagencies");
-
+  const faqSchema = getFAQSchema(faqItems);
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
     {
@@ -95,6 +127,7 @@ export default function ForDentalMarketingAgencies() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -109,14 +142,19 @@ export default function ForDentalMarketingAgencies() {
               </h1>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
-                data-testid="text-hero-subheading">
+                data-testid="text-hero-subheading"
+              >
                 Stop reporting leads and appointments. Start proving real
                 revenue growth for your dental clients.
               </p>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
-                data-testid="text-hero-subheading">
-                SmartSync connects dental practice management systems directly with your CRM to automatically track patients, treatments, and payments generated after your agency begins working with a clinic.
+                data-testid="text-hero-subheading"
+              >
+                SmartSync connects dental practice management systems directly
+                with your CRM to automatically track patients, treatments, and
+                payments generated after your agency begins working with a
+                clinic.
               </p>
               <p
                 className="text-lg text-gray-600 mb-5 leading-relaxed"
@@ -202,7 +240,8 @@ export default function ForDentalMarketingAgencies() {
                   Most agencies rely on fragmented data sources:
                 </p>
                 <p className="text-lg text-gray-600 font-semibold mb-4 mt-2">
-                  Call tracking tools, Lead forms, Appointment reports, Manual spreadsheets.
+                  Call tracking tools, Lead forms, Appointment reports, Manual
+                  spreadsheets.
                 </p>
 
                 <p className="text-lg text-gray-600 mb-4">
@@ -726,9 +765,7 @@ export default function ForDentalMarketingAgencies() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
               <TrendingUp size={20} />
-              <span className="font-semibold text-sm">
-                Customer Results
-              </span>
+              <span className="font-semibold text-sm">Customer Results</span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -736,10 +773,13 @@ export default function ForDentalMarketingAgencies() {
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              SmartSync helps agencies strengthen client relationships through transparent reporting and measurable results.
+              SmartSync helps agencies strengthen client relationships through
+              transparent reporting and measurable results.
             </p>
           </div>
-          <p className="font-bold mb-2 p-2 text-lg text-center mb-6">Agencies using SmartSync benefit from:</p>
+          <p className="font-bold mb-2 p-2 text-lg text-center mb-6">
+            Agencies using SmartSync benefit from:
+          </p>
 
           {/* Benefits */}
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -772,13 +812,24 @@ export default function ForDentalMarketingAgencies() {
           </div>
         </div>
       </section>
+      <section className="py-20 bg-primary-light">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
+        </div>
+      </section>
       <div className="py-16 bg-primary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Give Your Agency a Competitive Advantage
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-2">
-            Move beyond lead reporting and demonstrate real production growth for every dental client you manage.
+            Move beyond lead reporting and demonstrate real production growth
+            for every dental client you manage.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
             Join agencies already using SmartSync across dozens of clinics.

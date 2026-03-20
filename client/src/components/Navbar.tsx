@@ -14,10 +14,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSupportMenu, setisSupportMenu] = useState(false);
+  const [isInnerMenu, setisInnerMenu] = useState(false);
 
   const navLinks = [
     { href: "/", label: "Home", type: "link" },
     { href: "/supported-platforms", label: "Supported Platforms", type: "menu" },
+    { href: "", label: "Features", type: "menu_page" },
     { href: "/onboarding", label: "Onboarding", type: "link" },
     { href: "/education", label: "Education", type: "link" },
     { href: "/contact", label: "Contact", type: "link" },
@@ -74,7 +76,107 @@ export default function Navbar() {
           </Link>
         </div>
       )}
+
     </div>);
+     if (type === "menu_page") return (<div className="relative"
+      onMouseEnter={() => setisInnerMenu(true)}
+      onMouseLeave={() => setisInnerMenu(false)}>
+      <button
+        className={`flex items-center ${isSupportMenu ? "text-primary" : " text-gray-700 "} py-[20px] font-medium hover:text-primary transition-colors`}
+        data-testid="agency-menu-toggle"
+      >
+        <span>{label}</span>
+        <ChevronDown className="ml-2 h-4 w-4" />
+      </button>
+
+      {isInnerMenu && (
+        <div className="absolute left-0  w-[250px] bg-white  rounded-bl-lg rounded-br-lg shadow-lg border-slate-200 z-10">
+
+          <Link
+            href="/dental-marketing-attribution"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            Dental Marketing Attribution Software
+          </Link>
+          <Link
+            href="/dental-analytics-dashboard"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            Dental Analytics Dashboard
+          </Link>
+          <Link
+            href="/for-dental-marketing-agencies"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            For Dental Marketing Agencies
+          </Link>
+          <Link
+            href="/treatment-tracking-software"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            Treatment Tracking & Revenue Pipeline Intelligence
+          </Link>
+          <Link
+            href="/dental-pms-integrations"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            Dental PMS Integrations
+          </Link>
+          <Link
+            href="/how-smartsync-works"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            How SmartSync Works
+          </Link>
+          <Link
+            href="/dentrix-crm-integration"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            Dentrix CRM Integration
+          </Link>
+          <Link
+            href="/open-dental-crm-integration"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            Open Dental CRM Integration
+          </Link>
+          <Link
+            href="/eaglesoft-crm-integration"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            Eaglesoft CRM Integration
+          </Link>
+          <Link
+            href="/gohighlevel-dental-integration"
+            className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg "
+            onClick={() => setisSupportMenu(false)}
+            data-testid="link-agency-open-dental"
+          >
+            GoHighLevel Dental Integration
+          </Link>
+        </div>
+      )}
+
+    </div>);
+    
 
     return (
       <Link href={href}>

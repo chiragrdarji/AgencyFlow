@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, { getBreadcrumbSchema , getFAQSchema } from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -61,6 +61,7 @@ import {
   X,
   Zap,
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: CheckCircle, label: "Dentrix" },
@@ -128,9 +129,37 @@ const steps2 = [
   "Custom field setup",
   "Opportunity synchronization",
 ];
+const faqItems = [
+  {
+    question: "What is dental PMS integration software?",
+    answer:
+      " Dental PMS integration software connects practice management systems like Dentrix, Open Dental, and Eaglesoft with CRM platforms to automatically sync patient, appointment, treatment, and payment data in real time.",
+  },
+  {
+    question: "How does Dentrix CRM integration help dental agencies?",
+    answer:
+      "Dentrix CRM integration helps dental agencies by syncing real clinic data such as patients, treatments, and payments directly into CRM systems, enabling accurate reporting, automation, and ROI tracking.",
+  },
+  {
+    question: " Does SmartSync support Open Dental CRM integration?",
+    answer:
+      "  Yes, SmartSync supports Open Dental CRM integration by synchronizing patient activity, appointments, treatments, and payment data into platforms like GoHighLevel, HubSpot, and Salesforce.",
+  },
+  {
+    question: "What data is synced with dental PMS sync software?",
+    answer:
+      "Dental PMS sync software like SmartSync synchronizes key data including patient records, appointment activity, treatment plans, completed procedures, payments, balances, and patient lifecycle information.",
+  },
+  {
+    question: "Why is two-way dental PMS integration important?",
+    answer:
+      "Two-way dental PMS integration is important because it keeps both PMS and CRM systems updated automatically, ensuring accurate data, better marketing automation, and reliable reporting without manual effort.",
+  },
+];
 
 export default function DentalPMSIntegrations() {
   const metaTags = getMetaTags("dentalPMSintegrations");
+   const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -143,6 +172,7 @@ export default function DentalPMSIntegrations() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -193,7 +223,7 @@ export default function DentalPMSIntegrations() {
                 />
               </div> */}
               <img
-                src="/img/Smart-Sync-One.gif"
+                src="/img/connect-dental-pms-integration.webp"
                 alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
               />
             </div>
@@ -210,7 +240,7 @@ export default function DentalPMSIntegrations() {
               Supported With Two-Way Synchronization
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {metrics.map(({ icon: Icon, label }, i) => (
               <div
                 key={i}
@@ -247,7 +277,7 @@ export default function DentalPMSIntegrations() {
           <p className="text-lg font-semibold text-gray-900 text-center mb-4">
             Without proper integration:
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             {[
               { icon: Clock , label: "Patient data becomes outdated" },
               {
@@ -684,7 +714,7 @@ export default function DentalPMSIntegrations() {
               SmartSync synchronizes important clinic activity including:
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  ">
               <div className=" w-12 h-12 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                 <Users  size={24} className="text-primary" />
@@ -916,6 +946,16 @@ export default function DentalPMSIntegrations() {
           </p>
         </div>
       </section>
+      <section className="py-20 bg-white">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Frequently Asked Questions
+                  </h2>
+                </div>
+                <FAQ items={faqItems} />
+              </div>
+            </section>
       <div className="py-16 bg-primary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

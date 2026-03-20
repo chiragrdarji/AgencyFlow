@@ -125,7 +125,7 @@ export default function EaglesoftCRMIntegration() {
                 />
               </div> */}
               <img
-                src="/img/dental-analytics-dashboard.webp"
+                src="/img/eaglesoft-crm-integration.webp"
                 alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
               />
             </div>

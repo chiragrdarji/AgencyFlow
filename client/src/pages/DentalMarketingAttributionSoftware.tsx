@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -37,6 +40,7 @@ import {
   Wallet,
   Zap,
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: Users, label: "New Patients Generated" },
@@ -79,8 +83,38 @@ const trackItems = [
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 
+const faqItems = [
+  {
+    question: "What is dental marketing attribution software?",
+    answer:
+      "Dental marketing attribution software helps agencies track how their marketing efforts generate real clinic revenue by connecting campaigns directly to treatments, payments, and lifetime patient value using dental PMS data.",
+  },
+  {
+    question: "How can I prove dental marketing ROI to my clients?",
+    answer:
+      " You can prove dental marketing ROI by integrating CRM platforms with dental practice management systems, allowing you to track actual revenue, procedures, and payments generated after your agency begins managing a clinic.",
+  },
+  {
+    question: "What metrics are important for dental ROI tracking?",
+    answer:
+      "The most important metrics for dental ROI tracking include new patients, treatment value, completed procedures, payments received, and lifetime patient revenue, which together provide a clear view of marketing performance.",
+  },
+  {
+    question: "Does SmartSync integrate with Dentrix and other PMS platforms?",
+    answer:
+      "SmartSync integrates with leading dental PMS platforms like Dentrix, Open Dental, and others, while also connecting with CRMs such as GoHighLevel, HubSpot, and Salesforce for seamless reporting.",
+  },
+  {
+    question:
+      "Why is dental revenue analytics better than traditional marketing reports?",
+    answer:
+      "Dental revenue analytics is more effective than traditional reports because it uses real clinic data like treatments and payments instead of just leads and bookings, giving agencies a true picture of financial impact and ROI.",
+  },
+];
+
 export default function DentalMarketingAttributionSoftware() {
   const metaTags = getMetaTags("dentalmarketingattributionsoftware");
+  const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -93,6 +127,7 @@ export default function DentalMarketingAttributionSoftware() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -144,7 +179,7 @@ export default function DentalMarketingAttributionSoftware() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative ">
               {/* <div className="p-6 bg-gradient-to-br from-primary-light to-blue-50 rounded-lg">
                 <img
                   src="/img/dental-marketying-campaign.webp"
@@ -154,6 +189,7 @@ export default function DentalMarketingAttributionSoftware() {
               <img
                 src="/img/dental-marketing-campaign.webp"
                 alt="dental-marketing-campaign"
+                className=" rounded-lg"
               />
             </div>
           </div>
@@ -203,7 +239,7 @@ export default function DentalMarketingAttributionSoftware() {
               </span>
             </div>
           </div>
-          
+
           <div className="relative grid lg:grid-cols-3 gap-4 lg:gap-6 items-stretch">
             {/* Card 1 - Problem (light red/orange) */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 relative z-10">
@@ -322,6 +358,10 @@ export default function DentalMarketingAttributionSoftware() {
                   </div>
                 ))}
               </div>
+              <p className="mt-10    text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4">
+                All data updates automatically within minutes. No manual
+                reporting required.
+              </p>
             </div>
           </div>
         </div>
@@ -452,7 +492,6 @@ export default function DentalMarketingAttributionSoftware() {
               </div>
             </div>
           </div>
-          
         </div>
       </section>
       <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
@@ -562,7 +601,7 @@ export default function DentalMarketingAttributionSoftware() {
               SmartSync simplifies reporting across multiple dental practices.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             {[
               { icon: Activity, label: "Monitor clinic performance" },
               { icon: TrendingUp, label: "Compare revenue growth" },
@@ -755,6 +794,16 @@ export default function DentalMarketingAttributionSoftware() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
         </div>
       </section>
       <div className="py-16 bg-primary">

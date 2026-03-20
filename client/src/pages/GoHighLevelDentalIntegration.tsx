@@ -167,7 +167,7 @@ export default function GoHighLevelDentalIntegration() {
             </div>
             <div className="relative">
               <img
-                src="/img/dental-marketing-campaign.webp"
+                src="/img/gohighlevel-dental-integration.webp"
                 alt="dental-marketing-campaign"
               />
             </div>

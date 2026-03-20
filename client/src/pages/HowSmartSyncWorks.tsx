@@ -151,7 +151,7 @@ export default function HowSmartSyncWorks() {
                 The setup process is guided and designed to minimize disruption
                 while ensuring accurate data synchronization.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
                   asChild
@@ -177,7 +177,7 @@ export default function HowSmartSyncWorks() {
                 />
               </div> */}
               <img
-                src="/img/dental-analytics-dashboard.webp"
+                src="/img/how-smartsync-works.webp"
                 alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
               />
             </div>
@@ -256,214 +256,292 @@ export default function HowSmartSyncWorks() {
               How SmartSync Works
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 gap-6 mb-8">
-          <div className="grid sm:grid-col-1 gap-6 mb-8">
-            <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
-                <span className="h-6 w-6 text-white font-bold flex items-center justify-center">
-                  1
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                Connect Your Dental PMS
-              </h3>
-              <p className="text-gray-600 text-md">
-                During onboarding, SmartSync securely connects to your dental
-                practice management system.
-              </p>
-              <p className="text-gray-600 text-md mt-4 font-semibold">
-                Supported systems include:
-              </p>
-              <div className="grid  sm:grid-cols-1 lg:grid-cols-3 gap-3  mt-[18px] text-center mb-4">
-                {pmsSystems.map((system) => (
-                  <div
-                    className="  rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
-                    key={system}
-                  >
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
-                  </div>
-                ))}
-              </div>
-              <p className="text-gray-600 text-md">
-                Our onboarding specialists assist throughout the process.
-              </p>
-              <p className="mt-8  mx-auto    text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                No disruption to daily clinic operations.
-              </p>
+
+          <div className="relative">
+            {/* Vertical timeline line */}
+            <div className="hidden md:block absolute left-5 top-2 h-full w-[2px] bg-primary"></div>
+            <div className="absolute left-[13px] top-2 translate-y-[-40%] translate-middle z-10">
+              <div className="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md"></div>
             </div>
-          </div>
-          <div className="grid sm:grid-col-1 gap-6 mb-8">
-            <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
-                <span className="h-6 w-6 text-white font-bold flex items-center justify-center">
-                  2
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                Connect Your CRM Platform
-              </h3>
-              <p className="text-gray-600 text-md">
-                Next, SmartSync integrates with your CRM environment.
-              </p>
-              <p className="text-gray-600 text-md font-semibold mt-4">Supported CRMs include:</p>
-              <div className="grid  sm:grid-cols-1 lg:grid-cols-1 gap-6  mt-[18px] text-center mb-4 ">
-                {crmPlatforms.map((system) => (
-                  <div
-                    className=" rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
-                    key={system}
-                  >
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8  mx-auto    text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                This allows operational data from the clinic to flow directly
-                into marketing and reporting pipelines.
-              </p>
+            <div className="absolute left-[13px] bottom-[-20px] translate-y-[-40%] translate-middle z-10">
+              <div className="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md"></div>
             </div>
-          </div>
-          <div className="grid sm:grid-col-1 gap-6 mb-8">
-            <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
-                <span className="h-6 w-6 text-white font-bold flex items-center justify-center">
-                  3
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                Automated CRM Configuration
-              </h3>
-              <p className="text-gray-600 text-md ">
-                SmartSync automatically prepares your CRM for synchronization.
-              </p>
-              <div className="grid  sm:grid-cols-1  gap-3  mt-[18px]  mb-4 ">
-                <div>
-                  <p className="text-gray-900 text-md font-semibold px-2">
-                    During setup:
-                  </p>
-                  <div className="grid    mt-[18px]  mb-4 ">
-                    {crmsetup.map((system) => (
-                      <div
-                        className=" p-1 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]     transition-all"
-                        key={system}
-                      >
-                        <CheckCircle2 className="h-4 w-4 text-primary" />{" "}
-                        {system}
-                      </div>
-                    ))}
+
+            <div className="space-y-12">
+              {/* STEP 1 */}
+              <div className="relative flex items-start gap-6">
+                <div className="absolute left-0 top-1/2 translate-y-[-40%] translate-middle z-10">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
+                    1
                   </div>
                 </div>
-                <div>
-                  <p className="text-gray-900 font-semibold text-md px-2">
-                    Fields such as the following are continuously updated:
-                  </p>
-                  <div className="grid  mt-[18px] mb-2 ">
-                    {crmUpdate.map((system) => (
-                      <div
-                        className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]     transition-all"
-                        key={system}
-                      >
-                        <CheckCircle2 className="h-4 w-4 text-primary" />{" "}
-                        {system}
+
+                <div className="ml-16 w-full">
+                  <div className="grid sm:grid-col-1 gap-6 mb-8">
+                    <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
+                      {/* (original number block kept but hidden to avoid duplication) */}
+                      <div className="hidden">
+                        <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
+                          <span className="h-6 w-6 text-white font-bold flex items-center justify-center">
+                            1
+                          </span>
+                        </div>
                       </div>
-                    ))}
+
+                      <h3 className="text-lg font-bold text-foreground mb-2">
+                        Connect Your Dental PMS
+                      </h3>
+                      <p className="text-gray-600 text-md">
+                        During onboarding, SmartSync securely connects to your
+                        dental practice management system.
+                      </p>
+                      <p className="text-gray-600 text-md mt-4 font-semibold">
+                        Supported systems include:
+                      </p>
+                      <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-[18px] text-center mb-4">
+                        {pmsSystems.map((system) => (
+                          <div
+                            className="rounded-xl text-foreground text-md flex items-center gap-[5px] font-semibold transition-all"
+                            key={system}
+                          >
+                            <CheckCircle2 className="h-4 w-4 text-primary" />{" "}
+                            {system}
+                          </div>
+                        ))}
+                      </div>
+                      <p className="text-gray-600 text-md">
+                        Our onboarding specialists assist throughout the
+                        process.
+                      </p>
+                      <p className="mt-8 mx-auto text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
+                        No disruption to daily clinic operations.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <p className="mt-2  mx-auto    text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] ">
-                This ensures accurate reporting without manual setup
-              </p>
-            </div>
-          </div>
-          <div className="grid sm:grid-col-1 gap-6 mb-8">
-            <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
-                <span className="h-6 w-6 text-white font-bold flex items-center justify-center">
-                  4
-                </span>
+
+              {/* STEP 2 */}
+              <div className="relative flex items-start gap-6 !mt-0">
+                <div className="absolute  top-1/2 translate-y-[-40%] z-10">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
+                    2
+                  </div>
+                </div>
+
+                <div className="ml-16 w-full">
+                  <div className="grid sm:grid-col-1 gap-6 mb-8">
+                    <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
+                      <div className="hidden">
+                        <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
+                          <span className="h-6 w-6 text-white font-bold flex items-center justify-center">
+                            2
+                          </span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-bold text-foreground mb-2">
+                        Connect Your CRM Platform
+                      </h3>
+                      <p className="text-gray-600 text-md">
+                        Next, SmartSync integrates with your CRM environment.
+                      </p>
+                      <p className="text-gray-600 text-md font-semibold mt-4">
+                        Supported CRMs include:
+                      </p>
+                      <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 mt-[18px] text-center mb-4">
+                        {crmPlatforms.map((system) => (
+                          <div
+                            className="rounded-xl text-foreground text-md flex items-center gap-[5px] font-semibold transition-all"
+                            key={system}
+                          >
+                            <CheckCircle2 className="h-4 w-4 text-primary" />{" "}
+                            {system}
+                          </div>
+                        ))}
+                      </div>
+                      <p className="mt-8 mx-auto text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
+                        This allows operational data from the clinic to flow
+                        directly into marketing and reporting pipelines.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
-                Real-Time Data Synchronization Begins
-              </h3>
-              <p className="text-gray-600 text-md ">
-                Once setup is complete, SmartSync continuously synchronizes
-                important clinic activity.
-              </p>
-              <p className="text-gray-600 text-md ">
-                Updates typically appear inside CRM systems within minutes
-              </p>
-              <p className="text-gray-600 text-md mt-4 font-semibold">
-                Automatically synchronized data includes:
-              </p>
-              <div className="grid  sm:grid-cols-2 lg:grid-cols-1 gap-3  mt-[18px]  mb-4 ">
-                <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-4 mb-10">
-                  {[
-                    {
-                      icon: Activity,
-                      label: "Patient Activity",
-                      list: [
-                        "New Patient Created",
-                        "First Visit Date",
-                        "Last Visit Date",
-                      ],
-                    },
-                    {
-                      icon: Calendar,
-                      label: "Appointment Updates",
-                      list: [
-                        "Appointment Booked",
-                        "Appointment Modified",
-                        "Missed Appointment",
-                        "Patient Showed",
-                      ],
-                    },
-                    {
-                      icon: Brain,
-                      label: "Treatment Intelligence",
-                      list: [
-                        "Treatment Proposed",
-                        "Pending Procedures",
-                        "Treatment Completed",
-                      ],
-                    },
-                    {
-                      icon: Database,
-                      label: "Financial Data",
-                      list: [
-                        "Payments Received",
-                        "Outstanding Payments",
-                        "Expected Future Payments",
-                      ],
-                    },
-                  ].map(({ icon: Icon, label, list }) => (
-                    <div
-                      key={label}
-                      className="rounded-lg  text-card-foreground  "
-                    >
-                      {/* <div className="w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
+
+              {/* STEP 3 */}
+              <div className="relative flex items-start gap-6 !mt-0">
+                <div className="absolute  top-1/2 translate-y-[-40%] z-10">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
+                    3
+                  </div>
+                </div>
+
+                <div className="ml-16 w-full">
+                  <div className="grid sm:grid-col-1 gap-6 mb-8">
+                    <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
+                      <div className="hidden">
+                        <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
+                          <span className="h-6 w-6 text-white font-bold flex items-center justify-center">
+                            3
+                          </span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-lg font-bold text-foreground mb-2">
+                        Automated CRM Configuration
+                      </h3>
+
+                      <p className="text-gray-600 text-md ">
+                        SmartSync automatically prepares your CRM for
+                        synchronization.
+                      </p>
+
+                      <div className="grid sm:grid-cols-2 gap-3 mt-[18px] mb-4 ">
+                        <div>
+                          <p className="text-gray-900 text-md font-semibold px-2">
+                            During setup:
+                          </p>
+                          <div className="grid mt-[18px] mb-4 ">
+                            {crmsetup.map((system) => (
+                              <div
+                                className="p-1 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px] transition-all"
+                                key={system}
+                              >
+                                <CheckCircle2 className="h-4 w-4 text-primary" />{" "}
+                                {system}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div>
+                          <p className="text-gray-900 font-semibold text-md px-2">
+                            Fields such as the following are continuously
+                            updated:
+                          </p>
+                          <div className="grid grid-cols-2 mt-[18px] mb-2 ">
+                            {crmUpdate.map((system) => (
+                              <div
+                                className="p-2 bg-white rounded-xl text-foreground text-md flex items-start gap-[5px] transition-all"
+                                key={system}
+                              >
+                                <CheckCircle2 className="h-4 w-4 min-w-fit text-primary mt-1" />{" "}
+                                {system}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      <p className="mt-2 mx-auto text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] ">
+                        This ensures accurate reporting without manual setup
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* STEP 4 */}
+              <div className="relative flex items-start gap-2 !mt-0">
+                <div className="absolute  top-1/2 translate-y-[-40%] z-10">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
+                    4
+                  </div>
+                </div>
+                <div className="ml-16 w-full">
+                  {/* KEEP EVERYTHING SAME AS YOUR ORIGINAL STEP 4 */}
+                  {/* (no content changes) */}
+                  <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
+                    <h3 className="text-lg font-bold text-foreground mb-2">
+                      Real-Time Data Synchronization Begins
+                    </h3>
+                    <p className="text-gray-600 text-md ">
+                      Once setup is complete, SmartSync continuously
+                      synchronizes important clinic activity.
+                    </p>
+                    <p className="text-gray-600 text-md ">
+                      Updates typically appear inside CRM systems within minutes
+                    </p>
+                    <p className="text-gray-600 text-md mt-4 font-semibold">
+                      Automatically synchronized data includes:
+                    </p>
+                    <div className="grid  sm:grid-cols-2 lg:grid-cols-1 gap-3  mt-[18px]  mb-4 ">
+                      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+                        {[
+                          {
+                            icon: Activity,
+                            label: "Patient Activity",
+                            list: [
+                              "New Patient Created",
+                              "First Visit Date",
+                              "Last Visit Date",
+                            ],
+                          },
+                          {
+                            icon: Calendar,
+                            label: "Appointment Updates",
+                            list: [
+                              "Appointment Booked",
+                              "Appointment Modified",
+                              "Missed Appointment",
+                              "Patient Showed",
+                            ],
+                          },
+                          {
+                            icon: Brain,
+                            label: "Treatment Intelligence",
+                            list: [
+                              "Treatment Proposed",
+                              "Pending Procedures",
+                              "Treatment Completed",
+                            ],
+                          },
+                          {
+                            icon: Database,
+                            label: "Financial Data",
+                            list: [
+                              "Payments Received",
+                              "Outstanding Payments",
+                              "Expected Future Payments",
+                            ],
+                          },
+                        ].map(({ icon: Icon, label, list }) => (
+                          <div
+                            key={label}
+                            className="rounded-lg  text-card-foreground  "
+                          >
+                            {/* <div className="w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                         <Icon className="h-6 w-6 text-primary mx-auto" />
                       </div> */}
 
-                      <p className="font-bold text-lg mb-4 text-foreground">
-                        {label}
-                      </p>
+                            <p className="font-bold text-lg mb-4 text-foreground">
+                              {label}
+                            </p>
 
-                      <div className="mb-2 space-y-1">
-                        {list?.map((item, index) => (
-                          <div key={index} className="flex items-center gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-primary" />
-                            <span>{item}</span>
+                            <div className="mb-2 space-y-1">
+                              {list?.map((item, index) => (
+                                <div
+                                  key={index}
+                                  className="flex items-center gap-2"
+                                >
+                                  <CheckCircle2 className="h-4 w-4 text-primary" />
+                                  <span>{item}</span>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         ))}
                       </div>
                     </div>
-                  ))}
+                    <p className="mt-2  mx-auto    text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] ">
+                      CRM workflows can automatically trigger using these
+                      updates.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <p className="mt-2  mx-auto    text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] ">
-                CRM workflows can automatically trigger using these updates.
-              </p>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -692,7 +770,7 @@ export default function HowSmartSyncWorks() {
           <p className="text-lg font-semibold text-gray-900 text-center mb-4">
             SmartSync is used by:
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             {[
               { icon: Megaphone, label: "Dental marketing agencies" },
               {
@@ -740,16 +818,18 @@ export default function HowSmartSyncWorks() {
                 More Than an Integration Tool
               </h2>
               <p className="text-lg text-gray-600">
-               SmartSync transforms operational PMS data into actionable intelligence.
+                SmartSync transforms operational PMS data into actionable
+                intelligence.
               </p>
-              
+
               <p className="mt-8  mx-auto   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                It becomes the operational bridge between marketing and production.
+                It becomes the operational bridge between marketing and
+                production.
               </p>
             </div>
             <div className="bg-white w-full md:w-[50%]  mx-auto max-w-[700px] rounded-2xl p-8   border-primary/10">
               <p className="text-xl font-semibold  mt-4 mb-6 ">
-               Customers use SmartSync to:
+                Customers use SmartSync to:
               </p>
               <div className="space-y-4">
                 {steps.map((step, i) => (
@@ -786,9 +866,10 @@ export default function HowSmartSyncWorks() {
             Ready to Connect Your PMS and CRM?
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-2">
-           See how SmartSync can automate reporting and unlock real-time revenue insights across your clinics.
+            See how SmartSync can automate reporting and unlock real-time
+            revenue insights across your clinics.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"

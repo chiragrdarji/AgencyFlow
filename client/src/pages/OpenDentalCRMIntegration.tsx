@@ -166,7 +166,7 @@ export default function OpenDentalCRMIntegration() {
             </div>
             <div className="relative">
               <img
-                src="/img/dental-marketing-campaign.webp"
+                src="/img/open-dental-crm-integration.webp"
                 alt="dental-marketing-campaign"
               />
             </div>

@@ -152,9 +152,9 @@ export default function DentrixCRMIntegration() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative mx-auto">
               <img
-                src="/img/dental-marketing-campaign.webp"
+                src="/img/dentrix-crm-integration.webp"
                 alt="dental-marketing-campaign"
               />
             </div>
@@ -281,7 +281,7 @@ export default function DentrixCRMIntegration() {
              Automatically Synced Dentrix Data
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             <div className="rounded-lg  bg-white border text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  ">
               <div className=" w-12 h-12 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                 <Users size={24} className="text-primary" />

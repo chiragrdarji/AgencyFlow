@@ -470,7 +470,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               SmartSync simplifies reporting across multiple dental practices.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             {[
               { icon: Activity, label: "Monitor clinic performance" },
               { icon: TrendingUp, label: "Compare revenue growth" },

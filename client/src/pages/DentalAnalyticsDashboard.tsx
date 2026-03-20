@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -35,6 +38,7 @@ import {
   XCircle,
   Zap,
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: Users, label: "New Patients" },
@@ -63,9 +67,38 @@ const steps = [
   "Recall campaign targets",
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
+const faqItems = [
+  {
+    question: "What is a dental analytics dashboard?",
+    answer:
+      " A dental analytics dashboard is a centralized platform that converts PMS data into real-time insights, helping agencies and clinics track patients, appointments, treatments, and revenue in one place.",
+  },
+  {
+    question: "How does SmartSync improve dental reporting software?",
+    answer:
+      " SmartSync improves dental reporting software by automatically syncing data from PMS systems into dashboards and CRMs, eliminating manual reporting while providing accurate, real-time performance insights.",
+  },
+  {
+    question: "What metrics can I track with a dental KPI software?",
+    answer:
+      "With dental KPI software like SmartSync, you can track key metrics such as new patients, appointments, treatment performance, payments received, outstanding balances, and expected future revenue.",
+  },
+  {
+    question: "Can SmartSync provide dental revenue dashboard insights across multiple clinics?",
+    answer:
+      "Yes, SmartSync allows agencies and multi-location practices to monitor performance across multiple clinics, compare growth, and track revenue trends from a single analytics dashboard.",
+  },
+  {
+    question:
+      "Why is a dental practice analytics platform important for growth?",
+    answer:
+      " A dental practice analytics platform is important because it provides real-time visibility into patient behavior, treatment performance, and revenue, enabling better decisions and improved long-term growth.",
+  },
+];
 
 export default function DentalAnalyticsDashboard() {
   const metaTags = getMetaTags("dentalanalyticsdashboard");
+  const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -78,6 +111,7 @@ export default function DentalAnalyticsDashboard() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -517,6 +551,31 @@ export default function DentalAnalyticsDashboard() {
           </div>
         </div>
       </section>
+      <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Left Content */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-1">
+                Want to Talk to Us?
+              </h3>
+              <p className="text-blue-100">
+                Schedule a quick demo and see SmartSync in action.
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <a
+              href="https://calendly.com/smart-sync/meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-primary font-semibold px-8 py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2"
+            >
+              Let's Start <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -650,31 +709,7 @@ export default function DentalAnalyticsDashboard() {
           </div>
         </div>
       </section>
-      <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            {/* Left Content */}
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-1">
-                Want to Talk to Us?
-              </h3>
-              <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
-              </p>
-            </div>
 
-            {/* CTA Button */}
-            <a
-              href="https://calendly.com/smart-sync/meeting"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-primary font-semibold px-8 py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2"
-            >
-              Let's Start <ArrowRight size={18} />
-            </a>
-          </div>
-        </div>
-      </section>
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -899,6 +934,16 @@ export default function DentalAnalyticsDashboard() {
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             SmartSync bridges clinic operations and marketing intelligence.
           </p>
+        </div>
+      </section>
+      <section className="py-20 bg-primary-light">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
         </div>
       </section>
       <div className="py-16 bg-primary">
