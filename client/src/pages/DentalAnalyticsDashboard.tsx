@@ -95,10 +95,45 @@ const faqItems = [
       " A dental practice analytics platform is important because it provides real-time visibility into patient behavior, treatment performance, and revenue, enabling better decisions and improved long-term growth.",
   },
 ];
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Dental Analytics Dashboard Software",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://smartsync.one/dental-analytics-dashboard",
+  description:
+    "Track new patients, appointments, treatments, payments, and future revenue using SmartSync’s dental analytics dashboard integrated directly with Dentrix, Open Dental, Eaglesoft and leading CRMs.",
+  brand: {
+    "@type": "Brand",
+    name: "Smart Sync",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Smart Sync",
+    url: "https://smartsync.one",
+  },
+  featureList: [
+    "Track new patients and patient growth trends",
+    "Monitor appointments, changes, and missed visits",
+    "Analyze treatment proposed, pending, and completed",
+    "Track payments received and outstanding balances",
+    "Measure patient lifetime value and revenue performance",
+    "Forecast future revenue based on pending treatments",
+    "Real-time PMS to CRM data synchronization",
+    "Automated analytics dashboards with no manual reporting"
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 50,
+  },
+};
 
 export default function DentalAnalyticsDashboard() {
   const metaTags = getMetaTags("dentalanalyticsdashboard");
   const faqSchema = getFAQSchema(faqItems);
+  
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -112,6 +147,7 @@ export default function DentalAnalyticsDashboard() {
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -937,7 +973,7 @@ export default function DentalAnalyticsDashboard() {
         </div>
       </section>
       <section className="py-20 bg-primary-light">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions

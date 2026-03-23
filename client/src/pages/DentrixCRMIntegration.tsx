@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -51,6 +54,7 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: Users, label: "New Patients" },
@@ -93,8 +97,73 @@ const trackItems = [
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 
+const faqItems = [
+  {
+    question: "What is Dentrix CRM integration?",
+    answer:
+      "Dentrix CRM integration connects Dentrix with platforms like GoHighLevel, HubSpot, and Salesforce to automatically sync patient data, appointments, treatments, and payments in real time.",
+  },
+  {
+    question: "How does Dentrix data sync improve marketing performance?",
+    answer:
+      "Dentrix data sync improves marketing performance by providing real clinic data inside your CRM, allowing agencies to track actual patient revenue, automate campaigns, and measure true ROI.",
+  },
+  {
+    question: "Can I integrate Dentrix with GoHighLevel, HubSpot, and Salesforce?",
+    answer:
+      "Yes, SmartSync enables seamless Dentrix integration with GoHighLevel, HubSpot, and Salesforce, allowing real-time data synchronization across all platforms for reporting and automation.",
+  },
+  {
+    question: "What data is included in Dentrix marketing automation integration?",
+    answer:
+      " Dentrix marketing automation integration includes syncing patient records, appointment activity, treatment status, payments, balances, and lifecycle data to power accurate workflows and reporting.",
+  },
+  {
+    question:
+      "Why is Dentrix CRM integration important for dental agencies?",
+    answer:
+      "Dentrix CRM integration is important because it eliminates manual reporting and provides real-time visibility into treatments and payments, helping agencies prove ROI and improve client retention.",
+  },
+];
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Dentrix CRM Integration Software",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://smartsync.one/dentrix-crm-integration",
+  description:
+    "Integrate Dentrix with GoHighLevel, HubSpot, and Salesforce using SmartSync. Sync patients, appointments, treatments, and payments automatically with real-time two-way synchronization.",
+  brand: {
+    "@type": "Brand",
+    name: "Smart Sync",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Smart Sync",
+    url: "https://smartsync.one",
+  },
+  featureList: [
+    "Real-time Dentrix to CRM two-way synchronization",
+    "Sync patient records, appointments, treatments, and payments automatically",
+    "Track patient lifecycle data including first and last visit dates",
+    "Monitor treatment proposed, pending procedures, and completed treatments",
+    "Track payments received, outstanding balances, and lifetime patient value",
+    "Trigger CRM automation workflows based on Dentrix activity",
+    "Integration with GoHighLevel, HubSpot, and Salesforce",
+    "Revenue attribution tracking after agency onboarding",
+    "Analytics dashboards powered by real Dentrix data",
+    "Centralized reporting for multi-location dental practices"
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 50,
+  },
+};
 export default function DentrixCRMIntegration() {
   const metaTags = getMetaTags("dentrixCRMintegration");
+  const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -107,6 +176,8 @@ export default function DentrixCRMIntegration() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -186,7 +257,9 @@ export default function DentrixCRMIntegration() {
               </div>
             ))}
           </div>
-          <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">Updates appear inside your CRM automatically within minutes.</p>
+          <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
+            Updates appear inside your CRM automatically within minutes.
+          </p>
         </div>
       </section>
       <section className="py-20 bg-white">
@@ -278,7 +351,7 @@ export default function DentrixCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-             Automatically Synced Dentrix Data
+              Automatically Synced Dentrix Data
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
@@ -456,7 +529,7 @@ export default function DentrixCRMIntegration() {
           </p>
         </div>
       </section>
-       <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
+      <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Left Content */}
@@ -499,29 +572,27 @@ export default function DentrixCRMIntegration() {
                 SmartSync allows agencies using GoHighLevel to bring real
                 Dentrix activity into CRM workflows.
               </p>
-              <p className="text-lg text-gray-900">
-                Trigger automation when:
-              </p>
+              <p className="text-lg text-gray-900">Trigger automation when:</p>
 
               <ul className="space-y-2 mt-4">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " />  New
+                  <ChevronRight size={18} className="text-primary " /> New
                   patients are created
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Appointments are missed
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Treatments are proposed
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   payments are recorded
                 </li>
               </ul>
@@ -563,7 +634,7 @@ export default function DentrixCRMIntegration() {
           </div>
         </div>
       </section>
-     
+
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -626,8 +697,8 @@ export default function DentrixCRMIntegration() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
-              <Cloud size={20} className=" text-primary" /> Dentrix
-              SalesForce Integration
+              <Cloud size={20} className=" text-primary" /> Dentrix SalesForce
+              Integration
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -890,6 +961,16 @@ export default function DentrixCRMIntegration() {
           </div>
         </div>
       </section>
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl px-4 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
+        </div>
+      </section>
 
       <div className="py-16 bg-primary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -897,7 +978,8 @@ export default function DentrixCRMIntegration() {
             Connect Dentrix With Your CRM Today
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-4">
-            Unlock real-time patient, treatment, and payment visibility using SmartSync.
+            Unlock real-time patient, treatment, and payment visibility using
+            SmartSync.
           </p>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Start transforming Dentrix data into measurable growth.

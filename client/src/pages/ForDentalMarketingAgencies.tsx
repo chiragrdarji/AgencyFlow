@@ -813,7 +813,7 @@ export default function ForDentalMarketingAgencies() {
         </div>
       </section>
       <section className="py-20 bg-primary-light">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl px-4 mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions

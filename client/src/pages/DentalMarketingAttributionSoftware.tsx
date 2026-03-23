@@ -111,8 +111,44 @@ const faqItems = [
       "Dental revenue analytics is more effective than traditional reports because it uses real clinic data like treatments and payments instead of just leads and bookings, giving agencies a true picture of financial impact and ROI.",
   },
 ];
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Dental Marketing Attribution Software for Agencies",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://smartsync.one/dental-marketing-attribution",
+  description:
+    "Track real patient revenue generated from dental marketing campaigns using PMS data. SmartSync connects Dentrix, Open Dental and other systems with CRM platforms to prove true agency ROI.",
+  brand: {
+    "@type": "Brand",
+    name: "Smart Sync",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Smart Sync",
+    url: "https://smartsync.one",
+  },
+  featureList: [
+    "Track new patients generated",
+    "Measure treatment value created",
+    "Monitor procedures completed",
+    "Track payments received",
+    "Calculate lifetime patient revenue",
+    "Revenue attribution after agency onboarding",
+    "Real-time PMS to CRM synchronization",
+    "Automated reporting with no manual work",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 50,
+  },
+};
+
 
 export default function DentalMarketingAttributionSoftware() {
+  
   const metaTags = getMetaTags("dentalmarketingattributionsoftware");
   const faqSchema = getFAQSchema(faqItems);
 
@@ -128,6 +164,7 @@ export default function DentalMarketingAttributionSoftware() {
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -225,7 +262,7 @@ export default function DentalMarketingAttributionSoftware() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="text-center mb-10 md:mb-14">
-            <div className="inline-flex items-center gap-4 px-4 sm:px-8 py-1.5 sm:py-3.5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-full shadow-sm">
+            <div className="inline-flex items-center gap-2 sm:gap-4 px-4 sm:px-8 py-1.5 sm:py-3.5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-full shadow-sm">
               <span className="text-sm md:text-lg font-bold text-primary">
                 Problem
               </span>
@@ -290,7 +327,7 @@ export default function DentalMarketingAttributionSoftware() {
               </h2>
 
               <div className="my-4">
-                <div className="text-5xl md:text-xl lg:text-2xl font-bold text-primary  leading-none">
+                <div className="text-xl lg:text-2xl font-bold text-primary  leading-none">
                   Revenue
                 </div>
               </div>
@@ -797,7 +834,7 @@ export default function DentalMarketingAttributionSoftware() {
         </div>
       </section>
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl px-4 mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions

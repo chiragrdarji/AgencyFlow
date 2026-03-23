@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema , getFAQSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -117,10 +120,10 @@ const eaglesoft_step = [
 ];
 
 const trackItems = [
-  { icon: Target , title: "Marketing attribution" },
-  { icon: BarChart3 , title: "Revenue analytics" },
-  { icon: GitBranch , title: "Treatment pipeline tracking" },
-  { icon: Zap , title: "CRM automation triggers" },
+  { icon: Target, title: "Marketing attribution" },
+  { icon: BarChart3, title: "Revenue analytics" },
+  { icon: GitBranch, title: "Treatment pipeline tracking" },
+  { icon: Zap, title: "CRM automation triggers" },
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 const steps2 = [
@@ -157,9 +160,46 @@ const faqItems = [
   },
 ];
 
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Dental PMS Integrations & CRM Synchronization Software",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://smartsync.one/dental-pms-integrations",
+  description:
+    "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync’s real-time two-way synchronization platform.",
+  brand: {
+    "@type": "Brand",
+    name: "Smart Sync",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Smart Sync",
+    url: "https://smartsync.one",
+  },
+  featureList: [
+    "Two-way synchronization between PMS and CRM systems",
+    "Sync patient records, appointments, treatments, and payments in real time",
+    "Dentrix CRM integration with automated data updates",
+    "Open Dental CRM integration with real-time analytics",
+    "Eaglesoft integration for treatment and revenue tracking",
+    "Support for multiple PMS platforms including Denticon, Curve Dental, and Dolphin",
+    "CRM integrations with GoHighLevel, HubSpot, and Salesforce",
+    "Automated patient lifecycle and financial data synchronization",
+    "Centralized reporting across multiple clinic locations",
+    "Real-time updates with no manual data exports",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 50,
+  },
+};
+
 export default function DentalPMSIntegrations() {
   const metaTags = getMetaTags("dentalPMSintegrations");
-   const faqSchema = getFAQSchema(faqItems);
+  const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -173,6 +213,7 @@ export default function DentalPMSIntegrations() {
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -261,7 +302,7 @@ export default function DentalPMSIntegrations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-              <Puzzle  size={18} className="" /> Why PMS Integration Matters
+              <Puzzle size={18} className="" /> Why PMS Integration Matters
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -279,17 +320,17 @@ export default function DentalPMSIntegrations() {
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             {[
-              { icon: Clock , label: "Patient data becomes outdated" },
+              { icon: Clock, label: "Patient data becomes outdated" },
               {
-                icon: FileDown  ,
+                icon: FileDown,
                 label: "Reporting requires manual exports",
               },
               {
-                icon: AlertTriangle ,
+                icon: AlertTriangle,
                 label: "Marketing automation lacks accuracy",
               },
               {
-                icon: EyeOff ,
+                icon: EyeOff,
                 label: "Agencies cannot track real revenue impact",
               },
             ].map(({ icon: Icon, label }) => (
@@ -359,7 +400,7 @@ export default function DentalPMSIntegrations() {
           <div className="flex flex-wrap md:flex-nowrap gap-10 items-center">
             <div className="mb-8 w-full md:w-[50%]">
               <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-                <Link   size={18} />
+                <Link size={18} />
                 Dentrix CRM Integration
               </span>
               <h2
@@ -452,7 +493,7 @@ export default function DentalPMSIntegrations() {
             </div>
             <div className="mb-8 w-full md:w-[50%] order-1 md:order-2">
               <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
-                <Link2  size={18} />
+                <Link2 size={18} />
                 Dentrix Ascend Integration
               </span>
               <h2
@@ -467,7 +508,8 @@ export default function DentalPMSIntegrations() {
               </p>
 
               <p className="mt-8  mx-auto   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                SmartSync ensures patient and appointment data flows automatically between systems.
+                SmartSync ensures patient and appointment data flows
+                automatically between systems.
               </p>
             </div>
           </div>
@@ -478,7 +520,7 @@ export default function DentalPMSIntegrations() {
           <div className=" flex flex-wrap md:flex-nowrap gap-10 items-center">
             <div className="mb-8 w-full md:w-[50%]">
               <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-                <Plug  size={18} />
+                <Plug size={18} />
                 Open Dental CRM Integration
               </span>
               <h2
@@ -566,7 +608,7 @@ export default function DentalPMSIntegrations() {
             </div>
             <div className="mb-8 w-full md:w-[50%] order-1 md:order-2">
               <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
-                <Settings    size={18} />
+                <Settings size={18} />
                 Eaglesoft Integration
               </span>
               <h2
@@ -617,7 +659,8 @@ export default function DentalPMSIntegrations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-              <Layers  size={18} /> Additional PMS Supported </span>
+              <Layers size={18} /> Additional PMS Supported{" "}
+            </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
@@ -652,7 +695,7 @@ export default function DentalPMSIntegrations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
-              <Network  size={18} className=" text-blue-600" /> CRM Integrations
+              <Network size={18} className=" text-blue-600" /> CRM Integrations
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -702,7 +745,7 @@ export default function DentalPMSIntegrations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-              <Database  size={18} className="" /> What Data SmartSync Syncs
+              <Database size={18} className="" /> What Data SmartSync Syncs
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -717,7 +760,7 @@ export default function DentalPMSIntegrations() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  ">
               <div className=" w-12 h-12 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
-                <Users  size={24} className="text-primary" />
+                <Users size={24} className="text-primary" />
               </div>
               <p className="font-semibold text-xl text-foreground mb-4">
                 Patient Intelligence
@@ -742,7 +785,7 @@ export default function DentalPMSIntegrations() {
             </div>
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  ">
               <div className=" w-12 h-12 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
-                <Calendar  size={24} className="text-primary" />
+                <Calendar size={24} className="text-primary" />
               </div>
               <p className="font-semibold text-foreground text-xl mb-4">
                 Appointment Activity
@@ -750,22 +793,22 @@ export default function DentalPMSIntegrations() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Appointment Booked
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Appointment Modified
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Missed Appointment
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Patient Showed
                 </li>
               </ul>
@@ -773,7 +816,7 @@ export default function DentalPMSIntegrations() {
 
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  ">
               <div className=" w-12 h-12 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
-                <Stethoscope  size={24} className="text-primary" />
+                <Stethoscope size={24} className="text-primary" />
               </div>
               <p className="font-semibold text-xl text-foreground mb-4">
                 Treatment Intelligence
@@ -781,24 +824,24 @@ export default function DentalPMSIntegrations() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Treatment Proposed
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Pending Procedures
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Treatment Completed
                 </li>
               </ul>
             </div>
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  ">
               <div className=" w-12 h-12 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
-                <DollarSign  size={24} className="text-primary" />
+                <DollarSign size={24} className="text-primary" />
               </div>
               <p className="font-semibold text-xl text-foreground mb-4">
                 Financial Data
@@ -806,36 +849,35 @@ export default function DentalPMSIntegrations() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Payments Received
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Payment Due
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Lifetime Patient Value
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Expected Future Payments
                 </li>
               </ul>
             </div>
           </div>
-         
         </div>
       </section>
       <section className="py-16 bg-primary-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
-              <Building2  size={18} className=" text-blue-600" /> Build for Agencies
-              Managing Multiple Clinics
+              <Building2 size={18} className=" text-blue-600" /> Build for
+              Agencies Managing Multiple Clinics
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -861,7 +903,7 @@ export default function DentalPMSIntegrations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-              <Compass   size={20} className=" text-primary" /> Guided Setup
+              <Compass size={20} className=" text-primary" /> Guided Setup
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -903,7 +945,7 @@ export default function DentalPMSIntegrations() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
-              <Sparkles  size={16} />
+              <Sparkles size={16} />
               <span className="text-primary">Why SmartSync </span>
             </div>
 
@@ -917,7 +959,7 @@ export default function DentalPMSIntegrations() {
           </div>
 
           <p className="text-lg font-semibold text-gray-900 mt-4 text-center mb-6">
-           It enables:
+            It enables:
           </p>
 
           <div className="relative w-[80%] mx-auto">
@@ -947,25 +989,26 @@ export default function DentalPMSIntegrations() {
         </div>
       </section>
       <section className="py-20 bg-white">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    Frequently Asked Questions
-                  </h2>
-                </div>
-                <FAQ items={faqItems} />
-              </div>
-            </section>
+        <div className="max-w-4xl px-4 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
+        </div>
+      </section>
       <div className="py-16 bg-primary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Connect Your Dental PMS and CRM Today
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-2">
-            Eliminate manual reporting and unlock real-time patient, treatment, and revenue insights.
+            Eliminate manual reporting and unlock real-time patient, treatment,
+            and revenue insights.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-           Join agencies already using SmartSync across 80+ dental clinics.
+            Join agencies already using SmartSync across 80+ dental clinics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

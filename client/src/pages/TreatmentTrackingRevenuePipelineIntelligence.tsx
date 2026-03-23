@@ -119,6 +119,40 @@ const faqItems = [
       " SmartSync supports dental production forecasting by analyzing pending treatments and scheduled procedures to estimate expected future payments and overall revenue potential.",
   },
 ];
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Dental Treatment Tracking Software & Revenue Pipeline Intelligence",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://smartsync.one/treatment-tracking-software",
+  description:
+    "Track treatment proposed, pending procedures, completed treatments, and expected future payments using SmartSync’s dental revenue pipeline intelligence platform integrated with leading PMS systems.",
+  brand: {
+    "@type": "Brand",
+    name: "Smart Sync",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Smart Sync",
+    url: "https://smartsync.one",
+  },
+  featureList: [
+    "Track treatment proposals and production opportunities",
+    "Identify pending procedures and unscheduled treatments",
+    "Monitor completed treatments and procedure trends",
+    "Track payments collected after treatment completion",
+    "Forecast future revenue based on pending procedures",
+    "Analyze treatment pipeline and revenue conversion",
+    "Trigger automated follow-ups based on treatment activity",
+    "Real-time PMS to CRM synchronization for treatment data"
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 50,
+  },
+};
 
 export default function TreatmentTrackingRevenuePipelineIntelligence() {
   const metaTags = getMetaTags("treatmenttrackingrevenuepipelineintelligence");
@@ -135,6 +169,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -874,7 +909,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
         </div>
       </section>
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl px-4 mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions

@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -66,7 +69,7 @@ import {
   X,
   Zap,
 } from "lucide-react";
-
+import FAQ from "@/components/FAQ";
 const metrics = [
   { icon: RefreshCcw, label: "Real Patient Sync" },
   { icon: GitBranch, label: " Treatment Pipeline Tracking" },
@@ -106,8 +109,74 @@ const trackItems = [
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 
+const faqItems = [
+  {
+    question: "What is GoHighLevel dental integration?",
+    answer:
+      "GoHighLevel dental integration connects dental PMS systems like Dentrix, Open Dental, and Eaglesoft with GoHighLevel to automatically sync patient data, appointments, treatments, and payments in real time.",
+  },
+  {
+    question: " How does SmartSync improve GoHighLevel for dental agencies?",
+    answer:
+      "SmartSync enhances GoHighLevel by syncing real clinic activity into CRM pipelines, enabling accurate reporting, automated workflows, and complete visibility into treatment and revenue performance.",
+  },
+  {
+    question:
+      "Can I connect Dentrix and Open Dental with GoHighLevel?",
+    answer:
+      " Yes, SmartSync allows seamless integration of Dentrix, Open Dental, and other PMS platforms with GoHighLevel, ensuring real-time data synchronization for automation and reporting.",
+  },
+  {
+    question: "What data is synced in dental CRM integration with GoHighLevel?",
+    answer:
+      " Dental CRM integration with GoHighLevel syncs patient records, appointment activity, treatment pipeline data, payments, and lifecycle information to power automation and revenue tracking.",
+  },
+  {
+    question: " Why is GoHighLevel dental automation important for agencies?",
+    answer:
+      "GoHighLevel dental automation is important because it uses real PMS data to trigger workflows, helping agencies improve patient engagement, track revenue growth, and clearly prove marketing ROI.",
+  },
+];
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "GoHighLevel Dental Integration Software",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://smartsync.one/gohighlevel-dental-integration",
+  description:
+    "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel using SmartSync. Sync patients, treatments, and payments to automate workflows and prove agency ROI.",
+  brand: {
+    "@type": "Brand",
+    name: "Smart Sync",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Smart Sync",
+    url: "https://smartsync.one",
+  },
+  featureList: [
+    "Real-time synchronization between dental PMS systems and GoHighLevel",
+    "Sync patients, appointments, treatments, and payments automatically",
+    "Track patient lifecycle data including visit history and upcoming appointments",
+    "Monitor treatment pipeline including proposed, pending, and completed procedures",
+    "Track payments received, outstanding balances, and lifetime patient value",
+    "Revenue attribution tracking after agency onboarding",
+    "Trigger GoHighLevel automation workflows using real PMS events",
+    "Enhance CRM opportunities with real clinic data and custom fields",
+    "Centralized reporting for multi-location dental practices",
+    "Analytics dashboards powered by real PMS data inside GoHighLevel"
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 50,
+  },
+};
+
 export default function GoHighLevelDentalIntegration() {
   const metaTags = getMetaTags("gohighleveldentalintegration");
+  const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -120,6 +189,8 @@ export default function GoHighLevelDentalIntegration() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -912,6 +983,16 @@ export default function GoHighLevelDentalIntegration() {
               reporting.
             </p>
           </div>
+        </div>
+      </section>
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl px-4 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
         </div>
       </section>
       <div className="py-16 bg-primary">

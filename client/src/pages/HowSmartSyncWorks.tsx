@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -56,6 +59,7 @@ import {
   XCircle,
   Zap,
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: RefreshCcw, label: "Real-Time PMS to CRM Synchronization" },
@@ -107,9 +111,37 @@ const trackItems = [
   { icon: TrendingUp, title: "Opportunity setup" },
   { icon: Shield, title: "Data verification" },
 ];
+const faqItems = [
+  {
+    question: "How does dental PMS integration work?",
+    answer:
+      "Dental PMS integration works by connecting practice management systems like Dentrix or Open Dental with CRM platforms, allowing patient activity, appointments, treatments, and payments to sync automatically in real time.",
+  },
+  {
+    question: "What is the SmartSync integration process?",
+    answer:
+      "The SmartSync integration process involves connecting your dental PMS, linking your CRM, automatically configuring data fields, and enabling real-time synchronization so all clinic activity flows seamlessly into your CRM.",
+  },
+  {
+    question: "How long does it take to set up Dentrix CRM sync?",
+    answer:
+      "Dentrix CRM sync setup is typically completed during onboarding with guided support, and most users begin seeing synchronized data and updates within a short time after configuration.",
+  },
+  {
+    question: "What data is synced during dental CRM automation integration?",
+    answer:
+      "Dental CRM automation integration syncs key data such as patient records, appointment updates, treatment status, payments, and expected future revenue to enable accurate reporting and automated workflows.",
+  },
+  {
+    question: "Why is real-time synchronization important for dental CRM integration?",
+    answer:
+      " Real-time synchronization ensures that CRM systems always reflect the latest clinic activity, enabling accurate reporting, better automation, and improved decision-making without manual data updates.",
+  },
+];
 
 export default function HowSmartSyncWorks() {
   const metaTags = getMetaTags("howsmartsyncworks");
+  const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -122,6 +154,7 @@ export default function HowSmartSyncWorks() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -259,24 +292,24 @@ export default function HowSmartSyncWorks() {
 
           <div className="relative">
             {/* Vertical timeline line */}
-            <div className="hidden md:block absolute left-5 top-2 h-full w-[2px] bg-primary"></div>
-            <div className="absolute left-[13px] top-2 translate-y-[-40%] translate-middle z-10">
+            <div className="block absolute left-2 md:left-5 top-2 h-full w-[2px] bg-primary"></div>
+            <div className="absolute left-[2px] md:left-[13px] top-2 translate-y-[-40%] translate-middle z-10">
               <div className="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md"></div>
             </div>
-            <div className="absolute left-[13px] bottom-[-20px] translate-y-[-40%] translate-middle z-10">
+            <div className="absolute left-[2px] md:left-[13px] bottom-[-20px] translate-y-[-40%] translate-middle z-10">
               <div className="w-4 h-4 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md"></div>
             </div>
 
             <div className="space-y-12">
               {/* STEP 1 */}
               <div className="relative flex items-start gap-6">
-                <div className="absolute left-0 top-1/2 translate-y-[-40%] translate-middle z-10">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
+                <div className="absolute left-[-8px] md:left-0 top-1/2 translate-y-[-40%] translate-middle z-10">
+                  <div className=" w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
                     1
                   </div>
                 </div>
 
-                <div className="ml-16 w-full">
+                <div className="ml-8 md:ml-16 w-full">
                   <div className="grid sm:grid-col-1 gap-6 mb-8">
                     <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
                       {/* (original number block kept but hidden to avoid duplication) */}
@@ -323,13 +356,13 @@ export default function HowSmartSyncWorks() {
 
               {/* STEP 2 */}
               <div className="relative flex items-start gap-6 !mt-0">
-                <div className="absolute  top-1/2 translate-y-[-40%] z-10">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
+                <div className="absolute left-[-8px] md:left-0  top-1/2 translate-y-[-40%] z-10">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
                     2
                   </div>
                 </div>
 
-                <div className="ml-16 w-full">
+                <div className="ml-8 md:ml-16 w-full">
                   <div className="grid sm:grid-col-1 gap-6 mb-8">
                     <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
                       <div className="hidden">
@@ -371,13 +404,13 @@ export default function HowSmartSyncWorks() {
 
               {/* STEP 3 */}
               <div className="relative flex items-start gap-6 !mt-0">
-                <div className="absolute  top-1/2 translate-y-[-40%] z-10">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
+                <div className="absolute left-[-8px] md:left-0  top-1/2 translate-y-[-40%] z-10">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
                     3
                   </div>
                 </div>
 
-                <div className="ml-16 w-full">
+                <div className="ml-8 md:ml-16 w-full">
                   <div className="grid sm:grid-col-1 gap-6 mb-8">
                     <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
                       <div className="hidden">
@@ -405,10 +438,10 @@ export default function HowSmartSyncWorks() {
                           <div className="grid mt-[18px] mb-4 ">
                             {crmsetup.map((system) => (
                               <div
-                                className="p-1 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px] transition-all"
+                                className="p-1 bg-white rounded-xl text-foreground text-md flex items-start gap-[5px] transition-all"
                                 key={system}
                               >
-                                <CheckCircle2 className="h-4 w-4 text-primary" />{" "}
+                                <CheckCircle2 className="h-4 w-4 text-primary min-w-fit mt-1" />{" "}
                                 {system}
                               </div>
                             ))}
@@ -420,13 +453,13 @@ export default function HowSmartSyncWorks() {
                             Fields such as the following are continuously
                             updated:
                           </p>
-                          <div className="grid grid-cols-2 mt-[18px] mb-2 ">
+                          <div className="grid sm:grid-cols-2 mt-[18px] mb-2 ">
                             {crmUpdate.map((system) => (
                               <div
                                 className="p-2 bg-white rounded-xl text-foreground text-md flex items-start gap-[5px] transition-all"
                                 key={system}
                               >
-                                <CheckCircle2 className="h-4 w-4 min-w-fit text-primary mt-1" />{" "}
+                                <CheckCircle2 className="h-4 w-4  text-primary mt-1 min-w-fit" />{" "}
                                 {system}
                               </div>
                             ))}
@@ -444,12 +477,12 @@ export default function HowSmartSyncWorks() {
 
               {/* STEP 4 */}
               <div className="relative flex items-start gap-2 !mt-0">
-                <div className="absolute  top-1/2 translate-y-[-40%] z-10">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
+                <div className="absolute left-[-8px] md:left-0  top-1/2 translate-y-[-40%] z-10">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold shadow-md">
                     4
                   </div>
                 </div>
-                <div className="ml-16 w-full">
+                <div className="ml-8 md:ml-16 w-full">
                   {/* KEEP EVERYTHING SAME AS YOUR ORIGINAL STEP 4 */}
                   {/* (no content changes) */}
                   <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
@@ -466,7 +499,7 @@ export default function HowSmartSyncWorks() {
                     <p className="text-gray-600 text-md mt-4 font-semibold">
                       Automatically synchronized data includes:
                     </p>
-                    <div className="grid  sm:grid-cols-2 lg:grid-cols-1 gap-3  mt-[18px]  mb-4 ">
+                    <div className="grid   lg:grid-cols-1 gap-3  mt-[18px]  mb-4 ">
                       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                         {[
                           {
@@ -858,6 +891,16 @@ export default function HowSmartSyncWorks() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl  mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
         </div>
       </section>
       <div className="py-16 bg-primary">

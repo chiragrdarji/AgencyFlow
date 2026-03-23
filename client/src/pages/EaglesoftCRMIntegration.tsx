@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -38,8 +41,8 @@ import {
   Wallet,
   Wand2,
   Workflow,
-  
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: Users, label: "New Patients" },
@@ -63,8 +66,77 @@ const trackItems = [
   { icon: TrendingUp, title: "Agency Influenced Revenue Growth" },
 ];
 
+const faqItems = [
+  {
+    question: "What is Eaglesoft CRM integration?",
+    answer:
+      " Eaglesoft CRM integration connects Eaglesoft with platforms like GoHighLevel, HubSpot, and Salesforce to automatically sync patient data, appointments, treatments, and payments in real time.",
+  },
+  {
+    question:
+      "How does Eaglesoft data sync improve marketing and reporting?",
+    answer:
+      " Eaglesoft data sync improves marketing and reporting by bringing real clinic data into your CRM, enabling accurate analytics, better automation, and clear visibility into treatment and revenue performance.",
+  },
+  {
+    question:
+      "Can I integrate Eaglesoft with GoHighLevel, HubSpot, and Salesforce?",
+    answer:
+      " Yes, SmartSync allows seamless Eaglesoft integration with GoHighLevel, HubSpot, and Salesforce, enabling real-time synchronization for automation, reporting, and revenue tracking.",
+  },
+  {
+    question:
+      "What data is included in Eaglesoft marketing integration?",
+    answer:
+      " Eaglesoft marketing integration includes syncing patient records, appointment activity, treatment pipeline data, payments, and patient lifecycle information to power CRM workflows and reporting.",
+  },
+  {
+    question:
+      "Why is Eaglesoft CRM integration important for dental agencies?",
+    answer:
+      "Eaglesoft CRM integration is important because it provides agencies with real treatment and payment data, helping them automate campaigns, track revenue growth, and prove marketing ROI effectively.",
+  },
+];
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Eaglesoft CRM Integration Software",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://smartsync.one/eaglesoft-crm-integration",
+  description:
+    "Integrate Eaglesoft with GoHighLevel, HubSpot, and Salesforce using SmartSync. Automatically sync patients, appointments, treatments, and payments with real-time two-way synchronization.",
+  brand: {
+    "@type": "Brand",
+    name: "Smart Sync",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Smart Sync",
+    url: "https://smartsync.one",
+  },
+  featureList: [
+    "Real-time Eaglesoft to CRM two-way synchronization",
+    "Sync patient records, appointments, treatments, and payments automatically",
+    "Track patient lifecycle data including visit history and upcoming appointments",
+    "Monitor treatment proposed, pending procedures, and completed treatments",
+    "Track payments received, outstanding balances, and lifetime patient value",
+    "Trigger CRM automation workflows based on Eaglesoft activity",
+    "Integration with GoHighLevel, HubSpot, and Salesforce",
+    "Treatment pipeline visibility for unscheduled and pending procedures",
+    "Analytics dashboards powered by real Eaglesoft data",
+    "Centralized reporting for multi-location dental practices"
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 50,
+  },
+};
+
 export default function EaglesoftCRMIntegration() {
   const metaTags = getMetaTags("eaglesoftCRMintegration");
+  const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -77,6 +149,8 @@ export default function EaglesoftCRMIntegration() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -86,20 +160,22 @@ export default function EaglesoftCRMIntegration() {
                 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
                 data-testid="text-hero-headline"
               >
-                <span className="text-primary">
-                  Eaglesoft CRM Integration </span>  for Dental Agencies and Multi-Location Practices
+                <span className="text-primary">Eaglesoft CRM Integration </span>{" "}
+                for Dental Agencies and Multi-Location Practices
               </h1>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Connect Eaglesoft directly with your CRM and marketing platforms using SmartSync’s real-time two-way synchronization.
+                Connect Eaglesoft directly with your CRM and marketing platforms
+                using SmartSync’s real-time two-way synchronization.
               </p>
-              <p
-                className="text-lg text-gray-600 mb-6 leading-relaxed" >
-                Automatically sync patient records, appointments, treatments, and payments to eliminate manual reporting and unlock accurate revenue insights.
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Automatically sync patient records, appointments, treatments,
+                and payments to eliminate manual reporting and unlock accurate
+                revenue insights.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
                   asChild
@@ -177,10 +253,12 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              Many successful dental practices rely on Eaglesoft to manage daily operations.
+              Many successful dental practices rely on Eaglesoft to manage daily
+              operations.
             </p>
             <p className="text-lg text-gray-600 mb-4">
-             However, agencies and growth teams typically operate inside CRM platforms.
+              However, agencies and growth teams typically operate inside CRM
+              platforms.
             </p>
           </div>
 
@@ -229,7 +307,8 @@ export default function EaglesoftCRMIntegration() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync connects Eaglesoft operational activity directly with CRM workflows
+            SmartSync connects Eaglesoft operational activity directly with CRM
+            workflows
           </p>
         </div>
       </section>
@@ -248,10 +327,12 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync continuously synchronizes clinic activity between Eaglesoft and supported CRM platforms.
+              SmartSync continuously synchronizes clinic activity between
+              Eaglesoft and supported CRM platforms.
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              When updates occur inside Eaglesoft, CRM records automatically reflect those changes.
+              When updates occur inside Eaglesoft, CRM records automatically
+              reflect those changes.
             </p>
             <p className="text-lg text-gray-600 mb-4">
               Typical synchronization occurs within minutes.
@@ -271,26 +352,28 @@ export default function EaglesoftCRMIntegration() {
               <ul className="space-y-2 mb-2">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " />  
+                  <ChevronRight size={18} className="text-primary " />
                   Patient Creation
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   First Visit Date
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " />  Last
+                  <ChevronRight size={18} className="text-primary " /> Last
                   Visit Date
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Upcoming Appointment Information.
+                  <ChevronRight size={18} className="text-primary " /> Upcoming
+                  Appointment Information.
                 </li>
               </ul>
               <p className="text-md text-gray-900 mb-2">
-                Marketing and reporting systems stay accurate without manual updates.
+                Marketing and reporting systems stay accurate without manual
+                updates.
               </p>
             </div>
             <div className="rounded-lg  bg-white  border text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  ">
@@ -301,7 +384,7 @@ export default function EaglesoftCRMIntegration() {
                 Appointment Activity Tracking
               </p>
               <p className="text-lg text-foreground mb-2">
-               SmartSync synchronizes scheduling activity including:
+                SmartSync synchronizes scheduling activity including:
               </p>
               <ul className="space-y-2 mb-2">
                 <li className="flex items-center gap-3">
@@ -334,10 +417,11 @@ export default function EaglesoftCRMIntegration() {
                 <Eye size={24} className="text-primary" />
               </div>
               <p className="font-semibold text-lg text-foreground mb-2">
-                Treatment Pipeline Visibility 
+                Treatment Pipeline Visibility
               </p>
               <p className="text-lg text-foreground mb-2">
-                SmartSync provides deep insight into treatment performance for Eaglesoft clinics.
+                SmartSync provides deep insight into treatment performance for
+                Eaglesoft clinics.
               </p>
               <p className="text-lg text-foreground mb-2">
                 Track automatically:
@@ -360,7 +444,8 @@ export default function EaglesoftCRMIntegration() {
                 </li>
               </ul>
               <p className="text-md text-gray-900 mb-2">
-                Identify production opportunities that may otherwise remain hidden.
+                Identify production opportunities that may otherwise remain
+                hidden.
               </p>
             </div>
             <div className="rounded-lg  bg-white border text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  ">
@@ -417,28 +502,34 @@ export default function EaglesoftCRMIntegration() {
                 Power GoHighLevel Automation Using Eaglesoft Activity
               </h2>
               <p className="text-lg text-gray-600 mt-4 mb-2">
-                SmartSync enables agencies using GoHighLevel to activate workflows using real clinic events.
+                SmartSync enables agencies using GoHighLevel to activate
+                workflows using real clinic events.
               </p>
-             
-              <p className="text-lg text-gray-900">Automation triggers include:</p>
+
+              <p className="text-lg text-gray-900">
+                Automation triggers include:
+              </p>
 
               <ul className="space-y-2 mt-4">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> New patient creation
+                  <ChevronRight size={18} className="text-primary " /> New
+                  patient creation
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " />Missed appointments
+                  <ChevronRight size={18} className="text-primary " />
+                  Missed appointments
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Treatment proposals
+                  <ChevronRight size={18} className="text-primary " /> Treatment
+                  proposals
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Payment updates
-                  
+                  <ChevronRight size={18} className="text-primary " /> Payment
+                  updates
                 </li>
               </ul>
 
@@ -509,7 +600,9 @@ export default function EaglesoftCRMIntegration() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Network size={18} />
-              <span className="text-blue-600">Eaglesoft  Hubspot Integration</span>
+              <span className="text-blue-600">
+                Eaglesoft Hubspot Integration
+              </span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -517,7 +610,8 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync synchronizes Eaglesoft activity into HubSpot contacts and deal pipelines.
+              SmartSync synchronizes Eaglesoft activity into HubSpot contacts
+              and deal pipelines.
             </p>
           </div>
 
@@ -550,9 +644,7 @@ export default function EaglesoftCRMIntegration() {
                 <TrendingUp className="h-6 w-6 text-primary" />
               </div>
 
-              <h3 className="font-medium text-foreground">
-                Production growth
-              </h3>
+              <h3 className="font-medium text-foreground">Production growth</h3>
             </div>
           </div>
 
@@ -576,7 +668,8 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              Organizations using Salesforce can centralize clinic intelligence across multiple Eaglesoft practices.
+              Organizations using Salesforce can centralize clinic intelligence
+              across multiple Eaglesoft practices.
             </p>
           </div>
 
@@ -614,7 +707,7 @@ export default function EaglesoftCRMIntegration() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-           Ideal for consultants and multi-location organizations.
+            Ideal for consultants and multi-location organizations.
           </p>
         </div>
       </section>
@@ -641,7 +734,7 @@ export default function EaglesoftCRMIntegration() {
           </div>
 
           <p className="text-lg font-semibold text-gray-900 mt-4 text-center mb-6">
-           Inside CRM opportunities agencies can view:
+            Inside CRM opportunities agencies can view:
           </p>
 
           <div className="relative w-[90%] mx-auto">
@@ -666,7 +759,7 @@ export default function EaglesoftCRMIntegration() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-           Client conversations shift toward measurable results.
+            Client conversations shift toward measurable results.
           </p>
         </div>
       </section>
@@ -686,12 +779,11 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              SmartSync converts Eaglesoft operational data into analytics dashboards.
+              SmartSync converts Eaglesoft operational data into analytics
+              dashboards.
             </p>
           </div>
-          <p className="font-bold p-2 text-lg text-center mb-6">
-            Track:
-          </p>
+          <p className="font-bold p-2 text-lg text-center mb-6">Track:</p>
 
           {/* Benefits */}
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -756,7 +848,8 @@ export default function EaglesoftCRMIntegration() {
                 Guided Eaglesoft Integration Setup Included
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync onboarding specialists assist throughout implementation.
+                SmartSync onboarding specialists assist throughout
+                implementation.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Setup includes:
@@ -772,13 +865,13 @@ export default function EaglesoftCRMIntegration() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
-                  <span className="text-gray-700">
-                    Custom field creation
-                  </span>
+                  <span className="text-gray-700">Custom field creation</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
-                  <span className="text-gray-700">Opportunity synchronization</span>
+                  <span className="text-gray-700">
+                    Opportunity synchronization
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
@@ -786,7 +879,8 @@ export default function EaglesoftCRMIntegration() {
                 </div>
 
                 <p className="text-gray-600">
-                 Most agencies begin seeing synchronized activity quickly after onboarding.
+                  Most agencies begin seeing synchronized activity quickly after
+                  onboarding.
                 </p>
               </div>
             </div>
@@ -800,7 +894,8 @@ export default function EaglesoftCRMIntegration() {
                 Modernize Eaglesoft Reporting and Automation
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-               SmartSync transforms Eaglesoft operational data into actionable intelligence.
+                SmartSync transforms Eaglesoft operational data into actionable
+                intelligence.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Customers use SmartSync to:
@@ -812,19 +907,17 @@ export default function EaglesoftCRMIntegration() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
-                  <span className="text-gray-700">Improve treatment follow-ups</span>
-                </div>
-                <div className="flex  items-center space-x-3">
-                  <ChevronRight size={18} className="text-primary " />
                   <span className="text-gray-700">
-                    Power CRM automation
+                    Improve treatment follow-ups
                   </span>
                 </div>
                 <div className="flex  items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
-                  <span className="text-gray-700">
-                    Prove marketing ROI
-                  </span>
+                  <span className="text-gray-700">Power CRM automation</span>
+                </div>
+                <div className="flex  items-center space-x-3">
+                  <ChevronRight size={18} className="text-primary " />
+                  <span className="text-gray-700">Prove marketing ROI</span>
                 </div>
 
                 <p className="text-gray-600">
@@ -849,7 +942,8 @@ export default function EaglesoftCRMIntegration() {
               Supporting Agencies and Clinics Across 80+ Dental Locations
             </h2>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync helps agencies standardize reporting and automation across clinics using Eaglesoft and other PMS systems.
+              SmartSync helps agencies standardize reporting and automation
+              across clinics using Eaglesoft and other PMS systems.
             </p>
 
             <p className="mt-8  mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
@@ -858,15 +952,26 @@ export default function EaglesoftCRMIntegration() {
           </div>
         </div>
       </section>
+      <section className="py-20 bg-primary-light">
+        <div className="max-w-4xl px-4 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
+        </div>
+      </section>
       <div className="py-16 bg-primary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Connect Eaglesoft With Your CRM Today
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-4">
-            Eliminate manual reporting and unlock real-time visibility into patient activity and revenue performance.
+            Eliminate manual reporting and unlock real-time visibility into
+            patient activity and revenue performance.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"

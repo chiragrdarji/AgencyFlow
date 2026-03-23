@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
-import SchemaMarkup, { getBreadcrumbSchema } from "@/components/SchemaMarkup";
+import SchemaMarkup, {
+  getBreadcrumbSchema,
+  getFAQSchema,
+} from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
 import {
   Activity,
@@ -59,6 +62,7 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
+import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: Users, label: "New Patients" },
@@ -103,8 +107,75 @@ const trackItems = [
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 
+const faqItems = [
+  {
+    question: "What is Open Dental CRM integration?",
+    answer:
+      "Open Dental CRM integration connects Open Dental with platforms like GoHighLevel, HubSpot, and Salesforce to automatically sync patient data, appointments, treatments, and payments in real time.",
+  },
+  {
+    question: "How does Open Dental data sync improve reporting and automation?",
+    answer:
+      "Open Dental data sync improves reporting and automation by providing real clinic data inside your CRM, enabling accurate analytics, smarter workflows, and better visibility into treatment and revenue performance.",
+  },
+  {
+    question:
+      "Can I integrate Open Dental with GoHighLevel, HubSpot, and Salesforce?",
+    answer:
+      " Yes, SmartSync allows seamless Open Dental integration with GoHighLevel, HubSpot, and Salesforce, enabling real-time synchronization for marketing automation, reporting, and pipeline tracking.",
+  },
+  {
+    question:
+      "What data is included in Open Dental marketing automation integration?",
+    answer:
+      " Open Dental marketing automation integration includes syncing patient records, appointment activity, treatment pipeline data, payments, and lifecycle information to power CRM workflows and reporting.",
+  },
+  {
+    question: "Why is Open Dental CRM integration important for dental agencies?",
+    answer:
+      "Open Dental CRM integration is important because it gives agencies access to real treatment and payment data, helping them automate campaigns, track revenue growth, and clearly demonstrate marketing ROI.",
+  },
+];
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Open Dental CRM Integration Software",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://smartsync.one/open-dental-crm-integration",
+  description:
+    "Connect Open Dental with GoHighLevel, HubSpot, and Salesforce using SmartSync. Automatically sync patients, appointments, treatments, and payments with real-time two-way integration.",
+  brand: {
+    "@type": "Brand",
+    name: "Smart Sync",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Smart Sync",
+    url: "https://smartsync.one",
+  },
+  featureList: [
+    "Real-time Open Dental to CRM two-way synchronization",
+    "Sync patient records, appointments, treatments, and payments automatically",
+    "Track patient lifecycle data including visit dates and upcoming appointments",
+    "Monitor treatment proposed, pending procedures, and completed treatments",
+    "Track payments received, outstanding balances, and lifetime patient value",
+    "Trigger CRM automation workflows based on Open Dental activity",
+    "Integration with GoHighLevel, HubSpot, and Salesforce",
+    "Treatment pipeline visibility for unscheduled and pending procedures",
+    "Analytics dashboards powered by real Open Dental data",
+    "Centralized reporting for multi-location dental practices"
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    ratingCount: 50,
+  },
+};
 export default function OpenDentalCRMIntegration() {
   const metaTags = getMetaTags("opendentalCRMintegration");
+  const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -117,6 +188,8 @@ export default function OpenDentalCRMIntegration() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={faqSchema} />
+      <SchemaMarkup schema={softwareSchema} />
       <section className="hero-gradient pb-20 pt-4  overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -322,17 +395,17 @@ export default function OpenDentalCRMIntegration() {
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   First Visit Date
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " />  Last
+                  <ChevronRight size={18} className="text-primary " /> Last
                   Visit Date
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " />  Next
+                  <ChevronRight size={18} className="text-primary " /> Next
                   Appointment Date
                 </li>
               </ul>
@@ -565,7 +638,9 @@ export default function OpenDentalCRMIntegration() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Network size={18} />
-              <span className="text-blue-600">Open Dental Hubspot Integration</span>
+              <span className="text-blue-600">
+                Open Dental Hubspot Integration
+              </span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -573,7 +648,8 @@ export default function OpenDentalCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync synchronizes Open Dental activity directly into HubSpot contacts and deal pipelines.
+              SmartSync synchronizes Open Dental activity directly into HubSpot
+              contacts and deal pipelines.
             </p>
           </div>
 
@@ -728,7 +804,7 @@ export default function OpenDentalCRMIntegration() {
           </p>
         </div>
       </section>
-       <section className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-8">
@@ -747,9 +823,7 @@ export default function OpenDentalCRMIntegration() {
               SmartSync converts Open Dental activity into analytics dashboards.
             </p>
           </div>
-          <p className="font-bold p-2 text-lg text-center mb-6">
-            Track:
-          </p>
+          <p className="font-bold p-2 text-lg text-center mb-6">Track:</p>
 
           {/* Benefits */}
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -926,6 +1000,16 @@ export default function OpenDentalCRMIntegration() {
               Reliable synchronization ensures accurate decision-making.
             </p>
           </div>
+        </div>
+      </section>
+      <section className="py-20 bg-primary-light">
+        <div className="max-w-4xl px-4 mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <FAQ items={faqItems} />
         </div>
       </section>
       <div className="py-16 bg-primary">
