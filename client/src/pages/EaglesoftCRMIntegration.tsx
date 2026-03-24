@@ -106,10 +106,7 @@ const softwareSchema = {
   url: "https://smartsync.one/eaglesoft-crm-integration",
   description:
     "Integrate Eaglesoft with GoHighLevel, HubSpot, and Salesforce using SmartSync. Automatically sync patients, appointments, treatments, and payments with real-time two-way synchronization.",
-  brand: {
-    "@type": "Brand",
-    name: "Smart Sync",
-  },
+  
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -129,8 +126,8 @@ const softwareSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 50,
+    ratingValue: "4.9",
+    ratingCount: "50",
   },
 };
 

@@ -128,10 +128,7 @@ const softwareSchema = {
   url: "https://smartsync.one/treatment-tracking-software",
   description:
     "Track treatment proposed, pending procedures, completed treatments, and expected future payments using SmartSync’s dental revenue pipeline intelligence platform integrated with leading PMS systems.",
-  brand: {
-    "@type": "Brand",
-    name: "Smart Sync",
-  },
+ 
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -149,8 +146,8 @@ const softwareSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 50,
+    ratingValue: "4.9",
+    ratingCount: "50",
   },
 };
 

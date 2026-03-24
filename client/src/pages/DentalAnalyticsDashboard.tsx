@@ -104,10 +104,7 @@ const softwareSchema = {
   url: "https://smartsync.one/dental-analytics-dashboard",
   description:
     "Track new patients, appointments, treatments, payments, and future revenue using SmartSync’s dental analytics dashboard integrated directly with Dentrix, Open Dental, Eaglesoft and leading CRMs.",
-  brand: {
-    "@type": "Brand",
-    name: "Smart Sync",
-  },
+  
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -125,8 +122,8 @@ const softwareSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 50,
+    ratingValue: "4.9",
+    ratingCount: "50",
   },
 };
 

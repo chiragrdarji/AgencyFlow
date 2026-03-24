@@ -134,10 +134,7 @@ const softwareSchema = {
   url: "https://smartsync.one/dentrix-crm-integration",
   description:
     "Integrate Dentrix with GoHighLevel, HubSpot, and Salesforce using SmartSync. Sync patients, appointments, treatments, and payments automatically with real-time two-way synchronization.",
-  brand: {
-    "@type": "Brand",
-    name: "Smart Sync",
-  },
+ 
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -157,8 +154,8 @@ const softwareSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 50,
+    ratingValue: "4.9",
+    ratingCount: "50",
   },
 };
 export default function DentrixCRMIntegration() {

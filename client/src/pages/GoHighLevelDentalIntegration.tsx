@@ -146,10 +146,7 @@ const softwareSchema = {
   url: "https://smartsync.one/gohighlevel-dental-integration",
   description:
     "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel using SmartSync. Sync patients, treatments, and payments to automate workflows and prove agency ROI.",
-  brand: {
-    "@type": "Brand",
-    name: "Smart Sync",
-  },
+  
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -169,8 +166,8 @@ const softwareSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 50,
+    ratingValue: "4.9",
+    ratingCount: "50",
   },
 };
 

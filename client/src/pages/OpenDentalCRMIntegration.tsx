@@ -146,10 +146,7 @@ const softwareSchema = {
   url: "https://smartsync.one/open-dental-crm-integration",
   description:
     "Connect Open Dental with GoHighLevel, HubSpot, and Salesforce using SmartSync. Automatically sync patients, appointments, treatments, and payments with real-time two-way integration.",
-  brand: {
-    "@type": "Brand",
-    name: "Smart Sync",
-  },
+ 
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -169,8 +166,8 @@ const softwareSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 50,
+    ratingValue: "4.9",
+    ratingCount: "50",
   },
 };
 export default function OpenDentalCRMIntegration() {

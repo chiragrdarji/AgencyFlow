@@ -120,10 +120,7 @@ const softwareSchema = {
   url: "https://smartsync.one/dental-marketing-attribution",
   description:
     "Track real patient revenue generated from dental marketing campaigns using PMS data. SmartSync connects Dentrix, Open Dental and other systems with CRM platforms to prove true agency ROI.",
-  brand: {
-    "@type": "Brand",
-    name: "Smart Sync",
-  },
+  
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -141,8 +138,8 @@ const softwareSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 50,
+    ratingValue: "4.9",
+    ratingCount: "50",
   },
 };
 

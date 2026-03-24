@@ -169,10 +169,7 @@ const softwareSchema = {
   url: "https://smartsync.one/dental-pms-integrations",
   description:
     "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync’s real-time two-way synchronization platform.",
-  brand: {
-    "@type": "Brand",
-    name: "Smart Sync",
-  },
+  
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -192,8 +189,8 @@ const softwareSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.9,
-    ratingCount: 50,
+    ratingValue: "4.9",
+    ratingCount: "50",
   },
 };
 
