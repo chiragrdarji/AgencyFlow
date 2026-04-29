@@ -220,20 +220,17 @@ export default function DentalPMSIntegrations() {
                 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
                 data-testid="text-hero-headline"
               >
-                Connect Your <span className="text-primary">Dental PMS </span>{" "}
-                With CRM and Marketing Systems Automatically
+                Automatically Link You <span className="text-primary">Dental PMS </span>{" "}
+                With CRM and Marketing Services
               </h1>
               <p className="text-lg text-gray-600 mb-2 leading-relaxed">
-                SmartSync integrates leading dental practice management systems
-                with modern CRM platforms to synchronize patients, appointments,
-                treatments, and payments in real time.
+                SmartSync connects the top dental practice management systems to the latest CRM solutions, providing a real-time synchronization of patients, appointments, treatments and payments
               </p>
               <p
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Eliminate manual reporting and keep operational and marketing
-                data aligned across systems.
+                Stop manual reporting and ensure your operational and marketing data are in lock step across your systems.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -359,11 +356,10 @@ export default function DentalPMSIntegrations() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Keep PMS and CRM Data Always Updated
+              Ensure PMS and CRM Data is Always Current
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync provides continuous two-way synchronization between
-              supported PMS systems and CRM platforms.
+              SmartSync enables real-time bi-directional sync for a select list of PMS systems with CRM solutions.
             </p>
             <p className="text-lg text-gray-600">
               Updates typically appear within minutes.
@@ -662,7 +658,7 @@ export default function DentalPMSIntegrations() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Integrations Across Modern Dental Software Ecosystems
+             Integration Across Contemporary Dental Software Systems
             </h2>
           </div>
           <div className="card  gap-8  rounded-2xl sm:p-8   border-primary">
@@ -681,8 +677,7 @@ export default function DentalPMSIntegrations() {
                 ))}
               </div>
               <p className="mt-8  mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                Two-way synchronization ensures updates flow continuously
-                between systems.
+                Two-way synchronization guarantees the updates are continuously propagated between systems.
               </p>
             </div>
           </div>
@@ -698,7 +693,7 @@ export default function DentalPMSIntegrations() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Works With Leading CRM Platforms Used by Agencies
+              Compatible with major CRM platforms loved by agencies
             </h2>
             <p className="text-lg text-gray-600">
               SmartSync integrates seamlessly with:
@@ -709,12 +704,12 @@ export default function DentalPMSIntegrations() {
               {
                 icon: TrendingUp,
                 title: "GoHighLevel",
-                desc: "Automatically update opportunities and trigger workflows using PMS activity.",
+                desc: "Auto-update deals and run workflows using activity from your PMS.",
               },
               {
                 icon: Network,
                 title: "HubSpot",
-                desc: "Bring dental operational data directly into sales and marketing pipelines.",
+                desc: "Push dental business operation data from pipelines straight into sales or marketing.",
               },
               {
                 icon: Cloud,

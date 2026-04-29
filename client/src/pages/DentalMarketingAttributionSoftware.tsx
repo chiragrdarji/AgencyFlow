@@ -171,30 +171,26 @@ export default function DentalMarketingAttributionSoftware() {
                 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
                 data-testid="text-hero-headline"
               >
-                Finally Prove Real ROI for{" "}
+                Finally Establish True ROI for{" "}
                 <span className="text-primary">Dental Marketing Campaigns</span>
               </h1>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Leads and booked appointments don’t tell the full story.
+                Leads and appointments booked do not tell everything.
               </p>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync connects dental practice management systems directly
-                with your CRM to track treatments, payments, and lifetime
-                patient value generated after your agency begins managing a
-                clinic.
+                SmartSync provides a direct link from dental practice management systems to your CRM to enable tracking of treatments, payments and lifetime patient value once your agency takes on managing a clinic.
               </p>
               <p
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Show clients exactly how marketing contributes to production and
-                revenue growth.
+                Let clients see precisely how marketing is helping the production and revenue grow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
@@ -283,11 +279,11 @@ export default function DentalMarketingAttributionSoftware() {
               </div>
 
               <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-5">
-                Dental Agencies Struggle to Prove Real Results
+                Dental Boards Have a Hard Time Proving Actual Outcomes:
               </h2>
 
               <p className="text-lg text-gray-600 mb-7">
-                Most dental marketing reports rely on:
+                Most dental marketing report on the following:
               </p>
 
               <ul className="space-y-5">
@@ -320,7 +316,7 @@ export default function DentalMarketingAttributionSoftware() {
               </div>
 
               <h2 className="text-2xl font-bold text-gray-900 tracking-tight mb-4">
-                But clinic owners ultimately care about one thing
+                But practice owners only care about one thing
               </h2>
 
               <div className="my-4">
@@ -330,12 +326,11 @@ export default function DentalMarketingAttributionSoftware() {
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-5">
-                Without PMS data integration, agencies cannot accurately connect
-                marketing performance to treatments or payments.
+               Without integration of data from the PMS, agencies are unable to precisely tie marketing performance back to treatments or payments.
               </p>
 
               <p className="text-lg font-semibold text-gray-900">
-                This creates uncertainty during client reviews and renewals.
+                This creates strain at account reviews and renewals.
               </p>
             </div>
 
@@ -358,8 +353,7 @@ export default function DentalMarketingAttributionSoftware() {
                   agencies.
                 </p>
                 <p className="text-lg font-semibold text-gray-900">
-                  Once connected, every important clinic event becomes
-                  measurable.
+                  Once connected, every critical event in the clinic can be quantified.
                 </p>
               </div>
             </div>
@@ -596,7 +590,7 @@ export default function DentalMarketingAttributionSoftware() {
               {
                 icon: TrendingUp,
                 title: "Future Revenue Pipeline",
-                desc: "Understand expected payments from upcoming treatments",
+                desc: "Expect payments from treatments you know are coming",
               },
             ].map(({ icon: Icon, title, desc }) => (
               <div
@@ -614,8 +608,7 @@ export default function DentalMarketingAttributionSoftware() {
             ))}
           </div>
           <p className="mt-10    text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4">
-            This creates a full visibility pipeline from acquisition to revenue
-            realization.
+            This provides a complete visibility pipe line from acquisition to revenue recognition.
           </p>
         </div>
       </section>

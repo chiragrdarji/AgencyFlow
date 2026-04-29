@@ -32,6 +32,18 @@ export default function Footer() {
   useEffect(() => {
     setIsClient(true);
   }, []);
+   const features = [
+    { href: "/dental-marketing-attribution", label: "Dental Marketing Attribution Software" },
+    { href: "/dental-analytics-dashboard", label: "Dental Analytics Dashboard" },
+    { href: "/for-dental-marketing-agencies", label: "For Dental Marketing Agencies" },
+    { href: "/treatment-tracking-software", label: "Treatment Tracking & Revenue Pipeline Intelligence" },
+    { href: "/dental-pms-integrations", label: "Dental PMS Integrations" },
+    { href: "/how-smartsync-works", label: "How SmartSync Works" },
+    { href: "/dentrix-crm-integration", label: " Dentrix CRM Integration" },
+    { href: "/open-dental-crm-integration", label: "Open Dental CRM Integration" },
+    { href: "/eaglesoft-crm-integration", label: "Eaglesoft CRM Integration" },
+    { href: "/gohighlevel-dental-integration", label: "GoHighLevel Dental Integration" },
+  ];
 
   const quickLinks = [
     { href: "/", label: "Home" },
@@ -97,7 +109,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
@@ -139,6 +151,27 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+          </div>
+
+           {/* Features */}
+          <div >
+            <h3 className="font-semibold mb-4">Features</h3>
+            <ul className="space-y-3 text-sm text-gray-400">
+              {features.map((links) => (
+                <li key={links.href}>
+                  <Link href={links.href}>
+                    <span
+                      className="hover:text-white transition-colors cursor-pointer"
+                      data-testid={`link-footer-${links.label
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}`}
+                    >
+                      {links.label}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Quick Links */}

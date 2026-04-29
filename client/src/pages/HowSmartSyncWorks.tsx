@@ -325,8 +325,7 @@ export default function HowSmartSyncWorks() {
                         Connect Your Dental PMS
                       </h3>
                       <p className="text-gray-600 text-md">
-                        During onboarding, SmartSync securely connects to your
-                        dental practice management system.
+                        During onboarding, SmartSync makes a secure connection to your dental practice management system.
                       </p>
                       <p className="text-gray-600 text-md mt-4 font-semibold">
                         Supported systems include:
@@ -343,11 +342,10 @@ export default function HowSmartSyncWorks() {
                         ))}
                       </div>
                       <p className="text-gray-600 text-md">
-                        Our onboarding specialists assist throughout the
-                        process.
+                        Our onboarding specialists assist throughout the process.
                       </p>
                       <p className="mt-8 mx-auto text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                        No disruption to daily clinic operations.
+                        No interference with the day-to-day working of the clinics.
                       </p>
                     </div>
                   </div>
@@ -377,7 +375,7 @@ export default function HowSmartSyncWorks() {
                         Connect Your CRM Platform
                       </h3>
                       <p className="text-gray-600 text-md">
-                        Next, SmartSync integrates with your CRM environment.
+                        Then, SmartSync works within your CRM environment.
                       </p>
                       <p className="text-gray-600 text-md font-semibold mt-4">
                         Supported CRMs include:
@@ -394,8 +392,7 @@ export default function HowSmartSyncWorks() {
                         ))}
                       </div>
                       <p className="mt-8 mx-auto text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                        This allows operational data from the clinic to flow
-                        directly into marketing and reporting pipelines.
+                        This enables clinic operational data to feed directly into marketing and reporting.
                       </p>
                     </div>
                   </div>
@@ -426,14 +423,13 @@ export default function HowSmartSyncWorks() {
                       </h3>
 
                       <p className="text-gray-600 text-md ">
-                        SmartSync automatically prepares your CRM for
-                        synchronization.
+                        SmartSync prepares your CRM for syncing automatically.
                       </p>
 
                       <div className="grid sm:grid-cols-2 gap-3 mt-[18px] mb-4 ">
                         <div>
                           <p className="text-gray-900 text-md font-semibold px-2">
-                            During setup:
+                            During installation:
                           </p>
                           <div className="grid mt-[18px] mb-4 ">
                             {crmsetup.map((system) => (
@@ -450,8 +446,7 @@ export default function HowSmartSyncWorks() {
 
                         <div>
                           <p className="text-gray-900 font-semibold text-md px-2">
-                            Fields such as the following are continuously
-                            updated:
+                            These Fields are Updating Continuously like:
                           </p>
                           <div className="grid sm:grid-cols-2 mt-[18px] mb-2 ">
                             {crmUpdate.map((system) => (
@@ -468,7 +463,7 @@ export default function HowSmartSyncWorks() {
                       </div>
 
                       <p className="mt-2 mx-auto text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] ">
-                        This ensures accurate reporting without manual setup
+                        So, that's also the end of having to do any manual set up for accurate reporting.
                       </p>
                     </div>
                   </div>
@@ -490,11 +485,10 @@ export default function HowSmartSyncWorks() {
                       Real-Time Data Synchronization Begins
                     </h3>
                     <p className="text-gray-600 text-md ">
-                      Once setup is complete, SmartSync continuously
-                      synchronizes important clinic activity.
+                     Immediately after installation, SmartSync starts gathering key clinic activities.
                     </p>
                     <p className="text-gray-600 text-md ">
-                      Updates typically appear inside CRM systems within minutes
+                      Once in a while, changes appear a few minutes later (within the CRM system)
                     </p>
                     <p className="text-gray-600 text-md mt-4 font-semibold">
                       Automatically synchronized data includes:
@@ -673,15 +667,13 @@ export default function HowSmartSyncWorks() {
               SmartSync operates as a synchronization layer between systems.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync does not store long-term patient data.
+              SmartSync does not save any patient information in the long term.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              Instead, operational updates synchronize directly between PMS and
-              CRM environments.
+             Operational updates synchronize directly between PMS and CRM, however.
             </p>
             <p className="mt-8  mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-              This architecture allows clinics and agencies to maintain control
-              of their systems while benefiting from automated integration.
+             This architecture enables clinics and agencies to keep their systems under their own control and still take advantage of seamless integration.
             </p>
           </div>
         </div>
@@ -695,16 +687,16 @@ export default function HowSmartSyncWorks() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Continuous Synchronization You Can Depend On
+              Dependable Continuous Sync
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync monitors synchronization activity continuously.
+              SmartSync continuously watches synchronization activity.
             </p>
           </div>
 
           <p className="text-lg font-semibold text-gray-900 mt-4 text-center mb-4">
-            Typical update timing:
+           Expected update times:
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -729,12 +721,11 @@ export default function HowSmartSyncWorks() {
             </div>
           </div>
           <p className="text-lg text-gray-600 my-4 mt-8 text-center">
-            This ensures CRM reporting always reflects current clinic
-            operations.
+            This way the reports from CRM are always up to date with the activities of the clinic.
           </p>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            Reliable synchronization reduces manual reporting errors.
+            Reliable sync reduces manual reporting errors.
           </p>
         </div>
       </section>

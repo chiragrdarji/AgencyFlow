@@ -185,22 +185,19 @@ export default function DentrixCRMIntegration() {
                 data-testid="text-hero-headline"
               >
                 <span className="text-primary">Dentrix CRM Integration </span>{" "}
-                Built for Dental Marketing Agencies and Growing Practices
+                Designed For Dental Marketing Agencies And Growing Practices
               </h1>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Connect Dentrix directly with your CRM and marketing systems
-                using SmartSync’s real-time two-way synchronization platform.
+                Integrate Dentrix directly with your CRM and marketing solutions through SmartSync’s real-time,   two-way synchronization platform.
               </p>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Automatically sync patient activity, appointments, treatments,
-                and payments to eliminate manual reporting and unlock real
-                revenue visibility.
+                Sync patient activity, appointments, treatments, and payments automatically to stop manually reporting and gain real revenue visibility.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -255,7 +252,7 @@ export default function DentrixCRMIntegration() {
             ))}
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            Updates appear inside your CRM automatically within minutes.
+            You receive the updates in your CRM automatically in a matter of minutes. 
           </p>
         </div>
       </section>
@@ -274,9 +271,7 @@ export default function DentrixCRMIntegration() {
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-2">
-                  Dentrix manages critical operational data for dental clinics,
-                  but marketing teams and agencies typically work inside CRM
-                  platforms.
+                  Dentrix handles vital business data for dental offices, but marketing teams and agencies are typically located within CRM platforms.
                 </p>
                 <p className="text-lg text-gray-600 mb-4">
                   Without integration:
@@ -291,10 +286,10 @@ export default function DentrixCRMIntegration() {
                       text: "Reporting becomes inaccurate",
                     },
                     {
-                      text: "Automation workflows lack real clinic data",
+                      text: "Automation workflows lack real clinic data",
                     },
                     {
-                      text: "ROI discussions become difficult",
+                      text: "Discussions about ROI are becoming more difficult",
                     },
                   ].map((item, i) => {
                     return (
@@ -305,7 +300,7 @@ export default function DentrixCRMIntegration() {
                   })}
                 </ul>
                 <p className="text-lg font-semibold text-gray-900 mt-4">
-                  SmartSync connects Dentrix directly to your CRM environment.
+                  With SmartSync you can access Dentrix information directly from your CRM environment. 
                 </p>
               </div>
 
@@ -775,14 +770,13 @@ export default function DentrixCRMIntegration() {
               </span>
               <h3 className="lg:flex md:block items-center mb-6 font-bold text-gray-900 text-lg">
                 <Workflow size={24} className="text-primary mr-2" />
-                Turn Dentrix Activity Into CRM Automation Triggers
+                Create Dentrix activity as CRM automation triggers:
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync transforms clinic operations into marketing automation
-                signals.
+                SmartSync turns clinic procedures into marketing automation signals.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Supported triggers include:
+                The available triggers are:
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -815,7 +809,7 @@ export default function DentrixCRMIntegration() {
                 </div>
 
                 <p className="text-gray-600">
-                  Your CRM workflows activate automatically.
+                  Workflows in your CRM run on their own
                 </p>
               </div>
             </div>
@@ -829,11 +823,10 @@ export default function DentrixCRMIntegration() {
                 Dentrix Analytics Without Manual Reporting
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync converts Dentrix operational data into analytics
-                dashboards.
+                With SmartSync Dentrix business information can be transformed into analytical dashboards.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Track:
+                Keep an eye on:
               </p>
               <div className="space-y-4">
                 <div className="flex  items-center space-x-3">
@@ -860,7 +853,7 @@ export default function DentrixCRMIntegration() {
                 </div>
 
                 <p className="text-gray-600">
-                  Available inside SmartSync dashboards and CRM opportunities.
+                  Found within SmartSync dashboards and CRM leads.
                 </p>
               </div>
             </div>

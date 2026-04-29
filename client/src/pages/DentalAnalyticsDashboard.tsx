@@ -251,15 +251,14 @@ export default function DentalAnalyticsDashboard() {
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-5">
-                  Dental Data Exists Everywhere But Insights Are Missing
+                  Dental Data Is Everywhere, but There Are No Insights:
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-2">
-                  Dental practices generate large amounts of operational data
-                  every day inside their PMS systems.
+                 Every day, dental offices produce a wealth of data on their operations within their PMS platforms.
                 </p>
                 <p className="text-lg text-gray-600 mb-4">
-                  However, agencies and clinic owners often struggle with:
+                  Despite that, agencies and clinic owners are faced with:
                 </p>
 
                 <ul className="space-y-5 list-disc ps-5">
@@ -295,8 +294,7 @@ export default function DentalAnalyticsDashboard() {
                   })}
                 </ul>
                 <p className="text-lg font-semibold text-gray-900 mt-4">
-                  Without centralized analytics, understanding real growth
-                  becomes difficult.
+                  Real growth is hard to discern without a centralized analytics solution.
                 </p>
               </div>
 
@@ -312,25 +310,21 @@ export default function DentalAnalyticsDashboard() {
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
-                  Real-Time Analytics Directly From Your PMS
+                  Real-Time Analytics From Your PMS:​
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-4">
-                  SmartSync connects directly with supported dental practice
-                  management systems and continuously synchronizes operational
-                  updates.
+                  SmartSync links directly to compatible dental practice management systems and performs continual synchronization of daily operational data.
                 </p>
 
                 <p className="text-lg text-gray-600 mb-4">
-                  Analytics update automatically as activity occurs inside the
-                  clinic.
+                  Analytics update seamlessly as clinic activity occurs.
                 </p>
                 <p className="text-lg text-gray-600 mb-4">
-                  There is no manual export or reporting process required.
+                  There’s nothing to manually export or report on.
                 </p>
                 <p className="text-lg font-semibold text-gray-900 mt-4">
-                  Data becomes instantly usable for agencies, consultants, and
-                  practice owners.
+                  Data become immediately actionable for agencies, consultants, and practice owners.
                 </p>
               </div>
             </div>
@@ -345,11 +339,10 @@ export default function DentalAnalyticsDashboard() {
               <span className="font-medium">Core Analytics Metrics</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Monitor Clinic Performance From One Dashboard
+              Keep Track of Clinic Performance From One Dashboard
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync analytics provide visibility across patient acquisition,
-              treatment pipeline, and revenue performance.
+              SmartSync analytics offer insights into patient flow, treatment stages and revenue generation.
             </p>
           </div>
 
@@ -364,7 +357,7 @@ export default function DentalAnalyticsDashboard() {
                     Patient Growth Analytics
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Understand how practices are growing over time.
+                    Know if and how practices are expanding over time.
                   </p>
                   <p className="text-gray-700 font-medium mb-3">Track:</p>
                   <ul className="space-y-2">
@@ -394,8 +387,7 @@ export default function DentalAnalyticsDashboard() {
                     </li>
                   </ul>
                   <p className="text-gray-600 mt-4">
-                    Identify marketing performance and patient acquisition
-                    effectiveness.
+                    Determine the efficiency of marketing and the success of patient acquisition.
                   </p>
                 </div>
               </div>
@@ -411,9 +403,9 @@ export default function DentalAnalyticsDashboard() {
                     Appointment Analytics
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Monitor scheduling performance across locations.
+                    Track the success of scheduling at any or all locations.
                   </p>
-                  <p className="text-gray-700 font-medium mb-3">Track:</p>
+                  <p className="text-gray-700 font-medium mb-3">Keep an eye on:</p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
                       <div className="flex items-center space-x-3">
@@ -447,8 +439,7 @@ export default function DentalAnalyticsDashboard() {
                     </li>
                   </ul>
                   <p className="text-gray-600 mt-4">
-                    Agencies and clinics can quickly identify operational
-                    inefficiencies.
+                    Agencies and clinics can easily pinpoint where they are running inefficiently.
                   </p>
                 </div>
               </div>
@@ -464,8 +455,7 @@ export default function DentalAnalyticsDashboard() {
                     Treatment Performance Analytics
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Understand treatment acceptance and production
-                    opportunities.
+                    Receive coverage on treatment acceptance and production potential within your practice.
                   </p>
                   <p className="text-gray-700 mb-3">SmartSync tracks:</p>
                   <ul className="space-y-2">
@@ -495,8 +485,7 @@ export default function DentalAnalyticsDashboard() {
                     </li>
                   </ul>
                   <p className="text-gray-600 mt-4">
-                    This helps identify unscheduled or delayed treatments
-                    impacting revenue.
+                    This is useful in identifying treatments that are not scheduled or are delayed, affecting your cash flow.
                   </p>
                 </div>
               </div>
@@ -515,15 +504,14 @@ export default function DentalAnalyticsDashboard() {
                     </h3>
                   </div>
                   <p className="text-gray-600 mb-4">
-                    Gain complete financial visibility using real PMS payment
-                    activity.
+                    Gain complete financial visibility using real PMS payment activity.
                   </p>
-                  <p className="text-gray-700 font-medium mb-3">Monitor:</p>
+                  <p className="text-gray-700 font-medium mb-3">Track:</p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
                       <div className="flex items-center space-x-3">
                         <ChevronRight size={18} className="text-primary " />
-                        <span className="text-gray-700">Payments Received</span>
+                        <span className="text-gray-700">Payments Received</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -531,7 +519,7 @@ export default function DentalAnalyticsDashboard() {
                         <ChevronRight size={18} className="text-primary " />
                         <span className="text-gray-700">
                           {" "}
-                          Outstanding Payments
+                          Due Payments
                         </span>
                       </div>
                     </li>
@@ -540,7 +528,7 @@ export default function DentalAnalyticsDashboard() {
                         <ChevronRight size={18} className="text-primary " />
                         <span className="text-gray-700">
                           {" "}
-                          Patient Lifetime Value
+                          Patient Lifetime Value
                         </span>
                       </div>
                     </li>
@@ -548,14 +536,13 @@ export default function DentalAnalyticsDashboard() {
                       <div className="flex items-center space-x-3">
                         <ChevronRight size={18} className="text-primary " />
                         <span className="text-gray-700">
-                          Revenue Generated After Agency Start Date
+                          Revenue after Date of Agency Start
                         </span>
                       </div>
                     </li>
                   </ul>
                   <p className="text-gray-600 mt-4">
-                    This enables accurate performance reporting for clinics and
-                    agencies.
+                    This is for the purpose of making performance reports for the clinics and agencies.
                   </p>
                 </div>
               </div>
@@ -568,15 +555,13 @@ export default function DentalAnalyticsDashboard() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 my-3">
-                    Future Revenue Forecasting
+                    Prediction of Future Revenues
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    SmartSync calculates expected future payments based on
-                    pending treatments and scheduled procedures.
+                    SmartSync estimates future payments due to you taking into account treatments in process and planned treatments.
                   </p>
                   <p className="text-gray-600">
-                    Practices gain visibility into upcoming production
-                    potential.
+                   Practice visibility into future production potential.
                   </p>
                 </div>
               </div>
@@ -804,11 +789,10 @@ export default function DentalAnalyticsDashboard() {
               </span>
               <h3 className="lg:flex md:block items-center mb-6 font-bold text-gray-900 text-lg">
                 <Database size={24} className="text-primary mr-2" />
-                Perfect for Agencies Managing Multiple Dental Clinics
+                Ideal for Agencies operating multiple dental clinics
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync analytics simplify performance monitoring across
-                multiple practices.
+                The SmartSync analytics make it easy to track progress for multiple practices.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Agencies can:
@@ -881,8 +865,7 @@ export default function DentalAnalyticsDashboard() {
                   Typical synchronization occurs within minutes.
                 </p>
                 <p className="text-gray-600">
-                  This ensures dashboards always reflect current clinic
-                  performance.
+                  This guarantees the dashboards are always up to date with the latest clinic performance.
                 </p>
               </div>
             </div>

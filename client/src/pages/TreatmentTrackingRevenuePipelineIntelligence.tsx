@@ -80,9 +80,9 @@ const steps = [
   "Lost production opportunities",
 ];
 const trackItems = [
-  { icon: LineChart, title: "Upcoming production value" },
+  { icon: LineChart, title: "Value of Upcoming production" },
   { icon: ListTodo, title: "Treatment backlog" },
-  { icon: BarChart3, title: "Future revenue potential" },
+  { icon: BarChart3, title: "Revenue Opportunity in the Future" },
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 const steps2 = [
@@ -269,21 +269,19 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             <div className="mb-8 w-full md:w-[50%]">
               <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
                 <EyeOff size={18} />
-                The Hidden Revenue Problem
+                The Unseen Revenue Issue
               </span>
               <h2
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
                 data-testid="text-problem-title"
               >
-                Millions in Treatment Revenue Often Go Unscheduled
+                Millions in Treatment Revenue Are Not being Scheduled
               </h2>
               <p className="text-lg text-gray-600">
-                Dental practices frequently propose treatments that patients
-                delay or never schedule.
+               Dentists often recommend treatments that patients put off or never book.
               </p>
               <p className="text-lg text-gray-600">
-                Marketing performance alone cannot solve growth challenges
-                without understanding treatment conversion.
+                Marketing performance alone cannot solve growth challenges without understanding treatment conversion.
               </p>
               <p className="mt-8  mx-auto   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
                 SmartSync helps uncover these opportunities.
@@ -377,8 +375,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                           className="text-primary mt-1 min-w-fit"
                         />
                         <span className="text-gray-700">
-                          Understand potential production opportunities entering
-                          the pipeline
+                          Know some of the potential production coming into the pipeline
                         </span>
                       </div>
                     </li>
@@ -404,8 +401,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                           className="text-primary mt-1 min-w-fit"
                         />
                         <span className="text-gray-700">
-                          Detect treatments that remain unscheduled or
-                          incomplete.
+                          Identify treatments which are unbooked or incomplete.
                         </span>
                       </div>
                     </li>
@@ -416,8 +412,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                           className="text-primary mt-1 min-w-fit"
                         />
                         <span className="text-gray-700">
-                          These opportunities often represent significant
-                          unrealized revenue.
+                          These prospects are often tremendous untapped sources of revenue.
                         </span>
                       </div>
                     </li>
@@ -428,8 +423,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                           className="text-primary mt-1 min-w-fit"
                         />
                         <span className="text-gray-700">
-                          Agencies and clinics can use this insight to trigger
-                          follow-ups or reactivation campaigns.
+                         Agencies and clinics can use this insight to trigger follow-ups or reactivation campaigns.
                         </span>
                       </div>
                     </li>
@@ -513,21 +507,20 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <TrendingUp size={16} />
-              <span className="text-primary">Forecast Future Revenue </span>
+              <span className="text-primary">Estimate Future Income </span>
             </div>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
-              Understand Upcoming Production Before It Happens
+              Know the Future Production Before the Event
             </h2>
 
             <p className="text-lg text-gray-600 ">
-              SmartSync calculates expected future payments based on pending
-              procedures and scheduled treatments.
+              SmartSync anticipates future payments due to pending procedures and upcoming treatments.
             </p>
           </div>
 
           <p className="text-lg font-semibold text-gray-900 mt-4 text-center mb-6">
-            Practices and agencies gain visibility into:
+            Practices and agencies get a clear view of:
           </p>
 
           <div className="relative w-[80%] mx-auto">
@@ -552,7 +545,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            This helps teams plan growth strategies more effectively.
+            This enables teams to better plan their growth strategies.
           </p>
         </div>
       </section>
@@ -588,16 +581,16 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <TrendingUp size={20} />
               <span className="font-semibold text-sm">
-                Powerful for Marketing Agencies
+                Good for Marketing Agencies
               </span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Identify Growth Opportunities Beyond Lead Generation
+              Spot Growth Opportunities Beyond Lead Generation
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Dental marketing agencies often focus on acquiring new patients.
+             Dental marketing agencies are frequently dedicated to filling the new patient pipeline.
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
               SmartSync allows agencies to also identify revenue opportunities
@@ -655,11 +648,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Trigger CRM Campaigns Using Treatment Activity
+              Trigger CRM Campaigns Based on Treatment Activity
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync synchronizes treatment updates into CRM platforms where
-              automation workflows can be triggered.
+              SmartSync writes treatment updates into CRM systems where automation workflows can be triggered.
             </p>
           </div>
           <div className="">
@@ -686,7 +678,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
               ))}
             </div>
             <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-              Automation becomes aligned with real clinical opportunities.
+              Automation becomes aligned with real clinical opportunities.
             </p>
           </div>
         </div>
@@ -704,10 +696,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 Understand Treatment Within the Patient Journey
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync also synchronizes important lifecycle data.
+               SmartSync also syncs important lifecycle Data.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Track alongside treatment activity:
+                Follow along treatment activity:
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -724,12 +716,11 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
-                  <span className="text-gray-700">Patient Payment History</span>
+                  <span className="text-gray-700">History of Patient Payments</span>
                 </div>
 
                 <p className="text-gray-600">
-                  This provides complete context for smarter outreach and
-                  retention strategies.
+                  With this you get full context to more intelligent outreach and retention strategies.
                 </p>
               </div>
             </div>
@@ -740,11 +731,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
               </span>
               <h3 className="lg:flex md:block items-center mb-6 font-bold text-gray-900 text-lg">
                 <Network size={24} className="text-primary mr-2" />
-                Monitor Treatment Performance Across Multiple Clinics
+                Track Treatment Performance in Multiple Clinics
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Agencies and DSOs managing multiple locations gain centralized
-                insight into treatment pipelines.
+                Agencies and DSOs with multiple locations have visibility into the treatment pipelines across all their locations.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Compare:
@@ -753,7 +743,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 <div className="flex  items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
                   <span className="text-gray-700">
-                    Treatment proposal volume
+                    Volume of treatment proposals
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -763,12 +753,12 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 <div className="flex  items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
                   <span className="text-gray-700">
-                    Revenue realization across clinics
+                    Revenue performance across clinics
                   </span>
                 </div>
 
                 <p className="text-gray-600">
-                  Identify operational gaps quickly.
+                  Address operational deficiencies fast.
                 </p>
               </div>
             </div>
@@ -837,7 +827,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Move From Reactive Reporting to Revenue Intelligence
+              From Reactive Reporting to Revenue Intelligence
             </h2>
           </div>
 
@@ -850,15 +840,15 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-red-600">
-                  Without SmartSync:
+                  No SmartSync:
                 </h3>
               </div>
 
               <ul className="space-y-5">
                 {[
-                  "Treatment opportunities remain hidden",
-                  "Follow-ups happen manually",
-                  "Revenue forecasting is difficult",
+                  "Treatment options are not clearly seen",
+                  "Follow-ups occur by hand",
+                  "No easy way to forecast revenue",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <X className="text-red-500 w-5 h-5 flex-shrink-0" />
@@ -887,9 +877,9 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
 
               <ul className="space-y-5">
                 {[
-                  "Treatment pipelines become visible",
-                  "Automation improves conversion",
-                  "Revenue becomes predictable",
+                  "Treatment pipelines are revealed",
+                  "Automation drives better conversion",
+                  "Revenue becomes predictable",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <CheckCircle className="text-green-500 w-5 h-5 flex-shrink-0" />
@@ -901,7 +891,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync bridges clinic operations and growth strategy.
+            SmartSync seamlessly connects clinic operations with growth strategy.
           </p>
         </div>
       </section>

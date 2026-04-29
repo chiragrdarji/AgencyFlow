@@ -80,9 +80,9 @@ const trackItems = [
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 const steps2 = [
-  "Lifetime Patient Payment",
-  "First Payment Date",
-  "Revenue After Agency Onboarding",
+  "Lifetime Patient Payment",
+  "First Payment Date",
+  "Revenue After Agency Onboarding",
 ];
 
 const faqItems = [
@@ -233,11 +233,11 @@ export default function ForDentalMarketingAgencies() {
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-5">
-                  Dental Agencies Struggle With Client Reporting
+                  Dental Agencies Are Struggling With Client Reporting
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-2">
-                  Most agencies rely on fragmented data sources:
+                  The majority of agencies depend on disjointed data sources
                 </p>
                 <p className="text-lg text-gray-600 font-semibold mb-4 mt-2">
                   Call tracking tools, Lead forms, Appointment reports, Manual
@@ -245,19 +245,17 @@ export default function ForDentalMarketingAgencies() {
                 </p>
 
                 <p className="text-lg text-gray-600 mb-4">
-                  But dental practice owners ultimately evaluate performance
-                  based on production and revenue.
+                  But owners of dental practices judge success by production and revenue.
                 </p>
                 <p className="text-lg text-gray-600 mb-4">
-                  Without PMS visibility, agencies face challenges such as:
+                  Without PMS visibility, agencies encounter difficulties such as:
                 </p>
                 <p className="text-lg text-gray-600 font-semibold mb-4-2 mt-2">
-                  Difficult ROI conversations, Client churn, Time-consuming
-                  reporting, Limited operational insight
+                 Tough ROI discussions, Churn clients, Reporting time consuming, Operational insights limited
                 </p>
 
                 <p className="text-lg font-semibold text-gray-900 mt-4">
-                  SmartSync solves this gap.
+                  SmartSync fills this gap.
                 </p>
               </div>
 
@@ -273,28 +271,25 @@ export default function ForDentalMarketingAgencies() {
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
-                  Connect Marketing Performance to Real Clinic Revenue
+                  Relate Marketing Performance to Real Clinic Income
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-4">
-                  SmartSync synchronizes operational data directly from dental
-                  PMS systems into CRM platforms agencies already use.
+                 SmartSync pulls the day-to-day operational data, dental PMS, directly into the crm platforms agencies are using.
                 </p>
 
                 <p className="text-lg text-gray-600 mb-4">
                   Automatically track:
                 </p>
                 <p className="text-lg text-gray-600 font-semibold mb-4 mt-2">
-                  New Patients Generated, Appointment Activity, Treatment
-                  Proposed, Treatment Completed, Payments Received, Outstanding
-                  Balances, Expected Future Revenue
+                  New Patients Generated, Appointment Activity, Treatment Proposed, Treatment Completed, Payments Received, Outstanding Balances, and Expected Future Revenue
                 </p>
 
                 <p className="text-lg text-gray-600 mb-4">
-                  All updates occur automatically within minutes.
+                  All updates are done automatically within minutes.
                 </p>
                 <p className="text-lg font-semibold text-gray-900 mt-4">
-                  No manual data collection required.
+                  No more busywork manual data collecting.
                 </p>
               </div>
             </div>
@@ -538,16 +533,15 @@ export default function ForDentalMarketingAgencies() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Enhanced CRM Opportunities Automatically Updated
+              Upgraded CRM Opportunities Dynamically Refreshed
             </h2>
             <p className="text-lg text-gray-600">
-              During onboarding, SmartSync configures required CRM custom fields
-              automatically.
+              In the course of onboarding, SmartSync automatically creates necessary CRM custom fields.
             </p>
           </div>
           <div className="">
             <p className="text-lg font-semibold text-gray-900 mt-4 text-center mb-6">
-              Opportunities continuously update with:
+              Opportunities continually refresh with:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
               {steps2.map((step, i) => (
@@ -569,7 +563,7 @@ export default function ForDentalMarketingAgencies() {
               ))}
             </div>
             <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-              Agency teams gain instant visibility without manual updates.
+              Agency teams have real-time visibility, with no manual updates needed.
             </p>
           </div>
         </div>
@@ -579,13 +573,13 @@ export default function ForDentalMarketingAgencies() {
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <CheckCircle2 size={18} />
-              <span className="font-medium">Save Hours of Reporting Time</span>
+              <span className="font-medium">Save Reporting Time by the Hour</span>
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Replace Manual Reports With Automated Intelligence
+              Replace Manual Reporting with Automated Intelligence
             </h2>
           </div>
 
@@ -605,8 +599,8 @@ export default function ForDentalMarketingAgencies() {
               <ul className="space-y-5">
                 {[
                   "Export PMS data manually",
-                  "Update spreadsheets",
-                  "Prepare monthly reports",
+                  "Update spreadsheets",
+                  "Complete the monthly report using the chart ",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <X className="text-red-500 w-5 h-5 flex-shrink-0" />
@@ -636,8 +630,8 @@ export default function ForDentalMarketingAgencies() {
               <ul className="space-y-5">
                 {[
                   "Data syncs automatically",
-                  "Dashboards update continuously",
-                  "CRM reporting becomes effortless",
+                  "Dashboards update continuously",
+                  "CRM reporting has never been easier",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <CheckCircle className="text-green-500 w-5 h-5 flex-shrink-0" />
@@ -649,7 +643,7 @@ export default function ForDentalMarketingAgencies() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            Agencies can focus on growth instead of reporting tasks.
+            Agencies can concentrate on growing, not reporting.
           </p>
         </div>
       </section>
@@ -714,16 +708,14 @@ export default function ForDentalMarketingAgencies() {
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
                 data-testid="text-problem-title"
               >
-                Guided Setup Designed for Agencies
+                Built-for-Agencies Guided Setup
               </h2>
               <p className="text-lg text-gray-600">
-                SmartSync onboarding specialists assist throughout setup to
-                ensure accurate synchronization.
+                SmartSync onboarding experts guide you through the process to make sure your data is syncing correctly.
               </p>
 
               <p className="mt-8  mx-auto   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                Most agencies begin seeing synchronized data quickly after
-                onboarding.
+                The majority of agencies begin accessing synchronized data shortly after onboarding.
               </p>
             </div>
             <div className="bg-white w-full md:w-[50%]  mx-auto max-w-[700px] rounded-2xl p-8   border-primary/10">
@@ -765,20 +757,19 @@ export default function ForDentalMarketingAgencies() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
               <TrendingUp size={20} />
-              <span className="font-semibold text-sm">Customer Results</span>
+              <span className="font-semibold text-sm">Customer Outcomes</span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Trusted by Agencies Managing 80+ Dental Clinics
+              The agencies managing 80 dental clinics trust us
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              SmartSync helps agencies strengthen client relationships through
-              transparent reporting and measurable results.
+              SmartSync enables agencies to enhance client relations with clear reporting and tangible results.
             </p>
           </div>
-          <p className="font-bold mb-2 p-2 text-lg text-center mb-6">
-            Agencies using SmartSync benefit from:
+          <p className="font-bold p-2 text-lg text-center mb-6">
+            Agencies that use SmartSync enjoy the following benefits:
           </p>
 
           {/* Benefits */}
@@ -788,7 +779,7 @@ export default function ForDentalMarketingAgencies() {
                 <ShieldCheck className="text-primary" size={24} />
               </div>
               <h3 className="text-lg font-semibold text-gray-900">
-                Improved reporting confidence
+                Greater confidence in the reports
               </h3>
             </div>
 
@@ -797,7 +788,7 @@ export default function ForDentalMarketingAgencies() {
                 <Clock className="text-primary" size={24} />
               </div>
               <h3 className="text-lg font-semibold text-gray-900">
-                Faster performance reviews
+                Quicker performance reviews
               </h3>
             </div>
 
@@ -806,7 +797,7 @@ export default function ForDentalMarketingAgencies() {
                 <Users className="text-primary" size={24} />
               </div>
               <h3 className="text-lg font-semibold text-gray-900">
-                Better client retention
+                Improved client retention
               </h3>
             </div>
           </div>

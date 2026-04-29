@@ -72,7 +72,7 @@ export default function Navbar() {
                 onClick={() => setisSupportMenu(false)}
                 data-testid="link-agency-open-dental"
               >
-                Open dental to GHL Integration
+                Open Dental to GHL Integration
               </Link>
               <Link
                 href="/dentrix-gohighlevel-integration"
