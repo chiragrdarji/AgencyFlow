@@ -219,6 +219,16 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
             >
               BAA <Download size={16} />
             </a>
+            <a
+              href="/blog"
+              className="flex justify-between items-center text-sm text-slate-700 py-2 hover:text-primary"
+              onClick={() => {
+                setOpenSection(null);
+                setIsOpen?.(false);
+              }}
+            >
+              Blog 
+            </a>
           </div>
         )}
       </div>

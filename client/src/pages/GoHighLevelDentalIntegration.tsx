@@ -323,7 +323,7 @@ export default function GoHighLevelDentalIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                Reporting depends on spreadsheets
+                Reporting relies on spreadsheets
               </h3>
             </div>
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-4 flex gap-4 items-center ">
@@ -332,13 +332,13 @@ export default function GoHighLevelDentalIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                Agencies struggle to prove ROI
+               Agencies find it hard to demonstrate ROI
               </h3>
             </div>
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            Your pipelines reflect real clinic performance automatically.
+            Your pipelines are a real reflection of what happens in your clinic—automatically.
           </p>
         </div>
       </section>
@@ -353,12 +353,11 @@ export default function GoHighLevelDentalIntegration() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Automatically Sync Real Clinic Activity Into GoHighLevel
+             Bring Real Clinic Activity Auto-Sync Into GoHighLevel
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync continuously synchronizes PMS updates into GoHighLevel
-              opportunities and contacts.
+              SmartSync continuously syncs PMS updates to GoHighLevel opportunities and contacts.
             </p>
             <p className="text-lg text-gray-600 mb-4">
               Updates typically appear within minutes.
@@ -570,18 +569,18 @@ export default function GoHighLevelDentalIntegration() {
               },
               {
                 icon: MessageCircle,
-                title: "Treatment Follow-Up Campaigns",
-                desc: "Trigger nurturing workflows when treatment is proposed but not scheduled.",
+                title: "Follow-Up Campaigns for Treatment",
+                desc: "Enable nurturing workflows to begin when treatment has been suggested but no appointment has been made.",
               },
               {
                 icon: UserPlus,
                 title: "Patient Reactivation",
-                desc: "Reconnect with inactive patients based on visit history.",
+                desc: "Reactivate inactive patients by their visit history.",
               },
               {
                 icon: Bell,
                 title: "Payment Follow Ups",
-                desc: "Automate communication after payment activity.",
+                desc: "Automate communication on payment event.",
               },
             ].map(({ icon: Icon, title, desc }) => (
               <div

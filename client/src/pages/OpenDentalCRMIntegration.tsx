@@ -199,22 +199,19 @@ export default function OpenDentalCRMIntegration() {
                 <span className="text-primary">
                   Open Dental CRM Integration{" "}
                 </span>{" "}
-                Designed for Automation-Driven Dental Agencies
+                Built for Automation Centric Dental Agencies
               </h1>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Connect Open Dental directly with your CRM and marketing systems
-                using SmartSync’s real-time two-way synchronization platform.
+                Integrate Open Dental with your CRM and marketing platforms through SmartSync’s real-time two-way synchronization software
               </p>
               <p
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Automatically synchronize patient activity, appointments,
-                treatments, and payments to power accurate reporting and
-                advanced automation workflows.
+                Keep track appointments, treatments and payments of your patients for accurate reporting and higher level automation workflow by auto syncing of patient activities, appointments, treatment, and payments.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -279,21 +276,19 @@ export default function OpenDentalCRMIntegration() {
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
               <AlertTriangle size={18} />
               <span className="text-blue-600">
-                The Challenge With Open Dental Data
+                The Problem With Open Dental Data
               </span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Powerful PMS Data Often Remains Underutilized
+             Robust PMS data is often underexploited
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              Open Dental provides extensive operational flexibility for dental
-              practices.
+              This is why protocols, like Open Dental, offer extensive latitude to the practice
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              However, agencies and marketing teams often struggle to access
-              this data for reporting or automation.
+              The problem is that agencies and marketing teams rarely have access to that data in their reporting or automation.
             </p>
           </div>
 
@@ -308,7 +303,7 @@ export default function OpenDentalCRMIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                Teams manually export reports
+                Teams are manually exporting reports
               </h3>
             </div>
 
@@ -318,7 +313,7 @@ export default function OpenDentalCRMIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                CRM pipelines lack treatment visibility
+                CRM pipelines are blind to treatments
               </h3>
             </div>
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-4 flex gap-4 items-center ">
@@ -327,7 +322,7 @@ export default function OpenDentalCRMIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                Automation workflows rely on assumptions
+                Automation workflows are based on assumptions
               </h3>
             </div>
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-4 flex gap-4 items-center ">
@@ -342,8 +337,7 @@ export default function OpenDentalCRMIntegration() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync connects Open Dental directly to CRM platforms used for
-            growth and communication.
+           SmartSync connects Open Dental directly to CRM platforms for growth and communication.
           </p>
         </div>
       </section>
@@ -353,24 +347,24 @@ export default function OpenDentalCRMIntegration() {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Sparkles size={18} />
               <span className="text-blue-600">
-                How SmartSync Integrates Open Dental
+                How SmartSync Works with Open Dental
               </span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Real-Time Two-Way Open Dental Synchronization
+              Real-Time Two-Way Open Dental Sync
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync continuously synchronizes operational updates between
-              Open Dental and supported CRM platforms.
+              SmartSync synchronizes ongoing business updates in real-time between Open Dental and compatible CRM solutions.
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              When activity changes inside Open Dental, CRM records update
-              automatically.
+              Changes made within Open Dental means CRM records are updated automatically.
+              
+
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              Synchronization typically occurs within minutes.
+              Sync takes place typically within minutes. 
             </p>
           </div>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mb-10">
@@ -533,33 +527,30 @@ export default function OpenDentalCRMIntegration() {
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
                 data-testid="text-problem-title"
               >
-                Power GoHighLevel Automation Using Open Dental Activity
+                From Open Dental Activity to Power GoHighLevel Automation:
               </h2>
               <p className="text-lg text-gray-600 mt-4 mb-2">
-                Many dental agencies rely on GoHighLevel for communication and
-                funnel automation.
+                Communication between organisations and funnel automation are managed in many dental agencies by GoHighLevel.
               </p>
               <p className="text-lg text-gray-600 mt-2 mb-4">
-                SmartSync connects Open Dental clinic activity directly into
-                GoHighLevel workflows.
+                SmartSync seamlessly integrates Open Dental clinic activity directly into GoHighLevel workflows. 
               </p>
               <p className="text-lg text-gray-900">Trigger automation when:</p>
 
               <ul className="space-y-2 mt-4">
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> New
-                  patients are added
+                  <ChevronRight size={18} className="text-primary " /> Add a new patient
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " />{" "}
+                  <ChevronRight size={18} className="text-primary " />
                   Appointments are missed
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> Treatment
-                  plans are created
+                  <ChevronRight size={18} className="text-primary " /> 
+                  Treatment plans have been created
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}

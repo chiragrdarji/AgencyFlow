@@ -46,12 +46,12 @@ import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: Users, label: "New Patients" },
-  { icon: CalendarPlus, label: "Appointment Updates" },
+  { icon: CalendarPlus, label: "Changes in Appointment" },
   { icon: FileText, label: "Treatment Proposed" },
   { icon: Clock10, label: "Pending Procedures" },
-  { icon: CheckCircle2, label: "Treatment Completed" },
+  { icon: CheckCircle2, label: "Treatment Finished" },
   { icon: Wallet, label: "Payments Received" },
-  { icon: History, label: "Patient Visit History" },
+  { icon: History, label: "History of Patient Visits" },
 ];
 
 const steps = [
@@ -158,19 +158,16 @@ export default function EaglesoftCRMIntegration() {
                 data-testid="text-hero-headline"
               >
                 <span className="text-primary">Eaglesoft CRM Integration </span>{" "}
-                for Dental Agencies and Multi-Location Practices
+                for Dental Agencies and Multi-Location Practices
               </h1>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Connect Eaglesoft directly with your CRM and marketing platforms
-                using SmartSync’s real-time two-way synchronization.
+                Integrate Eaglesoft with your CRM and marketing management platform in real-time with SmartSync and get two-way synchronization.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Automatically sync patient records, appointments, treatments,
-                and payments to eliminate manual reporting and unlock accurate
-                revenue insights.
+                Keep your patient records, appointments, treatments and payments synchronized to avoid manual labor and gain access to precise revenue insights.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -246,16 +243,14 @@ export default function EaglesoftCRMIntegration() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Eaglesoft Data Often Remains Isolated From Marketing Systems
+              Eaglesoft Data Isolated, Historically, From Marketing Data Systems
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              Many successful dental practices rely on Eaglesoft to manage daily
-              operations.
+             Eaglesoft is a favorite among many award-winning dental practices.
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              However, agencies and growth teams typically operate inside CRM
-              platforms.
+              But agencies and growth teams generally work within a CRM platform.
             </p>
           </div>
 
@@ -270,7 +265,7 @@ export default function EaglesoftCRMIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                Patient updates must be exported manually
+                Patient updates must be exported manually
               </h3>
             </div>
 
@@ -280,7 +275,7 @@ export default function EaglesoftCRMIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                Reporting takes significant time
+                Reporting takes significant time
               </h3>
             </div>
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-4 flex gap-4 items-center ">
@@ -289,7 +284,7 @@ export default function EaglesoftCRMIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                Automation workflows lack clinic intelligence
+                Workflows for Automation lack knowledge of the clinic
               </h3>
             </div>
             <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-4 flex gap-4 items-center ">
@@ -298,14 +293,13 @@ export default function EaglesoftCRMIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-                Marketing ROI becomes difficult to prove
+                The Marketing ROI is becoming a little illusive.
               </h3>
             </div>
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync connects Eaglesoft operational activity directly with CRM
-            workflows
+            SmartSync links Eaglesoft day-to-day operations with CRM processes
           </p>
         </div>
       </section>
@@ -320,16 +314,14 @@ export default function EaglesoftCRMIntegration() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Real-Time Two-Way Eaglesoft Synchronization
+              Real-Time Two-Way Eaglesoft Synchronization
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync continuously synchronizes clinic activity between
-              Eaglesoft and supported CRM platforms.
+              SmartSync is a real-time clinic visit activity synchronization engine that synchronizes visits across Eaglesoft and any supported CRM platform.
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              When updates occur inside Eaglesoft, CRM records automatically
-              reflect those changes.
+             When updates are made within Eaglesoft, those changes are automatically updated in CRM records.
             </p>
             <p className="text-lg text-gray-600 mb-4">
               Typical synchronization occurs within minutes.

@@ -269,6 +269,13 @@ export default function Navbar() {
                   >
                     BAA <Download size={16} />{" "}
                   </a>
+                  <a
+                    href="/blog"
+                    className=" flex  justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg  "
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Blog 
+                  </a>
                 </div>
               )}
             </div>
