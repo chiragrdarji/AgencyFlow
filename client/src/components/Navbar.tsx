@@ -261,14 +261,14 @@ export default function Navbar() {
 
               {isMenuOpen && (
                 <div className="absolute left-0  w-[120px] bg-white  rounded-bl-lg rounded-br-lg shadow-lg border-slate-200 z-10">
-                  <a
+                  {/* <a
                     href="/pdfs/Smart_sync.pdf"
                     download
                     className=" flex  justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg  "
                     onClick={() => setIsMenuOpen(false)}
                   >
                     BAA <Download size={16} />{" "}
-                  </a>
+                  </a> */}
                   <a
                     href="/blog"
                     className=" flex  justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg  "

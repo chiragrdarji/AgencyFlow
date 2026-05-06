@@ -208,7 +208,7 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
 
         {openSection === "resources" && (
           <div className=" pb-3 px-8 space-y-2">
-            <a
+            {/* <a
               href="/pdfs/Smart_sync.pdf"
               download
               className="flex justify-between items-center text-sm text-slate-700 py-2 hover:text-primary"
@@ -218,7 +218,7 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
               }}
             >
               BAA <Download size={16} />
-            </a>
+            </a> */}
             <a
               href="/blog"
               className="flex justify-between items-center text-sm text-slate-700 py-2 hover:text-primary"
