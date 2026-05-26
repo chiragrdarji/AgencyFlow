@@ -3,6 +3,7 @@ export const seoConfig = {
   baseUrl: 'https://smartsync.one',
   siteName: 'Smart Sync One',
   defaultImage: 'https://smartsync.one/img/sso_logo.png',
+  ogdefaultImage: 'https://smartsync.one/img/og-image.png',
   
   pages: {
     home: {
@@ -135,7 +136,7 @@ export const getMetaTags = (pageKey: keyof typeof seoConfig.pages): MetaTags => 
     keywords: page.keywords,
     ogTitle: page.title,
     ogDescription: page.description,
-    ogImage: seoConfig.defaultImage,
+    ogImage: seoConfig.ogdefaultImage,
     ogUrl: `${seoConfig.baseUrl}${page.path}`,
     twitterCard: 'summary_large_image',
     twitterTitle: page.title,
