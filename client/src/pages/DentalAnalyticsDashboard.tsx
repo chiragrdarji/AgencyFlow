@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
@@ -39,6 +40,8 @@ import {
   Zap,
 } from "lucide-react";
 import FAQ from "@/components/FAQ";
+import analyticsImg from "@/assets/analytics.png";
+import crmImg from "@/assets/crm.png";
 
 const metrics = [
   { icon: Users, label: "New Patients" },
@@ -50,16 +53,21 @@ const metrics = [
   { icon: TrendingUp, label: "Expected Future Revenue" },
 ];
 const pmsSystems = [
+  "Open Dental",
   "Dentrix",
   "Dentrix Ascend",
-  "Open Dental",
   "Eaglesoft",
-  "Curve Dental",
+  "Curve Hero",
   "Denticon",
   "eClinicalWorks",
   "Dolphin",
   "OrthoTrac",
   "PracticeWorks",
+  "Athena",
+  "Cloud9",
+  "Dentrix Enterprise",
+  "Modernizing Medicine",
+  "NextGen Office"
 ];
 const steps = [
   "Inactive patients",
@@ -95,6 +103,8 @@ const faqItems = [
       " A dental practice analytics platform is important because it provides real-time visibility into patient behavior, treatment performance, and revenue, enabling better decisions and improved long-term growth.",
   },
 ];
+
+
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -104,7 +114,7 @@ const softwareSchema = {
   url: "https://smartsync.one/dental-analytics-dashboard",
   description:
     "Track new patients, appointments, treatments, payments, and future revenue using SmartSync’s dental analytics dashboard integrated directly with Dentrix, Open Dental, Eaglesoft and leading CRMs.",
-  
+
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -130,7 +140,8 @@ const softwareSchema = {
 export default function DentalAnalyticsDashboard() {
   const metaTags = getMetaTags("dentalanalyticsdashboard");
   const faqSchema = getFAQSchema(faqItems);
-  
+  const [activeTab, setActiveTab] = useState("analytics");
+
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
@@ -255,7 +266,7 @@ export default function DentalAnalyticsDashboard() {
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-2">
-                 Every day, dental offices produce a wealth of data on their operations within their PMS platforms.
+                  Every day, dental offices produce a wealth of data on their operations within their PMS platforms.
                 </p>
                 <p className="text-lg text-gray-600 mb-4">
                   Despite that, agencies and clinic owners are faced with:
@@ -310,7 +321,7 @@ export default function DentalAnalyticsDashboard() {
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
-                  Real-Time Analytics From Your PMS:​
+                  Real-Time Analytics From Your PMS:
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-4">
@@ -561,7 +572,7 @@ export default function DentalAnalyticsDashboard() {
                     SmartSync estimates future payments due to you taking into account treatments in process and planned treatments.
                   </p>
                   <p className="text-gray-600">
-                   Practice visibility into future production potential.
+                    Practice visibility into future production potential.
                   </p>
                 </div>
               </div>
@@ -616,27 +627,67 @@ export default function DentalAnalyticsDashboard() {
             Analytics can be viewed through:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-4 flex gap-4 items-center ">
-              <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
-                <LayoutDashboard className="h-6 w-6 text-primary" />
-              </div>
 
-              <h3 className="font-medium text-foreground">
-                SmartSync Analytics Dashboard
-              </h3>
-            </div>
+          {/* Tabs */}
+               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-            <div className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-4 flex gap-4 items-center ">
-              <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
-                <Briefcase className="h-6 w-6 text-primary" />
-              </div>
-
-              <h3 className="font-medium text-foreground">
-                CRM Opportunity Module
-              </h3>
-            </div>
+        <div
+          onClick={() => setActiveTab("analytics")}
+          className={`rounded-lg text-card-foreground p-4 flex gap-4 items-center cursor-pointer transition-all
+          ${
+            activeTab === "analytics"
+              ? "bg-blue-100 ring-2 ring-primary shadow-md"
+              : "bg-blue-50/60 shadow-sm hover:shadow-md"
+          }`}
+        >
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
+            <LayoutDashboard className="h-6 w-6 text-primary" />
           </div>
+
+          <h3 className="font-medium text-foreground">
+            SmartSync Analytics Dashboard
+          </h3>
+        </div>
+
+        <div
+          onClick={() => setActiveTab("crm")}
+          className={`rounded-lg text-card-foreground p-4 flex gap-4 items-center cursor-pointer transition-all
+          ${
+            activeTab === "crm"
+              ? "bg-blue-100 ring-2 ring-primary shadow-md"
+              : "bg-blue-50/60 shadow-sm hover:shadow-md"
+          }`}
+        >
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
+            <Briefcase className="h-6 w-6 text-primary" />
+          </div>
+
+          <h3 className="font-medium text-foreground">
+            CRM Opportunity Module
+          </h3>
+        </div>
+
+      </div>
+
+      <div className="mt-8 rounded-2xl overflow-hiddenshadow-sm">
+
+        {activeTab === "analytics" && (
+          <img
+            src="/img/analytics-dashboard.webp"
+            alt="Analytics Dashboard"
+            className="max-w-3xl mx-auto border border-primary rounded-lg border-[2px]"
+          />
+        )}
+
+        {activeTab === "crm" && (
+          <img
+            src="/img/crm-opportunity.webp"
+            alt="CRM Opportunity"
+            className="max-w-3xl mx-auto border border-primary rounded-lg border-[2px]"
+          />
+        )}
+
+      </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             Marketing teams, agency managers, and clinic owners can work from

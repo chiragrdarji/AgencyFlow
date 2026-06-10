@@ -67,16 +67,21 @@ import {
 import FAQ from "@/components/FAQ";
 
 const metrics = [
+  { icon: CheckCircle, label: "Open Dental" },
   { icon: CheckCircle, label: "Dentrix" },
   { icon: CheckCircle, label: "Dentrix Ascend" },
-  { icon: CheckCircle, label: "Open Dental" },
   { icon: CheckCircle, label: "Eaglesoft" },
-  { icon: CheckCircle, label: "Curve Dental" },
+  { icon: CheckCircle, label: "Curve Hero" },
   { icon: CheckCircle, label: "Denticon" },
   { icon: CheckCircle, label: "eClinicalWorks" },
   { icon: CheckCircle, label: "Dolphin" },
   { icon: CheckCircle, label: "OrthoTrac" },
   { icon: CheckCircle, label: "PracticeWorks" },
+  { icon: CheckCircle, label: "Athena" },
+  { icon: CheckCircle, label: "Cloud9" },
+  { icon: CheckCircle, label: "Dentrix Enterprise" },
+  { icon: CheckCircle, label: "Modernizing Medicine" },
+   { icon: CheckCircle, label: "NextGen Office" },
 ];
 const data = [
   { icon: CheckCircle, label: "Patient Records" },
