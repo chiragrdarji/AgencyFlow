@@ -12,6 +12,7 @@ import {
   ArrowRight,
   BarChart3,
   Bot,
+  Building2,
   Calendar,
   CalendarCheck,
   CheckCircle,
@@ -22,8 +23,10 @@ import {
   CreditCard,
   Database,
   DollarSign,
+  FileBarChart,
   FileText,
   Icon,
+  LayoutDashboard,
   Lightbulb,
   MapPin,
   Phone,
@@ -51,16 +54,21 @@ const metrics = [
   { icon: CalendarCheck, label: "Revenue After Agency Onboarding" },
 ];
 const pmsSystems = [
+  "Open Dental",
   "Dentrix",
   "Dentrix Ascend",
-  "Open Dental",
   "Eaglesoft",
-  "Curve Dental",
+  "Curve Hero",
   "Denticon",
   "eClinicalWorks",
   "Dolphin",
   "OrthoTrac",
   "PracticeWorks",
+  "Athena",
+  "Cloud9",
+  "Dentrix Enterprise",
+  "Modernizing Medicine",
+  "NextGen Office"
 ];
 const steps = [
   "First payment received from each patient",
@@ -71,7 +79,7 @@ const steps2 = [
   "Follow up when treatment is proposed",
   "Recover missed appointments",
   "Reactivate inactive patients",
-  "Trigger payment follow-ups",
+  // "Trigger payment follow-ups",
 ];
 
 const trackItems = [
@@ -120,7 +128,7 @@ const softwareSchema = {
   url: "https://smartsync.one/dental-marketing-attribution",
   description:
     "Track real patient revenue generated from dental marketing campaigns using PMS data. SmartSync connects Dentrix, Open Dental and other systems with CRM platforms to prove true agency ROI.",
-  
+
   publisher: {
     "@type": "Organization",
     name: "Smart Sync",
@@ -143,9 +151,7 @@ const softwareSchema = {
   },
 };
 
-
 export default function DentalMarketingAttributionSoftware() {
-  
   const metaTags = getMetaTags("dentalmarketingattributionsoftware");
   const faqSchema = getFAQSchema(faqItems);
 
@@ -184,13 +190,17 @@ export default function DentalMarketingAttributionSoftware() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync provides a direct link from dental practice management systems to your CRM to enable tracking of treatments, payments and lifetime patient value once your agency takes on managing a clinic.
+                SmartSync provides a direct link from dental practice management
+                systems to your CRM to enable tracking of treatments, payments
+                and lifetime patient value once your agency takes on managing a
+                clinic.
               </p>
               <p
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Let clients see precisely how marketing is helping the production and revenue grow.
+                Let clients see precisely how marketing is helping the
+                production and revenue grow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
@@ -326,7 +336,9 @@ export default function DentalMarketingAttributionSoftware() {
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-5">
-               Without integration of data from the PMS, agencies are unable to precisely tie marketing performance back to treatments or payments.
+                Without integration of data from the PMS, agencies are unable to
+                precisely tie marketing performance back to treatments or
+                payments.
               </p>
 
               <p className="text-lg font-semibold text-gray-900">
@@ -353,7 +365,8 @@ export default function DentalMarketingAttributionSoftware() {
                   agencies.
                 </p>
                 <p className="text-lg font-semibold text-gray-900">
-                  Once connected, every critical event in the clinic can be quantified.
+                  Once connected, every critical event in the clinic can be
+                  quantified.
                 </p>
               </div>
             </div>
@@ -585,7 +598,7 @@ export default function DentalMarketingAttributionSoftware() {
               {
                 icon: DollarSign,
                 title: "Payment Collection",
-                desc: "Automatically record payments received and outstanding balances.",
+                desc: "Automatically record payments received.",
               },
               {
                 icon: TrendingUp,
@@ -608,7 +621,8 @@ export default function DentalMarketingAttributionSoftware() {
             ))}
           </div>
           <p className="mt-10    text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4">
-            This provides a complete visibility pipe line from acquisition to revenue recognition.
+            This provides a complete visibility pipe line from acquisition to
+            revenue recognition.
           </p>
         </div>
       </section>
@@ -622,35 +636,54 @@ export default function DentalMarketingAttributionSoftware() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Perfect for Agencies Managing Multiple Clinics
+              Manage Reporting Across Multiple Clinics
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync simplifies reporting across multiple dental practices.
+              SmartSync makes it easy to access reporting and dashboards for
+              each clinic from their individual accounts.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             {[
-              { icon: Activity, label: "Monitor clinic performance" },
-              { icon: TrendingUp, label: "Compare revenue growth" },
-              { icon: BarChart3, label: "Track production trends" },
               {
-                icon: MapPin,
-                label: "Identify underperforming locations",
+                icon: FileBarChart,
+                title: "Access clinic performance reports",
+                description:
+                  "View detailed reporting  for each clinic separately.",
               },
-            ].map(({ icon: Icon, label }) => (
+              {
+                icon: LayoutDashboard,
+                title: "Secure individual clinic dashboards",
+                description:
+                  "Each clinic maintains its own dedicated dashboard and  data.",
+              },
+              {
+                icon: BarChart3,
+                title: "Track production and business metrics",
+                description:
+                  "Monitor  key performance indicators within each clinic account.",
+              },
+              {
+                icon: Building2,
+                title: "Manage multiple clinic accounts",
+                description:
+                  "Easily switch between clinic accounts to review reporting.",
+              },
+            ].map(({ icon: Icon, title , description}) => (
               <div
-                key={label}
+                key={title}
                 className="rounded-lg  bg-blue-50/60 text-card-foreground shadow-sm hover:shadow-md transition-shadow  p-6  "
               >
                 <div className=" w-10 h-10 mb-2 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
                   <Icon className="h-6 w-6 text-primary mx-auto " />
                 </div>
-                <p className="font-medium text-foreground">{label}</p>
+                <h3 className="font-bold text-lg text-foreground mb-2">{title}</h3>
+                <p className="text-gray-600">{description}</p>
               </div>
             ))}
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            Client reporting becomes faster and significantly more accurate.
+            View clinic-specfic dashboards and reports with ease.
           </p>
         </div>
       </section>
@@ -673,7 +706,7 @@ export default function DentalMarketingAttributionSoftware() {
             </p>
           </div>
           <div className="">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
               {steps2.map((step, i) => (
                 <div
                   key={step}

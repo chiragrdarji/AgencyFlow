@@ -41,6 +41,7 @@ import {
   UserCheck,
   Users,
   Wallet,
+  Wallet2,
   Workflow,
   X,
   Zap,
@@ -51,20 +52,26 @@ const metrics = [
   { icon: TrendingUp, label: "Prove marketing ROI" },
   { icon: Users, label: "Improve client retention" },
   { icon: FileBarChart, label: "Automate reporting" },
-  { icon: DollarSign, label: "Track treatment and payment growth" },
+  { icon: DollarSign, label: "Track treatment " },
   { icon: Building2, label: "Manage multiple clinics efficiently" },
+  { icon: Wallet2, label: "Track Payment" },
 ];
 const pmsSystems = [
+  "Open Dental",
   "Dentrix",
   "Dentrix Ascend",
-  "Open Dental",
   "Eaglesoft",
-  "Curve Dental",
+  "Curve Hero",
   "Denticon",
   "eClinicalWorks",
   "Dolphin",
   "OrthoTrac",
   "PracticeWorks",
+  "Athena",
+  "Cloud9",
+  "Dentrix Enterprise",
+  "Modernizing Medicine",
+  "NextGen Office"
 ];
 const steps = [
   "PMS connection",
@@ -761,7 +768,7 @@ export default function ForDentalMarketingAgencies() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              The agencies managing 80 dental clinics trust us
+              The agencies managing 100+ dental clinics trust us
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">

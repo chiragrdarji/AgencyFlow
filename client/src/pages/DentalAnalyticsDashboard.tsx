@@ -49,7 +49,7 @@ const metrics = [
   { icon: FileText, label: "Treatment Proposed" },
   { icon: CheckCircle2, label: "Treatment Completed" },
   { icon: Wallet, label: "Payments Received" },
-  { icon: Clock, label: "Payment Due" },
+  // { icon: Clock, label: "Payment Due" },
   { icon: TrendingUp, label: "Expected Future Revenue" },
 ];
 const pmsSystems = [
@@ -525,7 +525,7 @@ export default function DentalAnalyticsDashboard() {
                         <span className="text-gray-700">Payments Received</span>
                       </div>
                     </li>
-                    <li className="flex items-start gap-3">
+                    {/* <li className="flex items-start gap-3">
                       <div className="flex items-center space-x-3">
                         <ChevronRight size={18} className="text-primary " />
                         <span className="text-gray-700">
@@ -533,7 +533,7 @@ export default function DentalAnalyticsDashboard() {
                           Due Payments
                         </span>
                       </div>
-                    </li>
+                    </li> */}
                     <li className="flex items-start gap-3">
                       <div className="flex items-center space-x-3">
                         <ChevronRight size={18} className="text-primary " />
@@ -851,7 +851,7 @@ export default function DentalAnalyticsDashboard() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />
-                  <span className="text-gray-700">Compare clinic growth</span>
+                  <span className="text-gray-700">Compare clinic growth individually</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <ChevronRight size={18} className="text-primary " />

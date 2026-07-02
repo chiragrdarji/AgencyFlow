@@ -63,16 +63,21 @@ const metrics = [
   { icon: History, label: "Patient Treatment History" },
 ];
 const pmsSystems = [
+  "Open Dental",
   "Dentrix",
   "Dentrix Ascend",
-  "Open Dental",
   "Eaglesoft",
-  "Curve Dental",
+  "Curve Hero",
   "Denticon",
   "eClinicalWorks",
   "Dolphin",
   "OrthoTrac",
   "PracticeWorks",
+  "Athena",
+  "Cloud9",
+  "Dentrix Enterprise",
+  "Modernizing Medicine",
+  "NextGen Office"
 ];
 const steps = [
   "Unscheduled procedures",
