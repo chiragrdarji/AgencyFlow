@@ -13,8 +13,18 @@ import Contact from "@/pages/Contact";
 import DentrixIntegration from "@/pages/agency-dentrix";
 import AgencyOpenDental from "@/pages/agency-open-dental";
 import NotFound from "@/pages/not-found";
+import DentalMarketingAttributionSoftware from "./pages/DentalMarketingAttributionSoftware";
 import { useLocation } from "wouter";
 import { useEffect } from "react";
+import DentalAnalyticsDashboard from "./pages/DentalAnalyticsDashboard";
+import ForDentalMarketingAgencies from "./pages/ForDentalMarketingAgencies";
+import TreatmentTrackingRevenuePipelineIntelligence from "./pages/TreatmentTrackingRevenuePipelineIntelligence";
+import DentalPMSIntegrations from "./pages/DentalPMSIntegrations";
+import HowSmartSyncWorks from "./pages/HowSmartSyncWorks";
+import DentrixCRMIntegration from "./pages/DentrixCRMIntegration";
+import OpenDentalCRMIntegration from "./pages/OpenDentalCRMIntegration";
+import EaglesoftCRMIntegration from "./pages/EaglesoftCRMIntegration";
+import GoHighLevelDentalIntegration from "./pages/GoHighLevelDentalIntegration";
 
 export const DownloadPage = () => {
   const [, setLocation] = useLocation();
@@ -54,7 +64,17 @@ function Router() {
         <Route path="/SmartSync-Synchronizer.exe" component={DownloadPage} />
         <Route path="/dentrix-gohighlevel-integration" component={DentrixIntegration} />
         <Route path="/open-dental-gohighlevel-integration" component={AgencyOpenDental} />
-       
+        <Route path="/dental-marketing-attribution" component={DentalMarketingAttributionSoftware} />
+        <Route path="/dental-analytics-dashboard" component={DentalAnalyticsDashboard} />
+        <Route path="/for-dental-marketing-agencies" component={ForDentalMarketingAgencies} />
+        <Route path="/treatment-tracking-software" component={TreatmentTrackingRevenuePipelineIntelligence} />
+        <Route path="/dental-pms-integrations" component={DentalPMSIntegrations} />
+        <Route path="/how-smartsync-works" component={HowSmartSyncWorks} />
+        <Route path="/dentrix-crm-integration" component={DentrixCRMIntegration} />
+        <Route path="/open-dental-crm-integration" component={OpenDentalCRMIntegration} />
+        <Route path="/eaglesoft-crm-integration" component={EaglesoftCRMIntegration} />
+        <Route path="/gohighlevel-dental-integration" component={GoHighLevelDentalIntegration} />
+        
         <Route component={NotFound} />
       </Switch>
     </Layout>

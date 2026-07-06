@@ -413,7 +413,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans">
       {/* Schema Markup */}
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -435,7 +435,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
             },
           }),
         }}
-      />
+      /> */}
 
       {/* Navigation */}
       {/* <nav className="bg-white shadow-sm sticky top-0 z-50">

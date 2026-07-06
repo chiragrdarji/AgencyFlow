@@ -6,31 +6,88 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://smartsync.one</loc>
-  <lastmod>2026-01-08T06:51:01+00:00</lastmod>
-</url>
-<url>
-  <loc>https://smartsync.one/dentrix-gohighlevel-integration</loc>
-  <lastmod>2026-01-08T06:51:01+00:00</lastmod>
-</url>
-<url>
-  <loc>https://smartsync.one/supported-platforms</loc>
-  <lastmod>2026-01-08T06:51:01+00:00</lastmod>
-</url>
-<url>
-  <loc>https://smartsync.one/open-dental-gohighlevel-integration</loc>
-  <lastmod>2026-01-08T06:51:01+00:00</lastmod>
+  <loc>https://smartsync.one/</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://smartsync.one/onboarding</loc>
-  <lastmod>2026-01-08T06:51:01+00:00</lastmod>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://smartsync.one/education</loc>
-  <lastmod>2026-01-08T06:51:01+00:00</lastmod>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://smartsync.one/contact</loc>
-  <lastmod>2026-01-08T06:51:01+00:00</lastmod>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/supported-platforms</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/dentrix-gohighlevel-integration</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/open-dental-gohighlevel-integration</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/dental-marketing-attribution</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/dental-analytics-dashboard</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/for-dental-marketing-agencies</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/treatment-tracking-software</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/dental-pms-integrations</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/how-smartsync-works</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/dentrix-crm-integration</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/open-dental-crm-integration</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/eaglesoft-crm-integration</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartsync.one/gohighlevel-dental-integration</loc>
+  <lastmod>2026-03-23T06:58:30+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 </urlset>
