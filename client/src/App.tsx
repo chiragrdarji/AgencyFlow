@@ -25,6 +25,7 @@ import DentrixCRMIntegration from "./pages/DentrixCRMIntegration";
 import OpenDentalCRMIntegration from "./pages/OpenDentalCRMIntegration";
 import EaglesoftCRMIntegration from "./pages/EaglesoftCRMIntegration";
 import GoHighLevelDentalIntegration from "./pages/GoHighLevelDentalIntegration";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export const DownloadPage = () => {
   const [, setLocation] = useLocation();
@@ -74,6 +75,7 @@ function Router() {
         <Route path="/open-dental-crm-integration" component={OpenDentalCRMIntegration} />
         <Route path="/eaglesoft-crm-integration" component={EaglesoftCRMIntegration} />
         <Route path="/gohighlevel-dental-integration" component={GoHighLevelDentalIntegration} />
+        <Route path="/privacy-policy" component={PrivacyPolicy} />
         
         <Route component={NotFound} />
       </Switch>
