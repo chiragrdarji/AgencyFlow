@@ -108,6 +108,12 @@ export const seoConfig = {
       keywords: 'gohighlevel dental integration , dentrix gohighlevel integration , open dental gohighlevel integration , dental agency gohighlevel automation , dental CRM integration gohighlevel',
       path: '/gohighlevel-dental-integration',
     },
+    privacyPolicy: {
+      title: ' Privacy Policy | SmartSync.One Dental CRM Integration',
+      description: ' Read SmartSync.One Privacy Policy to understand how we collect, use, secure, and protect your data while syncing Dental PMS and CRM platforms.',
+      keywords: 'privacy policy, smart sync, patient data security, GDPR compliance, CCPA compliance',
+      path: '/privacy-policy',
+    },
 
   },
 };

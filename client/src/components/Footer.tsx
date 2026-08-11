@@ -51,6 +51,7 @@ export default function Footer() {
     { href: "/onboarding", label: "Onboarding" },
     { href: "/education", label: "Education Materials" },
     { href: "/contact", label: "Contact" },
+    { href: "/privacy-policy", label: "Privacy Policy" },
   ];
 
   // 2️⃣ Setup form
