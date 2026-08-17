@@ -64,13 +64,13 @@
 ## 📊 SEO Improvements By Page
 
 ### Home Page
-- **Title:** Smart Sync One – Patient Data Sync for Dental Agencies
+- **Title:** SmartSync.One – Patient Data Sync for Dental Agencies
 - **Keywords:** dentrix integration, open dental api, GoHighLevel Integration...
 - **Schema:** BreadcrumbList, FAQPage
 - **Keywords:** 12 target keywords
 
 ### Supported Platforms  
-- **Title:** Supported PMS Platforms | Smart Sync One
+- **Title:** Supported PMS Platforms | SmartSync.One
 - **Keywords:** dentrix api, open dental api, eaglesoft integration...
 - **Schema:** BreadcrumbList
 - **Keywords:** 8 target keywords
@@ -88,20 +88,20 @@
 - **Keywords:** 8 target keywords
 
 ### Onboarding
-- **Title:** Onboarding & Setup | Smart Sync One
-- **Keywords:** smart sync setup, integration onboarding...
+- **Title:** Onboarding & Setup | SmartSync.One
+- **Keywords:** SmartSync.One setup, integration onboarding...
 - **Schema:** BreadcrumbList, FAQPage (5 Q&As)
 - **Keywords:** 6 target keywords
 
 ### Education Materials
-- **Title:** Education Materials | Smart Sync One
+- **Title:** Education Materials | SmartSync.One
 - **Keywords:** dental marketing automation, gohighlevel guides...
 - **Schema:** BreadcrumbList
 - **Keywords:** 5 target keywords
 
 ### Contact
-- **Title:** Contact Us | Smart Sync One
-- **Keywords:** contact smart sync, dental integration support...
+- **Title:** Contact Us | SmartSync.One
+- **Keywords:** contact SmartSync.One, dental integration support...
 - **Schema:** BreadcrumbList
 - **Keywords:** 4 target keywords
 

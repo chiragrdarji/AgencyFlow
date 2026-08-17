@@ -107,7 +107,7 @@ export const getOrganizationSchema = () => {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Smart Sync One',
+    name: 'SmartSync.One',
     url: 'https://smartsync.one/',
     logo: 'https://smartsync.one/img/sso_logo.svg',
     description:

@@ -23,9 +23,8 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
         >
           <span>Features</span>
           <ChevronDown
-            className={`h-4 w-4 transition-transform duration-300 ${
-              openSection === "inner_menu" ? "rotate-180 text-primary" : ""
-            }`}
+            className={`h-4 w-4 transition-transform duration-300 ${openSection === "inner_menu" ? "rotate-180 text-primary" : ""
+              }`}
           />
         </button>
 
@@ -95,7 +94,7 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
               }}
               data-testid="link-agency-open-dental"
             >
-              How SmartSync Works
+              How SmartSync.One Works
             </Link>
             <Link
               href="/dentrix-crm-integration"
@@ -151,9 +150,8 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
         >
           <span>Supported Platfrom</span>
           <ChevronDown
-            className={`h-4 w-4 transition-transform duration-300 ${
-              openSection === "menu" ? "rotate-180 text-primary" : ""
-            }`}
+            className={`h-4 w-4 transition-transform duration-300 ${openSection === "menu" ? "rotate-180 text-primary" : ""
+              }`}
           />
         </button>
 
@@ -200,9 +198,8 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
         >
           <span>Resources</span>
           <ChevronDown
-            className={`h-4 w-4 transition-transform duration-300 ${
-              openSection === "resources" ? "rotate-180 text-primary" : ""
-            }`}
+            className={`h-4 w-4 transition-transform duration-300 ${openSection === "resources" ? "rotate-180 text-primary" : ""
+              }`}
           />
         </button>
 
@@ -227,7 +224,7 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
                 setIsOpen?.(false);
               }}
             >
-              Blog 
+              Blog
             </a>
           </div>
         )}

@@ -122,7 +122,7 @@ const faqItems = [
     question:
       "Can I integrate Open Dental with GoHighLevel, HubSpot, and Salesforce?",
     answer:
-      " Yes, SmartSync allows seamless Open Dental integration with GoHighLevel, HubSpot, and Salesforce, enabling real-time synchronization for marketing automation, reporting, and pipeline tracking.",
+      " Yes, SmartSync.One allows seamless Open Dental integration with GoHighLevel, HubSpot, and Salesforce, enabling real-time synchronization for marketing automation, reporting, and pipeline tracking.",
   },
   {
     question:
@@ -145,11 +145,11 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/open-dental-crm-integration",
   description:
-    "Connect Open Dental with GoHighLevel, HubSpot, and Salesforce using SmartSync. Automatically sync patients, appointments, treatments, and payments with real-time two-way integration.",
- 
+    "Connect Open Dental with GoHighLevel, HubSpot, and Salesforce using SmartSync.One. Automatically sync patients, appointments, treatments, and payments with real-time two-way integration.",
+
   publisher: {
     "@type": "Organization",
-    name: "Smart Sync",
+    name: "SmartSync.One",
     url: "https://smartsync.one",
   },
   featureList: [
@@ -205,7 +205,7 @@ export default function OpenDentalCRMIntegration() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Integrate Open Dental with your CRM and marketing platforms through SmartSync’s real-time two-way synchronization software
+                Integrate Open Dental with your CRM and marketing platforms through SmartSync.One’s real-time two-way synchronization software
               </p>
               <p
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
@@ -281,7 +281,7 @@ export default function OpenDentalCRMIntegration() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-             Robust PMS data is often underexploited
+              Robust PMS data is often underexploited
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
@@ -337,7 +337,7 @@ export default function OpenDentalCRMIntegration() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-           SmartSync connects Open Dental directly to CRM platforms for growth and communication.
+            SmartSync.One connects Open Dental directly to CRM platforms for growth and communication.
           </p>
         </div>
       </section>
@@ -347,7 +347,7 @@ export default function OpenDentalCRMIntegration() {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Sparkles size={18} />
               <span className="text-blue-600">
-                How SmartSync Works with Open Dental
+                How SmartSync.One Works with Open Dental
               </span>
             </div>
 
@@ -356,15 +356,15 @@ export default function OpenDentalCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync synchronizes ongoing business updates in real-time between Open Dental and compatible CRM solutions.
+              SmartSync.One synchronizes ongoing business updates in real-time between Open Dental and compatible CRM solutions.
             </p>
             <p className="text-lg text-gray-600 mb-4">
               Changes made within Open Dental means CRM records are updated automatically.
-              
+
 
             </p>
             <p className="text-lg text-gray-600 mb-4">
-              Sync takes place typically within minutes. 
+              Sync takes place typically within minutes.
             </p>
           </div>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mb-10">
@@ -449,7 +449,7 @@ export default function OpenDentalCRMIntegration() {
               </p>
               <p className="text-lg text-foreground mb-2">
                 Open Dental users benefit from deep treatment visibility through
-                SmartSync.
+                SmartSync.One.
               </p>
               <p className="text-lg text-foreground mb-2">
                 Automatically synchronize:
@@ -533,7 +533,7 @@ export default function OpenDentalCRMIntegration() {
                 Communication between organisations and funnel automation are managed in many dental agencies by GoHighLevel.
               </p>
               <p className="text-lg text-gray-600 mt-2 mb-4">
-                SmartSync seamlessly integrates Open Dental clinic activity directly into GoHighLevel workflows. 
+                SmartSync.One seamlessly integrates Open Dental clinic activity directly into GoHighLevel workflows.
               </p>
               <p className="text-lg text-gray-900">Trigger automation when:</p>
 
@@ -549,7 +549,7 @@ export default function OpenDentalCRMIntegration() {
                 </li>
                 <li className="flex items-center gap-3">
                   {" "}
-                  <ChevronRight size={18} className="text-primary " /> 
+                  <ChevronRight size={18} className="text-primary " />
                   Treatment plans have been created
                 </li>
                 <li className="flex items-center gap-3">
@@ -605,7 +605,7 @@ export default function OpenDentalCRMIntegration() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -636,7 +636,7 @@ export default function OpenDentalCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync synchronizes Open Dental activity directly into HubSpot
+              SmartSync.One synchronizes Open Dental activity directly into HubSpot
               contacts and deal pipelines.
             </p>
           </div>
@@ -697,7 +697,7 @@ export default function OpenDentalCRMIntegration() {
 
             <p className="text-lg text-gray-600 mb-4">
               Large dental organizations and consultants using Salesforce can
-              centralize clinic performance data using SmartSync.
+              centralize clinic performance data using SmartSync.One.
             </p>
           </div>
 
@@ -754,7 +754,7 @@ export default function OpenDentalCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 ">
-              SmartSync helps agencies move beyond appointment reporting
+              SmartSync.One helps agencies move beyond appointment reporting
             </p>
           </div>
 
@@ -783,7 +783,7 @@ export default function OpenDentalCRMIntegration() {
             </div>
           </div>
           <p className="text-lg text-gray-600 text-center mt-8">
-            SmartSync automatically tracks payments generated after agency
+            SmartSync.One automatically tracks payments generated after agency
             onboarding.
           </p>
 
@@ -808,7 +808,7 @@ export default function OpenDentalCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              SmartSync converts Open Dental activity into analytics dashboards.
+              SmartSync.One converts Open Dental activity into analytics dashboards.
             </p>
           </div>
           <p className="font-bold p-2 text-lg text-center mb-6">Track:</p>
@@ -867,7 +867,7 @@ export default function OpenDentalCRMIntegration() {
             </div>
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            Available inside SmartSync dashboards and CRM opportunities.
+            Available inside SmartSync.One dashboards and CRM opportunities.
           </p>
         </div>
       </section>
@@ -884,7 +884,7 @@ export default function OpenDentalCRMIntegration() {
                 Guided Open Dental Integration Setup
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync onboarding specialists assist throughout
+                SmartSync.One onboarding specialists assist throughout
                 implementation.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
@@ -923,17 +923,17 @@ export default function OpenDentalCRMIntegration() {
             <div className="bg-white shadow-lg p-8 rounded-2xl">
               <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
                 <LifeBuoy size={18} />
-                Why SmartSync for Open Dental
+                Why SmartSync.One for Open Dental
               </span>
               <h3 className="lg:flex md:block items-center mb-6 font-bold text-gray-900 text-lg">
                 <Brain size={24} className="text-primary mr-2" />
                 Transform Open Dental Data Into Growth Intelligence
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync goes beyond basic integration.
+                SmartSync.One goes beyond basic integration.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Customers use SmartSync to:
+                Customers use SmartSync.One to:
               </p>
               <div className="space-y-4">
                 <div className="flex  items-center space-x-3">
@@ -976,10 +976,10 @@ export default function OpenDentalCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies and Clinics Across 80+ Dental Locations
+              Supporting Agencies and Clinics Across 100+ Dental Locations
             </h2>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync helps agencies standardize reporting and automation
+              SmartSync.One helps agencies standardize reporting and automation
               across practices using different PMS systems including Open
               Dental.
             </p>
@@ -1007,7 +1007,7 @@ export default function OpenDentalCRMIntegration() {
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-4">
             Unlock patient, treatment, and revenue insights automatically using
-            SmartSync.
+            SmartSync.One.
           </p>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Start building smarter automation and reporting workflows.

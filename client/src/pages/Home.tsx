@@ -35,9 +35,9 @@ const faqItems = [
       "Setup typically takes about 45 minutes with our team. We handle the technical configuration, field mapping, and testing to ensure everything works perfectly before going live.",
   },
   {
-    question: "Is patient data secure and HIPAA conscious?",
+    question: "Is patient data secure and HIPAA Compliant?",
     answer:
-      "We are HIPAA conscious. We only sync essential business data (no medical records), use encrypted connections, and automatically delete data from our connector once it's successfully transferred. No treatment or medical data is ever accessed or stored.",
+      "We are HIPAA Compliant. We only sync essential business data (no medical records), use encrypted connections, and automatically delete data from our connector once it's successfully transferred. No treatment or medical data is ever accessed or stored.",
   },
   {
     question: "What data gets synced?",
@@ -100,7 +100,7 @@ export default function Home() {
                 <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
                   <Zap size={16} className="mr-2" />
                   <span data-testid="text-trusted-badge">
-                    Trusted by 50+ Marketing Agencies
+                    Trusted by 100+ Marketing Agencies
                   </span>
                 </div>
                 <h1
@@ -155,7 +155,7 @@ export default function Home() {
                 <div className="flex items-center text-sm text-gray-600">
                   <Clock size={16} className="mr-2" />
                   <span data-testid="text-setup-features">
-                    45-minute setup • Real-time sync • HIPAA-conscious
+                    45-minute setup • Real-time sync • HIPAA Compliant
                   </span>
                 </div>
               </div>
@@ -593,12 +593,12 @@ export default function Home() {
                   <div className="w-16 h-16  rounded-lg flex items-center justify-center mb-0">
                     <img
                       src="/img/HIPAA-Conscious-Design.svg"
-                      alt="HIPAA-Conscious Design"
+                      alt="HIPAA Compliant Design"
                       className="w-9 h-9" // adjust size as needed
                     />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    HIPAA-Conscious Design
+                    HIPAA Compliant Design
                   </h3>
                   <p className="text-gray-600">
                     Only essential business data is synced and auto-deleted
@@ -817,7 +817,7 @@ export default function Home() {
               Automatically
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join 50+ marketing agencies already using our connector to grow
+              Join 100+ marketing agencies already using our connector to grow
               their dental clients' practices.
             </p>
 
@@ -869,7 +869,7 @@ export default function Home() {
             <div className="text-blue-100 text-sm">
               <Shield size={16} className="inline mr-2" />
               <span data-testid="text-final-guarantees">
-                HIPAA-conscious • 45-minute setup • Real-time sync
+                HIPAA Compliant • 45-minute setup • Real-time sync
               </span>
             </div>
           </div>
@@ -882,15 +882,15 @@ export default function Home() {
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
                 data-testid="text-features-title"
               >
-                Dentrix, Eaglesoft & Open Dental API Integration by SmartSync
+                Dentrix, Eaglesoft & Open Dental API Integration by SmartSync.One
               </h2>
               <p className="text-xl text-gray-600 max-w-7xl mx-auto">
                 Dental APIs and PMS Integrations for Modern Practices
                 Integration of Dentrix, Eaglesoft, and Open Dental APIs by
-                SmartSync SmartSync facilitates seamless connectivity for dental
+                SmartSync.One SmartSync.One facilitates seamless connectivity for dental
                 practices, SaaS businesses, and healthcare ecosystems with
                 Dental Practice Management Systems (PMS) via secure and scalable
-                Dental APIs. SmartSync.one effortlessly and compliantly manages
+                Dental APIs. SmartSync.One effortlessly and compliantly manages
                 your data flow, whether you require Dentrix API, Eaglesoft API,
                 or Open Dental integration.
               </p>

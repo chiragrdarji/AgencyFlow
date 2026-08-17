@@ -82,19 +82,19 @@ const faqItems = [
       " A dental analytics dashboard is a centralized platform that converts PMS data into real-time insights, helping agencies and clinics track patients, appointments, treatments, and revenue in one place.",
   },
   {
-    question: "How does SmartSync improve dental reporting software?",
+    question: "How does SmartSync.One improve dental reporting software?",
     answer:
-      " SmartSync improves dental reporting software by automatically syncing data from PMS systems into dashboards and CRMs, eliminating manual reporting while providing accurate, real-time performance insights.",
+      " SmartSync.One improves dental reporting software by automatically syncing data from PMS systems into dashboards and CRMs, eliminating manual reporting while providing accurate, real-time performance insights.",
   },
   {
     question: "What metrics can I track with a dental KPI software?",
     answer:
-      "With dental KPI software like SmartSync, you can track key metrics such as new patients, appointments, treatment performance, payments received, outstanding balances, and expected future revenue.",
+      "With dental KPI software like SmartSync.One, you can track key metrics such as new patients, appointments, treatment performance, payments received, outstanding balances, and expected future revenue.",
   },
   {
-    question: "Can SmartSync provide dental revenue dashboard insights across multiple clinics?",
+    question: "Can SmartSync.One provide dental revenue dashboard insights across multiple clinics?",
     answer:
-      "Yes, SmartSync allows agencies and multi-location practices to monitor performance across multiple clinics, compare growth, and track revenue trends from a single analytics dashboard.",
+      "Yes, SmartSync.One allows agencies and multi-location practices to monitor performance across multiple clinics, compare growth, and track revenue trends from a single analytics dashboard.",
   },
   {
     question:
@@ -113,11 +113,11 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/dental-analytics-dashboard",
   description:
-    "Track new patients, appointments, treatments, payments, and future revenue using SmartSync’s dental analytics dashboard integrated directly with Dentrix, Open Dental, Eaglesoft and leading CRMs.",
+    "Track new patients, appointments, treatments, payments, and future revenue using SmartSync.One’s dental analytics dashboard integrated directly with Dentrix, Open Dental, Eaglesoft and leading CRMs.",
 
   publisher: {
     "@type": "Organization",
-    name: "Smart Sync",
+    name: "SmartSync.One",
     url: "https://smartsync.one",
   },
   featureList: [
@@ -181,9 +181,9 @@ export default function DentalAnalyticsDashboard() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync automatically converts patient activity, treatments,
+                SmartSync.One automatically converts patient activity, treatments,
                 and payments into real-time analytics dashboards inside
-                SmartSync and your CRM.
+                SmartSync.One and your CRM.
               </p>
               <p
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
@@ -317,7 +317,7 @@ export default function DentalAnalyticsDashboard() {
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-primary rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative z-10">
                 <div className="inline-flex gap-2 items-center px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full mb-6">
                   <Lightbulb size={20} className="text-white" />
-                  The SmartSync Analytics Approach
+                  The SmartSync.One Analytics Approach
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
@@ -325,7 +325,7 @@ export default function DentalAnalyticsDashboard() {
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-4">
-                  SmartSync links directly to compatible dental practice management systems and performs continual synchronization of daily operational data.
+                  SmartSync.One links directly to compatible dental practice management systems and performs continual synchronization of daily operational data.
                 </p>
 
                 <p className="text-lg text-gray-600 mb-4">
@@ -353,7 +353,7 @@ export default function DentalAnalyticsDashboard() {
               Keep Track of Clinic Performance From One Dashboard
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync analytics offer insights into patient flow, treatment stages and revenue generation.
+              SmartSync.One analytics offer insights into patient flow, treatment stages and revenue generation.
             </p>
           </div>
 
@@ -468,7 +468,7 @@ export default function DentalAnalyticsDashboard() {
                   <p className="text-gray-600 mb-4">
                     Receive coverage on treatment acceptance and production potential within your practice.
                   </p>
-                  <p className="text-gray-700 mb-3">SmartSync tracks:</p>
+                  <p className="text-gray-700 mb-3">SmartSync.One tracks:</p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
                       <div className="flex items-center space-x-3">
@@ -569,7 +569,7 @@ export default function DentalAnalyticsDashboard() {
                     Prediction of Future Revenues
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    SmartSync estimates future payments due to you taking into account treatments in process and planned treatments.
+                    SmartSync.One estimates future payments due to you taking into account treatments in process and planned treatments.
                   </p>
                   <p className="text-gray-600">
                     Practice visibility into future production potential.
@@ -589,7 +589,7 @@ export default function DentalAnalyticsDashboard() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -614,11 +614,11 @@ export default function DentalAnalyticsDashboard() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Analytics Available Inside SmartSync and Your CRM
+              Analytics Available Inside SmartSync.One and Your CRM
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync ensures insights are accessible without changing
+              SmartSync.One ensures insights are accessible without changing
               workflows.
             </p>
           </div>
@@ -629,65 +629,63 @@ export default function DentalAnalyticsDashboard() {
 
 
           {/* Tabs */}
-               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-        <div
-          onClick={() => setActiveTab("analytics")}
-          className={`rounded-lg text-card-foreground p-4 flex gap-4 items-center cursor-pointer transition-all
-          ${
-            activeTab === "analytics"
-              ? "bg-blue-100 ring-2 ring-primary shadow-md"
-              : "bg-blue-50/60 shadow-sm hover:shadow-md"
-          }`}
-        >
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
-            <LayoutDashboard className="h-6 w-6 text-primary" />
+            <div
+              onClick={() => setActiveTab("analytics")}
+              className={`rounded-lg text-card-foreground p-4 flex gap-4 items-center cursor-pointer transition-all
+          ${activeTab === "analytics"
+                  ? "bg-blue-100 ring-2 ring-primary shadow-md"
+                  : "bg-blue-50/60 shadow-sm hover:shadow-md"
+                }`}
+            >
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
+                <LayoutDashboard className="h-6 w-6 text-primary" />
+              </div>
+
+              <h3 className="font-medium text-foreground">
+                SmartSync.One Analytics Dashboard
+              </h3>
+            </div>
+
+            <div
+              onClick={() => setActiveTab("crm")}
+              className={`rounded-lg text-card-foreground p-4 flex gap-4 items-center cursor-pointer transition-all
+          ${activeTab === "crm"
+                  ? "bg-blue-100 ring-2 ring-primary shadow-md"
+                  : "bg-blue-50/60 shadow-sm hover:shadow-md"
+                }`}
+            >
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
+                <Briefcase className="h-6 w-6 text-primary" />
+              </div>
+
+              <h3 className="font-medium text-foreground">
+                CRM Opportunity Module
+              </h3>
+            </div>
+
           </div>
 
-          <h3 className="font-medium text-foreground">
-            SmartSync Analytics Dashboard
-          </h3>
-        </div>
+          <div className="mt-8 rounded-2xl overflow-hiddenshadow-sm">
 
-        <div
-          onClick={() => setActiveTab("crm")}
-          className={`rounded-lg text-card-foreground p-4 flex gap-4 items-center cursor-pointer transition-all
-          ${
-            activeTab === "crm"
-              ? "bg-blue-100 ring-2 ring-primary shadow-md"
-              : "bg-blue-50/60 shadow-sm hover:shadow-md"
-          }`}
-        >
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-100 to-blue-200 inline-flex items-center justify-center">
-            <Briefcase className="h-6 w-6 text-primary" />
+            {activeTab === "analytics" && (
+              <img
+                src="/img/analytics-dashboard.webp"
+                alt="Analytics Dashboard"
+                className="max-w-3xl mx-auto border border-primary rounded-lg border-[2px]"
+              />
+            )}
+
+            {activeTab === "crm" && (
+              <img
+                src="/img/crm-opportunity.webp"
+                alt="CRM Opportunity"
+                className="max-w-3xl mx-auto border border-primary rounded-lg border-[2px]"
+              />
+            )}
+
           </div>
-
-          <h3 className="font-medium text-foreground">
-            CRM Opportunity Module
-          </h3>
-        </div>
-
-      </div>
-
-      <div className="mt-8 rounded-2xl overflow-hiddenshadow-sm">
-
-        {activeTab === "analytics" && (
-          <img
-            src="/img/analytics-dashboard.webp"
-            alt="Analytics Dashboard"
-            className="max-w-3xl mx-auto border border-primary rounded-lg border-[2px]"
-          />
-        )}
-
-        {activeTab === "crm" && (
-          <img
-            src="/img/crm-opportunity.webp"
-            alt="CRM Opportunity"
-            className="max-w-3xl mx-auto border border-primary rounded-lg border-[2px]"
-          />
-        )}
-
-      </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             Marketing teams, agency managers, and clinic owners can work from
@@ -709,7 +707,7 @@ export default function DentalAnalyticsDashboard() {
                 Understand Patient Behavior Across the Entire Journey
               </h2>
               <p className="text-lg text-gray-600">
-                SmartSync synchronizes important lifecycle information
+                SmartSync.One synchronizes important lifecycle information
                 automatically.
               </p>
               <p className="text-gray-700 font-medium my-3">Track:</p>
@@ -843,7 +841,7 @@ export default function DentalAnalyticsDashboard() {
                 Ideal for Agencies operating multiple dental clinics
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                The SmartSync analytics make it easy to track progress for multiple practices.
+                The SmartSync.One analytics make it easy to track progress for multiple practices.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Agencies can:
@@ -886,7 +884,7 @@ export default function DentalAnalyticsDashboard() {
                 Analytics Powered by Real Clinical Activity
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync analytics rely on actual PMS updates rather than
+                SmartSync.One analytics rely on actual PMS updates rather than
                 manual reporting.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
@@ -928,7 +926,7 @@ export default function DentalAnalyticsDashboard() {
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
               <CheckCircle2 size={18} />
-              <span className="font-medium">Why SmartSync Analytics</span>
+              <span className="font-medium">Why SmartSync.One Analytics</span>
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -947,7 +945,7 @@ export default function DentalAnalyticsDashboard() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-red-600">
-                  Without SmartSync:
+                  Without SmartSync.One:
                 </h3>
               </div>
 
@@ -978,7 +976,7 @@ export default function DentalAnalyticsDashboard() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-primary">
-                  With SmartSync:
+                  With SmartSync.One:
                 </h3>
               </div>
 
@@ -999,7 +997,7 @@ export default function DentalAnalyticsDashboard() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync bridges clinic operations and marketing intelligence.
+            SmartSync.One bridges clinic operations and marketing intelligence.
           </p>
         </div>
       </section>
@@ -1023,8 +1021,8 @@ export default function DentalAnalyticsDashboard() {
             using real PMS data.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Join agencies already managing analytics across 80+ dental clinics
-            using SmartSync.
+            Join agencies already managing analytics across 100+ dental clinics
+            using SmartSync.One.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

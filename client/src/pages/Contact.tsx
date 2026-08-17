@@ -107,297 +107,297 @@ export default function Contact() {
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
-            data-testid="text-page-title"
-          >
-            Contact Us
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with our team for support, sales inquiries, or to
-            schedule a personalized demonstration of the Smart Sync One.
-          </p>
-        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1
+              className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+              data-testid="text-page-title"
+            >
+              Contact Us
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get in touch with our team for support, sales inquiries, or to
+              schedule a personalized demonstration of the SmartSync.One.
+            </p>
+          </div>
 
-        <div className="grid lg:grid-cols-3 gap-12 mb-16">
-          {/* Contact Methods */}
-          <div className="lg:col-span-1">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Get In Touch
-            </h2>
-            <div className="space-y-6">
-              {contactMethods.map((method, index) => {
-                const url = method.icon;
-                return (
-                  <Card key={index}>
-                    <CardContent className="p-6">
-                      <div className="flex items-start">
-                        <div className="w-9 h-9  rounded-lg flex items-center justify-center mr-4">
-                          <img src={url}
-                            alt="icon" // adjust size as needed
-                          />
-                        </div>
-                        <div className="flex-1">
-                          <h3
-                            className="font-bold text-gray-900 mb-1"
-                            data-testid={`contact-method-${index}`}
-                          >
-                            {method.title}
-                          </h3>
-                          <p className="text-sm text-gray-600 mb-2">
-                            {method.description}
-                          </p>
-                          {method.title === "Schedule a Demo" ? (
-                            <a
-                              href="https://calendly.com/smart-sync/meeting"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="mt-1 text-sm font-medium text-blue-600 hover:underline"
+          <div className="grid lg:grid-cols-3 gap-12 mb-16">
+            {/* Contact Methods */}
+            <div className="lg:col-span-1">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Get In Touch
+              </h2>
+              <div className="space-y-6">
+                {contactMethods.map((method, index) => {
+                  const url = method.icon;
+                  return (
+                    <Card key={index}>
+                      <CardContent className="p-6">
+                        <div className="flex items-start">
+                          <div className="w-9 h-9  rounded-lg flex items-center justify-center mr-4">
+                            <img src={url}
+                              alt="icon" // adjust size as needed
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <h3
+                              className="font-bold text-gray-900 mb-1"
+                              data-testid={`contact-method-${index}`}
                             >
-                              {method.contact}
-                            </a>
-                          ) : method.title === "Phone Support" ? (
-                            <a
-                              href={`tel:${method.contact.replace(/\s+/g, "")}`}
-                              className="font-medium text-primary mb-1"
-                              data-testid={`contact-info-${index}`}
-                            >
-                              {method.contact}
-                            </a>
-                          ) : method.title === "Email Support" ? (
-                            <a
-                              href={`mailto:${method.contact}`}
-                              className="font-medium text-primary mb-1"
-                              data-testid={`contact-info-${index}`}
-                            >
-                              {method.contact}
-                            </a>
-                          ) : (
-                            <div
-                              className="font-medium text-primary mb-1"
-                              data-testid={`contact-info-${index}`}
-                            >
-                              {method.contact}
+                              {method.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 mb-2">
+                              {method.description}
+                            </p>
+                            {method.title === "Schedule a Demo" ? (
+                              <a
+                                href="https://calendly.com/smart-sync/meeting"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-1 text-sm font-medium text-blue-600 hover:underline"
+                              >
+                                {method.contact}
+                              </a>
+                            ) : method.title === "Phone Support" ? (
+                              <a
+                                href={`tel:${method.contact.replace(/\s+/g, "")}`}
+                                className="font-medium text-primary mb-1"
+                                data-testid={`contact-info-${index}`}
+                              >
+                                {method.contact}
+                              </a>
+                            ) : method.title === "Email Support" ? (
+                              <a
+                                href={`mailto:${method.contact}`}
+                                className="font-medium text-primary mb-1"
+                                data-testid={`contact-info-${index}`}
+                              >
+                                {method.contact}
+                              </a>
+                            ) : (
+                              <div
+                                className="font-medium text-primary mb-1"
+                                data-testid={`contact-info-${index}`}
+                              >
+                                {method.contact}
+                              </div>
+                            )}
+
+                            <div className="text-xs text-gray-500">
+                              {method.availability}
                             </div>
-                          )}
-
-                          <div className="text-xs text-gray-500">
-                            {method.availability}
                           </div>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+
+              {/* Company Information */}
+              <Card className="mt-8">
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <MapPin className="mr-2" size={20} />
+                    Office Location
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="space-y-2 text-sm text-gray-600">
+                    <div data-testid="text-company-name">
+                      SmartSync.One
+                    </div>
+                    <div data-testid="text-company-address">
+                      30 N Gould St. Sheridan,
+                      <br />
+                      WY 82801
+                      <br />
+                      United States
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
-            {/* Company Information */}
-            <Card className="mt-8">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <MapPin className="mr-2" size={20} />
-                  Office Location
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <div className="space-y-2 text-sm text-gray-600">
-                  <div data-testid="text-company-name">
-                    Smart Sync One
-                  </div>
-                  <div data-testid="text-company-address">
-                    30 N Gould St. Sheridan,
-                    <br />
-                    WY 82801
-                    <br />
-                    United States
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <MessageSquare className="mr-2" size={20} />
-                  Send Us a Message
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Form {...form}>
-                  <form
-                    onSubmit={form.handleSubmit(handleSubmit)}
-                    className="space-y-6"
-                  >
-                    <div className="grid md:grid-cols-2 gap-4">
-                       <FormField
-                        control={form.control}
-                        name="firstname"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>First Name *</FormLabel>
-                            <FormControl>
-                              <Input {...field} data-testid="input-name" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                        />
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Last Name *</FormLabel>
-                            <FormControl>
-                              <Input {...field} data-testid="input-name" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="company"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Company *</FormLabel>
-                            <FormControl>
-                              <Input {...field} data-testid="input-company" />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email *</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="text"
-                                {...field}
-                                data-testid="input-email"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="phone"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Phone *</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="tel"
-                                {...field}
-                                data-testid="input-phone"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-
-                    <FormField
-                      control={form.control}
-                      name="subject"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Subject *</FormLabel>
-                          <Select
-                            onValueChange={field.onChange}
-                            defaultValue={field.value}
-                          >
-                            <FormControl>
-                              <SelectTrigger data-testid="select-subject">
-                                <SelectValue placeholder="Select a subject" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                              <SelectItem value="General Inquiry">
-                                General Inquiry
-                              </SelectItem>
-                              <SelectItem value="Sales Question">
-                                Sales Question
-                              </SelectItem>
-                              <SelectItem value="Technical Support">
-                                Technical Support
-                              </SelectItem>
-                              <SelectItem value="Request Demo">
-                                Request Demo
-                              </SelectItem>
-                              <SelectItem value="Integration Help">
-                                Integration Help
-                              </SelectItem>
-                              <SelectItem value="Billing Question">
-                                Billing Question
-                              </SelectItem>
-                            </SelectContent>
-                          </Select>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message *</FormLabel>
-                          <FormControl>
-                            <Textarea
-                              rows={6}
-                              placeholder="Tell us how we can help you..."
-                              {...field}
-                              data-testid="textarea-message"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-primary text-white hover:bg-primary-dark"
-                      disabled={contactMutation.isPending}
-                      data-testid="button-submit"
+            {/* Contact Form */}
+            <div className="lg:col-span-2">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <MessageSquare className="mr-2" size={20} />
+                    Send Us a Message
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Form {...form}>
+                    <form
+                      onSubmit={form.handleSubmit(handleSubmit)}
+                      className="space-y-6"
                     >
-                      {contactMutation.isPending ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Sending...
-                        </>
-                      ) : (
-                        "Send Message"
-                      )}
-                    </Button>
-                  </form>
-                </Form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="firstname"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>First Name *</FormLabel>
+                              <FormControl>
+                                <Input {...field} data-testid="input-name" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="name"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Last Name *</FormLabel>
+                              <FormControl>
+                                <Input {...field} data-testid="input-name" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="company"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Company *</FormLabel>
+                              <FormControl>
+                                <Input {...field} data-testid="input-company" />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
 
-        {/* Support Hours */}
-        {/* <Card className="mb-16">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Email *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="text"
+                                  {...field}
+                                  data-testid="input-email"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Phone *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="tel"
+                                  {...field}
+                                  data-testid="input-phone"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Subject *</FormLabel>
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue={field.value}
+                            >
+                              <FormControl>
+                                <SelectTrigger data-testid="select-subject">
+                                  <SelectValue placeholder="Select a subject" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                <SelectItem value="General Inquiry">
+                                  General Inquiry
+                                </SelectItem>
+                                <SelectItem value="Sales Question">
+                                  Sales Question
+                                </SelectItem>
+                                <SelectItem value="Technical Support">
+                                  Technical Support
+                                </SelectItem>
+                                <SelectItem value="Request Demo">
+                                  Request Demo
+                                </SelectItem>
+                                <SelectItem value="Integration Help">
+                                  Integration Help
+                                </SelectItem>
+                                <SelectItem value="Billing Question">
+                                  Billing Question
+                                </SelectItem>
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Message *</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                rows={6}
+                                placeholder="Tell us how we can help you..."
+                                {...field}
+                                data-testid="textarea-message"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <Button
+                        type="submit"
+                        size="lg"
+                        className="w-full bg-primary text-white hover:bg-primary-dark"
+                        disabled={contactMutation.isPending}
+                        data-testid="button-submit"
+                      >
+                        {contactMutation.isPending ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Sending...
+                          </>
+                        ) : (
+                          "Send Message"
+                        )}
+                      </Button>
+                    </form>
+                  </Form>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Support Hours */}
+          {/* <Card className="mb-16">
           <CardHeader>
             <CardTitle className="flex items-center justify-center">
               <Clock className="mr-2" size={20} />
@@ -430,36 +430,36 @@ export default function Contact() {
           </CardContent>
         </Card> */}
 
-        {/* Emergency Support */}
-        <Card className="bg-red-50 border-red-200">
-          <CardContent className="p-8 text-center">
-            <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto mb-4">
-              <img
+          {/* Emergency Support */}
+          <Card className="bg-red-50 border-red-200">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto mb-4">
+                <img
                   src="/img/Need-Emergency-Support.png"
                   alt="Emergency Support icon" // adjust size as needed
                 />
-            </div>
-            <h2 className="text-xl font-bold text-gray-900 mb-4">
-              Need Emergency Support?
-            </h2>
-            <p className="text-gray-600 mb-6">
-              For critical sync failures or system outages affecting patient
-              data, contact our emergency support line.
-            </p>
-            <div className="space-y-2">
-              <div className="font-semibold text-gray-900">
-                <a href="tel:+16308618263" data-testid="text-phone">
-                  Emergency Hotline: +1 630 861 8263
-                </a>
               </div>
-              <div className="text-sm text-gray-600">
-                Available 24/7 for critical issues
+              <h2 className="text-xl font-bold text-gray-900 mb-4">
+                Need Emergency Support?
+              </h2>
+              <p className="text-gray-600 mb-6">
+                For critical sync failures or system outages affecting patient
+                data, contact our emergency support line.
+              </p>
+              <div className="space-y-2">
+                <div className="font-semibold text-gray-900">
+                  <a href="tel:+16308618263" data-testid="text-phone">
+                    Emergency Hotline: +1 630 861 8263
+                  </a>
+                </div>
+                <div className="text-sm text-gray-600">
+                  Available 24/7 for critical issues
+                </div>
               </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-    </div>
     </>
   );
 }

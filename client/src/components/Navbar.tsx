@@ -157,7 +157,7 @@ export default function Navbar() {
                 onClick={() => setisInnerMenu(false)}
                 data-testid="link-agency-open-dental"
               >
-                How SmartSync Works
+                How SmartSync.One Works
               </Link>
               <Link
                 href="/dentrix-crm-integration"
@@ -231,7 +231,7 @@ export default function Navbar() {
               </div>
 
               <span className="text-xl font-bold text-gray-900">
-                Smart Sync
+                SmartSync.One
               </span>
             </span>
           </Link>
@@ -274,7 +274,7 @@ export default function Navbar() {
                     className=" flex  justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg  "
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Blog 
+                    Blog
                   </a>
                 </div>
               )}

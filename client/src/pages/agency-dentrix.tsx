@@ -24,7 +24,7 @@ export default function DentrixIntegration() {
     },
     {
       question: "What does this integration do?",
-      answer: "Smart Sync application syncs patients, providers, appointments, and payments between Dentrix and GoHighLevel so you can focus on growing your clients' practices.",
+      answer: "SmartSync.One application syncs patients, providers, appointments, and payments between Dentrix and GoHighLevel so you can focus on growing your clients' practices.",
     },
     {
       question: "Is the data sync real-time?",
@@ -76,12 +76,12 @@ export default function DentrixIntegration() {
     ],
     publisher: {
       "@type": "Organization",
-      name: "Smart Sync",
+      name: "SmartSync.One",
     },
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
-       ratingCount: "50",
+      ratingCount: "50",
     },
     offers: {
       "@type": "Offer",
@@ -96,7 +96,7 @@ export default function DentrixIntegration() {
       <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={softwareSchema} />
       <IntegrationLayout type="dentrix" />
-      
+
       {/* FAQ Section */}
       {/* <div className="min-h-screen py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

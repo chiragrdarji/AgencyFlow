@@ -118,9 +118,9 @@ const faqItems = [
       "Dental PMS integration works by connecting practice management systems like Dentrix or Open Dental with CRM platforms, allowing patient activity, appointments, treatments, and payments to sync automatically in real time.",
   },
   {
-    question: "What is the SmartSync integration process?",
+    question: "What is the SmartSync.One integration process?",
     answer:
-      "The SmartSync integration process involves connecting your dental PMS, linking your CRM, automatically configuring data fields, and enabling real-time synchronization so all clinic activity flows seamlessly into your CRM.",
+      "The SmartSync.One integration process involves connecting your dental PMS, linking your CRM, automatically configuring data fields, and enabling real-time synchronization so all clinic activity flows seamlessly into your CRM.",
   },
   {
     question: "How long does it take to set up Dentrix CRM sync?",
@@ -139,14 +139,14 @@ const faqItems = [
   },
 ];
 
-export default function HowSmartSyncWorks() {
+export default function HowsmartsyncWorks() {
   const metaTags = getMetaTags("howsmartsyncworks");
   const faqSchema = getFAQSchema(faqItems);
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: "Home", url: "https://smartsync.one/" },
     {
-      name: "How SmartSync Works",
+      name: "How SmartSync.One Works",
       url: "https://smartsync.one/how-smartsync-works",
     },
   ]);
@@ -161,18 +161,18 @@ export default function HowSmartSyncWorks() {
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6"></div>
               <h1
-                className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6"
+                className="text-4xl lg:text-[46px] font-bold text-gray-900 leading-tight mb-6"
                 data-testid="text-hero-headline"
               >
                 See{" "}
-                <span className="text-primary">How SmartSync Connects </span>{" "}
+                <span className="text-primary">How SmartSync.One Connects </span>{" "}
                 Dental PMS Systems With CRM Platforms
               </h1>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync automatically synchronizes patient activity,
+                SmartSync.One automatically synchronizes patient activity,
                 appointments, treatments, and payments between dental practice
                 management systems and CRM platforms used by agencies and
                 practices.
@@ -224,7 +224,7 @@ export default function HowSmartSyncWorks() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              What SmartSync Enables
+              What SmartSync.One Enables
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -262,10 +262,10 @@ export default function HowSmartSyncWorks() {
               CRM systems.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync acts as the connection layer between these systems.
+              SmartSync.One acts as the connection layer between these systems.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              When activity occurs inside the PMS, SmartSync automatically
+              When activity occurs inside the PMS, SmartSync.One automatically
               updates the CRM so marketing and reporting workflows remain
               accurate.
             </p>
@@ -286,7 +286,7 @@ export default function HowSmartSyncWorks() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              How SmartSync Works
+              How SmartSync.One Works
             </h2>
           </div>
 
@@ -325,7 +325,7 @@ export default function HowSmartSyncWorks() {
                         Connect Your Dental PMS
                       </h3>
                       <p className="text-gray-600 text-md">
-                        During onboarding, SmartSync makes a secure connection to your dental practice management system.
+                        During onboarding, SmartSync.One makes a secure connection to your dental practice management system.
                       </p>
                       <p className="text-gray-600 text-md mt-4 font-semibold">
                         Supported systems include:
@@ -375,7 +375,7 @@ export default function HowSmartSyncWorks() {
                         Connect Your CRM Platform
                       </h3>
                       <p className="text-gray-600 text-md">
-                        Then, SmartSync works within your CRM environment.
+                        Then, SmartSync.One works within your CRM environment.
                       </p>
                       <p className="text-gray-600 text-md font-semibold mt-4">
                         Supported CRMs include:
@@ -423,7 +423,7 @@ export default function HowSmartSyncWorks() {
                       </h3>
 
                       <p className="text-gray-600 text-md ">
-                        SmartSync prepares your CRM for syncing automatically.
+                        SmartSync.One prepares your CRM for syncing automatically.
                       </p>
 
                       <div className="grid sm:grid-cols-2 gap-3 mt-[18px] mb-4 ">
@@ -485,7 +485,7 @@ export default function HowSmartSyncWorks() {
                       Real-Time Data Synchronization Begins
                     </h3>
                     <p className="text-gray-600 text-md ">
-                     Immediately after installation, SmartSync starts gathering key clinic activities.
+                      Immediately after installation, SmartSync.One starts gathering key clinic activities.
                     </p>
                     <p className="text-gray-600 text-md ">
                       Once in a while, changes appear a few minutes later (within the CRM system)
@@ -581,7 +581,7 @@ export default function HowSmartSyncWorks() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -611,7 +611,7 @@ export default function HowSmartSyncWorks() {
               Power CRM Workflows Using Real Clinic Events
             </h2>
             <p className="text-lg text-gray-600 ">
-              SmartSync does not replace your CRM automation.
+              SmartSync.One does not replace your CRM automation.
             </p>
             <p className="text-lg font-semibold text-primary my-2">
               Instead, it strengthens it.
@@ -664,16 +664,16 @@ export default function HowSmartSyncWorks() {
               Designed to Keep Your Systems in Control
             </h2>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync operates as a synchronization layer between systems.
+              SmartSync.One operates as a synchronization layer between systems.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync does not save any patient information in the long term.
+              SmartSync.One does not save any patient information in the long term.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-             Operational updates synchronize directly between PMS and CRM, however.
+              Operational updates synchronize directly between PMS and CRM, however.
             </p>
             <p className="mt-8  mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-             This architecture enables clinics and agencies to keep their systems under their own control and still take advantage of seamless integration.
+              This architecture enables clinics and agencies to keep their systems under their own control and still take advantage of seamless integration.
             </p>
           </div>
         </div>
@@ -691,12 +691,12 @@ export default function HowSmartSyncWorks() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync continuously watches synchronization activity.
+              SmartSync.One continuously watches synchronization activity.
             </p>
           </div>
 
           <p className="text-lg font-semibold text-gray-900 mt-4 text-center mb-4">
-           Expected update times:
+            Expected update times:
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -742,7 +742,7 @@ export default function HowSmartSyncWorks() {
             </h2>
 
             <p className="text-lg text-gray-600 ">
-              SmartSync onboarding specialists assist agencies and clinics
+              SmartSync.One onboarding specialists assist agencies and clinics
               during implementation.
             </p>
           </div>
@@ -782,7 +782,7 @@ export default function HowSmartSyncWorks() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-              <Puzzle size={18} className="" /> Who Uses SmartSync
+              <Puzzle size={18} className="" /> Who Uses SmartSync.One
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -792,7 +792,7 @@ export default function HowSmartSyncWorks() {
             </h2>
           </div>
           <p className="text-lg font-semibold text-gray-900 text-center mb-4">
-            SmartSync is used by:
+            SmartSync.One is used by:
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
             {[
@@ -823,7 +823,7 @@ export default function HowSmartSyncWorks() {
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             Currently supporting synchronization across{" "}
-            <strong className="text-primary"> 80+ dental clinics</strong>
+            <strong className="text-primary"> 100+ dental clinics</strong>
           </p>
         </div>
       </section>
@@ -833,7 +833,7 @@ export default function HowSmartSyncWorks() {
             <div className="mb-8 w-full md:w-[50%]">
               <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
                 <Link size={18} />
-                Why SmartSync Works Differently
+                Why SmartSync.One Works Differently
               </span>
               <h2
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -842,7 +842,7 @@ export default function HowSmartSyncWorks() {
                 More Than an Integration Tool
               </h2>
               <p className="text-lg text-gray-600">
-                SmartSync transforms operational PMS data into actionable
+                SmartSync.One transforms operational PMS data into actionable
                 intelligence.
               </p>
 
@@ -853,7 +853,7 @@ export default function HowSmartSyncWorks() {
             </div>
             <div className="bg-white w-full md:w-[50%]  mx-auto max-w-[700px] rounded-2xl p-8   border-primary/10">
               <p className="text-xl font-semibold  mt-4 mb-6 ">
-                Customers use SmartSync to:
+                Customers use SmartSync.One to:
               </p>
               <div className="space-y-4">
                 {steps.map((step, i) => (
@@ -900,7 +900,7 @@ export default function HowSmartSyncWorks() {
             Ready to Connect Your PMS and CRM?
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-2">
-            See how SmartSync can automate reporting and unlock real-time
+            See how SmartSync.One can automate reporting and unlock real-time
             revenue insights across your clinics.
           </p>
 

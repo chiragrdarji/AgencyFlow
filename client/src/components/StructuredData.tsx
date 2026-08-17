@@ -6,41 +6,41 @@ interface StructuredDataProps {
 export default function StructuredData({ type, data = {} }: StructuredDataProps) {
   const getStructuredData = () => {
     const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://dentrixconnector.com';
-    
+
     switch (type) {
       case 'organization':
         return {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Smart Sync",
+          "name": "SmartSync.One",
           "url": "https://smartsync.one",
           "logo": `/img/sso_logo.svg`,
           "description": "Seamless data sync between dental practice management systems and GoHighLevel CRM for marketing agencies and dental practices.",
-           "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "30 N Gould St. Sheridan, WY 82801 USA",
-        "addressLocality": "Sheridan",
-        "addressRegion": "WY",
-        "postalCode": "82801",
-        "addressCountry": "USA"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1 630 861 8263",
-        "contactType": "customer service",
-        "email": "info@smartsync.one",
-        "availableLanguage": "English"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/smart-sync-one/"
-      ]
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "30 N Gould St. Sheridan, WY 82801 USA",
+            "addressLocality": "Sheridan",
+            "addressRegion": "WY",
+            "postalCode": "82801",
+            "addressCountry": "USA"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1 630 861 8263",
+            "contactType": "customer service",
+            "email": "info@smartsync.one",
+            "availableLanguage": "English"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/smart-sync-one/"
+          ]
         };
 
       case 'softwareApplication':
         return {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "Smart Sync One",
+          name: "SmartSync.One",
           applicationCategory: "BusinessApplication",
           description:
             "Automated data synchronization between dental practice management systems (Dentrix, Open Dental, EagleSoft, Curve Dental) and GoHighLevel CRM for marketing agencies and dental practices.",
@@ -62,7 +62,7 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
           featureList: [
             "Real-time data synchronization",
             "Two-way sync between PMS and CRM",
-            "HIPAA-conscious data handling",
+            "HIPAA Compliant data handling",
             "Automated campaign triggers",
             "Patient, provider, and appointment sync",
             "Payment data integration",
@@ -86,7 +86,7 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
             "Seamless two-way data synchronization between dental practice management systems and GoHighLevel CRM for marketing agencies and dental practices.",
           brand: {
             "@type": "Brand",
-            name: "Smart Sync One",
+            name: "SmartSync.One",
           },
           manufacturer: {
             "@type": "Organization",

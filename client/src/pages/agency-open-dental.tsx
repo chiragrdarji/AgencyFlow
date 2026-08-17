@@ -15,7 +15,7 @@ export default function OpenDentalIntegration() {
   const faqItems = [
     {
       question: "What does this integration do?",
-      answer: "Smart Sync application syncs patients, providers, appointments, and payments between Open Dental and GoHighLevel so you can focus on growing your clients' practices.",
+      answer: "SmartSync.One application syncs patients, providers, appointments, and payments between Open Dental and GoHighLevel so you can focus on growing your clients' practices.",
     },
     {
       question: "Is the data sync real-time?",
@@ -67,7 +67,7 @@ export default function OpenDentalIntegration() {
     ],
     publisher: {
       "@type": "Organization",
-      name: "Smart Sync",
+      name: "SmartSync.One",
     },
     aggregateRating: {
       "@type": "AggregateRating",
@@ -83,7 +83,7 @@ export default function OpenDentalIntegration() {
       <SchemaMarkup schema={faqSchema} />
       <SchemaMarkup schema={softwareSchema} />
       <IntegrationLayout type="open-dental" />
-      
+
       {/* FAQ Section */}
       {/* <div className="min-h-screen py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

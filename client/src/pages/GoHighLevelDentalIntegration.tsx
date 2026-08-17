@@ -116,15 +116,15 @@ const faqItems = [
       "GoHighLevel dental integration connects dental PMS systems like Dentrix, Open Dental, and Eaglesoft with GoHighLevel to automatically sync patient data, appointments, treatments, and payments in real time.",
   },
   {
-    question: " How does SmartSync improve GoHighLevel for dental agencies?",
+    question: " How does SmartSync.One improve GoHighLevel for dental agencies?",
     answer:
-      "SmartSync enhances GoHighLevel by syncing real clinic activity into CRM pipelines, enabling accurate reporting, automated workflows, and complete visibility into treatment and revenue performance.",
+      "SmartSync.One enhances GoHighLevel by syncing real clinic activity into CRM pipelines, enabling accurate reporting, automated workflows, and complete visibility into treatment and revenue performance.",
   },
   {
     question:
       "Can I connect Dentrix and Open Dental with GoHighLevel?",
     answer:
-      " Yes, SmartSync allows seamless integration of Dentrix, Open Dental, and other PMS platforms with GoHighLevel, ensuring real-time data synchronization for automation and reporting.",
+      " Yes, SmartSync.One allows seamless integration of Dentrix, Open Dental, and other PMS platforms with GoHighLevel, ensuring real-time data synchronization for automation and reporting.",
   },
   {
     question: "What data is synced in dental CRM integration with GoHighLevel?",
@@ -145,11 +145,11 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/gohighlevel-dental-integration",
   description:
-    "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel using SmartSync. Sync patients, treatments, and payments to automate workflows and prove agency ROI.",
-  
+    "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel using SmartSync.One. Sync patients, treatments, and payments to automate workflows and prove agency ROI.",
+
   publisher: {
     "@type": "Organization",
-    name: "Smart Sync",
+    name: "SmartSync.One",
     url: "https://smartsync.one",
   },
   featureList: [
@@ -204,7 +204,7 @@ export default function GoHighLevelDentalIntegration() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync connects dental practice management systems directly
+                SmartSync.One connects dental practice management systems directly
                 with GoHighLevel to synchronize patients, appointments,
                 treatments, and payments automatically.
               </p>
@@ -249,7 +249,7 @@ export default function GoHighLevelDentalIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              SmartSync + GoHighLevel Enables
+              SmartSync.One + GoHighLevel Enables
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -332,7 +332,7 @@ export default function GoHighLevelDentalIntegration() {
               </div>
 
               <h3 className="font-medium text-foreground">
-               Agencies find it hard to demonstrate ROI
+                Agencies find it hard to demonstrate ROI
               </h3>
             </div>
           </div>
@@ -348,16 +348,16 @@ export default function GoHighLevelDentalIntegration() {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Sparkles size={18} />
               <span className="text-blue-600">
-                How SmartSync Enhances Gohighlevel
+                How SmartSync.One Enhances Gohighlevel
               </span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-             Bring Real Clinic Activity Auto-Sync Into GoHighLevel
+              Bring Real Clinic Activity Auto-Sync Into GoHighLevel
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync continuously syncs PMS updates to GoHighLevel opportunities and contacts.
+              SmartSync.One continuously syncs PMS updates to GoHighLevel opportunities and contacts.
             </p>
             <p className="text-lg text-gray-600 mb-4">
               Updates typically appear within minutes.
@@ -486,7 +486,7 @@ export default function GoHighLevelDentalIntegration() {
             </div>
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync bridges GoHighLevel directly with clinic operations
+            SmartSync.One bridges GoHighLevel directly with clinic operations
           </p>
         </div>
       </section>
@@ -503,7 +503,7 @@ export default function GoHighLevelDentalIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 ">
-              SmartSync automatically tracks revenue generated after your agency
+              SmartSync.One automatically tracks revenue generated after your agency
               begins managing a clinic.
             </p>
           </div>
@@ -554,7 +554,7 @@ export default function GoHighLevelDentalIntegration() {
               Trigger GoHighLevel Workflows Using Real PMS Events
             </h2>
             <p className="text-lg text-muted-foreground">
-              SmartSync converts clinic activity into automation triggers.
+              SmartSync.One converts clinic activity into automation triggers.
             </p>
           </div>
           <p className="text-lg font-semibold mb-4 text-center">
@@ -612,7 +612,7 @@ export default function GoHighLevelDentalIntegration() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -644,7 +644,7 @@ export default function GoHighLevelDentalIntegration() {
           <div className="card grid  gap-8  rounded-2xl sm:p-8   border-primary">
             <div className="p-6  bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg">
-                SmartSync integrates with:
+                SmartSync.One integrates with:
               </h3>
               <div className="grid  sm:grid-cols-3 lg:grid-cols-5 gap-3  mt-[18px] text-center ">
                 {pmsSystems.map((system) => (
@@ -676,7 +676,7 @@ export default function GoHighLevelDentalIntegration() {
                 Automatically Enhanced GoHighLevel Opportunities
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                During setup SmartSync creates required custom fields inside
+                During setup SmartSync.One creates required custom fields inside
                 GoHighLevel.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
@@ -723,7 +723,7 @@ export default function GoHighLevelDentalIntegration() {
                 Manage Multiple Dental Clients Inside One GoHighLevel Account
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync standardizes PMS data across clinics using different
+                SmartSync.One standardizes PMS data across clinics using different
                 systems.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
@@ -772,7 +772,7 @@ export default function GoHighLevelDentalIntegration() {
           </div>
 
           <p className="text-lg font-semibold text-gray-900 mt-4 text-center mb-4">
-            SmartSync allows agencies to track:
+            SmartSync.One allows agencies to track:
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -843,7 +843,7 @@ export default function GoHighLevelDentalIntegration() {
               GoHighLevel Integration Setup Included
             </h2>
             <p className="text-lg text-gray-600 ">
-              SmartSync onboarding specialists assist agencies throughout setup.
+              SmartSync.One onboarding specialists assist agencies throughout setup.
             </p>
           </div>
           <div className="">
@@ -881,7 +881,7 @@ export default function GoHighLevelDentalIntegration() {
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
               <Sparkles size={18} />
-              <span className="font-medium">Why Agencies Choose SmartSync</span>
+              <span className="font-medium">Why Agencies Choose SmartSync.One</span>
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -892,7 +892,7 @@ export default function GoHighLevelDentalIntegration() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Without SmartSync */}
+            {/* Without SmartSync.One */}
             <div className="bg-white border border-red-200 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
@@ -900,7 +900,7 @@ export default function GoHighLevelDentalIntegration() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-red-600">
-                  Without SmartSync:
+                  Without SmartSync.One:
                 </h3>
               </div>
 
@@ -918,7 +918,7 @@ export default function GoHighLevelDentalIntegration() {
               </ul>
             </div>
 
-            {/* With SmartSync */}
+            {/* With SmartSync.One */}
             <div className="relative bg-white border-2 border-blue-400 rounded-2xl p-8 shadow-md">
               {/* Recommended Badge */}
               <div className="absolute top-0 right-0 bg-primary text-white text-xs font-semibold px-4 py-1 rounded-bl-xl rounded-tr-xl">
@@ -931,7 +931,7 @@ export default function GoHighLevelDentalIntegration() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-primary">
-                  With SmartSync:
+                  With SmartSync.One:
                 </h3>
               </div>
 
@@ -952,7 +952,7 @@ export default function GoHighLevelDentalIntegration() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync transforms GoHighLevel into a dental growth platform.
+            SmartSync.One transforms GoHighLevel into a dental growth platform.
           </p>
         </div>
       </section>
@@ -967,10 +967,10 @@ export default function GoHighLevelDentalIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies Managing 80+ Dental Clinics
+              Supporting Agencies Managing 100+ Dental Clinics
             </h2>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync helps agencies scale operations while improving
+              SmartSync.One helps agencies scale operations while improving
               reporting accuracy across multiple locations.
             </p>
 

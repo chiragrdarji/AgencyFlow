@@ -11,35 +11,35 @@ import { desc } from "drizzle-orm";
 
 const faqItems = [
   {
-    question: "Which dental PMS platforms does SmartSync support?",
-    answer: "SmartSync supports Open Dental, Dentrix 7, Dentrix 8, Dentrix Ascend, Dentrix Enterprise, Eaglesoft, Curve Dental, Denticon, eClinicalWorks, Dolphin, OrthoTrac, and PracticeWorks. This covers the majority of dental and orthodontic practices in North America.",
+    question: "Which dental PMS platforms does SmartSync.One support?",
+    answer: "SmartSync.One supports Open Dental, Dentrix 7, Dentrix 8, Dentrix Ascend, Dentrix Enterprise, Eaglesoft, Curve Dental, Denticon, eClinicalWorks, Dolphin, OrthoTrac, and PracticeWorks. This covers the majority of dental and orthodontic practices in North America.",
   },
   {
-    question: "Which CRM platforms does SmartSync integrate with?",
-    answer: "SmartSync supports GoHighLevel (GHL), HubSpot, and Salesforce. GoHighLevel is particularly popular with dental marketing agencies; HubSpot is common among mid-size DSOs; Salesforce is used by enterprise dental organizations that need custom object mapping and complex workflow automation.",
+    question: "Which CRM platforms does SmartSync.One integrate with?",
+    answer: "SmartSync.One supports GoHighLevel (GHL), HubSpot, and Salesforce. GoHighLevel is particularly popular with dental marketing agencies; HubSpot is common among mid-size DSOs; Salesforce is used by enterprise dental organizations that need custom object mapping and complex workflow automation.",
   },
   {
-    question: "Is SmartSync a two-way sync or one-way only?",
-    answer: "SmartSync supports bidirectional sync for the defined integration objects. PMS data flows out to CRM (patients, appointments, production, payments, providers). CRM data can write back to PMS for new patient creation, appointment creation, appointment status updates, and custom field updates. One important rule: existing patients in the PMS are never overwritten by CRM data — only net-new patients created in CRM are synced to PMS.",
+    question: "Is SmartSync.One a two-way sync or one-way only?",
+    answer: "SmartSync.One supports bidirectional sync for the defined integration objects. PMS data flows out to CRM (patients, appointments, production, payments, providers). CRM data can write back to PMS for new patient creation, appointment creation, appointment status updates, and custom field updates. One important rule: existing patients in the PMS are never overwritten by CRM data — only net-new patients created in CRM are synced to PMS.",
   },
   {
     question: "How close to real-time is the sync?",
-    answer: "SmartSync is described as near real-time. In practice, most changes appear in the CRM within a few minutes of occurring in the PMS — not overnight as with batch-based integrations. This latency is sufficient to trigger CRM automations (no-show recovery, appointment confirmations, post-visit sequences) from live clinical activity.",
+    answer: "SmartSync.One is described as near real-time. In practice, most changes appear in the CRM within a few minutes of occurring in the PMS — not overnight as with batch-based integrations. This latency is sufficient to trigger CRM automations (no-show recovery, appointment confirmations, post-visit sequences) from live clinical activity.",
   },
   {
-    question: "Does SmartSync work for multi-location dental groups and DSOs?",
-    answer: "Yes. SmartSync is specifically designed for multi-location dental organizations. Each location's PMS data is synced into CRM with location identifiers intact, enabling both location-level segmentation and group-level roll-up reporting in a single CRM instance.",
+    question: "Does SmartSync.One work for multi-location dental groups and DSOs?",
+    answer: "Yes. SmartSync.One is specifically designed for multi-location dental organizations. Each location's PMS data is synced into CRM with location identifiers intact, enabling both location-level segmentation and group-level roll-up reporting in a single CRM instance.",
   },
   {
-    question: "Does SmartSync sync production and payment data?",
-    answer: "Yes. Production and payments from the PMS sync into CRM Opportunities, giving marketing and operations teams the ability to attribute revenue to lead sources, campaigns, and referring providers. This is one of the key capabilities that distinguishes SmartSync from basic contact sync tools — and is what enables agencies to report true ROI rather than just lead counts.",
+    question: "Does SmartSync.One sync production and payment data?",
+    answer: "Yes. Production and payments from the PMS sync into CRM Opportunities, giving marketing and operations teams the ability to attribute revenue to lead sources, campaigns, and referring providers. This is one of the key capabilities that distinguishes SmartSync.One from basic contact sync tools — and is what enables agencies to report true ROI rather than just lead counts.",
   },
   {
-    question: "Does SmartSync support orthodontic PMS systems?",
-    answer: "Yes. SmartSync supports Dolphin and OrthoTrac — the two most widely used orthodontic practice management platforms. The integration handles orthodontic-specific workflows including consultation tracking, treatment pipeline visibility, and patient lifecycle sync across multi-year treatment courses.",
+    question: "Does SmartSync.One support orthodontic PMS systems?",
+    answer: "Yes. SmartSync.One supports Dolphin and OrthoTrac — the two most widely used orthodontic practice management platforms. The integration handles orthodontic-specific workflows including consultation tracking, treatment pipeline visibility, and patient lifecycle sync across multi-year treatment courses.",
   },
   {
-    question: "What data objects does SmartSync sync?",
+    question: "What data objects does SmartSync.One sync?",
     answer: "From PMS to CRM: Patients → Contacts, Appointments → Appointments, Appointment Status, Operatory → Calendar, Payments → Opportunities, Production → Opportunities, Procedures → Custom Fields, Patient Custom Fields → Contact Custom Fields, Providers → Users. From CRM to PMS: new Contacts → Patients, Appointments, Appointment Status, and Contact Custom Fields → Patient Custom Fields.",
   },
 ];
@@ -111,7 +111,7 @@ const platforms = [
 const PMS_CARDS = [
   { name: 'Open Dental', cat: 'Dental · Open source', desc: 'The most widely used open-source dental PMS. Full patient, appointment, production, and payment sync with near real-time updates.', type: 'dental' },
   { name: 'Dentrix 7 / 8', cat: 'Dental · Henry Schein', desc: 'Sync patient activity, appointments, payments, and production from Dentrix 7 and 8 into your CRM for attribution and reporting.', type: 'dental' },
-  { name: 'Dentrix Ascend', cat: 'Dental · Cloud-native', desc: "Henry Schein's cloud PMS. SmartSync connects Ascend data into GoHighLevel, HubSpot, or Salesforce without manual exports.", type: 'dental' },
+  { name: 'Dentrix Ascend', cat: 'Dental · Cloud-native', desc: "Henry Schein's cloud PMS. SmartSync.One connects Ascend data into GoHighLevel, HubSpot, or Salesforce without manual exports.", type: 'dental' },
   { name: 'Dentrix Enterprise', cat: 'Dental · DSO / Enterprise', desc: 'Built for large dental organizations. Centralized CRM reporting and multi-location visibility across every Dentrix Enterprise site.', type: 'dental' },
   { name: 'Eaglesoft', cat: 'Dental · Patterson', desc: 'Sync Eaglesoft patient and appointment data into CRM to power lead-to-patient workflows and campaign attribution.', type: 'dental' },
   { name: 'Curve Dental', cat: 'Dental · Cloud', desc: "Connect Curve Dental's cloud-based data to automate patient communication, appointment workflows, and revenue reporting.", type: 'dental' },
@@ -143,7 +143,7 @@ const INBOUND_ROWS = [
 
 const trackItems = [
   { icon: "1", title: "Lead arrives", desc: "New lead enters CRM from ad, referral, or web form. Contact record created." },
-  { icon: "2", title: "Booking confirmed", desc: "Appointment booked in PMS. SmartSync syncs appointment data to CRM within minutes." },
+  { icon: "2", title: "Booking confirmed", desc: "Appointment booked in PMS. SmartSync.One syncs appointment data to CRM within minutes." },
   { icon: "3", title: "Visit completed", desc: "Appointment status updates to 'complete.' Production and procedures sync to CRM opportunity." },
   { icon: "4", title: "Payment posted", desc: "Payment recorded in PMS. Synced to CRM opportunity value for revenue attribution." },
   { icon: "5", title: "Reactivation", desc: "Overdue recall triggers CRM automation. Reactivation workflow fires from live PMS status." },
@@ -152,7 +152,7 @@ const trackItems = [
 const trackItems1 = [
   { icon: Database, title: "100%", desc: "Of patient records available in CRM for segmentation and automation" },
   { icon: Timer, title: "<5 min", desc: "Typical sync latency from PMS event to CRM update" },
-  { icon: Ban, title: "$0", desc: "Manual data entry required once SmartSync is connected" },
+  { icon: Ban, title: "$0", desc: "Manual data entry required once SmartSync.One is connected" },
   { icon: Building2, title: "All", desc: "Locations unified in one CRM view, regardless of PMS instance count" },
 ];
 
@@ -171,7 +171,7 @@ export default function SupportedPlatforms() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Supported PMS Platforms",
-    description: "Smart Sync connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM with real-time bidirectional sync.",
+    description: "smartsync.one connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM with real-time bidirectional sync.",
     url: "https://smartsync.one/supported-platforms",
     mainEntity: {
       "@type": "ItemList",
@@ -237,7 +237,7 @@ export default function SupportedPlatforms() {
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync is the integration layer between your practice management software and your CRM. It continuously moves patient records, appointments, production figures, and payment data — so your marketing, operations, and reporting always reflect what's actually happening in the chair.
+                SmartSync.One is the integration layer between your practice management software and your CRM. It continuously moves patient records, appointments, production figures, and payment data — so your marketing, operations, and reporting always reflect what's actually happening in the chair.
               </p>
               <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                 <div className="bg-card rounded-xl p-4 shadow-sm border">
@@ -278,20 +278,20 @@ export default function SupportedPlatforms() {
         </div>
       </section>
 
-      {/* What is SmartSync? */}
+      {/* What is SmartSync.One? */}
 
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="">
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
               <Brain size={16} />
-              <span className="text-blue-600">What is SmartSync?</span>
+              <span className="text-blue-600">What is SmartSync.One?</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">The Dental CRM Integration Platform Built for Real Practices</h2>
-            <p className="text-lg text-gray-600 pb-4">Most dental practices run two separate data worlds. Their practice management system holds the clinical and financial truth — every patient, appointment, procedure code, and payment. Their CRM holds the marketing and communication layer — leads, campaigns, automations, and pipelines. SmartSync bridges these worlds.</p>
+            <p className="text-lg text-gray-600 pb-4">Most dental practices run two separate data worlds. Their practice management system holds the clinical and financial truth — every patient, appointment, procedure code, and payment. Their CRM holds the marketing and communication layer — leads, campaigns, automations, and pipelines. SmartSync.One bridges these worlds.</p>
             <p className=" text-gray-600 pb-4">Without a bridge, teams manually export CSV files, copy data between platforms, and build reports from memory rather than facts. Follow-up automations fire on stale data. Attribution reports miss production figures entirely. Reactivation campaigns go out to patients who already booked — or miss patients who've gone quiet for six months.</p>
-            <p className=" text-gray-600">SmartSync resolves this by continuously syncing the objects that matter most — patients, appointments, appointment status, procedures, production, and payments — between your PMS and CRM in near real time, with full support for bidirectional writes and multi-location architectures.</p>
-            <p className="mt-10 mx-auto max-w-max text-gray-600  bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-left"><strong>Why "near real-time" matters:</strong> A nightly batch sync means your CRM is 23 hours behind your PMS at worst. When a patient books, cancels, or makes a payment, SmartSync reflects that change in your CRM within minutes — not the next morning. Automations fire on current data. Reports reflect today, not yesterday.</p>
+            <p className=" text-gray-600">SmartSync.One resolves this by continuously syncing the objects that matter most — patients, appointments, appointment status, procedures, production, and payments — between your PMS and CRM in near real time, with full support for bidirectional writes and multi-location architectures.</p>
+            <p className="mt-10 mx-auto max-w-max text-gray-600  bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-left"><strong>Why "near real-time" matters:</strong> A nightly batch sync means your CRM is 23 hours behind your PMS at worst. When a patient books, cancels, or makes a payment, SmartSync.One reflects that change in your CRM within minutes — not the next morning. Automations fire on current data. Reports reflect today, not yesterday.</p>
           </div>
         </div>
       </div>
@@ -306,7 +306,7 @@ export default function SupportedPlatforms() {
               <span className="font-medium">Supported Platforms</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">11 Dental and Orthodontic PMS Platforms</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">SmartSync supports the most widely deployed practice management software in dentistry and orthodontics — from solo practices running Open Dental to enterprise DSOs on Dentrix Enterprise or Denticon.</p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">SmartSync.One supports the most widely deployed practice management software in dentistry and orthodontics — from solo practices running Open Dental to enterprise DSOs on Dentrix Enterprise or Denticon.</p>
 
             <div className="flex gap-5 mb-8 justify-center pt-6">
               <div className="flex items-center gap-2 text-lg text-gray-600">
@@ -357,23 +357,23 @@ export default function SupportedPlatforms() {
               <span className="text-blue-600">CRM Integrations</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Works With the CRMs Dental Teams Already Use</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">SmartSync doesn't ask you to change your CRM. It connects to GoHighLevel, HubSpot, or Salesforce and syncs your PMS data directly into the objects and fields your team already knows — contacts, appointments, opportunities, and custom fields.</p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">SmartSync.One doesn't ask you to change your CRM. It connects to GoHighLevel, HubSpot, or Salesforce and syncs your PMS data directly into the objects and fields your team already knows — contacts, appointments, opportunities, and custom fields.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mx-auto">
             {[
               {
                 abbr: 'GHL', name: 'GoHighLevel',
-                desc: "The CRM of choice for most dental marketing agencies. SmartSync syncs PMS data directly into GHL contacts, calendars, pipelines, and custom values — so your automations fire from real patient activity, not manual input.",
+                desc: "The CRM of choice for most dental marketing agencies. SmartSync.One syncs PMS data directly into GHL contacts, calendars, pipelines, and custom values — so your automations fire from real patient activity, not manual input.",
                 badge: 'Most popular for agencies', badgeBg: 'bg-blue-100', badgeText: 'text-primary', dotBg: 'bg-blue-100', dotText: 'text-primary',
               },
               {
                 abbr: 'Hs', name: 'HubSpot',
-                desc: "HubSpot is a natural fit for DSOs and multi-location groups that need structured contact management, deal pipelines, and marketing automation. SmartSync maps PMS production into HubSpot deals for real revenue attribution.",
+                desc: "HubSpot is a natural fit for DSOs and multi-location groups that need structured contact management, deal pipelines, and marketing automation. SmartSync.One maps PMS production into HubSpot deals for real revenue attribution.",
                 badge: 'Popular for DSOs', badgeBg: 'bg-blue-100', badgeText: 'text-primary', dotBg: 'text-primary', dotText: 'text-primary',
               },
               {
                 abbr: 'SF', name: 'Salesforce',
-                desc: 'For enterprise dental organizations that run Salesforce at the center of their operations. SmartSync integrates PMS data into Salesforce contacts, opportunities, and custom objects, supporting complex reporting and workflow automation at scale.',
+                desc: 'For enterprise dental organizations that run Salesforce at the center of their operations. SmartSync.One integrates PMS data into Salesforce contacts, opportunities, and custom objects, supporting complex reporting and workflow automation at scale.',
                 badge: 'Enterprise scale', badgeBg: 'bg-blue-100', badgeText: 'text-primary', dotBg: 'text-primary', dotText: 'text-primary',
               },
             ].map(crm => (
@@ -416,7 +416,7 @@ export default function SupportedPlatforms() {
               <span className="font-medium">Data Sync</span>
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">Complete Bidirectional Data Mapping</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync moves the objects that drive dental marketing and operations — not just contacts. Production, payments, procedures, and appointment status all flow into CRM so your team can report on what actually happened, not just what was scheduled.</p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync.One moves the objects that drive dental marketing and operations — not just contacts. Production, payments, procedures, and appointment status all flow into CRM so your team can report on what actually happened, not just what was scheduled.</p>
           </div>
           <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-4 items-center relative">
             <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
@@ -484,7 +484,7 @@ export default function SupportedPlatforms() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max text-gray-600 bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-left">
-            <strong>Production data in CRM opportunities</strong> is what separates SmartSync from basic contact sync tools. When production and payments flow into CRM as opportunity values, your marketing attribution moves from "leads generated" to "actual revenue produced." Agencies can prove ROI in dollars, not click metrics.
+            <strong>Production data in CRM opportunities</strong> is what separates SmartSync.One from basic contact sync tools. When production and payments flow into CRM as opportunity values, your marketing attribution moves from "leads generated" to "actual revenue produced." Agencies can prove ROI in dollars, not click metrics.
           </p>
         </div>
       </div>
@@ -498,8 +498,8 @@ export default function SupportedPlatforms() {
               <Route size={16} />
               <span className="text-blue-600">Patient Journey</span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How SmartSync Works Across the Patient Lifecycle</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync isn't a one-time import. It maintains a continuous live connection between PMS and CRM throughout every stage of the patient relationship — from first inquiry to long-term retention.</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How SmartSync.One Works Across the Patient Lifecycle</h2>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync.One isn't a one-time import. It maintains a continuous live connection between PMS and CRM throughout every stage of the patient relationship — from first inquiry to long-term retention.</p>
           </div>
 
           <div className="relative w-full">
@@ -523,7 +523,7 @@ export default function SupportedPlatforms() {
               ))}
             </div>
             <p className="mt-10 mx-auto max-w-max text-gray-600  bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-left">
-              This continuous sync means your CRM automations always reflect clinical reality. A no-show doesn't just update a field — it can trigger an immediate rebooking workflow. A completed implant procedure doesn't just close an opportunity — it can trigger a referral ask sequence, a review request, or a treatment plan follow-up. The intelligence lives in your CRM; the signal comes from SmartSync.
+              This continuous sync means your CRM automations always reflect clinical reality. A no-show doesn't just update a field — it can trigger an immediate rebooking workflow. A completed implant procedure doesn't just close an opportunity — it can trigger a referral ask sequence, a review request, or a treatment plan follow-up. The intelligence lives in your CRM; the signal comes from SmartSync.One.
             </p>
           </div>
         </div>
@@ -539,7 +539,7 @@ export default function SupportedPlatforms() {
               <span className="font-medium">Who it's For</span>
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4 !leading-tight max-w-3xl mx-auto">Built for Dental Agencies, DSOs, and Growing Practices</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync serves three primary audiences — each with different goals, but all sharing the same core need: a reliable, real-time connection between practice data and their CRM.</p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync.One serves three primary audiences — each with different goals, but all sharing the same core need: a reliable, real-time connection between practice data and their CRM.</p>
           </div>
 
           <div className="gap-8 grid md:grid-cols-2 ">
@@ -549,7 +549,7 @@ export default function SupportedPlatforms() {
                 Dental Marketing Agencies
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Agencies managing multiple dental clients need more than basic lead tracking. They need to show clients that their campaigns actually produced chair time and revenue — not just website visits. SmartSync makes that possible by pulling production and payment data from the PMS directly into CRM reports.
+                Agencies managing multiple dental clients need more than basic lead tracking. They need to show clients that their campaigns actually produced chair time and revenue — not just website visits. SmartSync.One makes that possible by pulling production and payment data from the PMS directly into CRM reports.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -580,7 +580,7 @@ export default function SupportedPlatforms() {
                 DSOs and Group Practices
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Dental service organizations running multiple locations face a coordination challenge: each site has its own PMS data, but executive leadership needs a consolidated view. SmartSync syncs all locations into a single CRM, giving both site-level visibility and group-wide roll-up reporting.
+                Dental service organizations running multiple locations face a coordination challenge: each site has its own PMS data, but executive leadership needs a consolidated view. SmartSync.One syncs all locations into a single CRM, giving both site-level visibility and group-wide roll-up reporting.
               </p>
               <div className="space-y-4">
                 <div className="flex  items-center space-x-3">
@@ -619,7 +619,7 @@ export default function SupportedPlatforms() {
                 Orthodontic Practices
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Orthodontic workflows differ from general dentistry — treatment spans months or years, consultations are a critical conversion point, and patient lifecycle tracking matters as much as single-visit production. SmartSync supports Dolphin and OrthoTrac with orthodontic-aware sync logic.
+                Orthodontic workflows differ from general dentistry — treatment spans months or years, consultations are a critical conversion point, and patient lifecycle tracking matters as much as single-visit production. SmartSync.One supports Dolphin and OrthoTrac with orthodontic-aware sync logic.
               </p>
               <div className="space-y-4">
                 <div className="flex  items-center space-x-3">
@@ -652,7 +652,7 @@ export default function SupportedPlatforms() {
                 Multi-location Practices
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Practices that have grown from one location to three, five, or ten often find their systems haven't kept pace with their scale. Data lives in siloed PMS instances, reporting is manual, and there's no single source of truth for performance. SmartSync provides the integration layer to unify that data.
+                Practices that have grown from one location to three, five, or ten often find their systems haven't kept pace with their scale. Data lives in siloed PMS instances, reporting is manual, and there's no single source of truth for performance. SmartSync.One provides the integration layer to unify that data.
               </p>
               <div className="space-y-4">
                 <div className="flex  items-center space-x-3">
@@ -683,17 +683,17 @@ export default function SupportedPlatforms() {
         </div>
       </div>
 
-      {/* Why SmartSync */}
+      {/* Why SmartSync.One */}
 
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
               <Sparkles size={16} />
-              <span className="text-blue-600">Why SmartSync</span>
+              <span className="text-blue-600">Why SmartSync.One</span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How SmartSync Compares to the Alternatives</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">There are three common approaches teams take before finding SmartSync: native integrations, manual reporting, and spreadsheet-based workflows. Each one falls short in a specific, predictable way.</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How SmartSync.One Compares to the Alternatives</h2>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">There are three common approaches teams take before finding SmartSync.One: native integrations, manual reporting, and spreadsheet-based workflows. Each one falls short in a specific, predictable way.</p>
           </div>
 
           <div className="space-y-12  px-4 mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -851,7 +851,7 @@ export default function SupportedPlatforms() {
               <div className=" items-start gap-4 mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-primary mb-3">
-                    SmartSync
+                    SmartSync.One
                   </h3>
                   <ul className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-2">
                     <li className="flex items-start gap-3">
@@ -919,7 +919,7 @@ export default function SupportedPlatforms() {
               <BadgeCheck size={16} />
               <span className="text-blue-600">Key Benefits</span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What SmartSync Unlocks for Your Team</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What SmartSync.One Unlocks for Your Team</h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">The downstream effects of reliable PMS-to-CRM sync touch every function in a dental marketing or operations team. Here's what becomes possible when your CRM data actually matches your PMS.</p>
           </div>
 
@@ -943,9 +943,9 @@ export default function SupportedPlatforms() {
                 </div>
               ))}
             </div>
-            <p className="mt-10 text-gray-600">Revenue attribution is perhaps the biggest unlock. Dental marketing agencies spend significant budget on paid search, social ads, and SEO — but without a link between CRM lead data and PMS production data, they can only report on cost per lead. SmartSync closes that loop. When a patient who came from a Google Ads campaign books, attends, and generates $4,200 in production, that figure flows into the CRM opportunity against the original lead source. The agency can now report true cost per acquired patient and cost per production dollar.</p>
+            <p className="mt-10 text-gray-600">Revenue attribution is perhaps the biggest unlock. Dental marketing agencies spend significant budget on paid search, social ads, and SEO — but without a link between CRM lead data and PMS production data, they can only report on cost per lead. SmartSync.One closes that loop. When a patient who came from a Google Ads campaign books, attends, and generates $4,200 in production, that figure flows into the CRM opportunity against the original lead source. The agency can now report true cost per acquired patient and cost per production dollar.</p>
             <p className="mt-10 mx-auto max-w-max text-gray-600  bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-left">
-              For operations teams, the benefit shows up as automation fidelity. No-show recovery workflows that fire immediately when appointment status changes to "broken." Recall sequences that trigger based on actual last-visit dates pulled from the PMS. Reactivation campaigns that exclude patients who already rebooked — because SmartSync told the CRM they did.
+              For operations teams, the benefit shows up as automation fidelity. No-show recovery workflows that fire immediately when appointment status changes to "broken." Recall sequences that trigger based on actual last-visit dates pulled from the PMS. Reactivation campaigns that exclude patients who already rebooked — because SmartSync.One told the CRM they did.
             </p>
           </div>
         </div>
@@ -961,10 +961,10 @@ export default function SupportedPlatforms() {
               <span className="text-blue-600">Orthodontic Practices</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Orthodontic CRM Integration — Built for Longer Treatment Cycles</h2>
-            <p className="text-lg text-gray-600 pb-4">General dentistry and orthodontics share some data structures, but the workflows are meaningfully different. A new dental patient might complete a case in a single visit; an orthodontic patient might span 24 months of appointments, payments, and status updates. SmartSync supports both Dolphin and OrthoTrac with this lifecycle in mind.</p>
-            <p className="text-gray-600 pb-4">Consultation conversion is the critical metric in orthodontics. A prospective patient inquires, books a consultation, and then either starts treatment or goes quiet. SmartSync syncs consultation appointment data into CRM the moment it's created in the PMS, allowing orthodontic practices to build automated follow-up sequences around consultation outcomes — immediate if treatment wasn't started, celebratory if it was.</p>
+            <p className="text-lg text-gray-600 pb-4">General dentistry and orthodontics share some data structures, but the workflows are meaningfully different. A new dental patient might complete a case in a single visit; an orthodontic patient might span 24 months of appointments, payments, and status updates. SmartSync.One supports both Dolphin and OrthoTrac with this lifecycle in mind.</p>
+            <p className="text-gray-600 pb-4">Consultation conversion is the critical metric in orthodontics. A prospective patient inquires, books a consultation, and then either starts treatment or goes quiet. SmartSync.One syncs consultation appointment data into CRM the moment it's created in the PMS, allowing orthodontic practices to build automated follow-up sequences around consultation outcomes — immediate if treatment wasn't started, celebratory if it was.</p>
             <p className="text-gray-600">Treatment milestone updates — debanding, retainer fit, mid-treatment checks — can sync to CRM as appointment records and trigger communication at each stage. This keeps the patient-practice relationship active and supports referral generation at the moments when patients are most satisfied.</p>
-            <p className="mt-10 mx-auto max-w-max text-gray-600 bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-left"><strong>Dolphin and OrthoTrac integration</strong> via SmartSync brings consultation tracking, treatment pipeline visibility, patient lifecycle reporting, referral source attribution, and orthodontic-specific automation directly into GoHighLevel, HubSpot, or Salesforce.</p>
+            <p className="mt-10 mx-auto max-w-max text-gray-600 bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-left"><strong>Dolphin and OrthoTrac integration</strong> via SmartSync.One brings consultation tracking, treatment pipeline visibility, patient lifecycle reporting, referral source attribution, and orthodontic-specific automation directly into GoHighLevel, HubSpot, or Salesforce.</p>
           </div>
         </div>
       </div>

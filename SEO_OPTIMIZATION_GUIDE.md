@@ -76,10 +76,10 @@ client/src/
 ### Example: Home Page
 ```typescript
 {
-  title: "Smart Sync One – Patient Data Sync for Dental Agencies",
+  title: "SmartSync.One – Patient Data Sync for Dental Agencies",
   description: "Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM...",
   keywords: "dentrix integration, open dental api, GoHighLevel Integration...",
-  ogTitle: "Smart Sync One – Patient Data Sync for Dental Agencies",
+  ogTitle: "SmartSync.One – Patient Data Sync for Dental Agencies",
   ogDescription: "...",
   ogImage: "https://smartsync.one/img/sso_logo.png",
   ogUrl: "https://smartsync.one/",

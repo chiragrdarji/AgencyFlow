@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {Building2, MapPin, Mail, Phone } from "lucide-react";
+import { Building2, MapPin, Mail, Phone } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "@/hooks/use-toast";
@@ -32,13 +32,13 @@ export default function Footer() {
   useEffect(() => {
     setIsClient(true);
   }, []);
-   const features = [
+  const features = [
     { href: "/dental-marketing-attribution", label: "Dental Marketing Attribution Software" },
     { href: "/dental-analytics-dashboard", label: "Dental Analytics Dashboard" },
     { href: "/for-dental-marketing-agencies", label: "For Dental Marketing Agencies" },
     { href: "/treatment-tracking-software", label: "Treatment Tracking & Revenue Pipeline Intelligence" },
     { href: "/dental-pms-integrations", label: "Dental PMS Integrations" },
-    { href: "/how-smartsync-works", label: "How SmartSync Works" },
+    { href: "/how-smartsync-works", label: "How SmartSync.One Works" },
     { href: "/dentrix-crm-integration", label: " Dentrix CRM Integration" },
     { href: "/open-dental-crm-integration", label: "Open Dental CRM Integration" },
     { href: "/eaglesoft-crm-integration", label: "Eaglesoft CRM Integration" },
@@ -73,12 +73,12 @@ export default function Footer() {
         },
         body: JSON.stringify(data)
       });
-      
+
       if (!response.ok) {
         const error = await response.json();
         throw new Error(error.message || "Failed to send message");
       }
-      
+
       return response.json();
     },
     onSuccess: (data: any) => {
@@ -102,11 +102,11 @@ export default function Footer() {
     contactMutation.mutate(data);
     // API request here...
   };
- 
-    useEffect(() => { 
-      form.reset();
-    }, [form]);
-  
+
+  useEffect(() => {
+    form.reset();
+  }, [form]);
+
   return (
     <footer className="bg-gray-900 text-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,17 +121,17 @@ export default function Footer() {
                   className="w-9 h-9" // adjust size as needed
                 />
               </div>
-              <span className="text-xl font-bold">Smart Sync</span>
+              <span className="text-xl font-bold">SmartSync.One</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               Seamless data sync between dental practice management systems and
-               CRM for marketing agencies and dental practices.
+              CRM for marketing agencies and dental practices.
             </p>
 
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center">
                 <Building2 size={16} className="mr-3 w-4" />
-                <span data-testid="text-company-name">Smart Sync </span>
+                <span data-testid="text-company-name">SmartSync.One </span>
               </div>
               <div className="flex items-center">
                 <MapPin size={16} className="mr-3 w-4" />
@@ -154,7 +154,7 @@ export default function Footer() {
             </div>
           </div>
 
-           {/* Features */}
+          {/* Features */}
           <div >
             <h3 className="font-semibold mb-4">Features</h3>
             <ul className="space-y-3 text-sm text-gray-400">
@@ -297,7 +297,7 @@ export default function Footer() {
             All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply endorsement.
           </p>
           <p data-testid="text-copyright">
-            &copy; Smart Sync . All rights reserved.
+            &copy; SmartSync.One . All rights reserved.
           </p>
         </div>
       </div>

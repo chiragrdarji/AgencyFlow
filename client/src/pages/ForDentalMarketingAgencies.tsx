@@ -96,7 +96,7 @@ const faqItems = [
   {
     question: "What is software for dental marketing agencies?",
     answer:
-      " Software for dental marketing agencies like SmartSync helps connect marketing efforts directly to real clinic performance by tracking patients, treatments, and payments using PMS and CRM integrations.",
+      " Software for dental marketing agencies like SmartSync.One helps connect marketing efforts directly to real clinic performance by tracking patients, treatments, and payments using PMS and CRM integrations.",
   },
   {
     question: "How can dental agencies prove marketing ROI to clients?",
@@ -109,14 +109,14 @@ const faqItems = [
       "WDental agency reporting software tracks key metrics such as new patients, appointment activity, treatments proposed and completed, payments received, and future revenue to provide a complete performance view.",
   },
   {
-    question: " Does SmartSync support dental CRM integration for agencies?",
+    question: " Does SmartSync.One support dental CRM integration for agencies?",
     answer:
-      "Yes, SmartSync integrates with popular CRM platforms like GoHighLevel, HubSpot, and Salesforce, allowing agencies to sync real-time PMS data directly into their existing workflows.",
+      "Yes, SmartSync.One integrates with popular CRM platforms like GoHighLevel, HubSpot, and Salesforce, allowing agencies to sync real-time PMS data directly into their existing workflows.",
   },
   {
-    question: "How does SmartSync help improve client retention for agencies?",
+    question: "How does SmartSync.One help improve client retention for agencies?",
     answer:
-      " SmartSync improves client retention by providing transparent, data-driven reports that clearly show revenue growth and marketing impact, making it easier to build trust and justify ongoing services.",
+      " SmartSync.One improves client retention by providing transparent, data-driven reports that clearly show revenue growth and marketing impact, making it easier to build trust and justify ongoing services.",
   },
 ];
 
@@ -158,7 +158,7 @@ export default function ForDentalMarketingAgencies() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync connects dental practice management systems directly
+                SmartSync.One connects dental practice management systems directly
                 with your CRM to automatically track patients, treatments, and
                 payments generated after your agency begins working with a
                 clinic.
@@ -209,7 +209,7 @@ export default function ForDentalMarketingAgencies() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Agencies Use SmartSync To
+              Agencies Use SmartSync.One To
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -258,11 +258,11 @@ export default function ForDentalMarketingAgencies() {
                   Without PMS visibility, agencies encounter difficulties such as:
                 </p>
                 <p className="text-lg text-gray-600 font-semibold mb-4-2 mt-2">
-                 Tough ROI discussions, Churn clients, Reporting time consuming, Operational insights limited
+                  Tough ROI discussions, Churn clients, Reporting time consuming, Operational insights limited
                 </p>
 
                 <p className="text-lg font-semibold text-gray-900 mt-4">
-                  SmartSync fills this gap.
+                  SmartSync.One fills this gap.
                 </p>
               </div>
 
@@ -274,7 +274,7 @@ export default function ForDentalMarketingAgencies() {
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-primary rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative z-10">
                 <div className="inline-flex gap-2 items-center px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full mb-6">
                   <Lightbulb size={20} className="text-white" />
-                  How SmartSync Helps Agencies
+                  How SmartSync.One Helps Agencies
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
@@ -282,7 +282,7 @@ export default function ForDentalMarketingAgencies() {
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-4">
-                 SmartSync pulls the day-to-day operational data, dental PMS, directly into the crm platforms agencies are using.
+                  SmartSync.One pulls the day-to-day operational data, dental PMS, directly into the crm platforms agencies are using.
                 </p>
 
                 <p className="text-lg text-gray-600 mb-4">
@@ -322,7 +322,7 @@ export default function ForDentalMarketingAgencies() {
           </div>
 
           <p className="text-lg text-gray-600 mb-2 text-center">
-            SmartSync automatically tracks payments received after a clinic
+            SmartSync.One automatically tracks payments received after a clinic
             begins working with your agency.
           </p>
           <p className="text-lg font-semibold text-gray-900 mt-4 text-center mb-6">
@@ -372,7 +372,7 @@ export default function ForDentalMarketingAgencies() {
               Enhanced CRM Opportunities Automatically Updated
             </h2>
             <p className="text-lg text-gray-600">
-              During onboarding, SmartSync configures required CRM custom fields
+              During onboarding, SmartSync.One configures required CRM custom fields
               automatically.
             </p>
           </div>
@@ -410,7 +410,7 @@ export default function ForDentalMarketingAgencies() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -440,7 +440,7 @@ export default function ForDentalMarketingAgencies() {
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Agencies managing several dental practices gain centralized
-                visibility using SmartSync.
+                visibility using SmartSync.One.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Monitor:
@@ -481,7 +481,7 @@ export default function ForDentalMarketingAgencies() {
                 Power CRM Automation Using Real Clinic Activity
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync converts PMS updates into automation triggers inside
+                SmartSync.One converts PMS updates into automation triggers inside
                 your CRM.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
@@ -543,7 +543,7 @@ export default function ForDentalMarketingAgencies() {
               Upgraded CRM Opportunities Dynamically Refreshed
             </h2>
             <p className="text-lg text-gray-600">
-              In the course of onboarding, SmartSync automatically creates necessary CRM custom fields.
+              In the course of onboarding, SmartSync.One automatically creates necessary CRM custom fields.
             </p>
           </div>
           <div className="">
@@ -591,7 +591,7 @@ export default function ForDentalMarketingAgencies() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Without SmartSync */}
+            {/* Without SmartSync.One */}
             <div className="bg-white border border-red-200 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
@@ -599,7 +599,7 @@ export default function ForDentalMarketingAgencies() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-red-600">
-                  Without SmartSync:
+                  Without SmartSync.One:
                 </h3>
               </div>
 
@@ -617,7 +617,7 @@ export default function ForDentalMarketingAgencies() {
               </ul>
             </div>
 
-            {/* With SmartSync */}
+            {/* With SmartSync.One */}
             <div className="relative bg-white border-2 border-blue-400 rounded-2xl p-8 shadow-md">
               {/* Recommended Badge */}
               <div className="absolute top-0 right-0 bg-primary text-white text-xs font-semibold px-4 py-1 rounded-bl-xl rounded-tr-xl">
@@ -630,7 +630,7 @@ export default function ForDentalMarketingAgencies() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-primary">
-                  With SmartSync:
+                  With SmartSync.One:
                 </h3>
               </div>
 
@@ -718,7 +718,7 @@ export default function ForDentalMarketingAgencies() {
                 Built-for-Agencies Guided Setup
               </h2>
               <p className="text-lg text-gray-600">
-                SmartSync onboarding experts guide you through the process to make sure your data is syncing correctly.
+                SmartSync.One onboarding experts guide you through the process to make sure your data is syncing correctly.
               </p>
 
               <p className="mt-8  mx-auto   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
@@ -772,11 +772,11 @@ export default function ForDentalMarketingAgencies() {
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              SmartSync enables agencies to enhance client relations with clear reporting and tangible results.
+              SmartSync.One enables agencies to enhance client relations with clear reporting and tangible results.
             </p>
           </div>
           <p className="font-bold p-2 text-lg text-center mb-6">
-            Agencies that use SmartSync enjoy the following benefits:
+            Agencies that use SmartSync.One enjoy the following benefits:
           </p>
 
           {/* Benefits */}
@@ -830,7 +830,7 @@ export default function ForDentalMarketingAgencies() {
             for every dental client you manage.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Join agencies already using SmartSync across dozens of clinics.
+            Join agencies already using SmartSync.One across dozens of clinics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

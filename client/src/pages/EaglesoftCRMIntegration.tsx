@@ -82,7 +82,7 @@ const faqItems = [
     question:
       "Can I integrate Eaglesoft with GoHighLevel, HubSpot, and Salesforce?",
     answer:
-      " Yes, SmartSync allows seamless Eaglesoft integration with GoHighLevel, HubSpot, and Salesforce, enabling real-time synchronization for automation, reporting, and revenue tracking.",
+      " Yes, SmartSync.One allows seamless Eaglesoft integration with GoHighLevel, HubSpot, and Salesforce, enabling real-time synchronization for automation, reporting, and revenue tracking.",
   },
   {
     question:
@@ -105,11 +105,11 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/eaglesoft-crm-integration",
   description:
-    "Integrate Eaglesoft with GoHighLevel, HubSpot, and Salesforce using SmartSync. Automatically sync patients, appointments, treatments, and payments with real-time two-way synchronization.",
-  
+    "Integrate Eaglesoft with GoHighLevel, HubSpot, and Salesforce using SmartSync.One. Automatically sync patients, appointments, treatments, and payments with real-time two-way synchronization.",
+
   publisher: {
     "@type": "Organization",
-    name: "Smart Sync",
+    name: "SmartSync.One",
     url: "https://smartsync.one",
   },
   featureList: [
@@ -164,7 +164,7 @@ export default function EaglesoftCRMIntegration() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Integrate Eaglesoft with your CRM and marketing management platform in real-time with SmartSync and get two-way synchronization.
+                Integrate Eaglesoft with your CRM and marketing management platform in real-time with SmartSync.One and get two-way synchronization.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Keep your patient records, appointments, treatments and payments synchronized to avoid manual labor and gain access to precise revenue insights.
@@ -209,7 +209,7 @@ export default function EaglesoftCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              SmartSync Automatically Syncs
+              SmartSync.One Automatically Syncs
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -247,7 +247,7 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-             Eaglesoft is a favorite among many award-winning dental practices.
+              Eaglesoft is a favorite among many award-winning dental practices.
             </p>
             <p className="text-lg text-gray-600 mb-4">
               But agencies and growth teams generally work within a CRM platform.
@@ -299,7 +299,7 @@ export default function EaglesoftCRMIntegration() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync links Eaglesoft day-to-day operations with CRM processes
+            SmartSync.One links Eaglesoft day-to-day operations with CRM processes
           </p>
         </div>
       </section>
@@ -309,7 +309,7 @@ export default function EaglesoftCRMIntegration() {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Sparkles size={18} />
               <span className="text-blue-600">
-                How SmartSync Connects Eaglesoft
+                How SmartSync.One Connects Eaglesoft
               </span>
             </div>
 
@@ -318,10 +318,10 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync is a real-time clinic visit activity synchronization engine that synchronizes visits across Eaglesoft and any supported CRM platform.
+              SmartSync.One is a real-time clinic visit activity synchronization engine that synchronizes visits across Eaglesoft and any supported CRM platform.
             </p>
             <p className="text-lg text-gray-600 mb-4">
-             When updates are made within Eaglesoft, those changes are automatically updated in CRM records.
+              When updates are made within Eaglesoft, those changes are automatically updated in CRM records.
             </p>
             <p className="text-lg text-gray-600 mb-4">
               Typical synchronization occurs within minutes.
@@ -373,7 +373,7 @@ export default function EaglesoftCRMIntegration() {
                 Appointment Activity Tracking
               </p>
               <p className="text-lg text-foreground mb-2">
-                SmartSync synchronizes scheduling activity including:
+                SmartSync.One synchronizes scheduling activity including:
               </p>
               <ul className="space-y-2 mb-2">
                 <li className="flex items-center gap-3">
@@ -409,7 +409,7 @@ export default function EaglesoftCRMIntegration() {
                 Treatment Pipeline Visibility
               </p>
               <p className="text-lg text-foreground mb-2">
-                SmartSync provides deep insight into treatment performance for
+                SmartSync.One provides deep insight into treatment performance for
                 Eaglesoft clinics.
               </p>
               <p className="text-lg text-foreground mb-2">
@@ -491,7 +491,7 @@ export default function EaglesoftCRMIntegration() {
                 Power GoHighLevel Automation Using Eaglesoft Activity
               </h2>
               <p className="text-lg text-gray-600 mt-4 mb-2">
-                SmartSync enables agencies using GoHighLevel to activate
+                SmartSync.One enables agencies using GoHighLevel to activate
                 workflows using real clinic events.
               </p>
 
@@ -568,7 +568,7 @@ export default function EaglesoftCRMIntegration() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -599,7 +599,7 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync synchronizes Eaglesoft activity into HubSpot contacts
+              SmartSync.One synchronizes Eaglesoft activity into HubSpot contacts
               and deal pipelines.
             </p>
           </div>
@@ -715,7 +715,7 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 ">
-              SmartSync allows agencies to move beyond appointment reporting.
+              SmartSync.One allows agencies to move beyond appointment reporting.
             </p>
             <p className="text-lg text-gray-600 ">
               Automatically track payments generated after agency onboarding.
@@ -768,7 +768,7 @@ export default function EaglesoftCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              SmartSync converts Eaglesoft operational data into analytics
+              SmartSync.One converts Eaglesoft operational data into analytics
               dashboards.
             </p>
           </div>
@@ -820,7 +820,7 @@ export default function EaglesoftCRMIntegration() {
             </div>
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            Available inside SmartSync dashboards and CRM systems.
+            Available inside SmartSync.One dashboards and CRM systems.
           </p>
         </div>
       </section>
@@ -837,7 +837,7 @@ export default function EaglesoftCRMIntegration() {
                 Guided Eaglesoft Integration Setup Included
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync onboarding specialists assist throughout
+                SmartSync.One onboarding specialists assist throughout
                 implementation.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
@@ -876,18 +876,18 @@ export default function EaglesoftCRMIntegration() {
             <div className="bg-white shadow-lg p-8 rounded-2xl">
               <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
                 <LifeBuoy size={18} />
-                Why SmartSync for Eaglesoft
+                Why SmartSync.One for Eaglesoft
               </span>
               <h3 className="lg:flex md:block items-center mb-6 font-bold text-gray-900 text-lg">
                 <Brain size={24} className="text-primary mr-2" />
                 Modernize Eaglesoft Reporting and Automation
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync transforms Eaglesoft operational data into actionable
+                SmartSync.One transforms Eaglesoft operational data into actionable
                 intelligence.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                Customers use SmartSync to:
+                Customers use SmartSync.One to:
               </p>
               <div className="space-y-4">
                 <div className="flex  items-center space-x-3">
@@ -928,10 +928,10 @@ export default function EaglesoftCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies and Clinics Across 80+ Dental Locations
+              Supporting Agencies and Clinics Across 100+ Dental Locations
             </h2>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync helps agencies standardize reporting and automation
+              SmartSync.One helps agencies standardize reporting and automation
               across clinics using Eaglesoft and other PMS systems.
             </p>
 

@@ -116,125 +116,125 @@ export default function EducationMaterials() {
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
       <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
-            data-testid="text-page-title"
-          >
-            Education Materials
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to master the Smart Sync One and maximize your
-            dental marketing campaigns.
-          </p>
-        </div>
-
-        {/* Video Tutorials */}
-        <section className="mb-20">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            Video Tutorials
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {videoTutorials.map((video, index) => (
-              // <Card key={index} className="hover:shadow-lg transition-shadow">
-              //   <CardHeader className="pb-4">
-              //     <div className="relative bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
-              //       {/* Show thumbnail or placeholder */}
-              //       {video.url ? (
-              //         <img
-              //           src={`https://img.youtube.com/vi/${
-              //             video.url.split("v=")[1]
-              //           }/hqdefault.jpg`}
-              //           alt={video.title}
-              //           className="w-full h-full object-cover rounded-lg"
-              //         />
-              //       ) : (
-              //         <PlayCircle className="text-primary" size={64} />
-              //       )}
-
-              //       {/* Duration Badge */}
-              //       {video.duration && (
-              //         <div className="absolute top-4 right-4">
-              //           <Badge
-              //             variant="secondary"
-              //             className="bg-black/50 text-white"
-              //           >
-              //             <Clock size={12} className="mr-1" />
-              //             {video.duration}
-              //           </Badge>
-              //         </div>
-              //       )}
-
-              //       {/* Category Badge */}
-              //       {/* <div className="absolute bottom-4 left-4">
-              //         <Badge className="bg-primary text-white">
-              //           {video.category}
-              //         </Badge>
-              //       </div> */}
-              //     </div>
-              //     <CardTitle className="text-lg">{video.title}</CardTitle>
-              //   </CardHeader>
-              //   <CardContent className="pt-0">
-              //     <p className="text-gray-600 mb-4">{video.description}</p>
-              //     <Button
-              //       className="w-full bg-primary text-white hover:bg-primary-dark"
-              //       onClick={() =>
-              //         video.url && window.open(video.url, "_blank")
-              //       }
-              //       disabled={!video.url}
-              //     >
-              //       <PlayCircle size={16} className="mr-2" />
-              //       {video.url ? "Watch Now" : "Coming Soon"}
-              //     </Button>
-              //   </CardContent>
-              // </Card>
-
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader className="pb-4">
-                  <div className="relative bg-gray-100 rounded-lg h-[260px] flex items-center justify-center mb-4 overflow-hidden">
-                    {video.url ? (
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        src={`https://www.youtube.com/embed/${video.url.split("v=")[1]
-                          }`}
-                        title={video.title}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="rounded-lg"
-                      />
-                    ) : (
-                      <PlayCircle className="text-primary" size={64} />
-                    )}
-
-                    {/* Duration Badge */}
-                    {video.duration && (
-                      <div className="absolute top-4 right-4">
-                        <Badge
-                          variant="secondary"
-                          className="bg-black/50 text-white"
-                        >
-                          <Clock size={12} className="mr-1" />
-                          {video.duration}
-                        </Badge>
-                      </div>
-                    )}
-                  </div>
-                  <CardTitle className="text-lg">{video.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-gray-600 mb-0">{video.description}</p>
-                </CardContent>
-              </Card>
-
-            ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1
+              className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+              data-testid="text-page-title"
+            >
+              Education Materials
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to master the SmartSync.One and maximize your
+              dental marketing campaigns.
+            </p>
           </div>
-        </section>
 
-        {/* Guides & Documentation */}
-        {/* <section className="mb-20">
+          {/* Video Tutorials */}
+          <section className="mb-20">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Video Tutorials
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {videoTutorials.map((video, index) => (
+                // <Card key={index} className="hover:shadow-lg transition-shadow">
+                //   <CardHeader className="pb-4">
+                //     <div className="relative bg-gray-100 rounded-lg h-48 flex items-center justify-center mb-4 overflow-hidden">
+                //       {/* Show thumbnail or placeholder */}
+                //       {video.url ? (
+                //         <img
+                //           src={`https://img.youtube.com/vi/${
+                //             video.url.split("v=")[1]
+                //           }/hqdefault.jpg`}
+                //           alt={video.title}
+                //           className="w-full h-full object-cover rounded-lg"
+                //         />
+                //       ) : (
+                //         <PlayCircle className="text-primary" size={64} />
+                //       )}
+
+                //       {/* Duration Badge */}
+                //       {video.duration && (
+                //         <div className="absolute top-4 right-4">
+                //           <Badge
+                //             variant="secondary"
+                //             className="bg-black/50 text-white"
+                //           >
+                //             <Clock size={12} className="mr-1" />
+                //             {video.duration}
+                //           </Badge>
+                //         </div>
+                //       )}
+
+                //       {/* Category Badge */}
+                //       {/* <div className="absolute bottom-4 left-4">
+                //         <Badge className="bg-primary text-white">
+                //           {video.category}
+                //         </Badge>
+                //       </div> */}
+                //     </div>
+                //     <CardTitle className="text-lg">{video.title}</CardTitle>
+                //   </CardHeader>
+                //   <CardContent className="pt-0">
+                //     <p className="text-gray-600 mb-4">{video.description}</p>
+                //     <Button
+                //       className="w-full bg-primary text-white hover:bg-primary-dark"
+                //       onClick={() =>
+                //         video.url && window.open(video.url, "_blank")
+                //       }
+                //       disabled={!video.url}
+                //     >
+                //       <PlayCircle size={16} className="mr-2" />
+                //       {video.url ? "Watch Now" : "Coming Soon"}
+                //     </Button>
+                //   </CardContent>
+                // </Card>
+
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardHeader className="pb-4">
+                    <div className="relative bg-gray-100 rounded-lg h-[260px] flex items-center justify-center mb-4 overflow-hidden">
+                      {video.url ? (
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          src={`https://www.youtube.com/embed/${video.url.split("v=")[1]
+                            }`}
+                          title={video.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="rounded-lg"
+                        />
+                      ) : (
+                        <PlayCircle className="text-primary" size={64} />
+                      )}
+
+                      {/* Duration Badge */}
+                      {video.duration && (
+                        <div className="absolute top-4 right-4">
+                          <Badge
+                            variant="secondary"
+                            className="bg-black/50 text-white"
+                          >
+                            <Clock size={12} className="mr-1" />
+                            {video.duration}
+                          </Badge>
+                        </div>
+                      )}
+                    </div>
+                    <CardTitle className="text-lg">{video.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-gray-600 mb-0">{video.description}</p>
+                  </CardContent>
+                </Card>
+
+              ))}
+            </div>
+          </section>
+
+          {/* Guides & Documentation */}
+          {/* <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Guides & Documentation
           </h2>
@@ -279,8 +279,8 @@ export default function EducationMaterials() {
           </div>
         </section> */}
 
-        {/* Campaign Templates */}
-        {/* <section className="mb-20">
+          {/* Campaign Templates */}
+          {/* <section className="mb-20">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Campaign Templates
           </h2>
@@ -321,8 +321,8 @@ export default function EducationMaterials() {
           </div>
         </section> */}
 
-        {/* ROI Calculator */}
-        {/* <section className="mb-20">
+          {/* ROI Calculator */}
+          {/* <section className="mb-20">
           <Card className="bg-primary text-white">
             <CardContent className="p-8 text-center">
               <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -347,103 +347,103 @@ export default function EducationMaterials() {
           </Card>
         </section> */}
 
-        {/* Best Practices */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
+          {/* Best Practices */}
+          <section className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Best Practices
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Learn from successful agencies who have implemented our connector
+                to grow their dental clients' practices.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card>
+                <CardContent className="p-8 text-center">
+                  <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/img/Patient-Segmentatio.svg"
+                      alt="Patient Segmentation" // adjust size as needed
+                    />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-4">
+                    Patient Segmentation
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    How to segment dental patients for maximum campaign
+                    effectiveness and personalization.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-8 text-center">
+                  <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/img/Timing-Optimization.svg"
+                      alt="Timing Optimization" // adjust size as needed
+                    />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-4">
+                    Timing Optimization
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Best practices for campaign timing based on appointment
+                    schedules and patient behavior.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-8 text-center">
+                  <div className="w-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/img/Performance-Tracking.png"
+                      alt="Performance Tracking" // adjust size as needed
+                    />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-4">
+                    Performance Tracking
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Key metrics to track and how to present ROI data to dental
+                    practice owners.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <div className="bg-gray-50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Best Practices
+              Need Additional Support?
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Learn from successful agencies who have implemented our connector
-              to grow their dental clients' practices.
+            <p className="text-gray-600 mb-6">
+              Can't find what you're looking for? Our team is here to help with
+              custom training and support.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card>
-              <CardContent className="p-8 text-center">
-                <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
-                 <img
-                  src="/img/Patient-Segmentatio.svg"
-                  alt="Patient Segmentation" // adjust size as needed
-                />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-4">
-                  Patient Segmentation
-                </h3>
-                <p className="text-sm text-gray-600">
-                  How to segment dental patients for maximum campaign
-                  effectiveness and personalization.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-8 text-center">
-                <div className="w-12  rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <img
-                  src="/img/Timing-Optimization.svg"
-                  alt="Timing Optimization" // adjust size as needed
-                />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-4">
-                  Timing Optimization
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Best practices for campaign timing based on appointment
-                  schedules and patient behavior.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-8 text-center">
-                <div className="w-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <img
-                  src="/img/Performance-Tracking.png"
-                  alt="Performance Tracking" // adjust size as needed
-                />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-4">
-                  Performance Tracking
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Key metrics to track and how to present ROI data to dental
-                  practice owners.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <div className="bg-gray-50 rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Need Additional Support?
-          </h2>
-          <p className="text-gray-600 mb-6">
-            Can't find what you're looking for? Our team is here to help with
-            custom training and support.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-primary text-white hover:bg-primary-dark"
-              data-testid="button-contact-support"
-              asChild
-            >
-              <a href="mailto:support@smartsync.one">Contact Support</a>
-            </Button>
-            {/* <Button
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-primary text-white hover:bg-primary-dark"
+                data-testid="button-contact-support"
+                asChild
+              >
+                <a href="mailto:support@smartsync.one">Contact Support</a>
+              </Button>
+              {/* <Button
                 variant="outline"
                 size="lg"
                 data-testid="button-request-training"
               >
                 Request Training Session
               </Button> */}
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </>
   );

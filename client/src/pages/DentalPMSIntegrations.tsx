@@ -81,7 +81,7 @@ const metrics = [
   { icon: CheckCircle, label: "Cloud9" },
   { icon: CheckCircle, label: "Dentrix Enterprise" },
   { icon: CheckCircle, label: "Modernizing Medicine" },
-   { icon: CheckCircle, label: "NextGen Office" },
+  { icon: CheckCircle, label: "NextGen Office" },
 ];
 const data = [
   { icon: CheckCircle, label: "Patient Records" },
@@ -149,14 +149,14 @@ const faqItems = [
       "Dentrix CRM integration helps dental agencies by syncing real clinic data such as patients, treatments, and payments directly into CRM systems, enabling accurate reporting, automation, and ROI tracking.",
   },
   {
-    question: " Does SmartSync support Open Dental CRM integration?",
+    question: " Does SmartSync.One support Open Dental CRM integration?",
     answer:
-      "  Yes, SmartSync supports Open Dental CRM integration by synchronizing patient activity, appointments, treatments, and payment data into platforms like GoHighLevel, HubSpot, and Salesforce.",
+      "  Yes, SmartSync.One supports Open Dental CRM integration by synchronizing patient activity, appointments, treatments, and payment data into platforms like GoHighLevel, HubSpot, and Salesforce.",
   },
   {
     question: "What data is synced with dental PMS sync software?",
     answer:
-      "Dental PMS sync software like SmartSync synchronizes key data including patient records, appointment activity, treatment plans, completed procedures, payments, balances, and patient lifecycle information.",
+      "Dental PMS sync software like SmartSync.One synchronizes key data including patient records, appointment activity, treatment plans, completed procedures, payments, balances, and patient lifecycle information.",
   },
   {
     question: "Why is two-way dental PMS integration important?",
@@ -173,11 +173,11 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/dental-pms-integrations",
   description:
-    "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync’s real-time two-way synchronization platform.",
-  
+    "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync.One’s real-time two-way synchronization platform.",
+
   publisher: {
     "@type": "Organization",
-    name: "Smart Sync",
+    name: "SmartSync.One",
     url: "https://smartsync.one",
   },
   featureList: [
@@ -229,7 +229,7 @@ export default function DentalPMSIntegrations() {
                 With CRM and Marketing Services
               </h1>
               <p className="text-lg text-gray-600 mb-2 leading-relaxed">
-                SmartSync connects the top dental practice management systems to the latest CRM solutions, providing a real-time synchronization of patients, appointments, treatments and payments
+                SmartSync.One connects the top dental practice management systems to the latest CRM solutions, providing a real-time synchronization of patients, appointments, treatments and payments
               </p>
               <p
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
@@ -345,7 +345,7 @@ export default function DentalPMSIntegrations() {
             ))}
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync bridges this gap using automated synchronization.
+            SmartSync.One bridges this gap using automated synchronization.
           </p>
         </div>
       </section>
@@ -364,7 +364,7 @@ export default function DentalPMSIntegrations() {
               Ensure PMS and CRM Data is Always Current
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync enables real-time bi-directional sync for a select list of PMS systems with CRM solutions.
+              SmartSync.One enables real-time bi-directional sync for a select list of PMS systems with CRM solutions.
             </p>
             <p className="text-lg text-gray-600">
               Updates typically appear within minutes.
@@ -412,7 +412,7 @@ export default function DentalPMSIntegrations() {
                 management systems.
               </p>
               <p className="text-lg text-gray-600">
-                SmartSync connects Dentrix directly with CRM platforms such as
+                SmartSync.One connects Dentrix directly with CRM platforms such as
                 GoHighLevel, HubSpot, and Salesforce.
               </p>
               <p className="text-lg text-gray-600">
@@ -506,7 +506,7 @@ export default function DentalPMSIntegrations() {
               </p>
 
               <p className="mt-8  mx-auto   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                SmartSync ensures patient and appointment data flows
+                SmartSync.One ensures patient and appointment data flows
                 automatically between systems.
               </p>
             </div>
@@ -528,7 +528,7 @@ export default function DentalPMSIntegrations() {
                 Open Dental CRM Integration With Real-Time Analytics
               </h2>
               <p className="text-lg text-gray-600">
-                SmartSync enables powerful Open Dental integrations for agencies
+                SmartSync.One enables powerful Open Dental integrations for agencies
                 and growing practices.
               </p>
               <p className="text-lg text-gray-600">
@@ -616,7 +616,7 @@ export default function DentalPMSIntegrations() {
                 Eaglesoft PMS Integration for Marketing Intelligence
               </h2>
               <p className="text-lg text-gray-600 ">
-                SmartSync connects Eaglesoft data directly with CRM
+                SmartSync.One connects Eaglesoft data directly with CRM
                 opportunities and analytics dashboards.
               </p>
 
@@ -637,7 +637,7 @@ export default function DentalPMSIntegrations() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -663,13 +663,13 @@ export default function DentalPMSIntegrations() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-             Integration Across Contemporary Dental Software Systems
+              Integration Across Contemporary Dental Software Systems
             </h2>
           </div>
           <div className="card  gap-8  rounded-2xl sm:p-8   border-primary">
             <div className="p-6  bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg text-center">
-                SmartSync also integrates with:{" "}
+                SmartSync.One also integrates with:{" "}
               </h3>
               <div className="grid  sm:grid-cols-3 lg:grid-cols-6 gap-3  mt-[18px] text-center ">
                 {pmsSystems.map((system) => (
@@ -701,7 +701,7 @@ export default function DentalPMSIntegrations() {
               Compatible with major CRM platforms loved by agencies
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync integrates seamlessly with:
+              SmartSync.One integrates seamlessly with:
             </p>
           </div>
           <div className="grid sm:grid-col-2 md:grid-cols-3 gap-6">
@@ -742,7 +742,7 @@ export default function DentalPMSIntegrations() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-              <Database size={18} className="" /> What Data SmartSync Syncs
+              <Database size={18} className="" /> What Data SmartSync.One Syncs
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -751,7 +751,7 @@ export default function DentalPMSIntegrations() {
               Complete Operational Visibility Inside Your CRM
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync synchronizes important clinic activity including:
+              SmartSync.One synchronizes important clinic activity including:
             </p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
@@ -887,7 +887,7 @@ export default function DentalPMSIntegrations() {
               different PMS platforms.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync standardizes data across systems and sends it into one
+              SmartSync.One standardizes data across systems and sends it into one
               CRM environment.
             </p>
             <p className="mt-8  mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
@@ -909,7 +909,7 @@ export default function DentalPMSIntegrations() {
               Expert Onboarding Included
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync onboarding specialists assist with:
+              SmartSync.One onboarding specialists assist with:
             </p>
           </div>
           <div className="">
@@ -943,7 +943,7 @@ export default function DentalPMSIntegrations() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Sparkles size={16} />
-              <span className="text-primary">Why SmartSync </span>
+              <span className="text-primary">Why SmartSync.One </span>
             </div>
 
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
@@ -951,7 +951,7 @@ export default function DentalPMSIntegrations() {
             </h2>
 
             <p className="text-lg text-gray-600 ">
-              SmartSync does more than transfer data.
+              SmartSync.One does more than transfer data.
             </p>
           </div>
 
@@ -1005,7 +1005,7 @@ export default function DentalPMSIntegrations() {
             and revenue insights.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Join agencies already using SmartSync across 80+ dental clinics.
+            Join agencies already using SmartSync.One across 100+ dental clinics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

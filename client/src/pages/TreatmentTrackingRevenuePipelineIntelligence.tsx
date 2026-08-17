@@ -114,14 +114,14 @@ const faqItems = [
       " Pending procedures in dental analytics refer to treatments that have been proposed but not yet scheduled or completed, often representing significant unrealized revenue for the practice.",
   },
   {
-    question: " Can SmartSync help with dental treatment acceptance tracking?",
+    question: " Can SmartSync.One help with dental treatment acceptance tracking?",
     answer:
-      " Yes, SmartSync enables dental treatment acceptance tracking by monitoring which proposed treatments are completed and which remain pending, helping improve conversion and patient follow-up strategies.",
+      " Yes, SmartSync.One enables dental treatment acceptance tracking by monitoring which proposed treatments are completed and which remain pending, helping improve conversion and patient follow-up strategies.",
   },
   {
-    question: "How does SmartSync support dental production forecasting?",
+    question: "How does SmartSync.One support dental production forecasting?",
     answer:
-      " SmartSync supports dental production forecasting by analyzing pending treatments and scheduled procedures to estimate expected future payments and overall revenue potential.",
+      " SmartSync.One supports dental production forecasting by analyzing pending treatments and scheduled procedures to estimate expected future payments and overall revenue potential.",
   },
 ];
 const softwareSchema = {
@@ -132,11 +132,11 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/treatment-tracking-software",
   description:
-    "Track treatment proposed, pending procedures, completed treatments, and expected future payments using SmartSync’s dental revenue pipeline intelligence platform integrated with leading PMS systems.",
- 
+    "Track treatment proposed, pending procedures, completed treatments, and expected future payments using SmartSync.One’s dental revenue pipeline intelligence platform integrated with leading PMS systems.",
+
   publisher: {
     "@type": "Organization",
-    name: "Smart Sync",
+    name: "SmartSync.One",
     url: "https://smartsync.one",
   },
   featureList: [
@@ -195,7 +195,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync connects dental PMS systems with your CRM to track
+                SmartSync.One connects dental PMS systems with your CRM to track
                 treatment proposals, pending procedures, completed treatments,
                 and expected payments automatically.
               </p>
@@ -283,13 +283,13 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 Millions in Treatment Revenue Are Not being Scheduled
               </h2>
               <p className="text-lg text-gray-600">
-               Dentists often recommend treatments that patients put off or never book.
+                Dentists often recommend treatments that patients put off or never book.
               </p>
               <p className="text-lg text-gray-600">
                 Marketing performance alone cannot solve growth challenges without understanding treatment conversion.
               </p>
               <p className="mt-8  mx-auto   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                SmartSync helps uncover these opportunities.
+                SmartSync.One helps uncover these opportunities.
               </p>
             </div>
             <div className="bg-primary-light w-full md:w-[50%]  mx-auto max-w-[700px] rounded-2xl p-8   border-primary/10">
@@ -332,18 +332,18 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
               <Bot size={20} />
               <span className="font-medium">
-                SmartSync Revenue Pipeline Intelligence
+                SmartSync.One Revenue Pipeline Intelligence
               </span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Automatically Track the Entire Treatment Lifecycle
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync continuously synchronizes treatment activity from
+              SmartSync.One continuously synchronizes treatment activity from
               supported dental practice management systems.
             </p>
             <p className="text-lg text-gray-600">
-              Every update becomes visible inside SmartSync analytics and CRM
+              Every update becomes visible inside SmartSync.One analytics and CRM
               opportunities.
             </p>
             <p className="text-lg text-gray-600">
@@ -428,7 +428,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                           className="text-primary mt-1 min-w-fit"
                         />
                         <span className="text-gray-700">
-                         Agencies and clinics can use this insight to trigger follow-ups or reactivation campaigns.
+                          Agencies and clinics can use this insight to trigger follow-ups or reactivation campaigns.
                         </span>
                       </div>
                     </li>
@@ -520,7 +520,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             </h2>
 
             <p className="text-lg text-gray-600 ">
-              SmartSync anticipates future payments due to pending procedures and upcoming treatments.
+              SmartSync.One anticipates future payments due to pending procedures and upcoming treatments.
             </p>
           </div>
 
@@ -563,7 +563,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -595,10 +595,10 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-             Dental marketing agencies are frequently dedicated to filling the new patient pipeline.
+              Dental marketing agencies are frequently dedicated to filling the new patient pipeline.
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center">
-              SmartSync allows agencies to also identify revenue opportunities
+              SmartSync.One allows agencies to also identify revenue opportunities
               already inside the practice.
             </p>
           </div>
@@ -656,7 +656,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
               Trigger CRM Campaigns Based on Treatment Activity
             </h2>
             <p className="text-lg text-gray-600">
-              SmartSync writes treatment updates into CRM systems where automation workflows can be triggered.
+              SmartSync.One writes treatment updates into CRM systems where automation workflows can be triggered.
             </p>
           </div>
           <div className="">
@@ -701,7 +701,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 Understand Treatment Within the Patient Journey
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-               SmartSync also syncs important lifecycle Data.
+                SmartSync.One also syncs important lifecycle Data.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Follow along treatment activity:
@@ -826,7 +826,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Sparkles size={18} />
-              <span className="font-medium">Why SmartSync</span>
+              <span className="font-medium">Why SmartSync.One</span>
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -837,7 +837,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Without SmartSync */}
+            {/* Without SmartSync.One */}
             <div className="bg-white border border-red-200 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
@@ -845,7 +845,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-red-600">
-                  No SmartSync:
+                  No SmartSync.One:
                 </h3>
               </div>
 
@@ -863,7 +863,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
               </ul>
             </div>
 
-            {/* With SmartSync */}
+            {/* With SmartSync.One */}
             <div className="relative bg-white border-2 border-blue-400 rounded-2xl p-8 shadow-md">
               {/* Recommended Badge */}
               <div className="absolute top-0 right-0 bg-primary text-white text-xs font-semibold px-4 py-1 rounded-bl-xl rounded-tr-xl">
@@ -876,7 +876,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-primary">
-                  With SmartSync:
+                  With SmartSync.One:
                 </h3>
               </div>
 
@@ -896,7 +896,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
           </div>
 
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            SmartSync seamlessly connects clinic operations with growth strategy.
+            SmartSync.One seamlessly connects clinic operations with growth strategy.
           </p>
         </div>
       </section>
@@ -920,7 +920,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             future payments automatically.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Join agencies and clinics already using SmartSync across 80+ dental
+            Join agencies and clinics already using SmartSync.One across 100+ dental
             practices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

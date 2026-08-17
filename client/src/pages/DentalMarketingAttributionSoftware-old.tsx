@@ -104,7 +104,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                SmartSync connects dental practice management systems directly
+                SmartSync.One connects dental practice management systems directly
                 with your CRM to track treatments, payments, and lifetime
                 patient value generated after your agency begins managing a
                 clinic.
@@ -155,7 +155,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              With SmartSync You Can Track
+              With SmartSync.One You Can Track
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -286,7 +286,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
-              <Zap className="h-4 w-4" /> The SmartSync Solution
+              <Zap className="h-4 w-4" /> The SmartSync.One Solution
             </span>
             <h2
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -295,7 +295,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               Connect Marketing Performance Directly to Clinic Revenue
             </h2>
             <p className="text-lg text-muted-foreground">
-              SmartSync automatically synchronizes patient and financial
+              SmartSync.One automatically synchronizes patient and financial
               activity from dental PMS systems into CRM platforms used by
               agencies.
             </p>
@@ -344,11 +344,11 @@ export default function DentalMarketingAttributionSoftwareOld() {
               Measure Revenue Generated After Agency Onboarding
             </h2>
             <p className="text-lg text-muted-foreground">
-              SmartSync introduces a powerful attribution capability designed
+              SmartSync.One introduces a powerful attribution capability designed
               specifically for dental agencies.
             </p>
             <p className="text-lg text-muted-foreground">
-              When a clinic starts working with your agency, SmartSync
+              When a clinic starts working with your agency, SmartSync.One
               automatically begins tracking payments generated afterward.
             </p>
           </div>
@@ -402,7 +402,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               Track the Complete Patient Revenue Journey
             </h2>
             <p className="text-lg text-muted-foreground">
-              SmartSync allows agencies to understand how patients move through
+              SmartSync.One allows agencies to understand how patients move through
               treatment and payment stages.
             </p>
           </div>
@@ -467,7 +467,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               Perfect for Agencies Managing Multiple Clinics
             </h2>
             <p className="text-lg text-muted-foreground">
-              SmartSync simplifies reporting across multiple dental practices.
+              SmartSync.One simplifies reporting across multiple dental practices.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 mb-10">
@@ -512,7 +512,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               Turn Attribution Data Into Automated Growth Campaigns
             </h2>
             <p className="text-lg text-muted-foreground">
-              Because SmartSync syncs PMS activity into CRM systems, agencies
+              Because SmartSync.One syncs PMS activity into CRM systems, agencies
               can automate workflows using real clinic events.
             </p>
           </div>
@@ -575,14 +575,14 @@ export default function DentalMarketingAttributionSoftwareOld() {
                     className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
                     key={system}
                   >
-                   <CheckCircle2 className="h-4 w-4" /> {system}
+                    <CheckCircle2 className="h-4 w-4" /> {system}
                   </div>
                 ))}
               </div>
             </div>
-            <div  className="p-6  bg-gradient-to-br from-primary-light to-blue-50 rounded-lg">
+            <div className="p-6  bg-gradient-to-br from-primary-light to-blue-50 rounded-lg">
               <h3 className="font-bold mb-2 p-2  text-lg">
-                CRM Platforms 
+                CRM Platforms
               </h3>
               <div className="grid sm:grid-col-1  gap-4 mt-[18px] text-center">
                 {crmPlatforms.map((platform) => (
@@ -590,7 +590,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
                     className="p-2 bg-white  rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
                     key={platform}
                   >
-                   <CheckCircle2 className="h-4 w-4" /> {platform}
+                    <CheckCircle2 className="h-4 w-4" /> {platform}
                   </div>
                 ))}
               </div>
@@ -604,7 +604,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
             <div className="bg-white shadow-lg p-8 rounded-2xl">
               <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
                 <Sparkles className="h-4 w-4" />
-                Why SmartSync is DIfferent
+                Why SmartSync.One is DIfferent
               </span>
               <h3 className="lg:flex md:block items-center mb-6 font-bold text-gray-900 text-lg">
                 <Database size={24} className="text-primary mr-2" />
@@ -612,7 +612,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Many reporting tools depend on assumptions or manual
-                tagging.SmartSync uses actual PMS activity.
+                tagging.SmartSync.One uses actual PMS activity.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 That means attribution is based on:
@@ -669,7 +669,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
                 </div>
 
                 <p className="text-gray-600">
-                  SmartSync helps agencies move from service providers to
+                  SmartSync.One helps agencies move from service providers to
                   strategic growth partners.
                 </p>
               </div>
@@ -685,7 +685,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Give your agency the ability to demonstrate measurable financial
             results using real clinic data. Join agencies already using
-            SmartSync across 80+ dental clinics.
+            SmartSync.One across 100+ dental clinics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

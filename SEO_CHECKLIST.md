@@ -78,15 +78,15 @@ npm run dev
 
 ### Home Page
 ```
-Title: Smart Sync One – Patient Data Sync for Dental Agencies
+Title: SmartSync.One – Patient Data Sync for Dental Agencies
 Description: Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM...
 URL: /
 ```
 
 ### Supported Platforms
 ```
-Title: Supported PMS Platforms | Smart Sync One
-Description: Smart Sync connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM...
+Title: Supported PMS Platforms | SmartSync.One
+Description: SmartSync.One connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM...
 URL: /supported-platforms
 ```
 
@@ -106,21 +106,21 @@ URL: /open-dental-gohighlevel-integration
 
 ### Onboarding
 ```
-Title: Onboarding & Setup | Smart Sync One
-Description: Get started with Smart Sync in minutes. Our guided onboarding process ensures...
+Title: Onboarding & Setup | SmartSync.One
+Description: Get started with SmartSync.One in minutes. Our guided onboarding process ensures...
 URL: /onboarding
 ```
 
 ### Education Materials
 ```
-Title: Education Materials | Smart Sync One
+Title: Education Materials | SmartSync.One
 Description: Learn how to maximize your dental marketing automation. Guides, tutorials, and...
 URL: /education
 ```
 
 ### Contact
 ```
-Title: Contact Us | Smart Sync One
+Title: Contact Us | SmartSync.One
 Description: Get in touch with our support team. We're here to help with integration setup...
 URL: /contact
 ```
@@ -278,7 +278,7 @@ const articleSchema = getArticleSchema({
 - ghl dental integration
 
 ### Onboarding (6 keywords)
-- smart sync setup
+- SmartSync.One setup
 - integration onboarding
 - ghl dental setup
 - dental pms setup
@@ -293,7 +293,7 @@ const articleSchema = getArticleSchema({
 - crm for dental practices
 
 ### Contact (4 keywords)
-- contact smart sync
+- contact SmartSync.One
 - dental integration support
 - customer service
 - technical support

@@ -1,63 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <script type="module">
-import { createHotContext } from "/@vite/client";
-const hot = createHotContext("/__dummy__runtime-error-plugin");
+    import { createHotContext } from "/@vite/client";
+    const hot = createHotContext("/__dummy__runtime-error-plugin");
 
-function sendError(error) {
-  if (!(error instanceof Error)) {
-    error = new Error("(unknown runtime error)");
-  }
-  const serialized = {
-    message: error.message,
-    stack: error.stack,
-  };
-  hot.send("runtime-error-plugin:error", serialized);
-}
+    function sendError(error) {
+      if (!(error instanceof Error)) {
+        error = new Error("(unknown runtime error)");
+      }
+      const serialized = {
+        message: error.message,
+        stack: error.stack,
+      };
+      hot.send("runtime-error-plugin:error", serialized);
+    }
 
-window.addEventListener("error", (evt) => {
-  sendError(evt.error);
-});
+    window.addEventListener("error", (evt) => {
+      sendError(evt.error);
+    });
 
-window.addEventListener("unhandledrejection", (evt) => {
-  sendError(evt.reason);
-});
-</script>
+    window.addEventListener("unhandledrejection", (evt) => {
+      sendError(evt.reason);
+    });
+  </script>
 
   <script type="module">
-import RefreshRuntime from "/@react-refresh"
-RefreshRuntime.injectIntoGlobalHook(window)
-window.$RefreshReg$ = () => {}
-window.$RefreshSig$ = () => (type) => type
-window.__vite_plugin_react_preamble_installed__ = true
-</script>
+    import RefreshRuntime from "/@react-refresh"
+    RefreshRuntime.injectIntoGlobalHook(window)
+    window.$RefreshReg$ = () => { }
+    window.$RefreshSig$ = () => (type) => type
+    window.__vite_plugin_react_preamble_installed__ = true
+  </script>
 
   <script type="module" src="/@vite/client"></script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <title>Smart Sync One – Patient Data Sync for Dental Agencies</title>
+  <title>SmartSync.One – Patient Data Sync for Dental Agencies</title>
   <meta name="description"
     content="Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients dental practices.">
 
   <!-- Enhanced SEO Meta Tags -->
-  <meta name="keywords" content="dentrix integration, open dental api, GoHighLevel Integration, GHL Integration, opendental api, open dental integration, dental pms ghl integration, dental pms integration, eaglesoft api, api dental, dentrix api">
-  <meta name="author" content="Smart Sync One">
+  <meta name="keywords"
+    content="dentrix integration, open dental api, GoHighLevel Integration, GHL Integration, opendental api, open dental integration, dental pms ghl integration, dental pms integration, eaglesoft api, api dental, dentrix api">
+  <meta name="author" content="SmartSync.One">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   <meta name="revisit-after" content="7 days">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://smartsync.one/">
-  <meta property="og:title" content="Smart Sync One – Patient Data Sync for Dental Agencies">
+  <meta property="og:title" content="SmartSync.One – Patient Data Sync for Dental Agencies">
   <meta property="og:description"
     content="Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients dental practices.">
   <meta property="og:image" content="https://smartsync.one/img/og-image.png">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:site_name" content="Smart Sync">
+  <meta property="og:site_name" content="SmartSync.One">
   <meta property="og:locale" content="en_US">
 
   <!-- Technical SEO -->
@@ -66,24 +66,24 @@ window.__vite_plugin_react_preamble_installed__ = true
   <link rel="icon" type="image/svg+xml" href="https://smartsync.one/img/sso_logo.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Smart Sync One – Patient Data Sync for Dental Agencies" />
+  <meta name="twitter:title" content="SmartSync.One – Patient Data Sync for Dental Agencies" />
   <meta name="twitter:description"
     content="Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients dental practices." />
   <meta name="twitter:image" content="https://smartsync.one/img/sso_logo.png" />
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-690XBYTF0D"></script>
   <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WH6TJ27T');</script>
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WH6TJ27T');</script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -97,7 +97,7 @@ window.__vite_plugin_react_preamble_installed__ = true
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Smart Sync",
+      "name": "SmartSync.One",
       "url": "https://smartsync.one/",
       "logo": "/img/sso_logo.svg",
       "description": "Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients dental practices.",
@@ -127,7 +127,7 @@ window.__vite_plugin_react_preamble_installed__ = true
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Smart Sync",
+  "name": "SmartSync.One",
   "description": "Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients dental practices.",
   "url": "https://smartsync.one/",
   "telephone": "+1 630 861 8263",

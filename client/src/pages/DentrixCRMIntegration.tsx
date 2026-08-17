@@ -111,7 +111,7 @@ const faqItems = [
   {
     question: "Can I integrate Dentrix with GoHighLevel, HubSpot, and Salesforce?",
     answer:
-      "Yes, SmartSync enables seamless Dentrix integration with GoHighLevel, HubSpot, and Salesforce, allowing real-time data synchronization across all platforms for reporting and automation.",
+      "Yes, SmartSync.One enables seamless Dentrix integration with GoHighLevel, HubSpot, and Salesforce, allowing real-time data synchronization across all platforms for reporting and automation.",
   },
   {
     question: "What data is included in Dentrix marketing automation integration?",
@@ -133,11 +133,11 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/dentrix-crm-integration",
   description:
-    "Integrate Dentrix with GoHighLevel, HubSpot, and Salesforce using SmartSync. Sync patients, appointments, treatments, and payments automatically with real-time two-way synchronization.",
- 
+    "Integrate Dentrix with GoHighLevel, HubSpot, and Salesforce using SmartSync.One. Sync patients, appointments, treatments, and payments automatically with real-time two-way synchronization.",
+
   publisher: {
     "@type": "Organization",
-    name: "Smart Sync",
+    name: "SmartSync.One",
     url: "https://smartsync.one",
   },
   featureList: [
@@ -191,7 +191,7 @@ export default function DentrixCRMIntegration() {
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
                 data-testid="text-hero-subheading"
               >
-                Integrate Dentrix directly with your CRM and marketing solutions through SmartSync’s real-time,   two-way synchronization platform.
+                Integrate Dentrix directly with your CRM and marketing solutions through SmartSync.One’s real-time,   two-way synchronization platform.
               </p>
               <p
                 className="text-lg text-gray-600 mb-2 leading-relaxed"
@@ -233,7 +233,7 @@ export default function DentrixCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              What SmartSync Syncs From Dentrix
+              What SmartSync.One Syncs From Dentrix
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -252,7 +252,7 @@ export default function DentrixCRMIntegration() {
             ))}
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            You receive the updates in your CRM automatically in a matter of minutes. 
+            You receive the updates in your CRM automatically in a matter of minutes.
           </p>
         </div>
       </section>
@@ -300,7 +300,7 @@ export default function DentrixCRMIntegration() {
                   })}
                 </ul>
                 <p className="text-lg font-semibold text-gray-900 mt-4">
-                  With SmartSync you can access Dentrix information directly from your CRM environment. 
+                  With SmartSync.One you can access Dentrix information directly from your CRM environment.
                 </p>
               </div>
 
@@ -312,7 +312,7 @@ export default function DentrixCRMIntegration() {
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-primary rounded-2xl p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative z-10">
                 <div className="inline-flex gap-2 items-center px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full mb-6">
                   <Lightbulb size={20} className="text-white" />
-                  How SmartSync Connects Dentrix
+                  How SmartSync.One Connects Dentrix
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
@@ -320,7 +320,7 @@ export default function DentrixCRMIntegration() {
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-4">
-                  SmartSync continuously synchronizes operational updates
+                  SmartSync.One continuously synchronizes operational updates
                   between Dentrix and supported CRM systems.
                 </p>
 
@@ -486,7 +486,7 @@ export default function DentrixCRMIntegration() {
               struggle to demonstrate measurable results.
             </p>
             <p className="text-lg text-gray-600 ">
-              SmartSync automatically tracks payments received after agency
+              SmartSync.One automatically tracks payments received after agency
               onboarding.
             </p>
           </div>
@@ -530,7 +530,7 @@ export default function DentrixCRMIntegration() {
                 Want to Talk to Us?
               </h3>
               <p className="text-blue-100">
-                Schedule a quick demo and see SmartSync in action.
+                Schedule a quick demo and see SmartSync.One in action.
               </p>
             </div>
 
@@ -561,7 +561,7 @@ export default function DentrixCRMIntegration() {
                 Dentrix GoHighLevel Integration for Automation and Reporting
               </h2>
               <p className="text-lg text-gray-600 my-4">
-                SmartSync allows agencies using GoHighLevel to bring real
+                SmartSync.One allows agencies using GoHighLevel to bring real
                 Dentrix activity into CRM workflows.
               </p>
               <p className="text-lg text-gray-900">Trigger automation when:</p>
@@ -640,7 +640,7 @@ export default function DentrixCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">
-              SmartSync synchronizes Dentrix activity directly into HubSpot
+              SmartSync.One synchronizes Dentrix activity directly into HubSpot
               contacts and deal pipelines.
             </p>
           </div>
@@ -700,7 +700,7 @@ export default function DentrixCRMIntegration() {
             </h2>
             <p className="text-lg text-gray-600 mb-2">
               Large dental organizations and consultants using Salesforce can
-              centralize clinic intelligence using SmartSync.
+              centralize clinic intelligence using SmartSync.One.
             </p>
             <p className="text-lg text-gray-600 mb-2">
               Track production performance and patient revenue directly inside
@@ -727,7 +727,7 @@ export default function DentrixCRMIntegration() {
               Expert Dentrix Integration Setup Included
             </h2>
             <p className="text-lg text-gray-600 ">
-              SmartSync onboarding specialists assist during implementation.
+              SmartSync.One onboarding specialists assist during implementation.
             </p>
           </div>
           <div className="">
@@ -773,7 +773,7 @@ export default function DentrixCRMIntegration() {
                 Create Dentrix activity as CRM automation triggers:
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                SmartSync turns clinic procedures into marketing automation signals.
+                SmartSync.One turns clinic procedures into marketing automation signals.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 The available triggers are:
@@ -823,7 +823,7 @@ export default function DentrixCRMIntegration() {
                 Dentrix Analytics Without Manual Reporting
               </h3>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
-                With SmartSync Dentrix business information can be transformed into analytical dashboards.
+                With SmartSync.One Dentrix business information can be transformed into analytical dashboards.
               </p>
               <p className="mx-auto mb-4 max-w-2xl text-[16px] text-gray-600">
                 Keep an eye on:
@@ -853,7 +853,7 @@ export default function DentrixCRMIntegration() {
                 </div>
 
                 <p className="text-gray-600">
-                  Found within SmartSync dashboards and CRM leads.
+                  Found within SmartSync.One dashboards and CRM leads.
                 </p>
               </div>
             </div>
@@ -867,7 +867,7 @@ export default function DentrixCRMIntegration() {
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-4">
               <Sparkles size={20} />
               <span className="font-semibold text-sm">
-                Why SmartSync For Dentrix
+                Why SmartSync.One For Dentrix
               </span>
             </div>
 
@@ -876,12 +876,12 @@ export default function DentrixCRMIntegration() {
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              SmartSync enables agencies and practices to transform Dentrix data
+              SmartSync.One enables agencies and practices to transform Dentrix data
               into growth intelligence.
             </p>
           </div>
           <p className="font-bold p-2 text-lg text-center mb-6">
-            Customers use SmartSync to:
+            Customers use SmartSync.One to:
           </p>
 
           {/* Benefits */}
@@ -937,10 +937,10 @@ export default function DentrixCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies Managing 80+ Dental Clinics
+              Supporting Agencies Managing 100+ Dental Clinics
             </h2>
             <p className="text-lg text-gray-600 mb-2">
-              SmartSync helps agencies and practices eliminate manual reporting
+              SmartSync.One helps agencies and practices eliminate manual reporting
               while improving operational visibility across multiple locations.
             </p>
 
@@ -969,7 +969,7 @@ export default function DentrixCRMIntegration() {
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-4">
             Unlock real-time patient, treatment, and payment visibility using
-            SmartSync.
+            SmartSync.One.
           </p>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Start transforming Dentrix data into measurable growth.
