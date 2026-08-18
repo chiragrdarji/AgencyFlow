@@ -976,7 +976,7 @@ export default function OpenDentalCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies and Clinics Across 100+ Dental Locations
+              Supporting Agencies and Clinics Across 120+ Dental Locations
             </h2>
             <p className="text-lg text-gray-600 mb-2">
               SmartSync.One helps agencies standardize reporting and automation

@@ -237,7 +237,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden xl:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-6">
             {navLinks.map((link) => (
               <NavLink
                 key={link.href}

@@ -874,7 +874,7 @@ export default function DentalMarketingAttributionSoftware() {
           <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Give your agency the ability to demonstrate measurable financial
             results using real clinic data. Join agencies already using
-            SmartSync.One across 100+ dental clinics.
+            SmartSync.One across 120+ dental clinics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

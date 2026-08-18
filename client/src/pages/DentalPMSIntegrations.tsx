@@ -1005,7 +1005,7 @@ export default function DentalPMSIntegrations() {
             and revenue insights.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Join agencies already using SmartSync.One across 100+ dental clinics.
+            Join agencies already using SmartSync.One across 120+ dental clinics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

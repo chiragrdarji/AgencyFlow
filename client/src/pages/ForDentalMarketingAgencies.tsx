@@ -768,7 +768,7 @@ export default function ForDentalMarketingAgencies() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              The agencies managing 100+ dental clinics trust us
+              The agencies managing 120+ dental clinics trust us
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">

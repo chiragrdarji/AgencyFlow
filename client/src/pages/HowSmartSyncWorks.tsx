@@ -823,7 +823,7 @@ export default function HowsmartsyncWorks() {
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             Currently supporting synchronization across{" "}
-            <strong className="text-primary"> 100+ dental clinics</strong>
+            <strong className="text-primary"> 120+ dental clinics</strong>
           </p>
         </div>
       </section>

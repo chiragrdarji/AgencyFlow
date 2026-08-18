@@ -937,7 +937,7 @@ export default function DentrixCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies Managing 100+ Dental Clinics
+              Supporting Agencies Managing 120+ Dental Clinics
             </h2>
             <p className="text-lg text-gray-600 mb-2">
               SmartSync.One helps agencies and practices eliminate manual reporting

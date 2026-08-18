@@ -1021,7 +1021,7 @@ export default function DentalAnalyticsDashboard() {
             using real PMS data.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Join agencies already managing analytics across 100+ dental clinics
+            Join agencies already managing analytics across 120+ dental clinics
             using SmartSync.One.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -152,6 +152,13 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+
+            <div className="hipaa-compliance-footer mt-6">
+              <p>
+                <img src="/img/hipaa-compliant-shield-badge.svg" alt="HIPAA Shield" className="w-[50px]" />
+
+              </p>
+            </div>
           </div>
 
           {/* Features */}

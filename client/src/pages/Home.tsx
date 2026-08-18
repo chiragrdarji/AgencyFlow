@@ -26,6 +26,7 @@ import {
   Eye,
   CheckCircle,
   Star,
+  RefreshCw,
 } from "lucide-react";
 
 const faqItems = [
@@ -100,7 +101,7 @@ export default function Home() {
                 <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-6">
                   <Zap size={16} className="mr-2" />
                   <span data-testid="text-trusted-badge">
-                    Trusted by 100+ Marketing Agencies
+                    Trusted by 120+ Marketing Agencies
                   </span>
                 </div>
                 <h1
@@ -153,9 +154,18 @@ export default function Home() {
                   </Button>
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <Clock size={16} className="mr-2" />
-                  <span data-testid="text-setup-features">
-                    45-minute setup • Real-time sync • HIPAA Compliant
+                  <Clock size={20} className="mr-2 text-primary" />
+                  <span data-testid="text-setup-features" className="flex items-center">
+                    45-minute setup</span>
+                  <RefreshCw size={20} className="mx-2 text-primary" />
+                  <span data-testid="text-setup-features" className="flex items-center">
+                    Real-time sync
+                    <div className="hipaa-compliance-footer">
+                      <p className="flex items-center gap-2 ml-2">
+                        <img src="/img/hipaa-compliant-shield-badge.svg" alt="HIPAA Shield" className="w-[20px]" />
+                        HIPAA Compliant
+                      </p>
+                    </div>
                   </span>
                 </div>
               </div>
@@ -178,9 +188,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section >
         {/* Who This Is For */}
-        <section className="py-20 bg-white">
+        < section className="py-20 bg-white" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -312,9 +322,9 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section>
+        </section >
         {/* Problem Statement */}
-        <section className="py-20 bg-gray-50">
+        < section className="py-20 bg-gray-50" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -386,9 +396,9 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section>
+        </section >
         {/* Solution Overview */}
-        <section className="py-20 bg-white">
+        < section className="py-20 bg-white" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -527,9 +537,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section >
         {/* Key Features */}
-        <section className="py-20 bg-gray-50">
+        < section className="py-20 bg-gray-50" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -665,9 +675,9 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section>
+        </section >
         {/* How It Works */}
-        <section className="py-20 bg-white">
+        < section className="py-20 bg-white" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -734,9 +744,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section >
         {/* Testimonials */}
-        <section className="py-20 bg-primary-light">
+        < section className="py-20 bg-primary-light" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -787,9 +797,9 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section >
         {/* FAQ Section */}
-        <section className="py-20 bg-gray-50">
+        < section className="py-20 bg-gray-50" >
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -805,9 +815,9 @@ export default function Home() {
 
             <FAQ items={faqItems} />
           </div>
-        </section>
+        </section >
         {/* Final CTA */}
-        <section className="py-20 bg-primary">
+        < section className="py-20 bg-primary" >
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2
               className="text-3xl lg:text-4xl font-bold text-white mb-6"
@@ -817,7 +827,7 @@ export default function Home() {
               Automatically
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join 100+ marketing agencies already using our connector to grow
+              Join 120+ marketing agencies already using our connector to grow
               their dental clients' practices.
             </p>
 
@@ -873,9 +883,9 @@ export default function Home() {
               </span>
             </div>
           </div>
-        </section>
+        </section >
         {/*  */}
-        <section className="py-20 bg-gray-50">
+        < section className="py-20 bg-gray-50" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2
@@ -896,8 +906,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
-      </div>
+        </section >
+      </div >
     </>
   );
 }
