@@ -999,7 +999,7 @@ export default function SupportedPlatforms() {
               data-testid="button-contact-support"
               asChild
             >
-              <a href="https://calendly.com/smart-sync/meeting">Book a Demo</a>
+              <a href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ">Book a Demo</a>
             </Button>
           </div>
         </div>

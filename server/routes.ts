@@ -77,7 +77,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             <p style="color: #6b7280; font-size: 14px;">
               SmartSync.One<br>
               30 N Gould St. Sheridan,WY 82801 USA<br>
-              info@smartsync.one
+              support@smartsync.one
             </p>
           </div>
         `,

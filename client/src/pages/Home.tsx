@@ -153,20 +153,25 @@ export default function Home() {
                     </a>
                   </Button>
                 </div>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Clock size={20} className="mr-2 text-primary" />
-                  <span data-testid="text-setup-features" className="flex items-center">
-                    45-minute setup</span>
-                  <RefreshCw size={20} className="mx-2 text-primary" />
-                  <span data-testid="text-setup-features" className="flex items-center">
-                    Real-time sync
-                    <div className="hipaa-compliance-footer">
-                      <p className="flex items-center gap-2 ml-2">
-                        <img src="/img/hipaa-compliant-shield-badge.svg" alt="HIPAA Shield" className="w-[20px]" />
-                        HIPAA Compliant
-                      </p>
-                    </div>
-                  </span>
+                <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600">
+                  <div className="flex items-center">
+                    <Clock size={20} className="mr-2 text-primary" />
+                    <span data-testid="text-setup-time">45-minute setup</span>
+                  </div>
+
+                  <div className="flex items-center">
+                    <RefreshCw size={20} className="mr-2 text-primary" />
+                    <span data-testid="text-real-time-sync">Real-time sync</span>
+                  </div>
+
+                  <div className="flex items-center">
+                    <img
+                      src="/img/hipaa-compliant-shield-badge.svg"
+                      alt="HIPAA Shield"
+                      className="w-5 h-5 mr-2"
+                    />
+                    <span>HIPAA Compliant</span>
+                  </div>
                 </div>
               </div>
               <div className="relative">
@@ -867,7 +872,7 @@ export default function Home() {
                 data-testid="button-final-book-demo"
               >
                 <a
-                  href="https://calendly.com/smart-sync/meeting"
+                  href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

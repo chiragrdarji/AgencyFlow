@@ -124,7 +124,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
                   data-testid="button-buy-dentrix"
                 >
                   <a
-                    href="https://calendly.com/smart-sync/meeting"
+                    href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -694,7 +694,7 @@ export default function DentalMarketingAttributionSoftwareOld() {
               data-testid="button-contact-support"
               asChild
             >
-              <a href="https://calendly.com/smart-sync/meeting">Book a Demo</a>
+              <a href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ">Book a Demo</a>
             </Button>
           </div>
         </div>

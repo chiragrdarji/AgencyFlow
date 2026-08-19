@@ -124,7 +124,7 @@ export const getOrganizationSchema = () => {
       '@type': 'ContactPoint',
       telephone: '+1 630 861 8263',
       contactType: 'customer service',
-      email: 'info@smartsync.one',
+      email: 'support@smartsync.one',
       availableLanguage: 'English',
     },
     sameAs: ['https://www.linkedin.com/company/smart-sync-one/'],

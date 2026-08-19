@@ -210,7 +210,7 @@ export default function DentalMarketingAttributionSoftware() {
                   data-testid="button-buy-dentrix"
                 >
                   <a
-                    href="https://calendly.com/smart-sync/meeting"
+                    href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -550,7 +550,7 @@ export default function DentalMarketingAttributionSoftware() {
 
             {/* CTA Button */}
             <a
-              href="https://calendly.com/smart-sync/meeting"
+              href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-primary font-semibold px-8 py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2"
@@ -883,7 +883,7 @@ export default function DentalMarketingAttributionSoftware() {
               data-testid="button-contact-support"
               asChild
             >
-              <a href="https://calendly.com/smart-sync/meeting">Book a Demo</a>
+              <a href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ">Book a Demo</a>
             </Button>
           </div>
         </div>

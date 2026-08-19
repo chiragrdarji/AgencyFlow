@@ -151,7 +151,7 @@ export default function Contact() {
                             </p>
                             {method.title === "Schedule a Demo" ? (
                               <a
-                                href="https://calendly.com/smart-sync/meeting"
+                                href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-1 text-sm font-medium text-blue-600 hover:underline"
@@ -221,7 +221,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <MessageSquare className="mr-2" size={20} />
@@ -392,7 +392,26 @@ export default function Contact() {
                     </form>
                   </Form>
                 </CardContent>
-              </Card>
+              </Card> */}
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/L2woMrVA9gAZTmPEGGZh"
+                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '8px' }}
+                id="inline-L2woMrVA9gAZTmPEGGZh"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Us"
+                data-height="616"
+                data-layout-iframe-id="inline-L2woMrVA9gAZTmPEGGZh"
+                data-form-id="L2woMrVA9gAZTmPEGGZh"
+                title="Contact Us"
+              >
+              </iframe>
+              <script src="https://link.msgsndr.com/js/form_embed.js"></script>
             </div>
           </div>
 

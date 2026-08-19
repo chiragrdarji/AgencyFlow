@@ -50,7 +50,7 @@ export default function Footer() {
     { href: "/supported-platforms", label: "Supported Platforms" },
     { href: "/onboarding", label: "Onboarding" },
     { href: "/education", label: "Education Materials" },
-    { href: "/contact", label: "Contact" },
+    { href: "/contact", label: "Contact Us" },
     { href: "/privacy-policy", label: "Privacy Policy" },
   ];
 
@@ -110,9 +110,9 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="">
             <div className="flex items-center mb-6">
               <div className="w-9 h-9 rounded-lg flex items-center justify-center mr-3">
                 <img
@@ -141,8 +141,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <Mail size={16} className="mr-3 w-4" />
-                <a href="mailto:info@smartsync.one" data-testid="text-email">
-                  info@smartsync.one
+                <a href="mailto:support@smartsync.one" data-testid="text-email">
+                  support@smartsync.one
                 </a>
               </div>
               <div className="flex items-center">
@@ -204,7 +204,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Form with Validation */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold mb-4">Get In Touch</h3>
             {isClient && (
               <Form {...form}>
@@ -296,7 +296,7 @@ export default function Footer() {
                 </form>
               </Form>
             )}
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-gray-800 mt-12 py-8 text-center text-sm text-gray-400">

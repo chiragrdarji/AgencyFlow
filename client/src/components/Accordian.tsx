@@ -185,7 +185,7 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
                 setIsOpen?.(false);
               }}
             >
-              Other Platforms
+              Exolore All Integrations
             </Link>
           </div>
         )}

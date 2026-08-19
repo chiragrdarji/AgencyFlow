@@ -305,7 +305,7 @@ export default function Onboarding() {
               data-testid="button-book-setup-call"
             >
               <a
-                href="https://calendly.com/smart-sync/meeting"
+                href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
                 target="_blank"
                 rel="noopener noreferrer"
               >

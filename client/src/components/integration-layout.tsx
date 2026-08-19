@@ -693,7 +693,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
               data-testid="button-schedule-demo"
             >
               <Calendar className="mr-2 h-5 w-5" />  <a
-                href="https://calendly.com/smart-sync/meeting"
+                href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
                 target="_blank"
                 rel="noopener noreferrer"
               > Schedule Demo </a>
@@ -915,7 +915,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
             >
               <Calendar className="mr-2 h-5 w-5" />{" "}
               <a
-                href="https://calendly.com/smart-sync/meeting"
+                href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
                 target="_blank"
                 rel="noopener noreferrer"
               >
