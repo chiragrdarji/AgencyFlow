@@ -872,7 +872,7 @@ export default function Home() {
                 data-testid="button-final-book-demo"
               >
                 <a
-                  href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
+                  href="/schedule-a-call"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

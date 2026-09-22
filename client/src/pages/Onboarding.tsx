@@ -305,7 +305,7 @@ export default function Onboarding() {
               data-testid="button-book-setup-call"
             >
               <a
-                href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
+                href="/schedule-a-call"
                 target="_blank"
                 rel="noopener noreferrer"
               >

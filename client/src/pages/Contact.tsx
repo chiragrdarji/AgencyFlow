@@ -151,7 +151,7 @@ export default function Contact() {
                             </p>
                             {method.title === "Schedule a Demo" ? (
                               <a
-                                href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
+                                href="/schedule-a-call"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-1 text-sm font-medium text-blue-600 hover:underline"

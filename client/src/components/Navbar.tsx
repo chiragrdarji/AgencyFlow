@@ -302,7 +302,7 @@ export default function Navbar() {
               className="bg-primary text-white hover:bg-primary-dark hidden xl:block"
             >
               <a
-                href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
+                href="/schedule-a-call"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -361,7 +361,7 @@ export default function Navbar() {
                       data-testid="button-mobile-demo"
                     >
                       <a
-                        href="https://api.leadconnectorhq.com/widget/booking/Ff8QEqSOqwBCb7JckznJ"
+                        href="/schedule-a-call"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
