@@ -255,20 +255,18 @@ export default function Navbar() {
                 className={`flex items-center py-[20px] ${isMenuOpen ? "text-primary" : " text-gray-700 "} font-medium hover:text-primary  transition-colors`}
                 data-testid="agency-menu-toggle"
               >
-                <span>Resources</span>
-                <ChevronDown className="ml-2 h-4 w-4" />
+                <a
+                  href="/blog"
+                  className=" flex  justify-between  rounded-bl-lg rounded-br-lg  "
+
+                >
+                  Blog
+                </a>
               </button>
 
-              {isMenuOpen && (
+              {/* {isMenuOpen && (
                 <div className="absolute left-0  w-[120px] bg-white  rounded-bl-lg rounded-br-lg shadow-lg border-slate-200 z-10">
-                  {/* <a
-                    href="/pdfs/Smart_sync.pdf"
-                    download
-                    className=" flex  justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg  "
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    BAA <Download size={16} />{" "}
-                  </a> */}
+                 
                   <a
                     href="/blog"
                     className=" flex  justify-between px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 rounded-bl-lg rounded-br-lg  "
@@ -277,7 +275,7 @@ export default function Navbar() {
                     Blog
                   </a>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
 

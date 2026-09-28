@@ -192,7 +192,7 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
       </div>
       {/* Resources Section */}
       <div>
-        <button
+        {/* <button
           onClick={() => toggleSection("resources")}
           className="flex justify-between items-center w-full py-4 px-4 text-left text-gray-700 font-medium hover:text-primary transition-colors"
         >
@@ -201,7 +201,17 @@ export default function Accordian({ setIsOpen }: AccordianProps) {
             className={`h-4 w-4 transition-transform duration-300 ${openSection === "resources" ? "rotate-180 text-primary" : ""
               }`}
           />
-        </button>
+        </button> */}
+        <a
+          href="/blog"
+          className="flex justify-between items-center w-full py-4 px-4 text-left text-gray-700 font-medium hover:text-primary transition-colors"
+          onClick={() => {
+            setOpenSection(null);
+            setIsOpen?.(false);
+          }}
+        >
+          Blog
+        </a>
 
         {openSection === "resources" && (
           <div className=" pb-3 px-8 space-y-2">

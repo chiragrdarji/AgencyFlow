@@ -33,6 +33,9 @@ export default function Footer() {
     setIsClient(true);
   }, []);
   const features = [
+    { href: "/open-dental-gohighlevel-integration", label: " Open Dental to GHL Integration" },
+    { href: "/dentrix-gohighlevel-integration", label: " Dentrix to GHL Integration" },
+    { href: "/supported-platforms", label: "Suppported Platforms" },
     { href: "/dental-marketing-attribution", label: "Dental Marketing Attribution Software" },
     { href: "/dental-analytics-dashboard", label: "Dental Analytics Dashboard" },
     { href: "/for-dental-marketing-agencies", label: "For Dental Marketing Agencies" },
@@ -47,10 +50,12 @@ export default function Footer() {
 
   const quickLinks = [
     { href: "/", label: "Home" },
-    { href: "/supported-platforms", label: "Supported Platforms" },
+    // { href: "/supported-platforms", label: "Supported Platforms" },
     { href: "/onboarding", label: "Onboarding" },
     { href: "/education", label: "Education Materials" },
     { href: "/contact", label: "Contact Us" },
+    { href: "/blog", label: "Blog" },
+    { href: "/schedule-a-call", label: "Book a Demo" },
     { href: "/privacy-policy", label: "Privacy Policy" },
   ];
 
@@ -155,7 +160,7 @@ export default function Footer() {
 
             <div className="hipaa-compliance-footer mt-6">
               <p>
-                <img src="/img/hipaa-compliant-shield-badge.svg" alt="HIPAA Shield" className="w-[50px]" />
+                <img src="/img/hipaa-compliant-shield-badge.svg" alt="HIPAA Shield" className="w-[80px]" />
 
               </p>
             </div>
