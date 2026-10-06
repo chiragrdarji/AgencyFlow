@@ -84,6 +84,22 @@
   .animate-pulse-slow {
     animation: pulse 3s ease-in-out infinite;
   }
+
+  .animate-zoom-pulse {
+    animation: zoomPulse 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes zoomPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.11);
+  }
 }
 
 @keyframes float {

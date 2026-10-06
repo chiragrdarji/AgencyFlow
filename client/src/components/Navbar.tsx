@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-import { Download, Menu, ChevronDown } from "lucide-react";
+import { Download, Menu, ChevronDown, Star, Sparkle, Sparkles } from "lucide-react";
 import Accordian from "@/components/Accordian";
 
 import {
@@ -215,6 +215,26 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-99">
+      {/* Top Gradient Announcement Bar for LevelUp */}
+      <div className="bg-gradient-to-r from-[#4c1d95] via-[#7e22ce] to-[#c026d3] text-white py-2 px-4 text-xs sm:text-sm">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-left gap-4 min-w-0">
+            <Sparkles className="h-5 w-5 animate-zoom-pulse"></Sparkles>
+            <span className="inline-flex gap-1 items-center bg-white/20 text-white text-[10px] sm:text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider shrink-0 items-center ">
+              <span>LevelUp 2026</span>
+            </span>
+            <span className="truncate font-medium text-xs sm:text-sm">
+              Meet us live & elevate your agency operations!
+            </span>
+          </div>
+          <Link href="/levelup">
+            <span className="inline-flex items-center gap-1.5 bg-white text-[#c026d3] hover:bg-blue-50 font-semibold px-3 py-1 rounded-full text-xs transition-all shadow-sm cursor-pointer shrink-0 hover:shadow-md hover:scale-105 active:scale-95 animate-zoom-pulse">
+              Meet Us &rarr;
+            </span>
+          </Link>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/">

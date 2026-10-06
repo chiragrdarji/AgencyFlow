@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Building2, MapPin, Mail, Phone } from "lucide-react";
+import { Building2, MapPin, Mail, Phone, Facebook, Youtube, Instagram, Linkedin } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "@/hooks/use-toast";
@@ -57,6 +57,7 @@ export default function Footer() {
     { href: "/blog", label: "Blog" },
     { href: "/schedule-a-call", label: "Book a Demo" },
     { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/levelup", label: "Meet us at Levelup" },
   ];
 
   // 2️⃣ Setup form
@@ -156,6 +157,21 @@ export default function Footer() {
                   +1 630 861 8263
                 </a>
               </div>
+
+            </div>
+            <div className="flex items-center space-x-3 mt-4 text-gray-400">
+              <a className="border border-gray-600 rounded-full p-2 hover:border-white" href="https://www.facebook.com/people/SmartSyncOne/61590375405683/" target="_blank" >
+                <Facebook size={16} className=" w-6 h-6 hover:text-white" />
+              </a>
+              <a className="border border-gray-600 rounded-full p-2 hover:border-white" href="https://www.youtube.com/@SmartSync-One" target="_blank" >
+                <Youtube size={16} className=" w-6 h-6 hover:text-white" />
+              </a>
+              <a className="border border-gray-600 rounded-full p-2 hover:border-white" href="https://www.instagram.com/smartsync.one/" target="_blank" >
+                <Instagram size={16} className=" w-6 h-6 hover:text-white" />
+              </a>
+              <a className="border border-gray-600 rounded-full p-2 hover:border-white" href="https://www.linkedin.com/company/smart-sync-one" target="_blank" >
+                <Linkedin size={16} className=" w-6 h-6 hover:text-white" />
+              </a>
             </div>
 
             <div className="hipaa-compliance-footer mt-6">
@@ -193,7 +209,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-400">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>
+                  <a href={link.href}>
                     <span
                       className="hover:text-white transition-colors cursor-pointer"
                       data-testid={`link-footer-${link.label
@@ -202,7 +218,7 @@ export default function Footer() {
                     >
                       {link.label}
                     </span>
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

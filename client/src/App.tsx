@@ -27,10 +27,11 @@ import EaglesoftCRMIntegration from "./pages/EaglesoftCRMIntegration";
 import GoHighLevelDentalIntegration from "./pages/GoHighLevelDentalIntegration";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ScheduleaCall from "./pages/ScheduleCall";
+import LevelUpLanding from "./pages/levelup-landing";
 
 export const DownloadPage = () => {
   const [, setLocation] = useLocation();
- 
+
   useEffect(() => {
     // Trigger download
     const link = document.createElement("a");
@@ -39,13 +40,13 @@ export const DownloadPage = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
- 
+
     // Redirect after short delay
     setTimeout(() => {
       setLocation("/"); // Redirect to home page
     }, 500); // 0.5s delay
   }, [setLocation]);
- 
+
   return <h2>Your download should start shortly...</h2>;
 };
 
@@ -78,7 +79,9 @@ function Router() {
         <Route path="/gohighlevel-dental-integration" component={GoHighLevelDentalIntegration} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route path="/schedule-a-call" component={ScheduleaCall} />
-        
+        <Route path="/levelup" component={LevelUpLanding} />
+
+
         <Route component={NotFound} />
       </Switch>
     </Layout>
