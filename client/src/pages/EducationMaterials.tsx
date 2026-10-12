@@ -39,6 +39,30 @@ const videoTutorials = [
     category: "Marketing",
     url: "https://www.youtube.com/watch?v=RoFXn45J6ts",
   },
+  {
+    title: "Integrate Dentrix to GHL (GoHighLevel) Quick Demo",
+    duration: "",
+    description: "Quick walkthrough demonstrating how to connect and integrate Dentrix with GoHighLevel",
+    thumbnail: "automation",
+    category: "Marketing",
+    url: "https://vimeo.com/1102095318",
+  },
+  {
+    title: "Integrate Open Dental to GHL (GoHighLevel) Working Demo",
+    duration: "",
+    description: "Live working demonstration of real-time two-way synchronization between Open Dental and GoHighLevel",
+    thumbnail: "automation",
+    category: "Marketing",
+    url: "https://www.youtube.com/watch?v=YWDnFVUbedI",
+  },
+  {
+    title: "Integrate Dentrix to GHL (GoHighLevel) Working Demo",
+    duration: "",
+    description: "Live working demonstration of real-time two-way synchronization between Dentrix and GoHighLevel",
+    thumbnail: "automation",
+    category: "Marketing",
+    url: "https://www.youtube.com/watch?v=k6QUydXL3vY",
+  },
   // {
   //   title: "Troubleshooting Common Issues",
   //   duration: "",
@@ -48,6 +72,24 @@ const videoTutorials = [
   //   url: null, // no link
   // },
 ];
+
+const getEmbedUrl = (url: string) => {
+  if (!url) return "";
+
+  // Check Vimeo (e.g. https://vimeo.com/1102095318 or https://player.vimeo.com/video/1102095318)
+  const vimeoMatch = url.match(/(?:vimeo\.com\/(?:video\/)?|player\.vimeo\.com\/video\/)(\d+)/);
+  if (vimeoMatch) {
+    return `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+  }
+
+  // Check YouTube (e.g. https://www.youtube.com/watch?v=xxx, https://youtu.be/xxx, https://www.youtube.com/embed/xxx)
+  const youtubeMatch = url.match(/(?:youtube\.com\/(?:watch\?.*?v=|embed\/)|youtu\.be\/)([^&?/\s]+)/);
+  if (youtubeMatch) {
+    return `https://www.youtube.com/embed/${youtubeMatch[1]}`;
+  }
+
+  return url;
+};
 
 const guides = [
   {
@@ -197,11 +239,10 @@ export default function EducationMaterials() {
                         <iframe
                           width="100%"
                           height="100%"
-                          src={`https://www.youtube.com/embed/${video.url.split("v=")[1]
-                            }`}
+                          src={getEmbedUrl(video.url)}
                           title={video.title}
                           frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                           allowFullScreen
                           className="rounded-lg"
                         />

@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Building2, MapPin, Mail, Phone, Facebook, Youtube, Instagram, Linkedin } from "lucide-react";
+import { Building2, MapPin, Mail, Phone } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "@/hooks/use-toast";
@@ -159,18 +159,82 @@ export default function Footer() {
               </div>
 
             </div>
-            <div className="flex items-center space-x-3 mt-4 text-gray-400">
-              <a className="border border-gray-600 rounded-full p-2 hover:border-white" href="https://www.facebook.com/people/SmartSyncOne/61590375405683/" target="_blank" >
-                <Facebook size={16} className=" w-6 h-6 hover:text-white" />
+            <div className="flex items-center space-x-4 mt-4">
+              <a
+                className=" hover:bg-gray-800  flex items-center justify-center hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-200"
+                href="https://www.facebook.com/people/SmartSyncOne/61590375405683/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    fill="#1877F2"
+                  />
+                  <path
+                    d="M16.671 15.543l.532-3.47h-3.328v-2.25c0-.949.465-1.874 1.956-1.874h1.514V4.996s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669v2.613H7.078v3.47h3.047v8.385a12.18 12.18 0 003.85 0v-8.385h2.696z"
+                    fill="#ffffff"
+                  />
+                </svg>
               </a>
-              <a className="border border-gray-600 rounded-full p-2 hover:border-white" href="https://www.youtube.com/@SmartSync-One" target="_blank" >
-                <Youtube size={16} className=" w-6 h-6 hover:text-white" />
+              <a
+                className=" hover:bg-gray-800 hover:border-[#FF0000]/80 flex items-center justify-center hover:scale-110 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-200"
+                href="https://www.youtube.com/@SmartSync-One"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"
+                    fill="#FF0000"
+                  />
+                  <path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#ffffff" />
+                </svg>
               </a>
-              <a className="border border-gray-600 rounded-full p-2 hover:border-white" href="https://www.instagram.com/smartsync.one/" target="_blank" >
-                <Instagram size={16} className=" w-6 h-6 hover:text-white" />
+              <a
+                className=" hover:bg-gray-800 hover:border-[#E1306C]/80 flex items-center justify-center hover:scale-110 hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-200"
+                href="https://www.instagram.com/smartsync.one/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <radialGradient id="footer-ig-grad" cx="30%" cy="107%" r="150%">
+                      <stop offset="0%" stopColor="#fdf497" />
+                      <stop offset="5%" stopColor="#fdf497" />
+                      <stop offset="45%" stopColor="#fd5949" />
+                      <stop offset="60%" stopColor="#d6249f" />
+                      <stop offset="90%" stopColor="#285AEB" />
+                    </radialGradient>
+                  </defs>
+                  <rect width="24" height="24" rx="6" fill="url(#footer-ig-grad)" />
+                  <path
+                    d="M12 5.838c2.007 0 2.245.008 3.037.044.733.034 1.13.156 1.395.259.35.136.6.299.863.562.263.263.426.513.562.863.103.265.225.662.259 1.395.036.792.044 1.03.044 3.037s-.008 2.245-.044 3.037c-.034.733-.156 1.13-.259 1.395-.136.35-.299.6-.562.863-.263.263-.513.426-.863.562-.265.103-.662.225-1.395.259-.792.036-1.03.044-3.037.044s-2.245-.008-3.037-.044c-.733-.034-1.13-.156-1.395-.259a2.32 2.32 0 0 1-.863-.562 2.32 2.32 0 0 1-.562-.863c-.103-.265-.225-.662-.259-1.395-.036-.792-.044-1.03-.044-3.037s.008-2.245.044-3.037c.034-.733.156-1.13.259-1.395.136-.35.299-.6.562-.863.263-.263.513-.426.863-.562.265-.103.662-.225 1.395-.259.792-.036 1.03-.044 3.037-.044zm0-1.638c-2.041 0-2.297.009-3.099.045-.8.037-1.348.164-1.826.35a3.953 3.953 0 0 0-1.428.93 3.953 3.953 0 0 0-.93 1.428c-.186.478-.313 1.026-.35 1.826C4.331 9.565 4.322 9.821 4.322 12s.009 2.435.045 3.099c.037.8.164 1.348.35 1.826.192.496.45.92.93 1.428.48.508.932.738 1.428.93.478.186 1.026.313 1.826.35.802.036 1.058.045 3.099.045s2.297-.009 3.099-.045c.8-.037 1.348-.164 1.826-.35a3.953 3.953 0 0 0 1.428-.93 3.953 3.953 0 0 0 .93-1.428c.186-.478.313-1.026.35-1.826.036-.802.045-1.058.045-3.099s-.009-2.297-.045-3.099c-.037-.8-.164-1.348-.35-1.826a3.953 3.953 0 0 0-.93-1.428 3.953 3.953 0 0 0-1.428-.93c-.478-.186-1.026-.313-1.826-.35-.802-.036-1.058-.045-3.099-.045z"
+                    fill="#ffffff"
+                  />
+                  <path
+                    d="M12 8.081a3.919 3.919 0 1 0 0 7.838 3.919 3.919 0 0 0 0-7.838zm0 6.398a2.479 2.479 0 1 1 0-4.958 2.479 2.479 0 0 1 0 4.958zM17.155 7.761a.916.916 0 1 1-1.832 0 .916.916 0 0 1 1.832 0z"
+                    fill="#ffffff"
+                  />
+                </svg>
               </a>
-              <a className="border border-gray-600 rounded-full p-2 hover:border-white" href="https://www.linkedin.com/company/smart-sync-one" target="_blank" >
-                <Linkedin size={16} className=" w-6 h-6 hover:text-white" />
+              <a
+                className=" hover:bg-gray-800 hover:border-[#0A66C2]/80 flex items-center justify-center hover:scale-110 hover:shadow-lg hover:shadow-blue-600/20 transition-all duration-200"
+                href="https://www.linkedin.com/company/smart-sync-one"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="4" fill="#0A66C2" />
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                    fill="#ffffff"
+                  />
+                </svg>
               </a>
             </div>
 
