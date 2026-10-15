@@ -577,8 +577,7 @@ export default function LevelUpLanding() {
 
 
         {/* SECTION 7: FOOTER COUNTDOWN & SEE YOU IN DALLAS */}
-        <div className="bg-gradient-to-r from-[#2082eb] via-[#298bf3] to-[#3b82f6] rounded-[28px] p-4 sm:p-6 relative overflow-hidden mb-10 shadow-xl shadow-blue-500/20 text-white flex justify-center items-center max-w-5xl sm:mx-auto  mr-5 ml-5 p-6 mt-10">
-          {/* Curved Quarter Circle Overlay on Top-Left */}
+        {/* <div className="bg-gradient-to-r from-[#2082eb] via-[#298bf3] to-[#3b82f6] rounded-[28px] p-4 sm:p-6 relative overflow-hidden mb-10 shadow-xl shadow-blue-500/20 text-white flex justify-center items-center max-w-5xl sm:mx-auto  mr-5 ml-5 p-6 mt-10">
           <div className="hidden sm:block absolute -top-16 -left-16 w-56 h-56 rounded-full bg-white/15 pointer-events-none" />
 
           <div className="relative z-10  justify-center flex flex-col gap-4 items-center">
@@ -624,7 +623,7 @@ export default function LevelUpLanding() {
 
 
           </div>
-        </div>
+        </div> */}
 
       </div>
     </>
