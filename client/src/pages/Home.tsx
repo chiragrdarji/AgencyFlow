@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
@@ -43,6 +43,8 @@ import {
   ArrowRight,
   CheckCircle2,
   Layers,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 const faqItems = [
@@ -220,6 +222,106 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slideCount, setSlideCount] = useState(0);
 
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const slide0Ref = useRef<HTMLDivElement>(null);
+  const slide1Ref = useRef<HTMLDivElement>(null);
+  const slide2Ref = useRef<HTMLDivElement>(null);
+  const video0Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
+  const [sliderHeight, setSliderHeight] = useState<number | undefined>(undefined);
+
+  // Auto-scroll forward: slide 0 displays for 6s, slide 1 displays for 5s
+  useEffect(() => {
+    if (!isTransitioning || slideIndex > 1) return;
+
+    const duration = slideIndex === 0 ? 6000 : 5000;
+    const timer = setTimeout(() => {
+      setSlideIndex((prev) => prev + 1);
+    }, duration);
+
+    return () => clearTimeout(timer);
+  }, [slideIndex, isTransitioning]);
+
+  // When transitioning to slide 2 (clone of slide 0), silently snap back to slide 0 after transition completes
+  const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget && e.propertyName === "transform" && slideIndex === 2) {
+      if (video0Ref.current && video2Ref.current) {
+        try {
+          video0Ref.current.currentTime = video2Ref.current.currentTime;
+        } catch {
+          // ignore playback sync errors
+        }
+      }
+      setIsTransitioning(false);
+      setSlideIndex(0);
+    }
+  };
+
+  // Fallback timer to ensure seamless snap happens even if onTransitionEnd is delayed or unfocused
+  useEffect(() => {
+    if (slideIndex === 2) {
+      const resetTimer = setTimeout(() => {
+        if (video0Ref.current && video2Ref.current) {
+          try {
+            video0Ref.current.currentTime = video2Ref.current.currentTime;
+          } catch {
+            // ignore
+          }
+        }
+        setIsTransitioning(false);
+        setSlideIndex(0);
+      }, 750);
+
+      return () => clearTimeout(resetTimer);
+    }
+  }, [slideIndex]);
+
+  // Re-enable transition immediately after resetting to index 0
+  useEffect(() => {
+    if (!isTransitioning && slideIndex === 0) {
+      const frame = requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsTransitioning(true);
+        });
+      });
+      const timer = setTimeout(() => {
+        setIsTransitioning(true);
+      }, 50);
+
+      return () => {
+        cancelAnimationFrame(frame);
+        clearTimeout(timer);
+      };
+    }
+  }, [isTransitioning, slideIndex]);
+
+  // Dynamically adapt height to the active slide's natural height
+  useEffect(() => {
+    const activeEl = (slideIndex === 0 || slideIndex === 2) ? slide0Ref.current : slide1Ref.current;
+    if (!activeEl) return;
+
+    const updateHeight = () => {
+      if (activeEl) {
+        setSliderHeight(activeEl.offsetHeight);
+      }
+    };
+
+    updateHeight();
+
+    const ro = new ResizeObserver(updateHeight);
+    ro.observe(activeEl);
+
+    const otherEl = (slideIndex === 0 || slideIndex === 2) ? slide1Ref.current : slide0Ref.current;
+    if (otherEl) {
+      ro.observe(otherEl);
+    }
+
+    return () => ro.disconnect();
+  }, [slideIndex]);
+
+
+
   useEffect(() => {
     if (!carouselApi) return;
 
@@ -320,7 +422,7 @@ export default function Home() {
                 <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-gray-800">
 
                   <Database className="w-4 h-4 text-primary shrink-0" />
-                  <span><strong className="text-primary font-bold">11</strong> PMS platforms</span>
+                  <span><strong className="text-primary font-bold">40+</strong> PMS platforms</span>
 
                 </div>
               </a>
@@ -339,7 +441,9 @@ export default function Home() {
                 <span className=" font-bold">HIPAA compliant</span>
               </div>
             </div>
+            {/* Hero Main Content */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left Column — Static (Headline, Subheading & CTAs never slide) */}
               <div>
                 <h1
                   className="text-4xl lg:text-[54px] lg:leading-[58px] font-bold text-gray-900 leading-tight mb-6"
@@ -359,11 +463,12 @@ export default function Home() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col gap-4 mb-8">
                   {/* Row 1 — Primary */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2  sm:flex-row gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 sm:flex-row gap-4">
                     <Button
                       asChild
+                      variant="outline"
                       size="lg"
-                      className="bg-primary text-white hover:bg-primary-dark text-lg px-8 py-4 font-semibold shadow-md"
+                      className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-4 font-semibold"
                       data-testid="button-book-demo"
                     >
                       <Link href="/schedule-a-call">
@@ -391,7 +496,7 @@ export default function Home() {
                       href="https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" text-lg text-center bg-blue-50/90 px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-primary hover:border-primary"
+                      className="text-lg text-center bg-primary text-white hover:bg-primary-dark px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-primary hover:border-primary"
                       data-testid="button-buy-dentrix"
                     >
                       Buy Dentrix → GHL
@@ -401,33 +506,114 @@ export default function Home() {
                       href="https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" text-lg text-center bg-blue-50/90 px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-primary  hover:border-primary"
+                      className="text-lg text-center bg-primary text-white hover:bg-primary-dark px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-primary hover:border-primary"
                       data-testid="button-buy-open-dental"
                     >
                       Buy Open Dental → GHL
                     </a>
                   </div>
                 </div>
-
               </div>
-              <div className="relative">
-                {/* <img
-                  src="/img/Smart-Sync-One.gif"
-                  alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow" 
-                /> */}
 
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className=" h-auto"
-                  style={{ visibility: "visible" }}
+              {/* Right Column — Slider in the media/gif area only */}
+              <div className="relative w-full lg:max-h-[585px]">
+                <div
+                  className="overflow-hidden w-full transition-[height] duration-500 ease-in-out"
+                  style={{ height: sliderHeight ? `${sliderHeight}px` : "auto" }}
                 >
-                  <source src="/img/Smart-Sync-One.webm" type="video/webm" />
-                </video>
-              </div>
+                  <div
+                    onTransitionEnd={handleTransitionEnd}
+                    className={`flex items-center ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
+                    style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+                  >
+                    {/* Media Slide 0: Video / GIF */}
+                    <div ref={slide0Ref} className="w-full shrink-0 flex items-center justify-center">
+                      <video
+                        ref={video0Ref}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="h-auto w-full"
+                        style={{ visibility: "visible" }}
+                      >
+                        <source src="/img/Smart-Sync-One.webm" type="video/webm" />
+                      </video>
+                    </div>
 
+                    {/* Media Slide 1: A Top Marketplace App on GoHighLevel */}
+                    <div ref={slide1Ref} className="w-full shrink-0 flex flex-col items-center justify-center py-2 px-2 text-center">
+                      <h2
+                        className="text-2xl sm:text-[44px] lg:text-[44px] lg:leading-[52px] font-bold text-gray-900 leading-tight mb-4"
+                        data-testid="text-hero-headline-slide2"
+                      >
+                        A Top Marketplace App on
+                        <span className="block"> <span className="text-[#FFC441]">GO</span><span className="text-[#0B90C8]">High</span><span className="text-[#00B857]">Level</span> </span>
+                      </h2>
+                      <div className="max-w-[260px] min-w-full lg:min-w-[550px] mx-auto lg:mb-8">
+                        <img
+                          src="/img/top-marketplace-app-on-gohighlevel.webp"
+                          alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
+                          className="h-auto h-full drop-shadow-xl "
+                          onLoad={() => {
+                            if (slide1Ref.current && slideIndex === 1) {
+                              setSliderHeight(slide1Ref.current.offsetHeight);
+                            }
+                          }}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Media Slide 0 Clone for infinite seamless forward scrolling */}
+                    <div ref={slide2Ref} className="w-full shrink-0 flex items-center justify-center" aria-hidden="true">
+                      <video
+                        ref={video2Ref}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="h-auto w-full"
+                        style={{ visibility: "visible" }}
+                      >
+                        <source src="/img/Smart-Sync-One.webm" type="video/webm" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Slide Indicators / Navigation Controls */}
+                {(() => {
+                  const activeDot = slideIndex === 2 ? 0 : slideIndex;
+                  return (
+                    <div className="flex items-center justify-center gap-2.5 mt-6">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (!isTransitioning || activeDot === 0) return;
+                          setSlideIndex(2);
+                        }}
+                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${activeDot === 0
+                          ? "w-8 bg-primary shadow-sm"
+                          : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                          }`}
+                        aria-label="Go to Slide 1"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (!isTransitioning || activeDot === 1) return;
+                          setSlideIndex(1);
+                        }}
+                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${activeDot === 1
+                          ? "w-8 bg-primary shadow-sm"
+                          : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                          }`}
+                        aria-label="Go to Slide 2"
+                      />
+                    </div>
+                  );
+                })()}
+              </div>
             </div>
             {/* Rating / Review Line */}
             <div className="mt-10 bg-white/90 backdrop-blur-md rounded-2xl p-4 sm:p-5 border border-gray-100 shadow-md max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 items-center justify-between gap-3 sm:gap-4">
@@ -1427,7 +1613,7 @@ export default function Home() {
                 Dentrix, Eaglesoft & Open Dental API Integration by SmartSync.One
               </h2>
               <p className="text-xl text-gray-600 max-w-7xl mx-auto">
-                SmartSync.One is the integration layer between 11 leading dental and orthodontic PMS platforms and the CRMs your team already runs on. Built for agencies, DSOs, and multi-location practices who need their marketing and their production data to finally agree. Dental APIs and PMS Integrations for Modern Practices.
+                SmartSync.One is the integration layer between 40+ leading dental and orthodontic PMS platforms and the CRMs your team already runs on. Built for agencies, DSOs, and multi-location practices who need their marketing and their production data to finally agree. Dental APIs and PMS Integrations for Modern Practices.
               </p>
             </div>
           </div>

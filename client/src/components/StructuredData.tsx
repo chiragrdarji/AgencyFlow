@@ -43,7 +43,7 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
           name: "SmartSync.One",
           applicationCategory: "BusinessApplication",
           description:
-            "Automated data synchronization between dental practice management systems (Dentrix, Open Dental, EagleSoft, Curve Dental) and GoHighLevel CRM for marketing agencies and dental practices.",
+            "Automatically sync patients, providers, appointments, treatments, and payments between 40+ supported practice management systems—including Open Dental, Dentrix 7/8, Dentrix Ascend, Dentrix Enterprise, Eaglesoft, Curve Dental, Denticon, eClinicalWorks, Dolphin, OrthoTrac, PracticeWorks, ABELDent, DSN Dental, DSN Perio, SOE, SoftDent, Tracker, WinOMS, ClearDent, Dentally, DentalVision, EndoVision, PerioVision, Mogo, Officemate, CareStack, Sensei Cloud, Dental4Windows, D4Web, ChiroTouch, Jane App, CornerStone, IntraVet, AviMark, ClientTrax, DVMAX, ImproMed, DEXIS, OneView Imaging, CliniView, Planmeca Romexis, Carestream CS Imaging, SIDEXIS 4, and XDR Imaging—and GoHighLevel, HubSpot, or Salesforce CRM.",
           url: baseUrl,
           operatingSystem: "Web-based",
           offers: {

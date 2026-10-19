@@ -1,3 +1,4 @@
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -5,14 +6,14 @@ import FAQ from "@/components/FAQ";
 import SEO from "@/components/SEO";
 import SchemaMarkup, { getBreadcrumbSchema, getFAQSchema } from "@/components/SchemaMarkup";
 import { getMetaTags } from "@/lib/seoMeta";
-import { Laptop, CheckCircle, Clock, RefreshCw, Brain, MonitorSmartphone, Plug, DatabaseZap, ArrowRight, Route, Users, ChevronRight, Megaphone, Building2, Stethoscope, MapPinned, Database, Timer, Ban, Sparkles, BadgeCheck } from "lucide-react";
+import { Laptop, CheckCircle, Clock, RefreshCw, Brain, MonitorSmartphone, Plug, DatabaseZap, ArrowRight, Route, Users, ChevronRight, Megaphone, Building2, Stethoscope, MapPinned, Database, Timer, Ban, Sparkles, BadgeCheck, Search, X } from "lucide-react";
 import { useLocation } from "wouter";
 import { desc } from "drizzle-orm";
 
 const faqItems = [
   {
     question: "Which dental PMS platforms does SmartSync.One support?",
-    answer: "SmartSync.One supports Open Dental, Dentrix 7, Dentrix 8, Dentrix Ascend, Dentrix Enterprise, Eaglesoft, Curve Dental, Denticon, eClinicalWorks, Dolphin, OrthoTrac, and PracticeWorks. This covers the majority of dental and orthodontic practices in North America.",
+    answer: "SmartSync.One supports 40+ dental, orthodontic, veterinary, chiropractic, and specialty practice management platforms including Open Dental, Dentrix (7, 8, Ascend, Enterprise), Eaglesoft, Curve Dental, Denticon, eClinicalWorks, Dolphin, OrthoTrac, PracticeWorks, ABELDent, DSN Dental, DSN Perio, SOE/EXACT, SoftDent, Tracker, WinOMS, ClearDent, Dentally, DentalVision, EndoVision, PerioVision, Mogo, Officemate, CareStack, Sensei Cloud, Dental4Windows, D4Web, ChiroTouch, Jane App, Cornerstone, IntraVet, AviMark, and imaging platforms such as DEXIS, Romexis, and Sidexis.",
   },
   {
     question: "Which CRM platforms does SmartSync.One integrate with?",
@@ -120,6 +121,41 @@ const PMS_CARDS = [
   { name: 'Dolphin', cat: 'Orthodontic', desc: 'Purpose-built orthodontic workflows — consultation tracking, treatment pipeline visibility, and patient follow-up automation.', type: 'ortho' },
   { name: 'OrthoTrac', cat: 'Orthodontic', desc: 'Connect OrthoTrac with CRM to support orthodontic marketing, patient lifecycle reporting, and referral tracking.', type: 'ortho' },
   { name: 'PracticeWorks', cat: 'Dental', desc: 'Sync PracticeWorks data to improve reporting, automate patient communication, and keep records aligned across platforms.', type: 'dental' },
+  { name: 'ABELDent', cat: 'Dental · Practice Management', desc: 'Connect ABELDent with your CRM to sync patient records, appointments, treatment plans, insurance claims, and billing data for automated workflows and reporting.', type: 'dental' },
+  { name: 'DSN Dental', cat: 'Dental · Practice Management', desc: 'Connect DSN Dental with your CRM to access patient records, appointments, treatment plans, billing, and insurance claims for automated workflows and financial reporting.', type: 'dental' },
+  { name: 'DSN Perio', cat: 'Dental · Periodontal Practice Management', desc: 'CConnect DSN Perio with your CRM to access periodontal charting, treatment progress, patient records, referrals, and billing data for automated workflows and clinical reporting.', type: 'dental' },
+  { name: 'SOE', cat: 'Dental · Practice Management', desc: 'Connect SOE/EXACT with your CRM to sync patient records, NHS claims, clinical charting, appointments, and practice analytics for automated workflows and performance reporting.', type: 'dental' },
+  { name: 'SoftDent', cat: 'Dental · Practice Management', desc: 'Connect SoftDent with your CRM to sync patient records, appointments, treatment plans, billing, and insurance claims for automated workflows and financial reporting.', type: 'dental' },
+  { name: 'Tracker', cat: 'Dental · Practice Management', desc: 'Connect Tracker with your CRM to sync patient records, appointments, treatment plans, insurance claims, and financial data for automated workflows and practice performance reporting.', type: 'dental' },
+  { name: 'WinOMS', cat: 'Dental · Oral Surgery', desc: 'Connect WinOMS with your CRM to access surgical case data, patient records, referrals, medical and dental insurance claims, and treatment workflows for automated follow-ups and reporting.', type: 'dental' },
+  { name: 'ClearDent', cat: 'Dental · Cloud Practice Management', desc: 'Connect ClearDent with your CRM to sync patient records, imaging metadata, appointments, treatment plans, and Canadian billing data for automated workflows and practice performance reporting.', type: 'dental' },
+  { name: 'Dentally', cat: 'Dental · Cloud Practice Management', desc: 'Connect Dentally with your CRM to sync patient records, appointments, treatment plans, invoices, payments, and NHS claims for automated patient communication, recall management, and multi-location reporting.', type: 'dental' },
+  { name: 'DentalVision', cat: 'Dental · Practice Management', desc: 'Connect DentalVision with your CRM to streamline patient data management, appointment tracking, treatment workflows, and practice reporting through automated integrations.', type: 'dental' },
+  { name: 'EndoVision', cat: 'Healthcare · Practice Management', desc: 'Connect 40+ dental, veterinary, and chiropractic practice management systems through one API to sync patient records, appointments, billing, and imaging data for real-time workflows, analytics, and automation.', type: 'dental' },
+  { name: 'PerioVision', cat: 'Dental · Periodontal Practice Management', desc: 'Connect PerioVision with your CRM to sync patient records, appointments, clinical notes, insurance claims, and billing data for automated patient communication, revenue tracking, and practice analytics', type: 'dental' },
+  { name: 'Mogo', cat: 'Dental · Cloud Practice Management', desc: 'Connect Mogo with your CRM to sync patient records, appointments, treatment plans, insurance claims, and billing data for automated patient communication, treatment follow-ups, and practice analytics.', type: 'dental' },
+  { name: 'Officemate', cat: 'Practice Management', desc: 'Connect Officemate with your CRM to sync patient records, appointments, dental and vision insurance claims, inventory, and financial data for automated workflows and cross-specialty reporting.', type: 'dental' },
+  { name: 'Curve Dental (Curve Hero)', cat: 'Dental · Cloud Practice Management', desc: 'Connect Curve Dental with your CRM to sync patient records, appointments, treatment plans, clinical notes, and billing data for automated booking, patient communication, and multi-location reporting.', type: 'dental' },
+  { name: 'CareStack', cat: 'Cloud Practice Management', desc: 'Connect CareStack with your CRM to access patient records, real-time account balances, appointments, provider details, and procedure data for automated reminders, patient outreach, and multi-location reporting', type: 'dental' },
+  { name: 'Sensei Cloud', cat: 'Cloud Practice Management', desc: 'Connect Sensei Cloud with your CRM to sync patient records, appointments, providers, procedures, and outstanding balances, enabling automated appointment reminders, patient follow-ups, and multi-location reporting.', type: 'dental' },
+  { name: 'Dental4Windows', cat: 'Dental · Practice Management', desc: 'Connect Dental4Windows with your CRM to sync patient records, appointments, treatment plans, billing, and payment data for automated patient communication, follow-ups, and practice performance reporting.', type: 'dental' },
+  { name: 'D4Web', cat: 'Dental · Cloud Practice Management', desc: 'Connect D4Web with your CRM to sync patient records, appointments, treatment plans, and billing data for automated patient communication, follow-ups, and practice performance reporting.', type: 'dental' },
+  { name: 'ChiroTouch', cat: 'Chiropractic · EHR & Practice Management', desc: 'Connect ChiroTouch with your CRM to sync patient records, SOAP notes, treatment plans, visit history, and billing data for automated patient follow-ups, treatment tracking, and multi-location reporting.', type: 'chiro' },
+  { name: 'Jane (Jane App)', cat: 'Healthcare · Cloud Practice Management', desc: 'Connect Jane with your CRM to sync patient records, appointments, practitioner details, payments, and balances for automated booking, patient follow-ups, and multi-location reporting.', type: 'practice' },
+  { name: 'CornerStone', cat: 'Veterinary · Practice Management', desc: 'Connect Cornerstone with your CRM to sync pet and client records, appointments, lab results, vaccination history, and billing data for automated reminders, client communication, and multi-location reporting.', type: 'practice' },
+  { name: 'IntraVet', cat: 'Veterinary · Practice Management', desc: 'Connect IntraVet with your CRM to sync pet and client records, appointments, treatment plans, medical histories, and billing data for automated reminders, treatment follow-ups, and multi-location reporting.', type: 'vet' },
+  { name: 'AviMark', cat: 'Veterinary · Practice Management', desc: 'Connect AviMark with your CRM to sync pet and client records, appointments, inventory, lab results, and billing data for automated reminders, client engagement, and revenue reporting.', type: 'vet' },
+  { name: 'ClientTrax', cat: 'Veterinary · Practice Management', desc: 'Connect Clientrax with your CRM to sync client and patient records, appointments, treatment history, and billing data for automated reminders, client follow-ups, and practice performance reporting.', type: 'vet' },
+  { name: 'DvMax', cat: 'Veterinary · Practice Management', desc: 'Connect DVMax with your CRM to sync patient and client records, appointments, medical histories, treatment plans, and billing data for automated reminders, client communication, and practice reporting.', type: 'vet' },
+  { name: 'ImproMed', cat: 'Veterinary · Practice Management', desc: 'Connect ImproMed with your CRM to sync patient and client records, appointments, treatment history, inventory, and billing data for automated reminders, client engagement, and practice performance reporting.', type: 'vet' },
+  { name: 'Dexis (v9 & v10)', cat: 'Dental · Imaging', desc: 'Connect DEXIS with your CRM to access imaging metadata, capture dates, image types, associated teeth, provider annotations, and AI analysis results for clinical dashboards, analytics, and AI-powered workflows.', type: 'imaging' },
+  { name: 'OneView Imaging', cat: 'Dental · Imaging', desc: 'Connect OneView Imaging with your CRM to streamline dental imaging data access, improve patient record visibility, and support clinical workflows, diagnostic insights, and imaging analytics.', type: 'imaging' },
+  { name: 'Cliniview Imaging', cat: 'Dental · Imaging', desc: 'Connect CliniView Imaging with your CRM to streamline dental imaging data access, link images with patient records, and support clinical workflows, diagnostic insights, and imaging analytics.', type: 'imaging' },
+  { name: 'Planmeca Romexis', cat: 'Dental · Imaging', desc: 'Connect Planmeca Romexis with your CRM to access dental imaging metadata, link diagnostic images to patient records, and support clinical workflows, imaging analytics, and AI-powered insights.', type: 'imaging' },
+  { name: 'Carestream CS Imaging', cat: 'Dental · Imaging', desc: 'Connect Carestream CS Imaging with your CRM to streamline dental imaging data access, link diagnostic images to patient records, and support clinical workflows, imaging analytics, and patient care coordination.', type: 'imaging' },
+  { name: 'Sidexis 4', cat: 'Dental · Imaging', desc: 'Connect Sidexis 4 with your CRM to access dental imaging metadata, link diagnostic images to patient records, and support clinical workflows, imaging analytics, and patient care coordination.', type: 'imaging' },
+  { name: 'DEXIS Imaging Suite', cat: 'Dental · Imaging', desc: 'Connect DEXIS Imaging Suite with your CRM to access imaging metadata, associate diagnostic images with patient records, and support clinical workflows, imaging analytics, and AI-powered diagnostic insights.', type: 'imaging' },
+  { name: 'XDR Imaging', cat: 'Dental · Imaging', desc: 'Connect XDR Imaging with your CRM to streamline dental imaging data access, link diagnostic images to patient records, and support clinical workflows, imaging analytics, and patient care coordination.', type: 'imaging' },
 ];
 
 const OUTBOUND_ROWS = [
@@ -159,6 +195,39 @@ const trackItems1 = [
 export default function SupportedPlatforms() {
   const [, setLocation] = useLocation(); // <-- hook for navigation
   const metaTags = getMetaTags('supportedPlatforms');
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(9);
+
+  // Filter cards based on name, description, and category
+  const filteredCards = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return PMS_CARDS;
+    return PMS_CARDS.filter((card) => {
+      const name = (card.name || "").toLowerCase();
+      // const desc = (card.desc || "").toLowerCase();
+      // const cat = (card.cat || "").toLowerCase();
+      // return name.includes(q) || desc.includes(q) || cat.includes(q);
+      return name.includes(q);
+    });
+  }, [searchQuery]);
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    setVisibleCount(9);
+  };
+
+  const handleClearSearch = () => {
+    setSearchQuery("");
+    setVisibleCount(9);
+  };
+
+  const handleViewMore = () => {
+    setVisibleCount((prev) => prev + 9);
+  };
+
+  const displayedCards = filteredCards.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredCards.length;
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', url: 'https://smartsync.one/' },
@@ -241,7 +310,7 @@ export default function SupportedPlatforms() {
               </p>
               <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                 <div className="bg-card rounded-xl p-4 shadow-sm border">
-                  <p className="text-xl leading-tight font-bold text-gray-900 mb-2">11</p>
+                  <p className="text-xl leading-tight font-bold text-gray-900 mb-2">40+</p>
                   <span className="text-gray-600">Dental & ortho PMS platforms supported</span>
                 </div>
 
@@ -305,7 +374,7 @@ export default function SupportedPlatforms() {
               <MonitorSmartphone size={16} />
               <span className="font-medium">Supported Platforms</span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">11 Dental and Orthodontic PMS Platforms</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">40+ Dental and Orthodontic PMS Platforms</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">SmartSync.One supports the most widely deployed practice management software in dentistry and orthodontics — from solo practices running Open Dental to enterprise DSOs on Dentrix Enterprise or Denticon.</p>
 
             <div className="flex gap-5 mb-8 justify-center pt-6">
@@ -316,20 +385,83 @@ export default function SupportedPlatforms() {
                 <span className="w-4 h-4 rounded-sm bg-green-500 inline-block"></span> Orthodontic PMS
               </div>
             </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-10">
-            {PMS_CARDS.map(card => (
-              <div
-                key={card.name}
-                className={`bg-white rounded-xl p-5 border shadow-sm hover:shadow-md transition-shadow relative overflow-hidden ${card.type === 'ortho' ? 'border-blue-100' : 'border-emerald-100'}`}
-              >
-                <div className={`absolute top-0 left-0 w-1 h-full rounded-l-xl ${card.type === 'ortho' ? 'bg-green-500' : 'bg-primary'}`} />
-                <div className="font-bold text-gray-900 text-lg mb-1 pl-1">{card.name}</div>
-                <div className={`text-sm font-semibold mb-3 pl-1 ${card.type === 'ortho' ? 'text-green-500' : 'text-primary'}`}>{card.cat}</div>
-                <p className="text-gray-600 leading-relaxed pl-1">{card.desc}</p>
+
+            {/* Search Bar */}
+            <div className="max-w-xl mx-auto mb-2 relative">
+              <div className="relative flex items-center">
+                <Search className="absolute left-4 w-5 h-5 text-gray-400 pointer-events-none" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                  placeholder="Search platforms by their names.."
+                  className="w-full pl-12 pr-10 py-3.5 bg-white border border-gray-200 rounded-full shadow-xs text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-sm sm:text-base shadow-sm"
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={handleClearSearch}
+                    className="absolute right-3.5 p-1 rounded-full text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
+                    aria-label="Clear search"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
               </div>
-            ))}
+              {/* {searchQuery && (
+                <div className="mt-2.5 text-sm text-gray-600 text-center">
+                  Found <strong className="text-primary font-bold">{filteredCards.length}</strong> {filteredCards.length === 1 ? 'platform' : 'platforms'} matching &ldquo;{searchQuery}&rdquo;
+                </div>
+              )} */}
+            </div>
           </div>
+
+          {/* Cards Grid */}
+          {displayedCards.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-8">
+              {displayedCards.map(card => (
+                <div
+                  key={card.name}
+                  className={`bg-white rounded-xl p-5 border shadow-sm hover:shadow-md transition-shadow relative overflow-hidden ${card.type === 'ortho' ? 'border-blue-100' : 'border-emerald-100'}`}
+                >
+                  <div className={`absolute top-0 left-0 w-1 h-full rounded-l-xl ${card.type === 'ortho' ? 'bg-green-500' : 'bg-primary'}`} />
+                  <div className="font-bold text-gray-900 text-lg mb-1 pl-1">{card.name}</div>
+                  <div className={`text-sm font-semibold mb-3 pl-1 ${card.type === 'ortho' ? 'text-green-500' : 'text-primary'}`}>{card.cat}</div>
+                  <p className="text-gray-600 leading-relaxed pl-1">{card.desc || "Full sync support for patient records, appointments, and CRM workflows."}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 bg-white rounded-2xl border border-dashed border-gray-200 max-w-xl mx-auto mb-10 p-8 shadow-xs">
+              <Search className="w-10 h-10 text-gray-300 mx-auto mb-3" />
+              <h3 className="text-lg font-bold text-gray-900 mb-1">No platforms found</h3>
+              <p className="text-gray-500 text-sm mb-4">We couldn&apos;t find any platforms matching &ldquo;{searchQuery}&rdquo;.</p>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleClearSearch}
+                className="border-primary text-primary hover:bg-primary/5"
+              >
+                Clear Search
+              </Button>
+            </div>
+          )}
+
+          {/* View More Button */}
+          {hasMore && (
+            <div className="text-center mb-10">
+              <Button
+                onClick={handleViewMore}
+                size="lg"
+                className="bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-3.5 rounded-xl shadow-sm hover:shadow-md transition-all text-base"
+              >
+                View More
+              </Button>
+              <p className="text-xs sm:text-sm text-gray-500 mt-2.5">
+                Showing {displayedCards.length} of {filteredCards.length} platforms
+              </p>
+            </div>
+          )}
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-[18px] text-center">
             {items.map((item) => (
@@ -443,7 +575,7 @@ export default function SupportedPlatforms() {
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">Complete Bidirectional Data Mapping</h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync.One moves the objects that drive dental marketing and operations — not just contacts. Production, payments, procedures, and appointment status all flow into CRM so your team can report on what actually happened, not just what was scheduled.</p>
           </div>
-          <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-4 items-center relative">
+          <div className="sm:grid lg:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-4 items-center relative">
             <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
               <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-2">
                 {/* <ArrowRight className="w-4 h-4 text-blue-600" /> */}
@@ -488,7 +620,7 @@ export default function SupportedPlatforms() {
 
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-primary rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative z-10">
+            <div className="mt-4 sm:mt-0 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-primary rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative z-10">
               <div className="inline-flex gap-2 items-center px-4 py-1.5 bg-primary text-white text-sm font-semibold rounded-full mb-6">
                 {/* <ArrowRight className="w-4 h-4 text-green-600 rotate-180" /> */}
                 <span className="text-sm font-semibold text-white">CRM → PMS (inbound)</span>

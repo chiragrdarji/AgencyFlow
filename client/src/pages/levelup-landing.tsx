@@ -24,6 +24,8 @@ import {
   Rocket,
   Handshake,
   ShieldCheck,
+  Star,
+  Zap,
 } from "lucide-react";
 
 export default function LevelUpLanding() {
@@ -204,6 +206,79 @@ export default function LevelUpLanding() {
           </div>
         </section>
 
+        {/* TOP MARKETPLACE APP SPOTLIGHT SECTION */}
+        <section className="relative py-16 sm:py-24 bg-gray-50 overflow-hidden border-b border-gray-100">
+          {/* Luminous background glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[500px] bg-gradient-to-tr from-amber-200/25 via-sky-200/35 to-blue-300/25 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            {/* Pill Badge */}
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
+              <Trophy className="w-4 h-4  shrink-0" />
+              <span>Recognized by GoHighLevel</span>
+            </div>
+
+            {/* Headline */}
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] lg:leading-[54px] font-extrabold text-gray-900 tracking-tight mb-4">
+              A Top Marketplace App on <br />
+              <span className="text-[#FFC441]">GO</span>
+              <span className="text-[#0B90C8]">High</span>
+              <span className="text-[#00B857]">Level</span>
+            </h2>
+
+            {/* <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Proven integration connecting 40+ dental PMS platforms directly to GoHighLevel &mdash; trusted by 120+ marketing agencies to automate patient communication and prove ROI.
+            </p> */}
+
+            {/* Trophy Showcase Card */}
+            <div className="relative max-w-sm sm:max-w-md mx-auto my-8 group">
+              {/* <div className="absolute -inset-2 rounded-3xl bg-gradient-to-b from-amber-300/30 via-sky-300/20 to-blue-300/20 blur-xl opacity-80 group-hover:opacity-100 transition-opacity duration-500" /> */}
+              <div className="relative bg-white/85 backdrop-blur-md border border-white/90 shadow-xl shadow-blue-500/10 rounded-3xl p-6 sm:p-8 transition-transform duration-500 ">
+                <img
+                  src="/img/top-marketplace-app-on-gohighlevel.webp"
+                  alt="A Top Marketplace App on GoHighLevel"
+                  className="w-full max-w-[280px] sm:max-w-[340px] mx-auto h-auto drop-shadow-2xl animate-zoom-pulse"
+                />
+              </div>
+            </div>
+
+
+            {/* Action buttons */}
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <Button
+                asChild
+
+                size="lg"
+                className="border-2 border-primary/20 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-primary-dark"
+              >
+                <a
+                  href="https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy Dentrix → GHL
+                </a>
+              </Button>
+
+              <Button
+                asChild
+
+                size="lg"
+                className="border-2 border-primary/20 text-white font-semibold px-7 py-3.5 rounded-xl hover:bg-primary-dark"
+              >
+                <a
+                  href="https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy Open Dental → GHL
+                </a>
+              </Button>
+
+
+            </div>
+          </div>
+        </section>
 
         {/* SECTION 2: THE AGENCY FORUM */}
         <section className="py-20 bg-white">
