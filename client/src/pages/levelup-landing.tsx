@@ -215,7 +215,7 @@ export default function LevelUpLanding() {
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-6 border border-primary">
               <Trophy className="w-4 h-4  shrink-0" />
-              <span>Recognized by GoHighLevel</span>
+              <span><a href="https://levelup.gohighlevel.com/awards" target="_blank">Awarded by GoHighLevel</a></span>
             </div>
 
             {/* Headline */}

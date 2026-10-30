@@ -197,7 +197,7 @@ export default function SupportedPlatforms() {
   const metaTags = getMetaTags('supportedPlatforms');
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [visibleCount, setVisibleCount] = useState(9);
+  // const [visibleCount, setVisibleCount] = useState(9);
 
   // Filter cards based on name, description, and category
   const filteredCards = useMemo(() => {
@@ -214,20 +214,20 @@ export default function SupportedPlatforms() {
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
-    setVisibleCount(9);
+    // setVisibleCount(9);
   };
 
   const handleClearSearch = () => {
     setSearchQuery("");
-    setVisibleCount(9);
+    // setVisibleCount(9);
   };
 
-  const handleViewMore = () => {
-    setVisibleCount((prev) => prev + 9);
-  };
+  // const handleViewMore = () => {
+  //   setVisibleCount((prev) => prev + 9);
+  // };
 
-  const displayedCards = filteredCards.slice(0, visibleCount);
-  const hasMore = visibleCount < filteredCards.length;
+  const displayedCards = filteredCards;
+  // const hasMore = visibleCount < filteredCards.length;
 
   const breadcrumbSchema = getBreadcrumbSchema([
     { name: 'Home', url: 'https://smartsync.one/' },
@@ -394,7 +394,7 @@ export default function SupportedPlatforms() {
                   type="text"
                   value={searchQuery}
                   onChange={handleSearchChange}
-                  placeholder="Search platforms by their names.."
+                  placeholder="Search PMS by their names.."
                   className="w-full pl-12 pr-10 py-3.5 bg-white border border-gray-200 rounded-full shadow-xs text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-sm sm:text-base shadow-sm"
                 />
                 {searchQuery && (
@@ -448,7 +448,7 @@ export default function SupportedPlatforms() {
           )}
 
           {/* View More Button */}
-          {hasMore && (
+          {/* {hasMore && (
             <div className="text-center mb-10">
               <Button
                 onClick={handleViewMore}
@@ -461,7 +461,7 @@ export default function SupportedPlatforms() {
                 Showing {displayedCards.length} of {filteredCards.length} platforms
               </p>
             </div>
-          )}
+          )} */}
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-[18px] text-center">
             {items.map((item) => (

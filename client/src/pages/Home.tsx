@@ -229,7 +229,9 @@ export default function Home() {
   const slide2Ref = useRef<HTMLDivElement>(null);
   const video0Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
-  const [sliderHeight, setSliderHeight] = useState<number | undefined>(undefined);
+  const [sliderHeight, setSliderHeight] = useState<number | undefined>(
+    undefined,
+  );
 
   // Auto-scroll forward: slide 0 displays for 6s, slide 1 displays for 5s
   useEffect(() => {
@@ -245,7 +247,11 @@ export default function Home() {
 
   // When transitioning to slide 2 (clone of slide 0), silently snap back to slide 0 after transition completes
   const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget && e.propertyName === "transform" && slideIndex === 2) {
+    if (
+      e.target === e.currentTarget &&
+      e.propertyName === "transform" &&
+      slideIndex === 2
+    ) {
       if (video0Ref.current && video2Ref.current) {
         try {
           video0Ref.current.currentTime = video2Ref.current.currentTime;
@@ -298,7 +304,10 @@ export default function Home() {
 
   // Dynamically adapt height to the active slide's natural height
   useEffect(() => {
-    const activeEl = (slideIndex === 0 || slideIndex === 2) ? slide0Ref.current : slide1Ref.current;
+    const activeEl =
+      slideIndex === 0 || slideIndex === 2
+        ? slide0Ref.current
+        : slide1Ref.current;
     if (!activeEl) return;
 
     const updateHeight = () => {
@@ -312,15 +321,16 @@ export default function Home() {
     const ro = new ResizeObserver(updateHeight);
     ro.observe(activeEl);
 
-    const otherEl = (slideIndex === 0 || slideIndex === 2) ? slide1Ref.current : slide0Ref.current;
+    const otherEl =
+      slideIndex === 0 || slideIndex === 2
+        ? slide1Ref.current
+        : slide0Ref.current;
     if (otherEl) {
       ro.observe(otherEl);
     }
 
     return () => ro.disconnect();
   }, [slideIndex]);
-
-
 
   useEffect(() => {
     if (!carouselApi) return;
@@ -338,7 +348,9 @@ export default function Home() {
       try {
         setBlogLoading(true);
         setBlogError(false);
-        const res = await fetch("https://smartsync.one/blog/wp-json/wp/v2/posts?per_page=3&orderby=date&order=desc&_embed");
+        const res = await fetch(
+          "https://smartsync.one/blog/wp-json/wp/v2/posts?per_page=3&orderby=date&order=desc&_embed",
+        );
         if (!res.ok) {
           throw new Error(`WordPress API returned status ${res.status}`);
         }
@@ -348,30 +360,44 @@ export default function Home() {
             const rawTitle = post.title?.rendered || "";
             const rawExcerpt = post.excerpt?.rendered || "";
 
-            const docTitle = new DOMParser().parseFromString(rawTitle, "text/html");
+            const docTitle = new DOMParser().parseFromString(
+              rawTitle,
+              "text/html",
+            );
             const cleanTitle = docTitle.body.textContent || rawTitle;
 
-            const docExcerpt = new DOMParser().parseFromString(rawExcerpt, "text/html");
+            const docExcerpt = new DOMParser().parseFromString(
+              rawExcerpt,
+              "text/html",
+            );
             const cleanExcerpt = docExcerpt.body.textContent || rawExcerpt;
 
             const featuredMedia = post._embedded?.["wp:featuredmedia"]?.[0];
-            const imageUrl = featuredMedia?.source_url || featuredMedia?.media_details?.sizes?.medium_large?.source_url || featuredMedia?.media_details?.sizes?.full?.source_url;
+            const imageUrl =
+              featuredMedia?.source_url ||
+              featuredMedia?.media_details?.sizes?.medium_large?.source_url ||
+              featuredMedia?.media_details?.sizes?.full?.source_url;
             const altText = featuredMedia?.alt_text || cleanTitle;
 
             const term = post._embedded?.["wp:term"]?.[0]?.[0];
             const category = term?.name || "Dental Marketing";
 
-            const postDate = post.date ? new Date(post.date).toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric"
-            }) : "";
+            const postDate = post.date
+              ? new Date(post.date).toLocaleDateString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })
+              : "";
 
             return {
               id: post.id,
               link: post.link || "https://smartsync.one/blog/",
               title: cleanTitle,
-              excerpt: cleanExcerpt.length > 140 ? cleanExcerpt.substring(0, 140).trim() + "..." : cleanExcerpt,
+              excerpt:
+                cleanExcerpt.length > 140
+                  ? cleanExcerpt.substring(0, 140).trim() + "..."
+                  : cleanExcerpt,
               date: postDate,
               category,
               imageUrl,
@@ -414,30 +440,49 @@ export default function Home() {
             >
               <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-gray-800">
                 <Zap className="w-4 h-4 text-primary shrink-0" />
-                <span><strong className="text-primary font-bold">120+</strong> agencies</span>
+                <span>
+                  <strong className="text-primary font-bold">120+</strong>{" "}
+                  agencies
+                </span>
               </div>
 
-              <span className="h-4 w-px bg-gray-200 hidden sm:inline-block" aria-hidden="true" />
+              <span
+                className="h-4 w-px bg-gray-200 hidden sm:inline-block"
+                aria-hidden="true"
+              />
               <a href="/supported-platforms">
                 <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-gray-800">
-
                   <Database className="w-4 h-4 text-primary shrink-0" />
-                  <span><strong className="text-primary font-bold">40+</strong> PMS platforms</span>
-
+                  <span>
+                    <strong className="text-primary font-bold">40+</strong> PMS
+                    platforms
+                  </span>
                 </div>
               </a>
 
-              <span className="h-4 w-px bg-gray-200 hidden sm:inline-block" aria-hidden="true" />
+              <span
+                className="h-4 w-px bg-gray-200 hidden sm:inline-block"
+                aria-hidden="true"
+              />
 
               <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-gray-800">
                 <Layers className="w-4 h-4 text-primary shrink-0" />
-                <span><strong className="text-primary font-bold">3</strong> CRMs</span>
+                <span>
+                  <strong className="text-primary font-bold">3</strong> CRMs
+                </span>
               </div>
 
-              <span className="h-4 w-px bg-gray-200 hidden sm:inline-block" aria-hidden="true" />
+              <span
+                className="h-4 w-px bg-gray-200 hidden sm:inline-block"
+                aria-hidden="true"
+              />
 
               <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-gray-800">
-                <img src="/img/hipaa-compliant-shield-badge.svg" alt="HIPAA Shield" className="w-4 h-4 " />
+                <img
+                  src="/img/hipaa-compliant-shield-badge.svg"
+                  alt="HIPAA Shield"
+                  className="w-4 h-4 "
+                />
                 <span className=" font-bold">HIPAA compliant</span>
               </div>
             </div>
@@ -450,15 +495,16 @@ export default function Home() {
                   data-testid="text-hero-headline"
                 >
                   The trusted way to connect any{" "}
-                  <span className="text-primary">
-                    dental PMS to your CRM
-                  </span>
+                  <span className="text-primary">dental PMS to your CRM</span>
                 </h1>
                 <p
                   className="text-xl text-gray-600 mb-8 leading-relaxed"
                   data-testid="text-hero-subheading"
                 >
-                  Sync patients, appointments, treatments, and payments between Dentrix, Open Dental, Eaglesoft, and 8 other platforms and GoHighLevel, HubSpot, or Salesforce, so agencies can prove ROI and power AI-driven patient communication.
+                  Sync patients, appointments, treatments, and payments between
+                  Dentrix, Open Dental, Eaglesoft, and 8 other platforms and
+                  GoHighLevel, HubSpot, or Salesforce, so agencies can prove ROI
+                  and power AI-driven patient communication.
                 </p>
                 {/* CTA Buttons */}
                 <div className="flex flex-col gap-4 mb-8">
@@ -471,9 +517,7 @@ export default function Home() {
                       className="border-2 border-primary text-primary hover:bg-primary hover:text-white text-lg px-8 py-4 font-semibold"
                       data-testid="button-book-demo"
                     >
-                      <Link href="/schedule-a-call">
-                        Book a free demo
-                      </Link>
+                      <Link href="/schedule-a-call">Book a free demo</Link>
                     </Button>
 
                     <Button
@@ -519,7 +563,9 @@ export default function Home() {
               <div className="relative w-full lg:max-h-[585px]">
                 <div
                   className="overflow-hidden w-full transition-[height] duration-500 ease-in-out"
-                  style={{ height: sliderHeight ? `${sliderHeight}px` : "auto" }}
+                  style={{
+                    height: sliderHeight ? `${sliderHeight}px` : "auto",
+                  }}
                 >
                   <div
                     onTransitionEnd={handleTransitionEnd}
@@ -527,7 +573,10 @@ export default function Home() {
                     style={{ transform: `translateX(-${slideIndex * 100}%)` }}
                   >
                     {/* Media Slide 0: Video / GIF */}
-                    <div ref={slide0Ref} className="w-full shrink-0 flex items-center justify-center">
+                    <div
+                      ref={slide0Ref}
+                      className="w-full shrink-0 flex items-center justify-center"
+                    >
                       <video
                         ref={video0Ref}
                         autoPlay
@@ -537,18 +586,29 @@ export default function Home() {
                         className="h-auto w-full"
                         style={{ visibility: "visible" }}
                       >
-                        <source src="/img/Smart-Sync-One.webm" type="video/webm" />
+                        <source
+                          src="/img/Smart-Sync-One.webm"
+                          type="video/webm"
+                        />
                       </video>
                     </div>
 
                     {/* Media Slide 1: A Top Marketplace App on GoHighLevel */}
-                    <div ref={slide1Ref} className="w-full shrink-0 flex flex-col items-center justify-center py-2 px-2 text-center">
+                    <div
+                      ref={slide1Ref}
+                      className="w-full shrink-0 flex flex-col items-center justify-center py-2 px-2 text-center"
+                    >
                       <h2
                         className="text-2xl sm:text-[44px] lg:text-[44px] lg:leading-[52px] font-bold text-gray-900 leading-tight mb-4"
                         data-testid="text-hero-headline-slide2"
                       >
                         A Top Marketplace App on
-                        <span className="block"> <span className="text-[#FFC441]">GO</span><span className="text-[#0B90C8]">High</span><span className="text-[#00B857]">Level</span> </span>
+                        <span className="block">
+                          {" "}
+                          <span className="text-[#FFC441]">GO</span>
+                          <span className="text-[#0B90C8]">High</span>
+                          <span className="text-[#00B857]">Level</span>{" "}
+                        </span>
                       </h2>
                       <div className="max-w-[260px] min-w-full lg:min-w-[550px] mx-auto lg:mb-8">
                         <img
@@ -565,7 +625,11 @@ export default function Home() {
                     </div>
 
                     {/* Media Slide 0 Clone for infinite seamless forward scrolling */}
-                    <div ref={slide2Ref} className="w-full shrink-0 flex items-center justify-center" aria-hidden="true">
+                    <div
+                      ref={slide2Ref}
+                      className="w-full shrink-0 flex items-center justify-center"
+                      aria-hidden="true"
+                    >
                       <video
                         ref={video2Ref}
                         autoPlay
@@ -575,7 +639,10 @@ export default function Home() {
                         className="h-auto w-full"
                         style={{ visibility: "visible" }}
                       >
-                        <source src="/img/Smart-Sync-One.webm" type="video/webm" />
+                        <source
+                          src="/img/Smart-Sync-One.webm"
+                          type="video/webm"
+                        />
                       </video>
                     </div>
                   </div>
@@ -592,10 +659,11 @@ export default function Home() {
                           if (!isTransitioning || activeDot === 0) return;
                           setSlideIndex(2);
                         }}
-                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${activeDot === 0
-                          ? "w-8 bg-primary shadow-sm"
-                          : "w-2.5 bg-gray-300 hover:bg-gray-400"
-                          }`}
+                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${
+                          activeDot === 0
+                            ? "w-8 bg-primary shadow-sm"
+                            : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                        }`}
                         aria-label="Go to Slide 1"
                       />
                       <button
@@ -604,10 +672,11 @@ export default function Home() {
                           if (!isTransitioning || activeDot === 1) return;
                           setSlideIndex(1);
                         }}
-                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${activeDot === 1
-                          ? "w-8 bg-primary shadow-sm"
-                          : "w-2.5 bg-gray-300 hover:bg-gray-400"
-                          }`}
+                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${
+                          activeDot === 1
+                            ? "w-8 bg-primary shadow-sm"
+                            : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                        }`}
                         aria-label="Go to Slide 2"
                       />
                     </div>
@@ -617,26 +686,35 @@ export default function Home() {
             </div>
             {/* Rating / Review Line */}
             <div className="mt-10 bg-white/90 backdrop-blur-md rounded-2xl p-4 sm:p-5 border border-gray-100 shadow-md max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 items-center justify-between gap-3 sm:gap-4">
-
               <div className="flex items-center justify-center gap-2 bg-blue-50/70 px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-xs sm:text-sm font-semibold shadow-2xs">
-                <img src="/img/hipaa-compliant-shield-badge.svg" alt="HIPAA Shield" className="w-5 h-5 " />
+                <img
+                  src="/img/hipaa-compliant-shield-badge.svg"
+                  alt="HIPAA Shield"
+                  className="w-5 h-5 "
+                />
                 <span>HIPAA compliant</span>
               </div>
 
-              <div className="flex items-center justify-center gap-2 bg-blue-50/70 px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-xs sm:text-sm font-semibold shadow-2xs" data-testid="text-setup-time">
+              <div
+                className="flex items-center justify-center gap-2 bg-blue-50/70 px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-xs sm:text-sm font-semibold shadow-2xs"
+                data-testid="text-setup-time"
+              >
                 <Clock size={16} className="text-primary" />
                 <span>45-minute setup</span>
               </div>
 
-              <div className="flex items-center justify-center gap-2 bg-blue-50/70 px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-xs sm:text-sm font-semibold shadow-2xs" data-testid="text-real-time-sync">
+              <div
+                className="flex items-center justify-center gap-2 bg-blue-50/70 px-4 py-2 rounded-xl border border-blue-200/60 text-gray-900 text-xs sm:text-sm font-semibold shadow-2xs"
+                data-testid="text-real-time-sync"
+              >
                 <RefreshCw size={16} className="text-primary" />
                 <span>Real-time sync</span>
               </div>
             </div>
           </div>
-        </section >
+        </section>
         {/* Who This Is For */}
-        < section className="py-20 pb-8 bg-white" >
+        <section className="py-20 pb-8 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -674,7 +752,8 @@ export default function Home() {
                         size={16}
                       />
                       <span className="text-gray-700">
-                        Run smarter, data-driven campaigns with real-time patient info
+                        Run smarter, data-driven campaigns with real-time
+                        patient info
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -683,7 +762,8 @@ export default function Home() {
                         size={16}
                       />
                       <span className="text-gray-700">
-                        Provide new patients, reactivations, appointments booked, and revenue generated to dental practices
+                        Provide new patients, reactivations, appointments
+                        booked, and revenue generated to dental practices
                       </span>
                     </li>
                   </ul>
@@ -815,25 +895,45 @@ export default function Home() {
             {/* Platform list (PMS) */}
             <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 text-sm sm:text-base md:text-lg font-medium text-gray-700 leading-relaxed max-w-6xl mx-auto mb-3 px-2">
               <span className="whitespace-nowrap">Open Dental</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">Dentrix 7/8</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">Dentrix Ascend</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">Dentrix Enterprise</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">Eaglesoft</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">Curve Dental</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">Denticon</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">eClinicalWorks</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">Dolphin</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">OrthoTrac</span>
-              <span className="text-gray-400 select-none" aria-hidden="true">·</span>
+              <span className="text-gray-400 select-none" aria-hidden="true">
+                ·
+              </span>
               <span className="whitespace-nowrap">PracticeWorks</span>
             </div>
 
@@ -857,7 +957,7 @@ export default function Home() {
           </div>
         </section>
         {/* Problem Statement */}
-        < section className="py-20 bg-gray-50" >
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -929,9 +1029,9 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section >
+        </section>
         {/* Solution Overview */}
-        < section className="py-20 bg-white" >
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -963,7 +1063,8 @@ export default function Home() {
                         Two-Way Data Sync
                       </h3>
                       <p className="text-gray-600">
-                        Automatically sync patients, providers, appointments, and payments between your PMS and CRM in real-time.
+                        Automatically sync patients, providers, appointments,
+                        and payments between your PMS and CRM in real-time.
                       </p>
                     </div>
                   </div>
@@ -1068,7 +1169,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section >
+        </section>
         <section className="py-10 bg-gradient-to-r from-primary to-blue-500">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -1095,7 +1196,7 @@ export default function Home() {
           </div>
         </section>
         {/* Key Features */}
-        < section className="py-20 bg-gray-50" >
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -1231,9 +1332,9 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section >
+        </section>
         {/* How It Works */}
-        < section className="py-20 bg-white" >
+        <section className="py-20 bg-primary-light">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -1315,11 +1416,34 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="py-20  " >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative mx-auto sm:max-w-[85%]">
+              <div className="relative bg-blue-100 shadow-xl p-3 sm:p-5 border border-3 border-blue-300 rounded-3xl overflow-hidden">
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black shadow-inner">
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src="https://www.youtube-nocookie.com/embed/ZFX19UJZGv8?autoplay=1&mute=1&loop=1&playlist=ZFX19UJZGv8&controls=0&rel=0&playsinline=1"
+                      title="Realtime Agent Assist in Action"
+                      frameBorder="0"
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+              </div>
+
+              <div className="-z-10 absolute inset-0 bg-gradient-to-r from-orange-200 to-red-200 opacity-30 blur-3xl rounded-3xl"></div>
+            </div>
+          </div>
+        </section>
         {/* Testimonials / Reviews Slider */}
-        <section className="py-20 bg-primary-light" data-testid="section-testimonials">
+        <section
+className="py-20 bg-gray-50"
+          data-testid="section-testimonials"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-
               <h2
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
                 data-testid="text-testimonials-title"
@@ -1327,7 +1451,8 @@ export default function Home() {
                 Why Agencies Love It
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Real reviews from marketing agencies using our Dentrix & Open Dental connectors to scale practice growth.
+                Real reviews from marketing agencies using our Dentrix & Open
+                Dental connectors to scale practice growth.
               </p>
             </div>
 
@@ -1406,10 +1531,11 @@ export default function Home() {
                     <button
                       key={i}
                       onClick={() => carouselApi?.scrollTo(i)}
-                      className={`h-2.5 rounded-full transition-all duration-300 ${currentSlide === i
-                        ? "w-8 bg-primary"
-                        : "w-2.5 bg-gray-300 hover:bg-gray-400"
-                        }`}
+                      className={`h-2.5 rounded-full transition-all duration-300 ${
+                        currentSlide === i
+                          ? "w-8 bg-primary"
+                          : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                      }`}
                       aria-label={`Go to slide ${i + 1}`}
                     />
                   ))}
@@ -1419,7 +1545,10 @@ export default function Home() {
           </div>
         </section>
         {/* Latest from the Blog */}
-        <section className="py-20 bg-white border-t border-gray-100" data-testid="section-latest-blog">
+        <section
+          className="py-20 bg-white border-t border-gray-100"
+          data-testid="section-latest-blog"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               {/* <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-wider block mb-3">
@@ -1432,14 +1561,18 @@ export default function Home() {
                 Latest from the Blog
               </h2>
               <p className="text-xl text-gray-600 max-w-6xl mx-auto">
-                Strategies, integration guides, and AI trends for modern dental marketing agencies and growing practices.
+                Strategies, integration guides, and AI trends for modern dental
+                marketing agencies and growing practices.
               </p>
             </div>
 
             {blogLoading ? (
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="bg-white rounded-2xl border border-gray-200 p-6 h-96 animate-pulse flex flex-col justify-between">
+                  <div
+                    key={i}
+                    className="bg-white rounded-2xl border border-gray-200 p-6 h-96 animate-pulse flex flex-col justify-between"
+                  >
                     <div>
                       <div className="h-44 bg-gray-100 rounded-xl mb-4"></div>
                       <div className="h-4 bg-gray-200 rounded w-1/3 mb-3"></div>
@@ -1458,7 +1591,12 @@ export default function Home() {
                   >
                     <div>
                       {post.imageUrl && (
-                        <a href={post.link} target="_blank" rel="noopener noreferrer" className="block overflow-hidden">
+                        <a
+                          href={post.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block overflow-hidden"
+                        >
                           <img
                             src={post.imageUrl}
                             alt={post.altText || post.title}
@@ -1468,7 +1606,9 @@ export default function Home() {
                       )}
                       <div className="p-6">
                         <div className="flex items-center gap-2 text-xs font-semibold text-primary mb-3">
-                          <span className="bg-blue-50 px-2.5 py-1 rounded-md">{post.category}</span>
+                          <span className="bg-blue-50 px-2.5 py-1 rounded-md">
+                            {post.category}
+                          </span>
                           {post.date && (
                             <>
                               <span className="text-gray-400">·</span>
@@ -1477,7 +1617,11 @@ export default function Home() {
                           )}
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-3 leading-snug">
-                          <a href={post.link} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={post.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             {post.title}
                           </a>
                         </h3>
@@ -1493,7 +1637,8 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform"
                       >
-                        Continue reading <ArrowRight size={16} className="ml-1.5" />
+                        Continue reading{" "}
+                        <ArrowRight size={16} className="ml-1.5" />
                       </a>
                     </div>
                   </div>
@@ -1509,15 +1654,13 @@ export default function Home() {
                 className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold text-base px-8 py-3"
                 data-testid="button-view-all-blogs"
               >
-                <a href="/blog">
-                  Explore all blog posts →
-                </a>
+                <a href="/blog">Explore all blog posts →</a>
               </Button>
             </div>
           </div>
         </section>
         {/* FAQ Section */}
-        < section className="py-20 bg-gray-50" >
+        <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2
@@ -1533,9 +1676,9 @@ export default function Home() {
 
             <FAQ items={faqItems} />
           </div>
-        </section >
+        </section>
         {/* Final CTA */}
-        < section className="py-20 bg-primary" >
+        <section className="py-20 bg-primary">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2
               className="text-3xl lg:text-4xl font-bold text-white mb-6"
@@ -1601,24 +1744,30 @@ export default function Home() {
               </span>
             </div>
           </div>
-        </section >
+        </section>
         {/*  */}
-        < section className="py-20 bg-gray-50" >
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
                 data-testid="text-features-title"
               >
-                Dentrix, Eaglesoft & Open Dental API Integration by SmartSync.One
+                Dentrix, Eaglesoft & Open Dental API Integration by
+                SmartSync.One
               </h2>
               <p className="text-xl text-gray-600 max-w-7xl mx-auto">
-                SmartSync.One is the integration layer between 40+ leading dental and orthodontic PMS platforms and the CRMs your team already runs on. Built for agencies, DSOs, and multi-location practices who need their marketing and their production data to finally agree. Dental APIs and PMS Integrations for Modern Practices.
+                SmartSync.One is the integration layer between 40+ leading
+                dental and orthodontic PMS platforms and the CRMs your team
+                already runs on. Built for agencies, DSOs, and multi-location
+                practices who need their marketing and their production data to
+                finally agree. Dental APIs and PMS Integrations for Modern
+                Practices.
               </p>
             </div>
           </div>
-        </section >
-      </div >
+        </section>
+      </div>
     </>
   );
 }
