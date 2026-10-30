@@ -384,10 +384,10 @@ export default function Home() {
 
             const postDate = post.date
               ? new Date(post.date).toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })
               : "";
 
             return {
@@ -659,11 +659,10 @@ export default function Home() {
                           if (!isTransitioning || activeDot === 0) return;
                           setSlideIndex(2);
                         }}
-                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${
-                          activeDot === 0
-                            ? "w-8 bg-primary shadow-sm"
-                            : "w-2.5 bg-gray-300 hover:bg-gray-400"
-                        }`}
+                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${activeDot === 0
+                          ? "w-8 bg-primary shadow-sm"
+                          : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                          }`}
                         aria-label="Go to Slide 1"
                       />
                       <button
@@ -672,11 +671,10 @@ export default function Home() {
                           if (!isTransitioning || activeDot === 1) return;
                           setSlideIndex(1);
                         }}
-                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${
-                          activeDot === 1
-                            ? "w-8 bg-primary shadow-sm"
-                            : "w-2.5 bg-gray-300 hover:bg-gray-400"
-                        }`}
+                        className={`h-2.5 rounded-full transition-all duration-300 focus:outline-none ${activeDot === 1
+                          ? "w-8 bg-primary shadow-sm"
+                          : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                          }`}
                         aria-label="Go to Slide 2"
                       />
                     </div>
@@ -1421,7 +1419,7 @@ export default function Home() {
             <div className="relative mx-auto sm:max-w-[85%]">
               <div className="relative bg-blue-100 shadow-xl p-3 sm:p-5 border border-3 border-blue-300 rounded-3xl overflow-hidden">
                 <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black shadow-inner">
-                    <iframe
+                  {/* <iframe
                       className="absolute inset-0 w-full h-full"
                       src="https://www.youtube-nocookie.com/embed/ZFX19UJZGv8?autoplay=1&mute=1&loop=1&playlist=ZFX19UJZGv8&controls=0&rel=0&playsinline=1"
                       title="Realtime Agent Assist in Action"
@@ -1429,8 +1427,22 @@ export default function Home() {
                       allow="autoplay; encrypted-media; picture-in-picture"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
+                    /> */}
+                  <video
+                    ref={video0Ref}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="h-auto w-full"
+                    style={{ visibility: "visible" }}
+                  >
+                    <source
+                      src="/img/smartsync-ghl-award.webm"
+                      type="video/webm"
                     />
-                  </div>
+                  </video>
+                </div>
               </div>
 
               <div className="-z-10 absolute inset-0 bg-gradient-to-r from-orange-200 to-red-200 opacity-30 blur-3xl rounded-3xl"></div>
@@ -1439,7 +1451,7 @@ export default function Home() {
         </section>
         {/* Testimonials / Reviews Slider */}
         <section
-className="py-20 bg-gray-50"
+          className="py-20 bg-gray-50"
           data-testid="section-testimonials"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1531,11 +1543,10 @@ className="py-20 bg-gray-50"
                     <button
                       key={i}
                       onClick={() => carouselApi?.scrollTo(i)}
-                      className={`h-2.5 rounded-full transition-all duration-300 ${
-                        currentSlide === i
-                          ? "w-8 bg-primary"
-                          : "w-2.5 bg-gray-300 hover:bg-gray-400"
-                      }`}
+                      className={`h-2.5 rounded-full transition-all duration-300 ${currentSlide === i
+                        ? "w-8 bg-primary"
+                        : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                        }`}
                       aria-label={`Go to slide ${i + 1}`}
                     />
                   ))}
