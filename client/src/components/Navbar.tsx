@@ -216,7 +216,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-99">
       {/* Top Gradient Announcement Bar for LevelUp */}
-      <div className="bg-gradient-to-r from-[#4c1d95] via-[#7e22ce] to-[#c026d3] text-white py-2 px-4 text-xs sm:text-sm">
+      {/* <div className="bg-gradient-to-r from-[#4c1d95] via-[#7e22ce] to-[#c026d3] text-white py-2 px-4 text-xs sm:text-sm">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-left gap-4 min-w-0">
             <Sparkles className="h-5 w-5 animate-zoom-pulse"></Sparkles>
@@ -233,7 +233,7 @@ export default function Navbar() {
             </span>
           </Link>
         </div>
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">

@@ -605,7 +605,7 @@ export default function Home() {
                         A Top Marketplace App on
                         <span className="block">
                           {" "}
-                          <span className="text-[#FFC441]">GO</span>
+                          <span className="text-[#FFC441]">Go</span>
                           <span className="text-[#0B90C8]">High</span>
                           <span className="text-[#00B857]">Level</span>{" "}
                         </span>
