@@ -502,7 +502,7 @@ export default function Home() {
                   data-testid="text-hero-subheading"
                 >
                   Sync patients, appointments, treatments, and payments between
-                  Dentrix, Open Dental, Eaglesoft, and 8 other platforms and
+                  Dentrix, Open Dental, Eaglesoft, and other platforms and
                   GoHighLevel, HubSpot, or Salesforce, so agencies can prove ROI
                   and power AI-driven patient communication.
                 </p>
@@ -603,12 +603,14 @@ export default function Home() {
                         data-testid="text-hero-headline-slide2"
                       >
                         A Top Marketplace App on
-                        <span className="block">
-                          {" "}
-                          <span className="text-[#FFC441]">Go</span>
-                          <span className="text-[#0B90C8]">High</span>
-                          <span className="text-[#00B857]">Level</span>{" "}
-                        </span>
+                        <a href="https://levelup.gohighlevel.com/awards" target="_blank">
+                          <span className="block">
+                            {" "}
+                            <span className="text-[#FFC441]">Go</span>
+                            <span className="text-[#0B90C8]">High</span>
+                            <span className="text-[#00B857]">Level</span>{" "}
+                          </span>
+                        </a>
                       </h2>
                       <div className="max-w-[260px] min-w-full lg:min-w-[550px] mx-auto lg:mb-8">
                         <img
