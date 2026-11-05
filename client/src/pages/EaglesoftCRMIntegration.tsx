@@ -109,8 +109,9 @@ const softwareSchema = {
 
   publisher: {
     "@type": "Organization",
+    "@id": "https://smartsync.one/#organization",
     name: "SmartSync.One",
-    url: "https://smartsync.one",
+    url: "https://smartsync.one/",
   },
   featureList: [
     "Real-time Eaglesoft to CRM two-way synchronization",
@@ -482,7 +483,7 @@ export default function EaglesoftCRMIntegration() {
             <div className="mb-8 w-full md:w-[50%]">
               <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
                 <Plug size={20} />
-                Eaglesoft + Gohighlevel Integration
+                Eaglesoft + GoHighLevel Integration
               </span>
               <h2
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -928,7 +929,7 @@ export default function EaglesoftCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies and Clinics Across 120+ Dental Locations
+              Supporting Agencies and Clinics Across 120+ Customers
             </h2>
             <p className="text-lg text-gray-600 mb-2">
               SmartSync.One helps agencies standardize reporting and automation

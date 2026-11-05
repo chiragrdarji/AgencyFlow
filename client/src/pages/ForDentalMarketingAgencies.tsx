@@ -56,10 +56,11 @@ const metrics = [
   { icon: Building2, label: "Manage multiple clinics efficiently" },
   { icon: Wallet2, label: "Track Payment" },
 ];
-const pmsSystems = [
+const corePmsSystems = [
   "Open Dental",
-  "Dentrix",
+  "Dentrix (G6, G7, G8)",
   "Dentrix Ascend",
+  "Dentrix Enterprise",
   "Eaglesoft",
   "Curve Hero",
   "Denticon",
@@ -67,11 +68,13 @@ const pmsSystems = [
   "Dolphin",
   "OrthoTrac",
   "PracticeWorks",
-  "Athena",
-  "Cloud9",
-  "Dentrix Enterprise",
-  "Modernizing Medicine",
-  "NextGen Office"
+];
+
+const specialtyPmsSystems = [
+  { name: "Cloud9", status: "Beta" },
+  { name: "Athenahealth", status: "Specialty" },
+  { name: "Modernizing Medicine", status: "Planned" },
+  { name: "NextGen Office", status: "Planned" },
 ];
 const steps = [
   "PMS connection",
@@ -670,18 +673,31 @@ export default function ForDentalMarketingAgencies() {
           <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl sm:p-8   border-primary">
             <div className="p-6  bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg">
-                Supported PMS Systems
-                <span className="font-semibold text-md">
-                  (All integrations support two-way synchronization.)
-                </span>{" "}
+                40+ Supported PMS Platforms
+                <span className="font-normal text-sm block text-gray-600 mt-1">
+                  Core dental PMS platforms feature turnkey two-way sync. Specialty and EHR systems are labeled by availability.
+                </span>
               </h3>
-              <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-3  mt-[18px] text-center ">
-                {pmsSystems.map((system) => (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-[18px] text-center">
+                {corePmsSystems.map((system) => (
                   <div
-                    className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px] font-semibold transition-all shadow-sm"
                     key={system}
                   >
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
+                    <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {system}
+                  </div>
+                ))}
+                {specialtyPmsSystems.map((item) => (
+                  <div
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center justify-between gap-[5px] font-semibold transition-all border border-blue-200 shadow-sm"
+                    key={item.name}
+                  >
+                    <span className="flex items-center gap-1 truncate text-sm">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-blue-500 shrink-0" /> {item.name}
+                    </span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 text-blue-700">
+                      {item.status}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -768,7 +784,7 @@ export default function ForDentalMarketingAgencies() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              The agencies managing 120+ dental clinics trust us
+              Agencies and Practices Supporting 120+ Customers Trust Us
             </h2>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -830,7 +846,7 @@ export default function ForDentalMarketingAgencies() {
             for every dental client you manage.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Join agencies already using SmartSync.One across dozens of clinics.
+            Join 120+ customers already using SmartSync.One.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

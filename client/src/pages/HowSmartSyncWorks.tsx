@@ -83,7 +83,7 @@ const steps = [
   "Track marketing attribution",
   "Monitor treatment pipelines",
   "Analyze clinic growth",
-  "Automize CRM workflows",
+  "Automate CRM Workflows",
 ];
 const crmPlatforms = ["GoHighLevel", "HubSpot", "Salesforce"];
 const crmsetup = [
@@ -419,26 +419,31 @@ export default function HowsmartsyncWorks() {
                       </div>
 
                       <h3 className="text-lg font-bold text-foreground mb-2">
-                        Automated CRM Configuration
+                        Automated CRM Configuration &amp; Guided Field Mapping
                       </h3>
 
                       <p className="text-gray-600 text-md ">
-                        SmartSync.One prepares your CRM for syncing automatically.
+                        SmartSync.One automates the heavy technical lifting while guiding you through key mapping preferences during your 45-minute setup call.
                       </p>
 
                       <div className="grid sm:grid-cols-2 gap-3 mt-[18px] mb-4 ">
                         <div>
                           <p className="text-gray-900 text-md font-semibold px-2">
-                            During installation:
+                            Automated by SmartSync.One:
                           </p>
                           <div className="grid mt-[18px] mb-4 ">
-                            {crmsetup.map((system) => (
+                            {[
+                              "Required CRM custom fields are created automatically",
+                              "Opportunity pipelines and stages are pre-configured",
+                              "Webhook endpoints and API authentication are established",
+                              "Continuous automated sync testing and error logging",
+                            ].map((system) => (
                               <div
-                                className="p-1 bg-white rounded-xl text-foreground text-md flex items-start gap-[5px] transition-all"
+                                className="p-1.5 bg-white rounded-xl text-foreground text-sm flex items-start gap-2 transition-all mb-1"
                                 key={system}
                               >
-                                <CheckCircle2 className="h-4 w-4 text-primary min-w-fit mt-1" />{" "}
-                                {system}
+                                <CheckCircle2 className="h-4 w-4 text-primary min-w-fit mt-0.5" />{" "}
+                                <span>{system}</span>
                               </div>
                             ))}
                           </div>
@@ -446,16 +451,21 @@ export default function HowsmartsyncWorks() {
 
                         <div>
                           <p className="text-gray-900 font-semibold text-md px-2">
-                            These Fields are Updating Continuously like:
+                            Guided Customer Input (During 45-Min Call):
                           </p>
-                          <div className="grid sm:grid-cols-2 mt-[18px] mb-2 ">
-                            {crmUpdate.map((system) => (
+                          <div className="grid mt-[18px] mb-4 ">
+                            {[
+                              "Provide PMS admin access and CRM authorization",
+                              "Confirm preferred custom field mappings",
+                              "Choose appointment status trigger rules",
+                              "Select optional historical sync date range",
+                            ].map((system) => (
                               <div
-                                className="p-2 bg-white rounded-xl text-foreground text-md flex items-start gap-[5px] transition-all"
+                                className="p-1.5 bg-white rounded-xl text-foreground text-sm flex items-start gap-2 transition-all mb-1"
                                 key={system}
                               >
-                                <CheckCircle2 className="h-4 w-4  text-primary mt-1 min-w-fit" />{" "}
-                                {system}
+                                <CheckCircle2 className="h-4 w-4 text-primary min-w-fit mt-0.5" />{" "}
+                                <span>{system}</span>
                               </div>
                             ))}
                           </div>
@@ -463,7 +473,7 @@ export default function HowsmartsyncWorks() {
                       </div>
 
                       <p className="mt-2 mx-auto text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] ">
-                        So, that's also the end of having to do any manual set up for accurate reporting.
+                        Our technical team conducts the guided 45-minute setup session to ensure all mappings match your reporting needs before sync goes live.
                       </p>
                     </div>
                   </div>
@@ -488,7 +498,7 @@ export default function HowsmartsyncWorks() {
                       Immediately after installation, SmartSync.One starts gathering key clinic activities.
                     </p>
                     <p className="text-gray-600 text-md ">
-                      Once in a while, changes appear a few minutes later (within the CRM system)
+                      Updates typically appear in your CRM within minutes.
                     </p>
                     <p className="text-gray-600 text-md mt-4 font-semibold">
                       Automatically synchronized data includes:
@@ -823,7 +833,7 @@ export default function HowsmartsyncWorks() {
           </div>
           <p className="mt-10 mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             Currently supporting synchronization across{" "}
-            <strong className="text-primary"> 120+ dental clinics</strong>
+            <strong className="text-primary"> 120+ customers</strong>
           </p>
         </div>
       </section>

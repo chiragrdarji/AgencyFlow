@@ -137,8 +137,9 @@ const softwareSchema = {
 
   publisher: {
     "@type": "Organization",
+    "@id": "https://smartsync.one/#organization",
     name: "SmartSync.One",
-    url: "https://smartsync.one",
+    url: "https://smartsync.one/",
   },
   featureList: [
     "Real-time Dentrix to CRM two-way synchronization",
@@ -552,7 +553,7 @@ export default function DentrixCRMIntegration() {
             <div className="mb-8 w-full md:w-[50%]">
               <span className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
                 <Plug size={18} />
-                Dentrix + Gohighlevel Integration
+                Dentrix + GoHighLevel Integration
               </span>
               <h2
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
@@ -937,7 +938,7 @@ export default function DentrixCRMIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies Managing 120+ Dental Clinics
+              Supporting Agencies Supporting 120+ Customers
             </h2>
             <p className="text-lg text-gray-600 mb-2">
               SmartSync.One helps agencies and practices eliminate manual reporting

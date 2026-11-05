@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 
-
 interface SchemaMarkupProps {
   schema: Record<string, any>;
 }
@@ -59,6 +58,16 @@ export const getProductSchema = (data: {
     '@type': 'Product',
     name: data.name,
     description: data.description,
+    brand: {
+      '@type': 'Brand',
+      name: 'SmartSync.One',
+    },
+    manufacturer: {
+      '@type': 'Organization',
+      '@id': 'https://smartsync.one/#organization',
+      name: 'SmartSync.One',
+      url: 'https://smartsync.one/',
+    },
     ...(data.image && { image: data.image }),
     ...(data.price && {
       offers: {
@@ -66,6 +75,11 @@ export const getProductSchema = (data: {
         price: data.price,
         priceCurrency: data.currency || 'USD',
         availability: 'https://schema.org/InStock',
+        seller: {
+          '@type': 'Organization',
+          '@id': 'https://smartsync.one/#organization',
+          name: 'SmartSync.One',
+        },
       },
     }),
     ...(data.ratingValue && {
@@ -85,21 +99,48 @@ export const getArticleSchema = (data: {
   datePublished?: string;
   dateModified?: string;
   author?: string;
+  authorType?: 'Person' | 'Organization';
 }) => {
+  const isPerson = data.authorType === 'Person' || (data.author && data.author !== 'SmartSync.One');
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: data.headline,
     description: data.description,
     ...(data.image && { image: data.image }),
     ...(data.datePublished && { datePublished: data.datePublished }),
     ...(data.dateModified && { dateModified: data.dateModified }),
-    ...(data.author && {
-      author: {
-        '@type': 'Organization',
-        name: data.author,
+    author: isPerson
+      ? {
+          '@type': 'Person',
+          name: data.author || 'SmartSync Integration Team',
+          worksFor: {
+            '@type': 'Organization',
+            '@id': 'https://smartsync.one/#organization',
+            name: 'SmartSync.One',
+            url: 'https://smartsync.one/',
+          },
+        }
+      : {
+          '@type': 'Organization',
+          '@id': 'https://smartsync.one/#organization',
+          name: 'SmartSync.One',
+          url: 'https://smartsync.one/',
+        },
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://smartsync.one/#organization',
+      name: 'SmartSync.One',
+      url: 'https://smartsync.one/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://smartsync.one/img/sso_logo.svg',
       },
-    }),
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://smartsync.one/',
+    },
   };
 };
 
@@ -107,18 +148,19 @@ export const getOrganizationSchema = () => {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': 'https://smartsync.one/#organization',
     name: 'SmartSync.One',
     url: 'https://smartsync.one/',
     logo: 'https://smartsync.one/img/sso_logo.svg',
     description:
-      'Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM.',
+      'Automatically sync patients, providers, appointments, treatments, and payments between 40+ supported practice management systems and GoHighLevel, HubSpot, or Salesforce CRM.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '30 N Gould St. Sheridan, WY 82801 USA',
       addressLocality: 'Sheridan',
       addressRegion: 'WY',
       postalCode: '82801',
-      addressCountry: 'USA',
+      addressCountry: 'US',
     },
     contactPoint: {
       '@type': 'ContactPoint',

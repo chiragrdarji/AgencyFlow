@@ -1,28 +1,29 @@
 interface StructuredDataProps {
-  type: 'organization' | 'product' | 'softwareApplication' | 'localBusiness';
+  type: 'organization' | 'product' | 'softwareApplication';
   data?: Record<string, any>;
 }
 
 export default function StructuredData({ type, data = {} }: StructuredDataProps) {
   const getStructuredData = () => {
-    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://dentrixconnector.com';
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://smartsync.one';
 
     switch (type) {
       case 'organization':
         return {
           "@context": "https://schema.org",
           "@type": "Organization",
+          "@id": "https://smartsync.one/#organization",
           "name": "SmartSync.One",
-          "url": "https://smartsync.one",
-          "logo": `/img/sso_logo.svg`,
-          "description": "Seamless data sync between dental practice management systems and GoHighLevel CRM for marketing agencies and dental practices.",
+          "url": "https://smartsync.one/",
+          "logo": "https://smartsync.one/img/sso_logo.svg",
+          "description": "Seamless data sync between dental practice management systems and GoHighLevel, HubSpot, and Salesforce CRM for marketing agencies and dental practices.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "30 N Gould St. Sheridan, WY 82801 USA",
             "addressLocality": "Sheridan",
             "addressRegion": "WY",
             "postalCode": "82801",
-            "addressCountry": "USA"
+            "addressCountry": "US"
           },
           "contactPoint": {
             "@type": "ContactPoint",
@@ -55,25 +56,33 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.9",
-            reviewCount: "127",
+            reviewCount: "50",
             bestRating: "5",
             worstRating: "1",
           },
           featureList: [
-            "Real-time data synchronization",
+            "Near real-time data synchronization",
             "Two-way sync between PMS and CRM",
-            "HIPAA Compliant data handling",
+            "HIPAA Compliant data handling with zero persistent PHI storage",
             "Automated campaign triggers",
             "Patient, provider, and appointment sync",
-            "Payment data integration",
+            "Payment and treatment pipeline integration",
             "Field mapping customization",
-            "Webhook-based real-time updates",
+            "Webhook-based continuous updates",
           ],
           softwareRequirements:
-            "Compatible with Dentrix, Open Dental, EagleSoft, Curve Dental, and GoHighLevel",
+            "Compatible with Dentrix, Open Dental, EagleSoft, Curve Dental, and GoHighLevel, HubSpot, Salesforce",
           author: {
             "@type": "Organization",
-            name: "Variance infotech LLC",
+            "@id": "https://smartsync.one/#organization",
+            name: "SmartSync.One",
+            url: "https://smartsync.one/",
+          },
+          publisher: {
+            "@type": "Organization",
+            "@id": "https://smartsync.one/#organization",
+            name: "SmartSync.One",
+            url: "https://smartsync.one/",
           },
         };
 
@@ -83,14 +92,16 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
           "@type": "Product",
           name: "Dentrix to GoHighLevel Connector",
           description:
-            "Seamless two-way data synchronization between dental practice management systems and GoHighLevel CRM for marketing agencies and dental practices.",
+            "Seamless two-way data synchronization between dental practice management systems and GoHighLevel, HubSpot, or Salesforce CRM for marketing agencies and dental practices.",
           brand: {
             "@type": "Brand",
             name: "SmartSync.One",
           },
           manufacturer: {
             "@type": "Organization",
-            name: "Variance infotech LLC",
+            "@id": "https://smartsync.one/#organization",
+            name: "SmartSync.One",
+            url: "https://smartsync.one/",
           },
           category: "Software > Business Software > CRM Integration",
           offers: {
@@ -100,13 +111,15 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
             priceCurrency: "USD",
             seller: {
               "@type": "Organization",
-              name: "Variance infotech LLC",
+              "@id": "https://smartsync.one/#organization",
+              name: "SmartSync.One",
+              url: "https://smartsync.one/",
             },
           },
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.9",
-            reviewCount: "127",
+            reviewCount: "50",
           },
           review: [
             {
@@ -136,37 +149,6 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
                 "Our reactivation campaigns now hit at the perfect time. ROI is clear and client retention is higher.",
             },
           ],
-        };
-
-      case 'localBusiness':
-        return {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Variance infotech LLC",
-          "description": "Dental practice management system integration specialists providing seamless data sync between PMS and CRM systems.",
-          "url": baseUrl,
-          "telephone": "+1-555-123-4567",
-          "email": "support@dentrixconnector.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Main Street, Suite 456",
-            "addressLocality": "Austin",
-            "addressRegion": "TX",
-            "postalCode": "78701",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "30.2672",
-            "longitude": "-97.7431"
-          },
-          "openingHours": [
-            "Mo-Fr 09:00-18:00",
-            "Sa 10:00-14:00"
-          ],
-          "priceRange": "$$",
-          "paymentAccepted": "Credit Card, Bank Transfer",
-          "currenciesAccepted": "USD"
         };
 
       default:

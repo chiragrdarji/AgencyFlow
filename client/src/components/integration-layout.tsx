@@ -50,16 +50,16 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
   }
   // SEO data based on integration type
   const seoData = isOpenDental ? {
-    title: "Open Dental GoHighLevel Integration | AgencyFlow",
+    title: "Open Dental GoHighLevel Integration | SmartSync.One",
     description: "Seamlessly integrate Open Dental with GoHighLevel CRM. Automate patient communication, reduce no-shows, and boost your dental practice revenue with our HIPAA Compliant solution.",
     keywords: "Open Dental integration, GoHighLevel CRM, dental practice management, patient communication automation, HIPAA Compliant, dental marketing",
-    url: "https://agencyflow.com/open-dental-integration",
+    url: "https://smartsync.one/open-dental-gohighlevel-integration",
     pricing: "$149/month per Open Dental Instance"
   } : {
-    title: "Dentrix GoHighLevel Integration | AgencyFlow",
+    title: "Dentrix GoHighLevel Integration | SmartSync.One",
     description: "Connect Dentrix with GoHighLevel CRM for automated patient engagement, marketing campaigns, and practice growth. HIPAA Compliant with 99% uptime.",
     keywords: "Dentrix integration, GoHighLevel CRM, dental practice CRM, patient engagement, multi-practice management, ROI tracking",
-    url: "https://agencyflow.com/dentrix-integration",
+    url: "https://smartsync.one/dentrix-gohighlevel-integration",
     pricing: "Starting at $75/month per practice"
   };
   const ConnetsDentrix = [
@@ -95,6 +95,39 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
     }
   ]
 
+    const ConnetsOpenDental = [
+    {
+      agencUrl: "/img/patient.svg",
+      title: "Patient",
+      content: "Sync new and updated patient contact records and custom fields from Open Dental into GoHighLevel automatically."
+    },
+    {
+      agencUrl: "/img/appointment.svg",
+      title: "Appointment",
+      content: "Near real-time syncing of scheduled, completed, cancelled, or broken appointments and operatory calendars."
+    },
+    {
+      agencUrl: "/img/payment.svg",
+      title: "Payment",
+      content: "Open Dental ledger payment activity flows directly into GHL opportunities for revenue attribution and automation."
+    },
+    {
+      agencUrl: "/img/opportunity.svg",
+      title: "Opportunity",
+      content: "Automatically create and update opportunities in GoHighLevel based on treatment acceptance and completed procedures."
+    },
+    {
+      agencUrl: "/img/two-way-sync.svg",
+      title: "Two-way Sync",
+      content: "Bidirectional sync ensures new patients created in GoHighLevel flow into Open Dental without duplicates."
+    },
+    {
+      agencUrl: "/img/automation-ready.svg",
+      title: "Automation-Ready",
+      content: "Use Open Dental clinical events to trigger GoHighLevel workflows, reactivation campaigns, and reminders."
+    }
+  ];
+
   const marketingAgencies = [
     {
       agencUrl: "/img/Instant-Dental-Appointments.png",
@@ -116,91 +149,92 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
   const features: any = isOpenDental ? [
     {
       icon: "/img/loop-arrow.svg",
-      title: "Seamless Two-Way Synchronization",
-      description: "Automatically synchronize patient data, appointments, and treatment plans between Open Dental and GoHighLevel in real-time.",
+      title: "Two-Way Open Dental Synchronization",
+      description: "Automatically synchronize patient records, appointments, and treatment plans between Open Dental and GoHighLevel in near real-time.",
       bgColor: "bg-blue-50",
       iconColor: "text-primary"
     },
     {
       icon: "/img/data-storage.svg",
-      title: "Secure Data Transfer",
-      description: "Reduce no-shows by 40% with automated SMS and email reminders, confirmations, and pre-appointment instructions.",
+      title: "Automated Appointment Reminders",
+      description: "Reduce no-shows with automated SMS and email reminders, confirmations, and pre-appointment instructions triggered by Open Dental calendar status.",
       bgColor: "bg-green-50",
       iconColor: "text-[#00C18C]"
     },
     {
       icon: "/img/authentication.svg",
-      title: "Role-Based Access & Permissions",
-      description: "Automate payment reminders, process invoices, and streamline billing workflows with integrated payment processing.",
+      title: "Revenue & Payment Attribution",
+      description: "Sync completed Open Dental ledger payments and treatment values into GoHighLevel opportunities to calculate true marketing ROI.",
       bgColor: "bg-red-50",
       iconColor: "text-[#FF3B47]"
     },
     {
       icon: "/img/process.svg",
-      title: "Configurable Field Mapping for Data Flexibility",
-      description: "Fully secure and HIPAA Compliant platform ensuring patient data protection with encrypted transmission and storage.",
+      title: "Configurable Field Mapping",
+      description: "Customize which Open Dental patient fields, custom fields, and appointment types sync to GoHighLevel without technical complexity.",
       bgColor: "bg-blue-50",
       iconColor: "text-primary"
     },
     {
       icon: "/img/api.svg",
-      title: "Robust API Integration",
-      description: "Launch targeted email, SMS, and social media campaigns for patient reactivation, birthday wishes, and seasonal promotions.",
+      title: "HIPAA Compliant Data Pipeline",
+      description: "Zero persistent PHI storage with end-to-end encryption (TLS 1.3 / AES-256) and signed Business Associate Agreements (BAAs).",
       bgColor: "bg-green-50",
       iconColor: "text-[#00C18C]"
     },
     {
       icon: "/img/monitoring.svg",
-      title: "Real-Time Sync Status Monitoring",
-      description: "Boost your online reputation with automated review requests sent at optimal times right after successful appointments.",
+      title: "Continuous Sync Monitoring",
+      description: "Near real-time sync status monitoring and automated retry mechanisms to ensure data integrity between Open Dental and CRM.",
       bgColor: "bg-red-50",
       iconColor: "text-[#FF3B47]"
     }
   ] : [
     {
       icon: "/img/paitent-payment-real-time-sync.svg",
-      title: "Real-time sync of patients/appointments/payments",
-      description: "Real-time synchronization of patient data, appointments, and payment records with 30-45 minute full database syncs and 99% uptime.",
+      title: "Two-Way Dentrix Synchronization",
+      description: "Automatically sync patient records, appointments, and treatment plans between Dentrix G6/G7/G8/Ascend/Enterprise and GoHighLevel in near real-time.",
       bgColor: "bg-blue-50",
       iconColor: "text-primary"
     },
     {
       icon: "/img/loop-arrow.svg",
-      title: "Seamless Two-Way Synchronization",
-      description: "Enable text, email, and web chat capabilities with patients directly from your unified dashboard with automated responses.",
+      title: "Dentrix Appointment Book Integration",
+      description: "Sync operatories, providers, and appointment statuses (Scheduled, Completed, Cancelled, Broken) directly into GoHighLevel calendars.",
       bgColor: "bg-green-50",
       iconColor: "text-[#00C18C]"
     },
     {
       icon: "/img/seamless-data-flow.svg",
-      title: "Leveraging the Dentrix API for seamless data flow",
-      description: "Track which marketing campaigns generate actual appointments and revenue with detailed ROI dashboards and reporting.",
+      title: "Dentrix Ledger & Treatment Intelligence",
+      description: "Track proposed, accepted, and completed Dentrix treatment plans and payments inside GoHighLevel opportunity pipelines for accurate revenue attribution.",
       bgColor: "bg-red-50",
       iconColor: "text-[#FF3B47]"
     },
     {
       icon: "/img/data-storage.svg",
-      title: "Secure Data Transfer",
-      description: "Monitor and manage multiple dental offices from a single workspace with provider and location-specific workflows.",
+      title: "Multi-Location & Enterprise Visibility",
+      description: "Centralize multiple Dentrix databases or Dentrix Enterprise clinics into unified GoHighLevel accounts with location tagging.",
       bgColor: "bg-blue-50",
       iconColor: "text-primary"
     },
     {
       icon: "/img/process.svg",
-      title: "Configurable Field Mapping for Data Flexibility",
-      description: "Automated year-end insurance reminders, birthday campaigns, and seasonal marketing to maximize patient engagement.",
+      title: "Configurable Field Mapping",
+      description: "Map standard and custom Dentrix fields to GoHighLevel contact fields and custom values during guided onboarding.",
       bgColor: "bg-green-50",
       iconColor: "text-[#00C18C]"
     },
     {
       icon: "/img/api.svg",
-      title: "Robust API Integration",
-      description: "Fully HIPAA Compliant integration with signed Business Associate Agreement (BAA) and encrypted data transmission.",
+      title: "HIPAA Compliant & Secure",
+      description: "Fully HIPAA Compliant with signed BAA, zero persistent PHI storage, and automated payload deletion after secure delivery.",
       bgColor: "bg-red-50",
       iconColor: "text-[#FF3B47]"
     }
   ];
-  const faqItems = isOpenDental
+
+    const faqItems = isOpenDental
     ? [
       {
         question: "What does this integration do?",
@@ -210,7 +244,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
       {
         question: "Is the data sync real-time?",
         answer:
-          "Yes. The integration keeps your data updated in real-time (or near real-time), ensuring patient records, appointments, and contacts stay accurate without delays.",
+          "SmartSync.One provides near real-time synchronization. Updates typically appear in your CRM within minutes, ensuring patient records, appointments, and contacts stay continuously accurate.",
       },
       {
         question: "Do I need any technical skills to set it up?",
@@ -228,15 +262,15 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
           "Yes. The integration seamlessly supports multiple providers and locations, making it easy to manage all your data in one place.",
       },
       {
-        question: "What OpenDental versions are supported?",
+        question: "What Open Dental versions are supported?",
         answer:
-          "The integration works with most recent versions of OpenDental. For version-specific compatibility, please reach out to our team.",
+          "SmartSync.One supports Open Dental version 18.x through 24.x+, including both on-premise MySQL/MariaDB installations and Open Dental Cloud deployments.",
       },
       {
         question: "How can I get started?",
         answer: (
           <>
-            Click the “Connect OpenDental to GHL” button or visit our{" "}
+            Click the “Connect Open Dental to GHL” button or visit our{" "}
             <a
               href="https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af"
               target="_blank"
@@ -250,9 +284,9 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
         ),
       },
       {
-        question: "How much does the OpenDental to GoHighLevel integration cost?",
+        question: "How much does the Open Dental to GoHighLevel integration cost?",
         answer:
-          "Pricing starts at $79 per OpenDental instance per month and goes up to $129, depending on the plan.",
+          "Pricing starts at $79 per Open Dental instance per month and goes up to $129, depending on the plan.",
       },
 
     ]
@@ -270,12 +304,12 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
       {
         question: "What does this integration do?",
         answer:
-          "SmartSync.One application syncs patients, providers, appointments, and payments between Open Dental and GoHighLevel so you can focus on growing your clients practices.",
+          "SmartSync.One application syncs patients, providers, appointments, and payments between Dentrix and GoHighLevel so you can focus on growing your clients' practices.",
       },
       {
         question: "Is the data sync real-time?",
         answer:
-          "Yes. The integration syncs data in real-time (or near real-time) to ensure your records stay continuously updated without delays.",
+          "SmartSync.One provides near real-time synchronization. Updates typically appear in your CRM within minutes, ensuring patient records, appointments, and contacts stay continuously accurate.",
       },
       {
         question: "Do I need any technical skills to set it up?",
@@ -366,7 +400,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
         title: " Set up the required product key.",
         description: "Add your API key to enable synchronization.",
         image: "/img/dentrix/dentrix-gohighlevel-connector-dashboard-view.png",
-        alt: "Dentix Connector configuration screen showing developer key, customer key, and time zone setup in GoHighLevel",
+        alt: "Dentrix Connector configuration screen showing developer key, customer key, and time zone setup in GoHighLevel",
 
       },
       {
@@ -374,14 +408,14 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
         title: " Choose the required module to sync with GHL and set up the calendar",
         description: "Select the module to sync with GHL and configure the calendar.",
         image: "/img/dentrix/dentrix-gohighlevel-calendar-mapping-step3.png",
-        alt: "Dentix Connector calendar mapping screen in GoHighLevel showing provider-to-calendar synchronization setup",
+        alt: "Dentrix Connector calendar mapping screen in GoHighLevel showing provider-to-calendar synchronization setup",
       },
       {
         stepNo: "Step 4:-",
         title: " Configure field mapping.",
         description: "Map fields between your PMS and GoHighLevel.",
         image: "/img/dentrix/dentrix-gohighlevel-field-mapping-interface.png",
-        alt: "Field mapping interface in Dentix Connector showing data fields matched between Dentrix and GoHighLevel for personal information synchronization",
+        alt: "Field mapping interface in Dentrix Connector showing data fields matched between Dentrix and GoHighLevel for personal information synchronization",
       },
     ];
 
@@ -425,7 +459,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
             description: seoData.description,
             provider: {
               "@type": "Organization",
-              name: "AgencyFlow",
+              name: "SmartSync.One",
             },
             offers: {
               "@type": "Offer",
@@ -443,7 +477,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link href="/" className="font-bold text-2xl text-primary">
-                AgencyFlow
+                SmartSync.One
               </Link>
             </div>
             
@@ -672,10 +706,10 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4" >
               {isOpenDental
-                ? " Setup in a Four Easy Steps " : " Dentrix to GoHighLevel Integration Steps "}
+                ? " Set Up in Four Easy Steps " : " Dentrix to GoHighLevel Integration Steps "}
 
             </h2>
-            <p className={` ${isOpenDental ? "hidden" : " text-xl md:text-2xl font-bold text-slate-900 mb-4"}`}> Setup in a Four Easy Steps</p>
+            <p className={` ${isOpenDental ? "hidden" : " text-xl md:text-2xl font-bold text-slate-900 mb-4"}`}> Set Up in Four Easy Steps</p>
           </div>
           <SetupFlow steps={steps} />
           <div className="flex flex-col sm:flex-row  gap-4 justify-start mb-8 mt-[20px] lg:mt-[-20px] ms-4">
@@ -749,7 +783,9 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
                 ? " Open Dental to GHL Sync for Marketing Agencies" : "Dentrix to GoHighLevel Integration for Dental Marketing Agencies"}
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              SmartSync.One delivers the most reliable and automation-ready Dentrix integration for dental agencies. By connecting Dentrix with GoHighLevel through the secure Dentrix API, your team can finally streamline operations, automate communication, and sync all essential dental PMS data in real time.
+              {isOpenDental
+                ? "SmartSync.One delivers the most reliable and automation-ready Open Dental integration for dental agencies. By connecting Open Dental with GoHighLevel through the secure Open Dental API, your team can finally streamline operations, automate communication, and sync all essential dental PMS data in near real-time."
+                : "SmartSync.One delivers the most reliable and automation-ready Dentrix integration for dental agencies. By connecting Dentrix with GoHighLevel through the secure Dentrix API, your team can finally streamline operations, automate communication, and sync all essential dental PMS data in near real-time."}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -773,59 +809,42 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
           </div>
         </div>
       </section>
-      {/* Easy Steps Section */}
-      {isOpenDental
-        ? (" ") : (
-          <section className="py-20 bg-slate-50 ">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                  How SmartSync.One Connects Dentrix to GoHighLevel
-
-                </h2>
-                <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                  Our connector provides full end-to-end dental PMS GHL integration, allowing your agency to manage patients, appointments, and payments inside GoHighLevel without manual work. Below are the modules we sync to & from Dentrix to GHL.
-
-                </p>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {ConnetsDentrix.map((connect) => (
-                  <Card className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-100">
-                    <CardContent className="p-8">
-                      <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
-                        <img
-                          src={connect.agencUrl}
-                          alt="Icon"
-                          className="w-9 h-9" // adjust size as needed
-                        />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                        {connect.title}
-                      </h3>
-                      <p className="text-gray-600 text-center">{connect.content}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </section>)}
-
-      {/* {isOpenDental
-        ? (" ") : (
-          <section className="py-20 bg-white px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto p-8 px-4 bg-blue-100 rounded-xl sm:px-6 lg:px-8">
-              <div className="text-center ">
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                  Dentrix to GoHighLevel Integration for Dental Marketing Agencies
-                </h2>
-                <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                 SmartSync delivers the most reliable and automation-ready Dentrix integration for dental agencies. By connecting Dentrix with GoHighLevel through the secure Dentrix API, your team can finally streamline operations, automate communication, and sync all essential dental PMS data in real time.
-                </p>
-              </div>
-              </div>
-              </section>
-        )
-      } */}
+      {/* Modules Section */}
+      <section className="py-20 bg-slate-50 ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              {isOpenDental
+                ? "How SmartSync.One Connects Open Dental to GoHighLevel"
+                : "How SmartSync.One Connects Dentrix to GoHighLevel"}
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              {isOpenDental
+                ? "Our connector provides full end-to-end dental PMS GHL integration, allowing your agency to manage patients, appointments, and payments inside GoHighLevel without manual work. Below are the modules we sync to and from Open Dental to GHL."
+                : "Our connector provides full end-to-end dental PMS GHL integration, allowing your agency to manage patients, appointments, and payments inside GoHighLevel without manual work. Below are the modules we sync to and from Dentrix to GHL."}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {(isOpenDental ? ConnetsOpenDental : ConnetsDentrix).map((connect) => (
+              <Card key={connect.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-slate-100">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                    <img
+                      src={connect.agencUrl}
+                      alt="Icon"
+                      className="w-9 h-9"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                    {connect.title}
+                  </h3>
+                  <p className="text-gray-600 text-center">{connect.content}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className={`py-20 ${isOpenDental ? "bg-slate-50" : " bg-white"}`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -149,8 +149,9 @@ const softwareSchema = {
 
   publisher: {
     "@type": "Organization",
+    "@id": "https://smartsync.one/#organization",
     name: "SmartSync.One",
-    url: "https://smartsync.one",
+    url: "https://smartsync.one/",
   },
   featureList: [
     "Real-time synchronization between dental PMS systems and GoHighLevel",
@@ -348,7 +349,7 @@ export default function GoHighLevelDentalIntegration() {
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-white text-primary text-sm font-semibold rounded-full mb-4 border border-primary">
               <Sparkles size={18} />
               <span className="text-blue-600">
-                How SmartSync.One Enhances Gohighlevel
+                How SmartSync.One Enhances GoHighLevel
               </span>
             </div>
 
@@ -762,7 +763,7 @@ export default function GoHighLevelDentalIntegration() {
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
               <AlertTriangle size={18} />
               <span className="text-blue-600">
-                Analytics Inside Gohighlevel
+                Analytics Inside GoHighLevel
               </span>
             </div>
 
@@ -967,7 +968,7 @@ export default function GoHighLevelDentalIntegration() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supporting Agencies Managing 120+ Dental Clinics
+              Supporting Agencies Supporting 120+ Customers
             </h2>
             <p className="text-lg text-gray-600 mb-2">
               SmartSync.One helps agencies scale operations while improving

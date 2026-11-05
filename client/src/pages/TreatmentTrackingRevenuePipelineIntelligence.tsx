@@ -136,8 +136,9 @@ const softwareSchema = {
 
   publisher: {
     "@type": "Organization",
+    "@id": "https://smartsync.one/#organization",
     name: "SmartSync.One",
-    url: "https://smartsync.one",
+    url: "https://smartsync.one/",
   },
   featureList: [
     "Track treatment proposals and production opportunities",
@@ -920,8 +921,7 @@ export default function TreatmentTrackingRevenuePipelineIntelligence() {
             future payments automatically.
           </p>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Join agencies and clinics already using SmartSync.One across 120+ dental
-            practices.
+            Join agencies and clinics already using SmartSync.One across 120+ customers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

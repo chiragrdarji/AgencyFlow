@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
     <>
       <SEO {...metaTags} />
       <SchemaMarkup schema={breadcrumbSchema} />
-      
+
       <div className="min-h-screen bg-gray-50/50">
         {/* Header */}
         <section className="hero-gradient py-20 text-center">
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
               <span>Trust & Security</span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
-              Privacy <span className="text-primary">Policy</span> 
+              Privacy <span className="text-primary">Policy</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Learn how we collect, use, protect, and process your information at  <a href="https://smartsync.one" target="_blank" className="hover:text-primary"> SmartSync.One.</a>
@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-6 md:p-8 sm:p-12 space-y-12">
-              
+
               {/* Introduction */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-           
+
 
               {/* Definitions */}
               <div>
@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* Information We Collect */}
               <div>
@@ -162,7 +162,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* How We Use Your Information */}
               <div>
@@ -187,7 +187,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* Dental Practice Data */}
               <div>
@@ -207,7 +207,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* Data Sharing */}
               <div>
@@ -236,7 +236,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* Data Retention */}
               <div>
@@ -260,7 +260,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* International Data Transfers */}
               <div>
@@ -272,7 +272,7 @@ export default function PrivacyPolicy() {
                 </p>
               </div>
 
-              
+
 
               {/* Security */}
               <div>
@@ -297,7 +297,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* Your Privacy Rights */}
               <div>
@@ -323,7 +323,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* GDPR & CCPA Compliance */}
               <div>
@@ -345,7 +345,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* Third-Party Integrations */}
               <div>
@@ -357,7 +357,7 @@ export default function PrivacyPolicy() {
                 </p>
               </div>
 
-              
+
 
               {/* Payment Information */}
               <div>
@@ -369,7 +369,7 @@ export default function PrivacyPolicy() {
                 </p>
               </div>
 
-              
+
 
               {/* Analytics & Marketing */}
               <div>
@@ -389,7 +389,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-              
+
 
               {/* Children's Privacy */}
               <div>
@@ -401,7 +401,7 @@ export default function PrivacyPolicy() {
                 </p>
               </div>
 
-              
+
 
               {/* External Links */}
               <div>
@@ -413,7 +413,7 @@ export default function PrivacyPolicy() {
                 </p>
               </div>
 
-              
+
 
               {/* Changes to This Privacy Policy */}
               <div>
@@ -433,7 +433,7 @@ export default function PrivacyPolicy() {
                 </div>
               </div>
 
-             
+
 
               {/* Contact Us */}
               <div>

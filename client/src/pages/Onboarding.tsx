@@ -34,7 +34,7 @@ const onboardingSteps = [
   {
     step: 3,
     title: "Field Mapping",
-    description: "Map data fields between your PMS and GoHighLevel",
+    description: "Map data fields between your PMS and CRM (GoHighLevel, HubSpot, or Salesforce)",
     icon: "/img/Field-Mapping.svg",
     details: [
       "Patient information mapping",
@@ -60,11 +60,11 @@ const onboardingSteps = [
 const faqItems = [
   {
     question: "What do I need to prepare before the setup call?",
-    answer: "Please ensure you have administrator access to both your PMS system and GoHighLevel account. Have your field mapping requirements ready and any custom fields you want to sync identified."
+    answer: "Please ensure you have administrator access to both your PMS system and CRM account (GoHighLevel, HubSpot, or Salesforce). Have your field mapping requirements ready and any custom fields you want to sync identified."
   },
   {
     question: "How long does the complete setup process take?",
-    answer: "The entire process typically takes 2-3 business days from initial consultation to going live. The actual setup call is about 45 minutes, with additional time for testing and verification."
+    answer: "The actual hands-on technical setup call takes about 45 minutes on a guided screen-share with our engineers (covering connector installation, CRM authentication, and field mapping). Complete implementation—including automated data validation and go-live sign-off—is finalized within 24 to 48 hours (1 to 2 business days)."
   },
   {
     question: "What if I need to modify field mappings later?",

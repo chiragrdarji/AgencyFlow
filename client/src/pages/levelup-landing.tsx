@@ -148,7 +148,7 @@ export default function LevelUpLanding() {
     <>
       <SEO
         title="LevelUp 2026 Dallas | SmartSync.One PMS to GHL Integration"
-        description="Meet SmartSync.One at LevelUp Dallas 2026. 120+ dental customers, 40+ PMS/EHRs. Register to claim your Dental Growth Playbook and spin for 6 months Free."
+        description="Meet SmartSync.One at LevelUp Dallas 2026. 120+ customers, 40+ PMS/EHRs. Register to claim your Dental Growth Playbook and spin for 6 months Free."
         keywords="LevelUp 2026, SmartSync.One, GoHighLevel Dental Integration, Dentrix GHL sync, Open Dental GHL, Dental Marketing Agency"
         canonical="https://smartsync.one/levelup"
       />
@@ -172,7 +172,7 @@ export default function LevelUpLanding() {
             {/* Main Headline */}
             <div className="max-w-6xl mx-auto">
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                120+ dental customers. 40+ PMS/EHRs.{" "}
+                120+ customers. 40+ PMS/EHRs.{" "}
                 <span className="text-primary">Now we want to learn from You.</span>
               </h1>
               <p className="text-lg text-gray-600 mb-8 max-w-6xl mx-auto leading-relaxed">
@@ -227,7 +227,7 @@ export default function LevelUpLanding() {
             </h2>
 
             {/* <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Proven integration connecting 40+ dental PMS platforms directly to GoHighLevel &mdash; trusted by 120+ marketing agencies to automate patient communication and prove ROI.
+              Proven integration connecting 40+ dental PMS platforms directly to GoHighLevel &mdash; trusted by 120+ customers to automate patient communication and prove ROI.
             </p> */}
 
             {/* Trophy Showcase Card */}

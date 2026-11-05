@@ -240,7 +240,13 @@ export default function SupportedPlatforms() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Supported PMS Platforms",
-    description: "smartsync.one connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM with real-time bidirectional sync.",
+    description: "SmartSync.One connects 40+ dental and healthcare PMS platforms including Dentrix, Open Dental, Eaglesoft, and Curve Dental to GoHighLevel, HubSpot, and Salesforce CRM with near real-time bidirectional sync.",
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://smartsync.one/#organization",
+      name: "SmartSync.One",
+      url: "https://smartsync.one/",
+    },
     url: "https://smartsync.one/supported-platforms",
     mainEntity: {
       "@type": "ItemList",

@@ -389,7 +389,7 @@ export default function Footer() {
             All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply endorsement.
           </p>
           <p data-testid="text-copyright">
-            &copy; SmartSync.One . All rights reserved.
+            &copy; {new Date().getFullYear()} SmartSync.One. All rights reserved.
           </p>
         </div>
       </div>

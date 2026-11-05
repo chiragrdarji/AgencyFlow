@@ -9,13 +9,13 @@ export const seoConfig = {
   pages: {
     home: {
       title: 'SmartSync.One – Patient Data Sync for Dental Agencies',
-      description: 'Automatically sync patients, providers, appointments, and payments between Dentrix/Open Dental and GoHighLevel CRM. Stop wasting time on manual data entry and focus on growing your clients dental practices.',
+      description: 'Automatically sync patients, providers, appointments, treatments, and payments between 40+ dental PMS systems and GoHighLevel, HubSpot, or Salesforce CRM. Stop wasting time on manual data entry and focus on growing dental practices.',
       keywords: 'dentrix integration, open dental api, GoHighLevel Integration, GHL Integration, opendental api, open dental integration, dental pms ghl integration, dental pms integration, eaglesoft api, api dental, dentrix api, dentrix developer program',
       path: '/',
     },
     supportedPlatforms: {
       title: 'Supported PMS Platforms | SmartSync.One',
-      description: 'SmartSync.One connects Dentrix, Open Dental, EagleSoft, and Curve Dental to GoHighLevel CRM. Real-time bidirectional sync for dental practices.',
+      description: 'SmartSync.One connects 40+ dental PMS platforms including Dentrix, Open Dental, Eaglesoft, and Curve Dental to GoHighLevel, HubSpot, and Salesforce with near real-time bidirectional sync.',
       keywords: 'dentrix api, open dental api, eaglesoft integration, curve dental ghl, eaglesoft api , dentrix integration, open dental api, GoHighLevel Integration, GHL Integration, opendental api, open dental integration, dental pms ghl integration, dental pms integration, eaglesoft api, api dental, dentrix api, dentrix developer program, pms dental, Dentrix ascend api, open dental integrations, Dentrix software demo, eaglesoft integrations, open dental install, install open dental, open dental installation, Dental PMS Data Integration',
       path: '/supported-platforms',
     },
@@ -33,7 +33,7 @@ export const seoConfig = {
     },
     onboarding: {
       title: 'Onboarding and Setup | SmartSync.One',
-      description: 'Get started with SmartSync.One in minutes. Our guided onboarding process ensures smooth setup and configuration of your dental practice data sync.',
+      description: 'Get started with SmartSync.One through a 45-minute guided configuration session with our engineering team, with full implementation and go-live within 24 to 48 hours.',
       keywords: 'SmartSync.One setup, integration onboarding, ghl dental setup, dental pms',
       path: '/onboarding',
     },

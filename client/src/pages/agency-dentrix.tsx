@@ -24,11 +24,11 @@ export default function DentrixIntegration() {
     },
     {
       question: "What does this integration do?",
-      answer: "SmartSync.One application syncs patients, providers, appointments, and payments between Dentrix and GoHighLevel so you can focus on growing your clients' practices.",
+      answer: "SmartSync.One syncs patients, providers, appointments, treatments, and payments between Dentrix (7/8, Ascend, Enterprise) and GoHighLevel via our official marketplace app, and also supports HubSpot and Salesforce CRM through guided technical onboarding.",
     },
     {
       question: "Is the data sync real-time?",
-      answer: "Yes, the integration supports real-time or near real-time syncing to keep your data continuously updated.",
+      answer: "Yes. The integration provides near real-time synchronization using event-driven webhooks and active synchronization.",
     },
     {
       question: "Do I need any technical skills to set it up?",
@@ -44,7 +44,7 @@ export default function DentrixIntegration() {
     },
     {
       question: "What Dentrix versions are supported?",
-      answer: "Most recent versions of Dentrix are supported. Contact us for version-specific compatibility.",
+      answer: "SmartSync.One supports Dentrix G6, G7, G7.x, G8, Dentrix Ascend (cloud), and Dentrix Enterprise across both on-premise and hosted dental environments.",
     },
     {
       question: "How can I get started?",
@@ -76,7 +76,9 @@ export default function DentrixIntegration() {
     ],
     publisher: {
       "@type": "Organization",
+      "@id": "https://smartsync.one/#organization",
       name: "SmartSync.One",
+      url: "https://smartsync.one/",
     },
     aggregateRating: {
       "@type": "AggregateRating",

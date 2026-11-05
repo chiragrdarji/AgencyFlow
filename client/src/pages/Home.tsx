@@ -107,7 +107,7 @@ const testimonials = [
     company: "Opkie OS",
     // date: "Sep 9, 2026",
     rating: 5,
-    text: "Easy to connect with OpenDental and great support team.",
+    text: "Easy to connect with Open Dental and great support team.",
   },
   {
     name: "Juan Toro",
@@ -139,7 +139,7 @@ const testimonials = [
     company: "Eastside Dental Group",
     // date: "Aug 21, 2025",
     rating: 5,
-    text: "This connector app is a game-changer! It samelessly retrive data from Dentrix and Open Dental, making it easy for our agency to run live and targeted marketing campaigns. The support team is extraordinary-quick, knowledgeable, and always ready to help. Highly recommended for any marketing agency working with dental practices!",
+    text: "This connector app is a game-changer! It seamlessly retrieves data from Dentrix and Open Dental, making it easy for our agency to run live and targeted marketing campaigns. The support team is extraordinary-quick, knowledgeable, and always ready to help. Highly recommended for any marketing agency working with dental practices!",
   },
   {
     name: "Sarah L.",
@@ -441,8 +441,7 @@ export default function Home() {
               <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-gray-800">
                 <Zap className="w-4 h-4 text-primary shrink-0" />
                 <span>
-                  <strong className="text-primary font-bold">120+</strong>{" "}
-                  agencies
+                  <strong className="text-primary font-bold">120+</strong> Customers
                 </span>
               </div>
 
@@ -700,7 +699,7 @@ export default function Home() {
                 data-testid="text-setup-time"
               >
                 <Clock size={16} className="text-primary" />
-                <span>45-minute setup</span>
+                <span>45-min guided setup</span>
               </div>
 
               <div
@@ -708,7 +707,7 @@ export default function Home() {
                 data-testid="text-real-time-sync"
               >
                 <RefreshCw size={16} className="text-primary" />
-                <span>Real-time sync</span>
+                <span>Near real-time sync</span>
               </div>
             </div>
           </div>
@@ -939,7 +938,7 @@ export default function Home() {
 
             {/* Muted CRM line */}
             <p className="text-sm sm:text-base text-gray-500 font-medium mb-6 mt-3">
-              + GoHighLevel, HubSpot, Salesforce
+              + 30+ specialty platforms & beta integrations (Cloud9, Athena, Modernizing Medicine, NextGen) — supporting 40+ PMS platforms total | CRMs: GoHighLevel (1-Click Marketplace App), HubSpot & Salesforce (Guided Onboarding)
             </p>
 
             {/* Outlined Button */}
@@ -1268,8 +1267,7 @@ export default function Home() {
                     HIPAA Compliant Design
                   </h3>
                   <p className="text-gray-600">
-                    Only essential business data is synced and auto-deleted
-                    after secure delivery. No medical data is ever accessed.
+                    Zero persistent PHI storage: practice and treatment data is encrypted in transit and auto-deleted after secure delivery. Clinical charts and doctor notes are never accessed.
                   </p>
                 </CardContent>
               </Card>
@@ -1287,8 +1285,7 @@ export default function Home() {
                     Set It and Forget It
                   </h3>
                   <p className="text-gray-600">
-                    One-time setup (~45 minutes) with our team — we handle
-                    everything from there. No ongoing maintenance required.
+                    Guided 45-minute technical configuration session with our team — we handle installation, API authorization, and field mapping before final validation.
                   </p>
                 </CardContent>
               </Card>
@@ -1303,11 +1300,11 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Real-Time Updates
+                    Real-Time Sync
                   </h3>
                   <p className="text-gray-600">
-                    Data syncs instantly when changes occur in either system. No
-                    delays, no batch processing, no manual uploads.
+                    Continuous sync reflects updates within minutes (typically &lt;5 min)
+                    via event-driven webhooks. No nightly batch processing or manual uploads.
                   </p>
                 </CardContent>
               </Card>
@@ -1697,12 +1694,10 @@ export default function Home() {
               className="text-3xl lg:text-4xl font-bold text-white mb-6"
               data-testid="text-final-cta-title"
             >
-              Get Your Dental Client Data Flowing Into GoHighLevel —
-              Automatically
+              Get Your Dental Client Data Flowing Into GoHighLevel, HubSpot, or Salesforce — Automatically
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join 120+ marketing agencies already using our connector to grow
-              their dental clients' practices.
+              Join 120+ customers already using our connector to grow practice revenue.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

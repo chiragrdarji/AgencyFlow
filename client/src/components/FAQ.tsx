@@ -1,10 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 
-interface FAQItem {
+export interface FAQItem {
   question: string;
-  answer: string;
+  answer: string | React.ReactNode;
 }
 
 interface FAQProps {
@@ -31,9 +31,9 @@ export default function FAQ({ items }: FAQProps) {
           </summary>
 
           <div className="p-6 pt-4 border-t border-gray-100">
-            <p className="text-gray-600">
+            <div className="text-gray-600">
               {item.answer}
-            </p>
+            </div>
           </div>
         </details>
       ))}
