@@ -101,7 +101,7 @@ const faqItems = [
   {
     question: "What is Dentrix CRM integration?",
     answer:
-      "Dentrix CRM integration connects Dentrix with platforms like GoHighLevel, HubSpot, and Salesforce to automatically sync patient data, appointments, treatments, and payments in real time.",
+      "Dentrix CRM integration connects Dentrix with platforms like GoHighLevel, HubSpot, and Salesforce to automatically sync patient data, appointments, treatments, and payments in near real-time (<5 min).",
   },
   {
     question: "How does Dentrix data sync improve marketing performance?",
@@ -111,7 +111,7 @@ const faqItems = [
   {
     question: "Can I integrate Dentrix with GoHighLevel, HubSpot, and Salesforce?",
     answer:
-      "Yes, SmartSync.One enables seamless Dentrix integration with GoHighLevel, HubSpot, and Salesforce, allowing real-time data synchronization across all platforms for reporting and automation.",
+      "Yes, SmartSync.One enables seamless Dentrix integration with GoHighLevel, HubSpot, and Salesforce, allowing near real-time data synchronization across all platforms for reporting and automation.",
   },
   {
     question: "What data is included in Dentrix marketing automation integration?",
@@ -133,7 +133,7 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/dentrix-crm-integration",
   description:
-    "Integrate Dentrix with GoHighLevel, HubSpot, and Salesforce using SmartSync.One. Sync patients, appointments, treatments, and payments automatically with real-time two-way synchronization.",
+    "Integrate Dentrix with GoHighLevel, HubSpot, and Salesforce using SmartSync.One. Sync patients, appointments, treatments, and payments automatically with near real-time synchronization.",
 
   publisher: {
     "@type": "Organization",
@@ -149,14 +149,14 @@ const softwareSchema = {
     "Track payments received, outstanding balances, and lifetime patient value",
     "Trigger CRM automation workflows based on Dentrix activity",
     "Integration with GoHighLevel, HubSpot, and Salesforce",
-    "Revenue attribution tracking after agency onboarding",
+    "Campaign-attributed revenue tracking",
     "Analytics dashboards powered by real Dentrix data",
     "Centralized reporting for multi-location dental practices"
   ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    ratingCount: "50",
+    ratingCount: "10",
   },
 };
 export default function DentrixCRMIntegration() {
@@ -317,7 +317,7 @@ export default function DentrixCRMIntegration() {
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">
-                  Real-Time Two-Way Dentrix Synchronization
+                  Near Real-Time Dentrix Synchronization
                 </h2>
 
                 <p className="text-lg text-gray-600 mb-4">

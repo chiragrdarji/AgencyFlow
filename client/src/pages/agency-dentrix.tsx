@@ -67,7 +67,7 @@ export default function DentrixIntegration() {
     softwareVersion: "1.0",
     url: "https://smartsync.one/dentrix-gohighlevel-integration",
     description:
-      "Seamless Dentrix integration into GoHighLevel for dental agencies. Sync patients, appointments & payments from your dental PMS into CRM in real-time.",
+      "Seamless Dentrix integration into GoHighLevel for dental agencies. Sync patients, appointments & payments from your dental PMS into CRM in near real-time (<5 min latency).",
     featureList: [
       "Real-time scheduling",
       "Two-way data sync",

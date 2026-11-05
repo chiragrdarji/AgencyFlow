@@ -19,7 +19,7 @@ import {
   CalendarCheck,
   CalendarPlus,
   CheckCircle,
-  CheckCircle2,
+  CheckCircle2, Plus,
   ChevronRight,
   Clock,
   CreditCard,
@@ -62,7 +62,7 @@ const corePmsSystems = [
   "Dentrix Ascend",
   "Dentrix Enterprise",
   "Eaglesoft",
-  "Curve Hero",
+  "Curve Dental",
   "Denticon",
   "eClinicalWorks",
   "Dolphin",
@@ -695,11 +695,17 @@ export default function ForDentalMarketingAgencies() {
                     <span className="flex items-center gap-1 truncate text-sm">
                       <CheckCircle2 className="h-3.5 w-3.5 text-blue-500 shrink-0" /> {item.name}
                     </span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 text-blue-700">
+                    {/* <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 text-blue-700">
                       {item.status}
-                    </span>
+                    </span> */}
                   </div>
                 ))}
+                <a
+                  href="/supported-platforms"
+                  className="p-2 bg-blue-50 hover:bg-blue-100 rounded-xl text-primary text-md flex items-center justify-center gap-1.5 font-bold transition-all border border-dashed border-blue-300 shadow-sm hover:scale-[1.02]"
+                >
+                  More (40+ Supported)
+                </a>
               </div>
             </div>
             <div className="p-6 bg-primary-light rounded-lg">

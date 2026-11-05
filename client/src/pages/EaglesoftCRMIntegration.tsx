@@ -114,7 +114,7 @@ const softwareSchema = {
     url: "https://smartsync.one/",
   },
   featureList: [
-    "Real-time Eaglesoft to CRM two-way synchronization",
+    "Near real-time (<5 min latency) Eaglesoft to CRM synchronization",
     "Sync patient records, appointments, treatments, and payments automatically",
     "Track patient lifecycle data including visit history and upcoming appointments",
     "Monitor treatment proposed, pending procedures, and completed treatments",
@@ -128,7 +128,7 @@ const softwareSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    ratingCount: "50",
+    ratingCount: "10",
   },
 };
 

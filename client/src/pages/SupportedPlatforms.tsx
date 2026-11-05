@@ -63,7 +63,7 @@ const platforms = [
     color: "blue-600",
     url: "https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b",
     features: [
-      "Real-time sync",
+      "Near real-time sync (<5 min)",
       "Two-way data flow",
       "All modules supported",
       "Cloud & On-premise",
@@ -76,7 +76,7 @@ const platforms = [
     status: "available",
     color: "green-600",
     url: "https://marketplace.gohighlevel.com/integration/67972665fc19f6448bf732af",
-    features: ["Real-time sync", "Two-way data flow", "Custom field mapping"],
+    features: ["Near real-time sync (<5 min)", "Two-way data flow", "Custom field mapping"],
     imgUrl: "/img/Open-Dental-icon.png"
   },
   {
@@ -86,7 +86,7 @@ const platforms = [
     color: "gray-400",
     url: "https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b",
     features: [
-      "Real-time sync",
+      "Near real-time sync (<5 min)",
       "Two-way data flow",
       "All modules supported",
       "Cloud & On-premise",
@@ -100,7 +100,7 @@ const platforms = [
     color: "gray-400",
     url: "https://marketplace.gohighlevel.com/integration/6836bcb8eb1ce7acf9241b8b",
     features: [
-      "Real-time sync",
+      "Near real-time sync (<5 min)",
       "Two-way data flow",
       "All modules supported",
       "Cloud & On-premise",
@@ -135,7 +135,7 @@ const PMS_CARDS = [
   { name: 'PerioVision', cat: 'Dental · Periodontal Practice Management', desc: 'Connect PerioVision with your CRM to sync patient records, appointments, clinical notes, insurance claims, and billing data for automated patient communication, revenue tracking, and practice analytics', type: 'dental' },
   { name: 'Mogo', cat: 'Dental · Cloud Practice Management', desc: 'Connect Mogo with your CRM to sync patient records, appointments, treatment plans, insurance claims, and billing data for automated patient communication, treatment follow-ups, and practice analytics.', type: 'dental' },
   { name: 'Officemate', cat: 'Practice Management', desc: 'Connect Officemate with your CRM to sync patient records, appointments, dental and vision insurance claims, inventory, and financial data for automated workflows and cross-specialty reporting.', type: 'dental' },
-  { name: 'Curve Dental (Curve Hero)', cat: 'Dental · Cloud Practice Management', desc: 'Connect Curve Dental with your CRM to sync patient records, appointments, treatment plans, clinical notes, and billing data for automated booking, patient communication, and multi-location reporting.', type: 'dental' },
+  { name: 'Curve Dental', cat: 'Dental · Cloud Practice Management', desc: 'Connect Curve Dental with your CRM to sync patient records, appointments, treatment plans, clinical notes, and billing data for automated booking, patient communication, and multi-location reporting.', type: 'dental' },
   { name: 'CareStack', cat: 'Cloud Practice Management', desc: 'Connect CareStack with your CRM to access patient records, real-time account balances, appointments, provider details, and procedure data for automated reminders, patient outreach, and multi-location reporting', type: 'dental' },
   { name: 'Sensei Cloud', cat: 'Cloud Practice Management', desc: 'Connect Sensei Cloud with your CRM to sync patient records, appointments, providers, procedures, and outstanding balances, enabling automated appointment reminders, patient follow-ups, and multi-location reporting.', type: 'dental' },
   { name: 'Dental4Windows', cat: 'Dental · Practice Management', desc: 'Connect Dental4Windows with your CRM to sync patient records, appointments, treatment plans, billing, and payment data for automated patient communication, follow-ups, and practice performance reporting.', type: 'dental' },
@@ -255,7 +255,7 @@ export default function SupportedPlatforms() {
           "@type": "SoftwareApplication",
           position: 1,
           name: "Dentrix Integration",
-          description: "Connect Dentrix PMS to GoHighLevel with real-time bidirectional sync",
+          description: "Connect Dentrix PMS to GoHighLevel with near real-time bidirectional sync",
           url: "https://smartsync.one/dentrix-gohighlevel-integration",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web",
@@ -269,7 +269,7 @@ export default function SupportedPlatforms() {
           "@type": "SoftwareApplication",
           position: 2,
           name: "Open Dental Integration",
-          description: "Connect Open Dental PMS to GoHighLevel with real-time bidirectional sync",
+          description: "Connect Open Dental PMS to GoHighLevel with near real-time bidirectional sync",
           url: "https://smartsync.one/open-dental-gohighlevel-integration",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web",
@@ -331,7 +331,7 @@ export default function SupportedPlatforms() {
                 </div>
 
                 <div className="bg-card rounded-xl p-4 shadow-sm border">
-                  <p className="text-xl leading-tight font-bold text-gray-900 mb-2">Real-time</p>
+                  <p className="text-xl leading-tight font-bold text-gray-900 mb-2">&lt;5 min</p>
                   <span className="text-gray-600">Near real-time sync — not nightly batch jobs</span>
                 </div>
               </div>
@@ -702,7 +702,7 @@ export default function SupportedPlatforms() {
               <span className="font-medium">Who it's For</span>
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4 !leading-tight max-w-3xl mx-auto">Built for Dental Agencies, DSOs, and Growing Practices</h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync.One serves three primary audiences — each with different goals, but all sharing the same core need: a reliable, real-time connection between practice data and their CRM.</p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">SmartSync.One serves three primary audiences — each with different goals, but all sharing the same core need: a reliable, near real-time connection between practice data and their CRM.</p>
           </div>
 
           <div className="gap-8 grid md:grid-cols-2 ">

@@ -19,7 +19,7 @@ import {
   CalendarCheck,
   CalendarPlus,
   CheckCircle,
-  CheckCircle2,
+  CheckCircle2, Plus,
   ChevronRight,
   Clock,
   Cloud,
@@ -68,20 +68,24 @@ import FAQ from "@/components/FAQ";
 
 const metrics = [
   { icon: CheckCircle, label: "Open Dental" },
-  { icon: CheckCircle, label: "Dentrix" },
+  { icon: CheckCircle, label: "Dentrix (G6, G7, G8)" },
   { icon: CheckCircle, label: "Dentrix Ascend" },
+  { icon: CheckCircle, label: "Dentrix Enterprise" },
   { icon: CheckCircle, label: "Eaglesoft" },
-  { icon: CheckCircle, label: "Curve Hero" },
+  { icon: CheckCircle, label: "Curve Dental" },
   { icon: CheckCircle, label: "Denticon" },
   { icon: CheckCircle, label: "eClinicalWorks" },
   { icon: CheckCircle, label: "Dolphin" },
   { icon: CheckCircle, label: "OrthoTrac" },
   { icon: CheckCircle, label: "PracticeWorks" },
-  { icon: CheckCircle, label: "Athena" },
-  { icon: CheckCircle, label: "Cloud9" },
-  { icon: CheckCircle, label: "Dentrix Enterprise" },
-  { icon: CheckCircle, label: "Modernizing Medicine" },
-  { icon: CheckCircle, label: "NextGen Office" },
+];
+const specialtyPmsSystems = [
+  { name: "Cloud9", status: "Beta" },
+  { name: "Athenahealth", status: "Specialty" },
+  { name: "Modernizing Medicine", status: "Planned" },
+  { name: "NextGen Office", status: "Planned" },
+  { name: "ABELDent", status: "Supported" },
+  { name: "DSN Dental", status: "Supported" },
 ];
 const data = [
   { icon: CheckCircle, label: "Patient Records" },
@@ -161,7 +165,7 @@ const faqItems = [
   {
     question: "Why is two-way dental PMS integration important?",
     answer:
-      "Two-way dental PMS integration is important because it keeps both PMS and CRM systems updated automatically, ensuring accurate data, better marketing automation, and reliable reporting without manual effort.",
+      "Two-way dental PMS integration keeps both PMS and CRM systems updated automatically. Patient contact details, appointments, treatments, and payments sync from the PMS to your CRM, while new leads, appointment bookings, and status tags sync from your CRM back to the PMS without overwriting clinical dental records.",
   },
 ];
 
@@ -173,7 +177,7 @@ const softwareSchema = {
   operatingSystem: "Web",
   url: "https://smartsync.one/dental-pms-integrations",
   description:
-    "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync.One’s real-time two-way synchronization platform.",
+    "Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync.One’s near real-time synchronization platform supporting 40+ practice management systems.",
 
   publisher: {
     "@type": "Organization",
@@ -183,7 +187,7 @@ const softwareSchema = {
   },
   featureList: [
     "Two-way synchronization between PMS and CRM systems",
-    "Sync patient records, appointments, treatments, and payments in real time",
+    "Sync patient records, appointments, treatments, and payments in near real-time (<5 min latency)",
     "Dentrix CRM integration with automated data updates",
     "Open Dental CRM integration with real-time analytics",
     "Eaglesoft integration for treatment and revenue tracking",
@@ -278,7 +282,7 @@ export default function DentalPMSIntegrations() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
               data-testid="text-problem-title"
             >
-              Supported With Two-Way Synchronization
+              Core Dental Platforms With Two-Way Synchronization
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -667,23 +671,45 @@ export default function DentalPMSIntegrations() {
               Integration Across Contemporary Dental Software Systems
             </h2>
           </div>
-          <div className="card  gap-8  rounded-2xl sm:p-8   border-primary">
-            <div className="p-6  bg-primary-light rounded-lg">
+          <div className="card gap-8 rounded-2xl sm:p-8 border-primary">
+            <div className="p-6 bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg text-center">
-                SmartSync.One also integrates with:{" "}
+                Specialty, Orthodontic & Additional PMS Integrations
+                <span className="font-normal text-sm block text-gray-600 mt-1">
+                  Core dental platforms feature turnkey two-way sync. Specialty and EHR systems are labeled by availability.
+                </span>
               </h3>
-              <div className="grid  sm:grid-cols-3 lg:grid-cols-6 gap-3  mt-[18px] text-center ">
-                {pmsSystems.map((system) => (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-[18px] text-center">
+                {specialtyPmsSystems.map((item) => (
                   <div
-                    className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
-                    key={system}
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center justify-between gap-[5px] font-semibold transition-all border border-blue-200 shadow-sm"
+                    key={item.name}
                   >
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
+                    <span className="flex items-center gap-1.5 truncate text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {item.name}
+                    </span>
+                    {/* <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 text-blue-700">
+                      {item.status}
+                    </span> */}
                   </div>
                 ))}
+                <a
+                  href="/supported-platforms"
+                  className="p-2 bg-blue-50 hover:bg-blue-100 rounded-xl text-primary text-md flex items-center justify-center gap-1.5 font-bold transition-all border border-dashed border-blue-300 shadow-sm hover:scale-[1.02]"
+                >
+                  More (40+ Supported)
+                </a>
               </div>
-              <p className="mt-8  mx-auto max-w-max   text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                Two-way synchronization guarantees the updates are continuously propagated between systems.
+              <div className="mt-6 text-center">
+                <a
+                  href="/supported-platforms"
+                  className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
+                >
+                  View all 40+ supported practice management systems in our directory &rarr;
+                </a>
+              </div>
+              <p className="mt-8 mx-auto max-w-4xl text-gray-600 text-sm font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)] text-left">
+                Core turnkey dental PMS integrations feature automated bidirectional synchronization (syncing demographics, appointments, treatment plans, and ledger payments to CRM, while syncing new contacts and appointments back to the PMS without overwriting clinical records). Updates typically synchronize within minutes.
               </p>
             </div>
           </div>

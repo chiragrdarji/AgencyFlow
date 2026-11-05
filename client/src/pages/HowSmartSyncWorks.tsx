@@ -492,7 +492,7 @@ export default function HowsmartsyncWorks() {
                   {/* (no content changes) */}
                   <div className="bg-card rounded-2xl p-6 border shadow-sm hover:shadow-md transition-shadow">
                     <h3 className="text-lg font-bold text-foreground mb-2">
-                      Real-Time Data Synchronization Begins
+                      Near Real-Time Data Synchronization Begins
                     </h3>
                     <p className="text-gray-600 text-md ">
                       Immediately after installation, SmartSync.One starts gathering key clinic activities.

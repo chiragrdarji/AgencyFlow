@@ -27,7 +27,7 @@ export const seoConfig = {
     },
     openDentalIntegration: {
       title: 'Open Dental to GoHighLevel Integration | SmartSync.One',
-      description: 'Connect Open Dental to GoHighLevel CRM with real-time data sync. Automate workflows for dental agencies and practices.',
+      description: 'Connect Open Dental to GoHighLevel CRM with near real-time data sync (<5 min latency). Automate workflows for dental agencies and practices.',
       keywords: 'open dental gohighlevel integration, opendental api, open dental ghl',
       path: '/open-dental-gohighlevel-integration',
     },
@@ -75,19 +75,19 @@ export const seoConfig = {
     },
     dentalPMSintegrations: {
       title: 'Dental PMS Integrations | Dentrix, Open Dental, Eaglesoft CRM Sync | SmartSync.One',
-      description: 'Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync.One’s real-time two-way synchronization platform.',
+      description: 'Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel, HubSpot, and Salesforce using SmartSync.One’s near real-time synchronization platform supporting 40+ practice management systems.',
       keywords: 'dentrix CRM integration, open dental CRM integration, dental PMS integration software , eaglesoft integration CRM , dental PMS sync software ,dentrix marketing integration ',
       path: '/dental-pms-integrations',
     },
     howsmartsyncworks: {
       title: 'How SmartSync.One Works | Dental PMS to CRM Integration Process',
-      description: 'Learn how SmartSync.One connects dental PMS systems like Dentrix and Open Dental with GoHighLevel, HubSpot, and Salesforce using real-time two-way synchronization.',
+      description: 'Learn how SmartSync.One connects dental PMS systems like Dentrix and Open Dental with GoHighLevel, HubSpot, and Salesforce using near real-time bidirectional synchronization.',
       keywords: 'dental PMS integration process, dentrix CRM sync setup , how dental PMS integration works , dental CRM automation integration ',
       path: '/how-smartsync-works',
     },
     dentrixCRMintegration: {
       title: 'Dentrix CRM Integration | Connect Dentrix with GoHighLevel, HubSpot & Salesforce',
-      description: 'Integrate Dentrix with GoHighLevel, HubSpot, and Salesforce using SmartSync.One. Sync patients, appointments, treatments, and payments automatically with real-time two-way synchronization.',
+      description: 'Integrate Dentrix with GoHighLevel, HubSpot, and Salesforce using SmartSync.One. Sync patients, appointments, treatments, and payments automatically with near real-time bidirectional synchronization.',
       keywords: 'dentrix CRM integration, dentrix gohighlevel integration , dentrix hubspot integration , dentrix marketing automation , dentrix data sync',
       path: '/dentrix-crm-integration',
     },
@@ -108,6 +108,12 @@ export const seoConfig = {
       description: 'Connect Dentrix, Open Dental, Eaglesoft and other dental PMS systems with GoHighLevel using SmartSync.One. Sync patients, treatments, and payments to automate workflows and prove agency ROI.',
       keywords: 'gohighlevel dental integration , dentrix gohighlevel integration , open dental gohighlevel integration , dental agency gohighlevel automation , dental CRM integration gohighlevel',
       path: '/gohighlevel-dental-integration',
+    },
+    scheduleACall: {
+      title: 'Schedule a Call | SmartSync.One Dental Integration Demo & Setup',
+      description: 'Schedule a 45-minute consultation or demo with the SmartSync.One engineering team to review dental PMS integration, CRM workflows, and custom mapping.',
+      keywords: 'schedule demo, dental pms call, SmartSync.One consultation, dental crm demo',
+      path: '/schedule-a-call',
     },
     privacyPolicy: {
       title: ' Privacy Policy | SmartSync.One Dental CRM Integration',

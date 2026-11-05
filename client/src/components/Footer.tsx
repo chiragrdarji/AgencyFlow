@@ -35,7 +35,7 @@ export default function Footer() {
   const features = [
     { href: "/open-dental-gohighlevel-integration", label: " Open Dental to GHL Integration" },
     { href: "/dentrix-gohighlevel-integration", label: " Dentrix to GHL Integration" },
-    { href: "/supported-platforms", label: "Suppported Platforms" },
+    { href: "/supported-platforms", label: "Supported Platforms" },
     { href: "/dental-marketing-attribution", label: "Dental Marketing Attribution Software" },
     { href: "/dental-analytics-dashboard", label: "Dental Analytics Dashboard" },
     { href: "/for-dental-marketing-agencies", label: "For Dental Marketing Agencies" },

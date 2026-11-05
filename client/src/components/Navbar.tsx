@@ -88,7 +88,7 @@ export default function Navbar() {
                 onClick={() => setisSupportMenu(false)}
                 data-testid="link-agency-open-dental"
               >
-                Exolore All Integrations
+                Explore All Integrations
               </Link>
             </div>
           )}

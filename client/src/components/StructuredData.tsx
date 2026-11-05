@@ -19,7 +19,7 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
           "description": "Seamless data sync between dental practice management systems and GoHighLevel, HubSpot, and Salesforce CRM for marketing agencies and dental practices.",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "30 N Gould St. Sheridan, WY 82801 USA",
+            "streetAddress": "30 N Gould St.",
             "addressLocality": "Sheridan",
             "addressRegion": "WY",
             "postalCode": "82801",
@@ -56,7 +56,7 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.9",
-            reviewCount: "50",
+            reviewCount: "10",
             bestRating: "5",
             worstRating: "1",
           },

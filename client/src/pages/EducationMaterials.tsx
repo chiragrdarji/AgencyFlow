@@ -50,7 +50,7 @@ const videoTutorials = [
   {
     title: "Integrate Open Dental to GHL (GoHighLevel) Working Demo",
     duration: "",
-    description: "Live working demonstration of real-time two-way synchronization between Open Dental and GoHighLevel",
+    description: "Live working demonstration of near real-time two-way synchronization between Open Dental and GoHighLevel",
     thumbnail: "automation",
     category: "Marketing",
     url: "https://www.youtube.com/watch?v=YWDnFVUbedI",
@@ -58,7 +58,7 @@ const videoTutorials = [
   {
     title: "Integrate Dentrix to GHL (GoHighLevel) Working Demo",
     duration: "",
-    description: "Live working demonstration of real-time two-way synchronization between Dentrix and GoHighLevel",
+    description: "Live working demonstration of near real-time two-way synchronization between Dentrix and GoHighLevel",
     thumbnail: "automation",
     category: "Marketing",
     url: "https://www.youtube.com/watch?v=k6QUydXL3vY",

@@ -58,7 +58,7 @@ export default function OpenDentalIntegration() {
     softwareVersion: "1.0",
     url: "https://smartsync.one/open-dental-gohighlevel-integration",
     description:
-      "Seamless Open Dental integration into GoHighLevel for dental agencies. Sync patients, appointments & payments from your dental PMS into CRM in real-time.",
+      "Seamless Open Dental integration into GoHighLevel for dental agencies. Sync patients, appointments & payments from your dental PMS into CRM in near real-time (<5 min latency).",
     featureList: [
       "Real-time scheduling",
       "Two-way data sync",

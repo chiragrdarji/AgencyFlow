@@ -51,22 +51,22 @@ const faqItems = [
   {
     question: "How long does setup take?",
     answer:
-      "Setup typically takes about 45 minutes with our team. We handle the technical configuration, field mapping, and testing to ensure everything works perfectly before going live.",
+      "The initial hands-on technical configuration call takes 45 minutes on a guided screen-share with our engineering team (covering connector installation, CRM authentication, and custom field mapping). Complete implementation—including automated data validation and production go-live sign-off—is finalized within 24 to 48 hours (1 to 2 business days).",
   },
   {
     question: "Is patient data secure and HIPAA Compliant?",
     answer:
-      "We are HIPAA Compliant. We only sync essential business data (no medical records), use encrypted connections, and automatically delete data from our connector once it's successfully transferred. No treatment or medical data is ever accessed or stored.",
+      "Yes, SmartSync.One is fully HIPAA Compliant. We maintain a zero persistent PHI architecture: practice operational data (demographics, appointments, treatment plans, and payments) is encrypted in transit using TLS 1.3 and AES-256 with ephemeral memory processing, then immediately purged from connector memory upon delivery. Clinical progress notes, diagnostic doctor notes, and x-rays/radiographs are strictly excluded from transmission.",
   },
   {
     question: "What data gets synced?",
     answer:
-      "We sync patients (contact info, demographics), providers, appointments (scheduled, completed, cancelled), and payment information. You choose which data points to sync during setup. Medical notes and treatment details are never accessed.",
+      "SmartSync.One synchronizes operational practice data required for CRM workflows and attribution: patient contacts (name, phone, email, address), appointment activity (scheduled, completed, cancelled, no-show status), treatment opportunities (procedure codes, proposed/completed status, estimated production), and ledger payment amounts. Clinical doctor notes, diagnostic imaging, and past medical history records are never accessed.",
   },
   {
     question: "How often does data sync?",
     answer:
-      "Data syncs in real-time using webhooks. When a change occurs in either PMS or GoHighLevel, it's automatically detected and synced within minutes. No batch processing or manual uploads required.",
+      "Data synchronizes in near real-time using event-driven webhooks and active synchronization. When a patient, appointment, treatment status, or payment updates in your PMS or CRM, changes typically appear in your CRM within minutes (under 5-minute latency). No manual batch processing or CSV uploads required.",
   },
   {
     question: "What happens if there's a sync conflict?",
@@ -101,14 +101,14 @@ const testimonials = [
     rating: 5,
     text: "Chirag and His team did an excellent job at helping us connect our clients pms with our crm.",
   },
-  {
-    name: "Ryan Lunt",
-    initials: "RL",
-    company: "Opkie OS",
-    // date: "Sep 9, 2026",
-    rating: 5,
-    text: "Easy to connect with Open Dental and great support team.",
-  },
+  // {
+  //   name: "Ryan Lunt",
+  //   initials: "RL",
+  //   company: "Opkie OS",
+  //   // date: "Sep 9, 2026",
+  //   rating: 5,
+  //   text: "Easy to connect with Open Dental and great support team.",
+  // },
   {
     name: "Juan Toro",
     initials: "JT",
@@ -1037,7 +1037,7 @@ export default function Home() {
                 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
                 data-testid="text-solution-title"
               >
-                The Solution: Real-Time, Automated Data Sync
+                The Solution: Automated Dental Data Synchronization
               </h2>
               <p className="text-xl text-gray-600 max-w-6xl mx-auto">
                 Connect your dental clients' practice management systems
@@ -1063,7 +1063,7 @@ export default function Home() {
                       </h3>
                       <p className="text-gray-600">
                         Automatically sync patients, providers, appointments,
-                        and payments between your PMS and CRM in real-time.
+                        and payments between your PMS and CRM within minutes.
                       </p>
                     </div>
                   </div>
@@ -1081,7 +1081,7 @@ export default function Home() {
                         Live Appointment Availability
                       </h3>
                       <p className="text-gray-600">
-                        Display real-time appointment slots on landing pages to
+                        Display up-to-date appointment slots on landing pages to
                         attract more patients and reduce booking friction.
                       </p>
                     </div>
@@ -1139,7 +1139,7 @@ export default function Home() {
                       <Card>
                         <CardContent className="p-3">
                           <span className="text-gray-900 font-medium">
-                            Connector instantly syncs to GoHighLevel
+                            Connector automatically syncs to GoHighLevel within minutes
                           </span>
                         </CardContent>
                       </Card>
@@ -1392,7 +1392,7 @@ export default function Home() {
                   Start Syncing
                 </h3>
                 <p className="text-gray-600">
-                  Real-time data sync begins automatically. Monitor progress in
+                  Near real-time data sync begins automatically. Monitor progress in
                   your dashboard.
                 </p>
               </div>
@@ -1748,7 +1748,7 @@ export default function Home() {
             <div className="text-blue-100 text-sm">
               <Shield size={16} className="inline mr-2" />
               <span data-testid="text-final-guarantees">
-                HIPAA Compliant • 45-minute setup • Real-time sync
+                HIPAA Compliant • 45-minute guided setup • Near real-time sync (&lt;5 min)
               </span>
             </div>
           </div>

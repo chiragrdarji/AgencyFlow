@@ -92,7 +92,7 @@ const steps = [
   "Revenue recovery sequences",
 ];
 const steps2 = [
-  "Dentrix connection",
+  "Open Dental connection",
   "CRM integration",
   "Custom field configuration",
   "Opportunity module setup",
@@ -154,7 +154,7 @@ const softwareSchema = {
     url: "https://smartsync.one/",
   },
   featureList: [
-    "Real-time Open Dental to CRM two-way synchronization",
+    "Near real-time (<5 min latency) Open Dental to CRM synchronization",
     "Sync patient records, appointments, treatments, and payments automatically",
     "Track patient lifecycle data including visit dates and upcoming appointments",
     "Monitor treatment proposed, pending procedures, and completed treatments",
@@ -168,7 +168,7 @@ const softwareSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    ratingCount: "50",
+    ratingCount: "10",
   },
 };
 export default function OpenDentalCRMIntegration() {
@@ -220,7 +220,7 @@ export default function OpenDentalCRMIntegration() {
                   asChild
                   size="lg"
                   className="bg-primary text-white hover:bg-primary-dark text-lg px-8 py-4"
-                  data-testid="button-buy-dentrix"
+                  data-testid="button-buy-open-dental"
                 >
                   <a
                     href="/schedule-a-call"
@@ -353,7 +353,7 @@ export default function OpenDentalCRMIntegration() {
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Real-Time Two-Way Open Dental Sync
+              Near Real-Time Open Dental Sync
             </h2>
 
             <p className="text-lg text-gray-600 mb-4">

@@ -20,7 +20,7 @@ import {
   Calendar,
   CalendarCheck,
   CheckCircle,
-  CheckCircle2,
+  CheckCircle2, Plus,
   ChevronRight,
   ClipboardList,
   Clock,
@@ -77,10 +77,11 @@ const metrics = [
   { icon: Zap, label: "Automated Workflow Triggers" },
   { icon: BarChart3, label: " Agency ROI Reporting" },
 ];
-const pmsSystems = [
-  "Dentrix",
-  "Dentrix Ascend",
+const corePmsSystems = [
   "Open Dental",
+  "Dentrix (G6, G7, G8)",
+  "Dentrix Ascend",
+  "Dentrix Enterprise",
   "Eaglesoft",
   "Curve Dental",
   "Denticon",
@@ -88,6 +89,13 @@ const pmsSystems = [
   "Dolphin",
   "OrthoTrac",
   "PracticeWorks",
+];
+
+const specialtyPmsSystems = [
+  { name: "Cloud9", status: "Beta" },
+  { name: "Athenahealth", status: "Specialty" },
+  { name: "Modernizing Medicine", status: "Planned" },
+  { name: "NextGen Office", status: "Planned" },
 ];
 const steps = [
   "Treatment follow-up automation",
@@ -113,7 +121,7 @@ const faqItems = [
   {
     question: "What is GoHighLevel dental integration?",
     answer:
-      "GoHighLevel dental integration connects dental PMS systems like Dentrix, Open Dental, and Eaglesoft with GoHighLevel to automatically sync patient data, appointments, treatments, and payments in real time.",
+      "GoHighLevel dental integration connects dental PMS systems like Dentrix, Open Dental, and Eaglesoft with GoHighLevel to automatically sync patient data, appointments, treatments, and payments in near real-time (<5 min).",
   },
   {
     question: " How does SmartSync.One improve GoHighLevel for dental agencies?",
@@ -124,7 +132,7 @@ const faqItems = [
     question:
       "Can I connect Dentrix and Open Dental with GoHighLevel?",
     answer:
-      " Yes, SmartSync.One allows seamless integration of Dentrix, Open Dental, and other PMS platforms with GoHighLevel, ensuring real-time data synchronization for automation and reporting.",
+      " Yes, SmartSync.One allows seamless integration of Dentrix, Open Dental, and other PMS platforms with GoHighLevel, ensuring near real-time data synchronization for automation and reporting.",
   },
   {
     question: "What data is synced in dental CRM integration with GoHighLevel?",
@@ -154,12 +162,12 @@ const softwareSchema = {
     url: "https://smartsync.one/",
   },
   featureList: [
-    "Real-time synchronization between dental PMS systems and GoHighLevel",
+    "Near real-time (<5 min latency) synchronization between dental PMS systems and GoHighLevel",
     "Sync patients, appointments, treatments, and payments automatically",
     "Track patient lifecycle data including visit history and upcoming appointments",
     "Monitor treatment pipeline including proposed, pending, and completed procedures",
     "Track payments received, outstanding balances, and lifetime patient value",
-    "Revenue attribution tracking after agency onboarding",
+    "Campaign-attributed revenue tracking",
     "Trigger GoHighLevel automation workflows using real PMS events",
     "Enhance CRM opportunities with real clinic data and custom fields",
     "Centralized reporting for multi-location dental practices",
@@ -168,7 +176,7 @@ const softwareSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    ratingCount: "50",
+    ratingCount: "10",
   },
 };
 
@@ -642,24 +650,69 @@ export default function GoHighLevelDentalIntegration() {
               Connect GoHighLevel With Leading Dental PMS Platforms
             </h2>
           </div>
-          <div className="card grid  gap-8  rounded-2xl sm:p-8   border-primary">
-            <div className="p-6  bg-primary-light rounded-lg">
-              <h3 className="font-bold mb-2 p-2 text-lg">
-                SmartSync.One integrates with:
+          <div className="card gap-8 rounded-2xl sm:p-8 border-primary">
+            <div className="p-6 bg-primary-light rounded-lg">
+              <h3 className="font-bold mb-2 p-2 text-lg text-center">
+                40+ Supported Dental & Specialty PMS Platforms
+                <span className="font-normal text-sm block text-gray-600 mt-1">
+                  Connect any practice management system to GoHighLevel with granular bidirectional field mapping.
+                </span>
               </h3>
-              <div className="grid  sm:grid-cols-3 lg:grid-cols-5 gap-3  mt-[18px] text-center ">
-                {pmsSystems.map((system) => (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-[18px] text-center">
+                {corePmsSystems.map((system) => (
                   <div
-                    className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px] font-semibold transition-all shadow-sm"
                     key={system}
                   >
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
+                    <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {system}
                   </div>
                 ))}
+                {specialtyPmsSystems.map((item) => (
+                  <div
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center justify-between gap-[5px] font-semibold transition-all border border-blue-200 shadow-sm"
+                    key={item.name}
+                  >
+                    <span className="flex items-center gap-1.5 truncate text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {item.name}
+                    </span>
+                    {/* <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 text-blue-700">
+                      {item.status}
+                    </span> */}
+                  </div>
+                ))}
+                <a
+                  href="/supported-platforms"
+                  className="p-2 bg-blue-50 hover:bg-blue-100 rounded-xl text-primary text-md flex items-center justify-center gap-1.5 font-bold transition-all border border-dashed border-blue-300 shadow-sm hover:scale-[1.02]"
+                >
+                  More (40+ Supported)
+                </a>
               </div>
-              <p className="mt-8      text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-                All integrations support two-way synchronization.
-              </p>
+              <div className="mt-4 text-center">
+                <a
+                  href="/supported-platforms"
+                  className="inline-flex items-center gap-1.5 text-primary font-semibold text-xs hover:underline"
+                >
+                  View all 40+ supported practice management systems in our directory &rarr;
+                </a>
+              </div>
+              <div className="mt-8 grid md:grid-cols-2 gap-4 text-left">
+                <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                  <h4 className="font-bold text-gray-900 text-sm mb-2 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span> PMS &rarr; GoHighLevel (Inbound Sync)
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Syncs patient contact info, appointment schedule changes, treatment proposal procedures, and ledger payments automatically into CRM custom fields and opportunity pipelines.
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                  <h4 className="font-bold text-gray-900 text-sm mb-2 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-blue-500"></span> GoHighLevel &rarr; PMS (Outbound Sync)
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Syncs net-new patient leads, appointment booking requests, and campaign tracking tags back to the PMS without overwriting existing clinical patient records or doctor chart notes.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

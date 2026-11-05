@@ -6,6 +6,16 @@ import { setupVite, serveStatic, log } from "./vite";
 import { renderPage } from "./ssr";
 
 const app = express();
+
+// Enforce canonical non-www hostname
+app.use((req: Request, res: Response, next: NextFunction) => {
+  const host = req.headers.host || "";
+  if (host.startsWith("www.")) {
+    const nonWwwHost = host.replace(/^www\./, "");
+    return res.redirect(301, `${req.protocol}://${nonWwwHost}${req.originalUrl}`);
+  }
+  next();
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

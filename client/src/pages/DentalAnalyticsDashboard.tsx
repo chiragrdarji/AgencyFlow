@@ -18,7 +18,7 @@ import {
   CalendarPlus,
   Check,
   CheckCircle,
-  CheckCircle2,
+  CheckCircle2, Plus,
   ChevronRight,
   Clock,
   Database,
@@ -52,22 +52,25 @@ const metrics = [
   // { icon: Clock, label: "Payment Due" },
   { icon: TrendingUp, label: "Expected Future Revenue" },
 ];
-const pmsSystems = [
+const corePmsSystems = [
   "Open Dental",
-  "Dentrix",
+  "Dentrix (G6, G7, G8)",
   "Dentrix Ascend",
+  "Dentrix Enterprise",
   "Eaglesoft",
-  "Curve Hero",
+  "Curve Dental",
   "Denticon",
   "eClinicalWorks",
   "Dolphin",
   "OrthoTrac",
   "PracticeWorks",
-  "Athena",
-  "Cloud9",
-  "Dentrix Enterprise",
-  "Modernizing Medicine",
-  "NextGen Office"
+];
+
+const specialtyPmsSystems = [
+  { name: "Cloud9", status: "Beta" },
+  { name: "Athenahealth", status: "Specialty" },
+  { name: "Modernizing Medicine", status: "Planned" },
+  { name: "NextGen Office", status: "Planned" },
 ];
 const steps = [
   "Inactive patients",
@@ -128,13 +131,13 @@ const softwareSchema = {
     "Track payments received and outstanding balances",
     "Measure patient lifetime value and revenue performance",
     "Forecast future revenue based on pending treatments",
-    "Real-time PMS to CRM data synchronization",
+    "Near real-time (<5 min) PMS to CRM data synchronization",
     "Automated analytics dashboards with no manual reporting"
   ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    ratingCount: "50",
+    ratingCount: "10",
   },
 };
 
@@ -611,7 +614,7 @@ export default function DentalAnalyticsDashboard() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-blue-100 px-4 py-1.5 rounded-full mb-6">
               <LayoutDashboard size={16} />
-              <span className="text-blue-600">Avaiable Where You Work</span>
+              <span className="text-blue-600">Available Where You Work</span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -792,24 +795,50 @@ export default function DentalAnalyticsDashboard() {
             </h2>
           </div>
           <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl sm:p-8   border-primary">
-            <div className="p-6  bg-primary-light rounded-lg">
+            <div className="p-6 bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2 text-lg">
-                PMS Systems Supported{" "}
-                <span className="font-semibold text-md">
-                  (All integrations support two-way synchronization)
-                </span>{" "}
+                40+ Supported PMS Platforms
+                <span className="font-normal text-sm block text-gray-600 mt-1">
+                  Core dental PMS platforms feature turnkey two-way sync. Specialty and EHR systems are labeled by availability.
+                </span>
               </h3>
-              <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-3  mt-[18px] text-center ">
-                {pmsSystems.map((system) => (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-[18px] text-center">
+                {corePmsSystems.map((system) => (
                   <div
-                    className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px] font-semibold transition-all shadow-sm"
                     key={system}
                   >
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
+                    <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {system}
                   </div>
                 ))}
+                {specialtyPmsSystems.map((item) => (
+                  <div
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center justify-between gap-[5px] font-semibold transition-all border border-blue-200 shadow-sm"
+                    key={item.name}
+                  >
+                    <span className="flex items-center gap-1.5 truncate text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {item.name}
+                    </span>
+                    {/* <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 text-blue-700">
+                      {item.status}
+                    </span> */}
+                  </div>
+                ))}
+                <a
+                  href="/supported-platforms"
+                  className="p-2 bg-blue-50 hover:bg-blue-100 rounded-xl text-primary text-md flex items-center justify-center gap-1.5 font-bold transition-all border border-dashed border-blue-300 shadow-sm hover:scale-[1.02]"
+                >
+                  More (40+ Supported)
+                </a>
               </div>
-              {/* <p className="mt-8      text-gray-600 text-lg font-medium bg-white p-4 rounded-md border-l-[5px] border-primary pl-4 shadow-[0_0_10px_rgba(0,0,0,0.1)]">All integrations support two-way synchronization.</p> */}
+              <div className="mt-4 text-center">
+                <a
+                  href="/supported-platforms"
+                  className="inline-flex items-center gap-1.5 text-primary font-semibold text-xs hover:underline"
+                >
+                  View all 40+ supported practice management systems &rarr;
+                </a>
+              </div>
             </div>
             <div className="p-6 bg-primary-light rounded-lg">
               <h3 className="font-bold mb-2 p-2  text-lg">CRM Platforms</h3>

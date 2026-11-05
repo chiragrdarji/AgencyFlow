@@ -95,7 +95,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
     }
   ]
 
-    const ConnetsOpenDental = [
+  const ConnetsOpenDental = [
     {
       agencUrl: "/img/patient.svg",
       title: "Patient",
@@ -131,17 +131,17 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
   const marketingAgencies = [
     {
       agencUrl: "/img/Instant-Dental-Appointments.png",
-      title: "Instant Dental Appointments – Right Inside Your CRM",
-      content: "Streamline scheduling with real-time calendar access. Book patients in seconds, eliminate back-and-forth, and keep your agency running smoothly."
+      title: "Automated Dental Appointments – Right Inside Your CRM",
+      content: "Streamline scheduling with near real-time calendar access. Book patients in seconds, eliminate back-and-forth, and keep your agency running smoothly."
     },
     {
       agencUrl: "/img/Real-Time-Patient-Data.png",
-      title: "Track Patient Attendance in Real Time",
-      content: "See instantly if patients attended their appointments—right inside your CRM. Use visit data to optimize campaigns and sharpen follow-ups"
+      title: "Track Patient Attendance with Near Real-Time Sync",
+      content: "See if patients attended their appointments right inside your CRM as it updates. Use visit data to optimize campaigns and sharpen follow-ups"
     },
     {
       agencUrl: "/img/Track-Patient-Attendance.svg",
-      title: "Automate Outreach with Real-Time Patient Data",
+      title: "Automate Outreach with Near Real-Time Patient Data",
       content: "Leverage synced records to send timely reminders, confirmations, and special messages. Keep patients engaged while strengthening loyalty—without lifting a finger"
     }
   ]
@@ -234,7 +234,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
     }
   ];
 
-    const faqItems = isOpenDental
+  const faqItems = isOpenDental
     ? [
       {
         question: "What does this integration do?",
@@ -563,7 +563,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
 
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
               {isOpenDental
-                ? "Seamlessly connect Open Dental with GoHighLevel CRM to automate patient communication, reduce no-shows by 40%, and boost your practice revenue with intelligent workflow automation."
+                ? "Seamlessly connect Open Dental with GoHighLevel CRM to automate patient communication, minimize no-shows through automated confirmation workflows, and boost practice revenue with intelligent workflow automation."
                 : "Our solution connects your Dentrix practice management system (PMS) via the Dentrix API into the GoHighLevel CRM a best-in-class dental PMS integration."}
             </p>
 
@@ -951,7 +951,7 @@ export default function IntegrationLayout({ type }: IntegrationLayoutProps) {
             </div>
             <div className="flex items-center">
               <Check className="h-5 w-5 text-[#00C18C] mr-2" />
-              24/7 Support
+              Dedicated Technical Support
             </div>
             <div className="flex items-center">
               <Check className="h-5 w-5 text-[#00C18C] mr-2" />

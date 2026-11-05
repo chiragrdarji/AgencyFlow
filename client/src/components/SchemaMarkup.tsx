@@ -156,7 +156,7 @@ export const getOrganizationSchema = () => {
       'Automatically sync patients, providers, appointments, treatments, and payments between 40+ supported practice management systems and GoHighLevel, HubSpot, or Salesforce CRM.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '30 N Gould St. Sheridan, WY 82801 USA',
+      streetAddress: '30 N Gould St.',
       addressLocality: 'Sheridan',
       addressRegion: 'WY',
       postalCode: '82801',

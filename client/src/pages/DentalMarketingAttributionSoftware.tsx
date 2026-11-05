@@ -16,7 +16,7 @@ import {
   Calendar,
   CalendarCheck,
   CheckCircle,
-  CheckCircle2,
+  CheckCircle2, Plus,
   ChevronRight,
   ClipboardList,
   Clock,
@@ -51,29 +51,32 @@ const metrics = [
   { icon: Activity, label: "Procedures Completed" },
   { icon: CreditCard, label: "Payments Received" },
   { icon: TrendingUp, label: "Lifetime Patient Revenue" },
-  { icon: CalendarCheck, label: "Revenue After Agency Onboarding" },
+  { icon: CalendarCheck, label: "Campaign-Attributed Revenue Tracking" },
 ];
-const pmsSystems = [
+const corePmsSystems = [
   "Open Dental",
-  "Dentrix",
+  "Dentrix (G6, G7, G8)",
   "Dentrix Ascend",
+  "Dentrix Enterprise",
   "Eaglesoft",
-  "Curve Hero",
+  "Curve Dental",
   "Denticon",
   "eClinicalWorks",
   "Dolphin",
   "OrthoTrac",
   "PracticeWorks",
-  "Athena",
-  "Cloud9",
-  "Dentrix Enterprise",
-  "Modernizing Medicine",
-  "NextGen Office"
+];
+
+const specialtyPmsSystems = [
+  { name: "Cloud9", status: "Beta" },
+  { name: "Athenahealth", status: "Specialty" },
+  { name: "Modernizing Medicine", status: "Planned" },
+  { name: "NextGen Office", status: "Planned" },
 ];
 const steps = [
   "First payment received from each patient",
   "Lifetime payment value",
-  "Revenue generated after agency onboarding.",
+  "Campaign-attributed revenue generated through marketing channels.",
 ];
 const steps2 = [
   "Follow up when treatment is proposed",
@@ -100,7 +103,7 @@ const faqItems = [
   {
     question: "How can I prove dental marketing ROI to my clients?",
     answer:
-      " You can prove dental marketing ROI by integrating CRM platforms with dental practice management systems, allowing you to track actual revenue, procedures, and payments generated after your agency begins managing a clinic.",
+      "You can prove dental marketing ROI by connecting CRM campaign leads, UTM parameters, and opportunity stages directly to PMS completed procedures and ledger payments, clearly distinguishing marketing-generated production from baseline practice revenue.",
   },
   {
     question: "What metrics are important for dental ROI tracking?",
@@ -141,14 +144,14 @@ const softwareSchema = {
     "Monitor procedures completed",
     "Track payments received",
     "Calculate lifetime patient revenue",
-    "Revenue attribution after agency onboarding",
-    "Real-time PMS to CRM synchronization",
+    "Campaign-attributed revenue tracking",
+    "Near real-time (<5 min) PMS to CRM synchronization",
     "Automated reporting with no manual work",
   ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    ratingCount: "50",
+    ratingCount: "10",
   },
 };
 
@@ -747,17 +750,49 @@ export default function DentalMarketingAttributionSoftware() {
             </h2>
           </div>
           <div className="card grid lg:grid-cols-[70%_30%] gap-8  rounded-2xl sm:p-8   border-primary">
-            <div className="p-6  bg-primary-light rounded-lg">
-              <h3 className="font-bold mb-2 p-2 text-lg">PMS Systems </h3>
-              <div className="grid  sm:grid-cols-2 lg:grid-cols-3 gap-3  mt-[18px] text-center ">
-                {pmsSystems.map((system) => (
+            <div className="p-6 bg-primary-light rounded-lg">
+              <h3 className="font-bold mb-2 p-2 text-lg">
+                40+ Supported PMS Platforms
+                <span className="font-normal text-sm block text-gray-600 mt-1">
+                  Core dental PMS platforms feature turnkey two-way sync. Specialty and EHR systems are labeled by availability.
+                </span>
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-[18px] text-center">
+                {corePmsSystems.map((system) => (
                   <div
-                    className=" p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px]   font-semibold  transition-all"
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center gap-[5px] font-semibold transition-all shadow-sm"
                     key={system}
                   >
-                    <CheckCircle2 className="h-4 w-4 text-primary" /> {system}
+                    <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {system}
                   </div>
                 ))}
+                {specialtyPmsSystems.map((item) => (
+                  <div
+                    className="p-2 bg-white rounded-xl text-foreground text-md flex items-center justify-between gap-[5px] font-semibold transition-all border border-blue-200 shadow-sm"
+                    key={item.name}
+                  >
+                    <span className="flex items-center gap-1.5 truncate text-sm">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {item.name}
+                    </span>
+                    {/* <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-blue-100 text-blue-700">
+                      {item.status}
+                    </span> */}
+                  </div>
+                ))}
+                <a
+                  href="/supported-platforms"
+                  className="p-2 bg-blue-50 hover:bg-blue-100 rounded-xl text-primary text-md flex items-center justify-center gap-1.5 font-bold transition-all border border-dashed border-blue-300 shadow-sm hover:scale-[1.02]"
+                >
+                  More (40+ Supported)
+                </a>
+              </div>
+              <div className="mt-4 text-center">
+                <a
+                  href="/supported-platforms"
+                  className="inline-flex items-center gap-1.5 text-primary font-semibold text-xs hover:underline"
+                >
+                  View all 40+ supported practice management systems &rarr;
+                </a>
               </div>
             </div>
             <div className="p-6 bg-primary-light rounded-lg">
