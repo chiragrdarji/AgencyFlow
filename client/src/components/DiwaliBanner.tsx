@@ -1,228 +1,65 @@
 import React, { useState } from "react";
-import { Calendar, X, Sparkles } from "lucide-react";
+import { X, Calendar } from "lucide-react";
 
 /**
- * Luminous Golden Diya Lamp SVG (Kept intact as requested)
+ * Animated Festive Diya Lamp SVG (Inspired by SalesHiker festive design)
+ * High-definition vector diya with golden brass bowl, oil pool, multi-stop gradient flame, and inner core
  */
-const DiyaLamp = ({ className = "w-14 h-14" }: { className?: string }) => (
+const DiyaLampSVG = ({
+  id = "diya",
+  className = "w-6 h-5.5 sm:w-8 sm:h-7.5",
+}: {
+  id?: string;
+  className?: string;
+}) => (
   <svg
-    viewBox="0 0 72 72"
+    viewBox="0 0 24 22"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-hidden="true"
   >
-    {/* Outer Radiant Glow */}
-    <ellipse cx="36" cy="24" rx="22" ry="24" fill="url(#diyaFlameAura)" opacity="0.9" />
-
-    {/* Flame Outer Silhouette */}
-    <path
-      d="M36 4C36 4 23 20 23 29C23 36.5 28.8 42 36 42C43.2 42 49 36.5 49 29C49 20 36 4 36 4Z"
-      fill="url(#diyaOuterFlame)"
-    />
-
-    {/* Flame Middle Glow */}
-    <path
-      d="M36 12C36 12 27 22 27 29C27 34 31 38 36 38C41 38 45 34 45 29C45 22 36 12 36 12Z"
-      fill="url(#diyaMidFlame)"
-    />
-
-    {/* Flame Core White Highlight */}
-    <path
-      d="M36 18C36 18 31 25 31 30C31 32.8 33.2 35 36 35C38.8 35 41 32.8 41 30C41 25 36 18 36 18Z"
-      fill="#ffffff"
-    />
-
-    {/* Diya Brass Rim Highlight */}
-    <ellipse cx="36" cy="41" rx="26" ry="6" fill="url(#diyaRimGrad)" />
-    <ellipse cx="36" cy="40" rx="23" ry="4" fill="url(#diyaOilPool)" />
-
-    {/* Diya Brass Body */}
-    <path
-      d="M10 41C10 41 16 58 36 58C56 58 62 41 62 41C62 41 53 47 36 47C19 47 10 41 10 41Z"
-      fill="url(#diyaBodyGrad)"
-    />
-
-    {/* Diya Decorative Filigree Ring */}
-    <path
-      d="M23 49.5C26.5 53 31 54.5 36 54.5C41 54.5 45.5 53 49 49.5"
-      stroke="#fef08a"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      opacity="0.9"
-    />
-
-    {/* Diya Pedestal Base */}
-    <path
-      d="M27 57C27 57 29.5 63.5 24 65.5H48C42.5 63.5 45 57 45 57H27Z"
-      fill="url(#diyaStandGrad)"
-    />
-    <ellipse cx="36" cy="65.5" rx="15" ry="2" fill="#451a03" opacity="0.65" />
-
     <defs>
-      <radialGradient id="diyaFlameAura" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#fef08a" stopOpacity="0.95" />
-        <stop offset="35%" stopColor="#f59e0b" stopOpacity="0.65" />
-        <stop offset="70%" stopColor="#ea580c" stopOpacity="0.3" />
-        <stop offset="100%" stopColor="#ea580c" stopOpacity="0" />
-      </radialGradient>
-
-      <linearGradient id="diyaOuterFlame" x1="36" y1="4" x2="36" y2="42" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#fffbeb" />
-        <stop offset="20%" stopColor="#fde047" />
-        <stop offset="65%" stopColor="#f97316" />
-        <stop offset="100%" stopColor="#dc2626" />
+      <linearGradient
+        id={`flameGrad-${id}`}
+        x1="12"
+        y1="1"
+        x2="12"
+        y2="12"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="30%" stopColor="#FDE047" />
+        <stop offset="70%" stopColor="#F97316" />
+        <stop offset="100%" stopColor="#DC2626" />
       </linearGradient>
-
-      <linearGradient id="diyaMidFlame" x1="36" y1="12" x2="36" y2="38" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#ffffff" />
-        <stop offset="45%" stopColor="#fef08a" />
-        <stop offset="100%" stopColor="#f59e0b" />
-      </linearGradient>
-
-      <linearGradient id="diyaRimGrad" x1="10" y1="41" x2="62" y2="41" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#92400e" />
-        <stop offset="20%" stopColor="#fde047" />
-        <stop offset="50%" stopColor="#fbbf24" />
-        <stop offset="80%" stopColor="#fde047" />
-        <stop offset="100%" stopColor="#92400e" />
-      </linearGradient>
-
-      <radialGradient id="diyaOilPool" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#78350f" />
-        <stop offset="75%" stopColor="#451a03" />
-        <stop offset="100%" stopColor="#92400e" />
-      </radialGradient>
-
-      <linearGradient id="diyaBodyGrad" x1="36" y1="41" x2="36" y2="58" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#fbbf24" />
-        <stop offset="20%" stopColor="#d97706" />
-        <stop offset="65%" stopColor="#92400e" />
-        <stop offset="100%" stopColor="#78350f" />
-      </linearGradient>
-
-      <linearGradient id="diyaStandGrad" x1="36" y1="57" x2="36" y2="65.5" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#d97706" />
-        <stop offset="50%" stopColor="#b45309" />
-        <stop offset="100%" stopColor="#78350f" />
+      <linearGradient
+        id={`diyaGrad-${id}`}
+        x1="3"
+        y1="13"
+        x2="21"
+        y2="21"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0%" stopColor="#FBBF24" />
+        <stop offset="50%" stopColor="#F59E0B" />
+        <stop offset="100%" stopColor="#B45309" />
       </linearGradient>
     </defs>
-  </svg>
-);
-
-/**
- * Festive Diwali Firecracker Rocket with sparkling fuse & bursting stars
- */
-const FirecrackerElement = ({ className = "w-10 h-16", flipped = false }: { className?: string; flipped?: boolean }) => (
-  <svg
-    viewBox="0 0 60 90"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={`${className} ${flipped ? "-scale-x-100" : ""}`}
-    aria-hidden="true"
-  >
-    {/* Rocket Stick */}
-    <line x1="28" y1="42" x2="16" y2="86" stroke="#fef08a" strokeWidth="2.5" strokeLinecap="round" />
-
-    {/* Rocket Cylinder Body (Tilted) */}
-    <g transform="rotate(-15 28 36)">
-      {/* Body Cylinder */}
-      <rect x="20" y="20" width="16" height="32" rx="3" fill="url(#rocketBodyGrad)" stroke="#fef08a" strokeWidth="1" />
-      {/* Decorative Gold Rings */}
-      <rect x="20" y="27" width="16" height="4" fill="#fde047" />
-      <rect x="20" y="37" width="16" height="4" fill="#fbbf24" />
-
-      {/* Cone Tip */}
-      <path d="M28 6L37 20H19L28 6Z" fill="url(#rocketTipGrad)" />
-
-      {/* Burning Fuse */}
-      <path d="M28 6C28 2 32 0 35 -4" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="35" cy="-4" r="3.5" fill="#fef08a" />
-      <path d="M35 -4L39 -7M35 -4L40 -2M35 -4L36 -9M35 -4L31 -6" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" />
-    </g>
-
-    {/* Sparkling particles shooting from firecracker */}
-    <circle cx="12" cy="18" r="2.5" fill="#fde047" opacity="0.9" />
-    <circle cx="6" cy="32" r="1.8" fill="#ffffff" opacity="0.9" />
-    <circle cx="48" cy="14" r="2" fill="#fef08a" opacity="0.85" />
-    <circle cx="52" cy="28" r="2.5" fill="#fde047" opacity="0.9" />
-    <circle cx="42" cy="62" r="1.8" fill="#ffffff" opacity="0.8" />
-
-    {/* Starburst sparks */}
-    <path d="M48 6L50 14L58 16L50 18L48 26L46 18L38 16L46 14Z" fill="#fef08a" opacity="0.9" />
-    <path d="M8 20L9.5 25L14.5 26.5L9.5 28L8 33L6.5 28L1.5 26.5L6.5 25Z" fill="#ffffff" opacity="0.85" />
-
-    <defs>
-      <linearGradient id="rocketBodyGrad" x1="20" y1="20" x2="36" y2="52" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#f87171" />
-        <stop offset="40%" stopColor="#ef4444" />
-        <stop offset="100%" stopColor="#991b1b" />
-      </linearGradient>
-
-      <linearGradient id="rocketTipGrad" x1="19" y1="6" x2="37" y2="20" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#fde047" />
-        <stop offset="60%" stopColor="#f59e0b" />
-        <stop offset="100%" stopColor="#b45309" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
-/**
- * Celebratory Firecracker Sparkle Burst SVG
- */
-const FirecrackerBurst = ({ className = "w-16 h-16" }: { className?: string }) => (
-  <svg
-    viewBox="0 0 80 80"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-  >
-    {/* Central warm glow */}
-    <circle cx="40" cy="40" r="14" fill="url(#burstCentralGlow)" opacity="0.85" />
-
-    {/* Radiating firework sparks */}
-    {[0, 36, 72, 108, 144, 180, 216, 252, 288, 324].map((deg, i) => {
-      const length = i % 2 === 0 ? 32 : 22;
-      return (
-        <g key={deg} transform={`rotate(${deg} 40 40)`}>
-          <line
-            x1="40"
-            y1="40"
-            x2="40"
-            y2={40 - length}
-            stroke="url(#burstSparkGrad)"
-            strokeWidth={i % 2 === 0 ? "2.2" : "1.6"}
-            strokeLinecap="round"
-          />
-          <circle cx="40" cy={40 - length} r={i % 2 === 0 ? "2.4" : "1.8"} fill="#ffffff" />
-        </g>
-      );
-    })}
-
-    {/* Center 8-point bright star */}
+    {/* Animated Teardrop Flame */}
     <path
-      d="M40 26L42 37L53 38.5L42 41L40 52L38 41L27 38.5L38 37Z"
-      fill="#ffffff"
-      opacity="0.95"
+      d="M12 1 C10 5, 8.5 8, 12 12 C15.5 8, 14 5, 12 1 Z"
+      fill={`url(#flameGrad-${id})`}
     />
-
-    <defs>
-      <radialGradient id="burstCentralGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
-        <stop offset="45%" stopColor="#fef08a" stopOpacity="0.75" />
-        <stop offset="80%" stopColor="#f59e0b" stopOpacity="0.3" />
-        <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
-      </radialGradient>
-
-      <linearGradient id="burstSparkGrad" x1="40" y1="40" x2="40" y2="8" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#ffffff" />
-        <stop offset="35%" stopColor="#fde047" />
-        <stop offset="80%" stopColor="#f59e0b" />
-        <stop offset="100%" stopColor="#ea580c" />
-      </linearGradient>
-    </defs>
+    {/* White-hot Inner Flame Core */}
+    <circle cx="12" cy="9" r="2.2" fill="#FFFBEB" />
+    {/* Golden Diya Bowl */}
+    <path
+      d="M3 13 C3 18.5, 8 21, 12 21 C16 21, 21 18.5, 21 13 H3 Z"
+      fill={`url(#diyaGrad-${id})`}
+    />
+    {/* Diya Rim & Oil Pool */}
+    <ellipse cx="12" cy="13" rx="9" ry="2" fill="#D97706" />
   </svg>
 );
 
@@ -235,72 +72,433 @@ export default function DiwaliBanner() {
     <div
       role="region"
       aria-label="Diwali Holiday Notice"
-      className="relative overflow-hidden bg-[#3780f6] text-white py-3 px-3 sm:px-6 border-b border-blue-400 shadow-md"
+      className="relative overflow-hidden bg-[#3780f6] text-white py-2 px-3 sm:px-6 shadow-md border-b border-blue-400/50 select-none"
+      style={{
+        background: "linear-gradient(90deg, #1d4ed8 0%, #3780f6 50%, #1d4ed8 100%)",
+      }}
     >
-      {/* Ambient warm lighting under lamps */}
-      <div className="absolute left-6 sm:left-14 top-1/2 -translate-y-1/2 w-40 h-28 rounded-full bg-amber-400/20 blur-xl pointer-events-none" />
-      <div className="absolute right-6 sm:right-14 top-1/2 -translate-y-1/2 w-40 h-28 rounded-full bg-amber-400/20 blur-xl pointer-events-none" />
+      <style>{`
+        /* ===================================================
+           DIWALI FESTIVE CRACKERS & FIREWORKS (from SalesHiker)
+           =================================================== */
+        .diwali-effects {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          overflow: hidden;
+          z-index: 1;
+        }
 
-      {/* LEFT SIDE: Lamp + Firecracker (Desktop & Tablet) */}
-      <div className="hidden md:flex items-center gap-2.5 absolute left-4 lg:left-10 xl:left-16 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10">
-        <div className="relative flex items-center justify-center">
-          <DiyaLamp className="w-12 h-12 lg:w-14 lg:h-14 relative z-10 drop-shadow-[0_0_12px_rgba(251,191,36,0.9)]" />
-        </div>
-        <div className="relative flex items-center justify-center">
-          <FirecrackerElement className="w-10 h-16 lg:w-11 lg:h-18 relative z-10 drop-shadow-[0_0_10px_rgba(254,240,138,0.8)]" />
-          <div className="absolute -top-3 -right-2">
-            <FirecrackerBurst className="w-12 h-12 animate-pulse" />
-          </div>
-        </div>
+        /* Bursting Firework Particles */
+        .diwali-firework {
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+        }
+
+        .df-1 {
+          top: 50%;
+          left: 6%;
+          animation: firework-burst-1 2.8s infinite ease-out;
+        }
+
+        .df-2 {
+          top: 45%;
+          right: 6%;
+          animation: firework-burst-2 3.2s infinite ease-out 1s;
+        }
+
+        .df-3 {
+          top: 35%;
+          left: 18%;
+          animation: firework-burst-3 3.6s infinite ease-out 0.5s;
+        }
+
+        .df-4 {
+          top: 55%;
+          right: 18%;
+          animation: firework-burst-4 3s infinite ease-out 1.7s;
+        }
+
+        .df-5 {
+          top: 40%;
+          left: 32%;
+          animation: firework-burst-2 3.4s infinite ease-out 1.2s;
+        }
+
+        .df-6 {
+          top: 50%;
+          right: 32%;
+          animation: firework-burst-1 3.1s infinite ease-out 0.8s;
+        }
+
+        /* Firecracker Burst Keyframes */
+        @keyframes firework-burst-1 {
+          0% {
+            transform: scale(0.1);
+            opacity: 0;
+            box-shadow: 0 0 0 #fff;
+          }
+          15% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 1;
+            box-shadow:
+              0 -22px 0 0 #FFE600,
+              16px -16px 0 0 #FF1744,
+              22px 0 0 0 #FFFFFF,
+              16px 16px 0 0 #FF9100,
+              0 22px 0 0 #00E5FF,
+              -16px 16px 0 0 #FFD700,
+              -22px 0 0 0 #FF0055,
+              -16px -16px 0 0 #FFFFFF,
+              0 -12px 2px 0 #FFF,
+              9px 9px 2px 0 #FFD700,
+              -9px 9px 2px 0 #FF5722,
+              -9px -9px 2px 0 #00E676;
+          }
+          85%, 100% {
+            transform: scale(1.3) translateY(8px);
+            opacity: 0;
+            box-shadow:
+              0 -30px 1px 0 rgba(255, 230, 0, 0),
+              22px -22px 1px 0 rgba(255, 23, 68, 0),
+              30px 0 1px 0 rgba(255, 255, 255, 0),
+              22px 22px 1px 0 rgba(255, 145, 0, 0),
+              0 30px 1px 0 rgba(0, 229, 255, 0),
+              -22px 22px 1px 0 rgba(255, 215, 0, 0),
+              -30px 0 1px 0 rgba(255, 0, 85, 0),
+              -22px -22px 1px 0 rgba(255, 255, 255, 0);
+          }
+        }
+
+        @keyframes firework-burst-2 {
+          0% {
+            transform: scale(0.1);
+            opacity: 0;
+            box-shadow: 0 0 0 #fff;
+          }
+          15% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 1;
+            box-shadow:
+              0 -24px 0 0 #FFD700,
+              17px -17px 0 0 #FF1744,
+              24px 0 0 0 #00E5FF,
+              17px 17px 0 0 #FFEB3B,
+              0 24px 0 0 #FFFFFF,
+              -17px 17px 0 0 #FF9100,
+              -24px 0 0 0 #E040FB,
+              -17px -17px 0 0 #76FF03;
+          }
+          85%, 100% {
+            transform: scale(1.4) translateY(10px);
+            opacity: 0;
+          }
+        }
+
+        @keyframes firework-burst-3 {
+          0% {
+            transform: scale(0.1);
+            opacity: 0;
+          }
+          15% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 1;
+            box-shadow:
+              0 -18px 0 0 #FFFFFF,
+              13px -13px 0 0 #FFAB00,
+              18px 0 0 0 #FF3D00,
+              13px 13px 0 0 #FFEA00,
+              0 18px 0 0 #00B0FF,
+              -13px 13px 0 0 #F50057,
+              -18px 0 0 0 #FFFFFF,
+              -13px -13px 0 0 #FFD600;
+          }
+          85%, 100% {
+            transform: scale(1.3) translateY(6px);
+            opacity: 0;
+          }
+        }
+
+        @keyframes firework-burst-4 {
+          0% {
+            transform: scale(0.1);
+            opacity: 0;
+          }
+          15% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 1;
+            box-shadow:
+              0 -20px 0 0 #FFEB3B,
+              14px -14px 0 0 #FF4081,
+              20px 0 0 0 #FFFFFF,
+              14px 14px 0 0 #00E676,
+              0 20px 0 0 #FF9100,
+              -14px 14px 0 0 #FFD700,
+              -20px 0 0 0 #651FFF,
+              -14px -14px 0 0 #00E5FF;
+          }
+          85%, 100% {
+            transform: scale(1.3) translateY(8px);
+            opacity: 0;
+          }
+        }
+
+        /* Rocket Sparkler Trails */
+        .diwali-rocket {
+          position: absolute;
+          width: 2px;
+          height: 14px;
+          background: linear-gradient(to top, rgba(255, 215, 0, 0), #FFD700, #FFFFFF);
+          border-radius: 2px;
+          opacity: 0;
+        }
+
+        .dr-left {
+          left: 10%;
+          bottom: -5px;
+          animation: rocket-shoot 3.8s infinite ease-out 0.3s;
+        }
+
+        .dr-right {
+          right: 11%;
+          bottom: -5px;
+          animation: rocket-shoot 4.2s infinite ease-out 1.8s;
+        }
+
+        @keyframes rocket-shoot {
+          0% {
+            transform: translateY(0) scaleY(1);
+            opacity: 0;
+          }
+          20% {
+            opacity: 1;
+          }
+          60% {
+            transform: translateY(-38px) scaleY(1.8);
+            opacity: 0.8;
+          }
+          80%, 100% {
+            transform: translateY(-50px) scaleY(0.4);
+            opacity: 0;
+          }
+        }
+
+        /* Twinkling Sparkles */
+        .diwali-sparkle {
+          position: absolute;
+          background: #FFD700;
+          border-radius: 50%;
+          opacity: 0;
+        }
+
+        .ds-1 {
+          width: 4px;
+          height: 4px;
+          top: 20%;
+          left: 14%;
+          animation: sparkle-twinkle 2s infinite ease-in-out;
+        }
+
+        .ds-2 {
+          width: 5px;
+          height: 5px;
+          top: 68%;
+          left: 28%;
+          animation: sparkle-twinkle 2.5s infinite ease-in-out 0.4s;
+          background: #FFFFFF;
+        }
+
+        .ds-3 {
+          width: 3px;
+          height: 3px;
+          top: 30%;
+          right: 28%;
+          animation: sparkle-twinkle 1.8s infinite ease-in-out 0.8s;
+          background: #FF9100;
+        }
+
+        .ds-4 {
+          width: 4px;
+          height: 4px;
+          top: 65%;
+          right: 14%;
+          animation: sparkle-twinkle 2.2s infinite ease-in-out 1.2s;
+          background: #FFE600;
+        }
+
+        .ds-5 {
+          width: 3px;
+          height: 3px;
+          top: 15%;
+          right: 46%;
+          animation: sparkle-twinkle 2.7s infinite ease-in-out 0.2s;
+          background: #FFFFFF;
+        }
+
+        @keyframes sparkle-twinkle {
+          0%, 100% {
+            opacity: 0;
+            transform: scale(0.3) rotate(0deg);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.4) rotate(180deg);
+            box-shadow: 0 0 8px #FFD700;
+          }
+        }
+
+        /* ===================================================
+           DIYA FLICKER ANIMATION (from SalesHiker)
+           =================================================== */
+        .diya-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          animation: diya-flicker 1.6s infinite alternate ease-in-out;
+          filter: drop-shadow(0 0 6px rgba(255, 230, 0, 0.85));
+          flex-shrink: 0;
+        }
+
+        @keyframes diya-flicker {
+          0% {
+            transform: scale(0.96) rotate(-2deg);
+            filter: drop-shadow(0 0 4px rgba(255, 200, 0, 0.7));
+          }
+          100% {
+            transform: scale(1.08) rotate(2deg);
+            filter: drop-shadow(0 0 10px rgba(255, 240, 50, 1));
+          }
+        }
+
+        /* Twirling Sparkle Emoji */
+        .diwali-sparkle-emoji {
+          display: inline-block;
+          animation: spin-sparkle 3s infinite linear;
+          flex-shrink: 0;
+        }
+
+        @keyframes spin-sparkle {
+          0% {
+            transform: scale(1) rotate(0deg);
+          }
+          50% {
+            transform: scale(1.25) rotate(18deg);
+            filter: drop-shadow(0 0 6px #FFFFFF);
+          }
+          100% {
+            transform: scale(1) rotate(0deg);
+          }
+        }
+
+        /* ===================================================
+           DIFFERENT & SLOWER LABEL ZOOM ANIMATION
+           Smooth 3.2s breathing cycle with radiant festive glow
+           =================================================== */
+        .diwali-holiday-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          background: linear-gradient(135deg, #FEF08A 0%, #FDE047 50%, #F59E0B 100%);
+          color: #0F172A;
+          font-weight: 800;
+          font-size: 13px;
+          letter-spacing: 0.3px;
+          padding: 2.5px 12px;
+          border-radius: 9999px;
+          border: 1.5px solid rgba(255, 255, 255, 0.85);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 0 12px rgba(254, 240, 138, 0.65);
+          animation: slowFestiveZoom 3.2s infinite ease-in-out;
+          transform-origin: center;
+          user-select: none;
+          margin: 0 4px;
+        }
+
+        @keyframes slowFestiveZoom {
+          0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 0 10px rgba(254, 240, 138, 0.5);
+          }
+          40% {
+            transform: scale(1.02);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22), 0 0 22px rgba(254, 240, 138, 0.95);
+          }
+          70% {
+            transform: scale(1.04);
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18), 0 0 16px rgba(254, 240, 138, 0.7);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .df-3, .df-4, .df-5, .df-6 {
+            display: none;
+          }
+          .diwali-holiday-badge {
+            font-size: 11.5px;
+            padding: 2px 9px;
+          }
+        }
+      `}</style>
+
+      {/* Ambient Firecracker & Firework Particle Layer (SalesHiker Effects) */}
+      <div className="diwali-effects" aria-hidden="true">
+        <div className="diwali-firework df-1" />
+        <div className="diwali-firework df-2" />
+        <div className="diwali-firework df-3" />
+        <div className="diwali-firework df-4" />
+        <div className="diwali-firework df-5" />
+        <div className="diwali-firework df-6" />
+        <div className="diwali-rocket dr-left" />
+        <div className="diwali-rocket dr-right" />
+        <div className="diwali-sparkle ds-1" />
+        <div className="diwali-sparkle ds-2" />
+        <div className="diwali-sparkle ds-3" />
+        <div className="diwali-sparkle ds-4" />
+        <div className="diwali-sparkle ds-5" />
       </div>
 
-      {/* RIGHT SIDE: Lamp + Firecracker (Desktop & Tablet) */}
-      <div className="hidden md:flex items-center gap-2.5 absolute right-4 lg:right-10 xl:right-16 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10">
-        <div className="relative flex items-center justify-center">
-          <FirecrackerElement className="w-10 h-16 lg:w-11 lg:h-18 relative z-10 drop-shadow-[0_0_10px_rgba(254,240,138,0.8)]" flipped />
-          <div className="absolute -top-3 -left-2">
-            <FirecrackerBurst className="w-12 h-12 animate-pulse" />
-          </div>
-        </div>
-        <div className="relative flex items-center justify-center">
-          <DiyaLamp className="w-12 h-12 lg:w-14 lg:h-14 relative z-10 drop-shadow-[0_0_12px_rgba(251,191,36,0.9)]" />
-        </div>
-      </div>
+      {/* Main Festive Content Layer */}
+      <div className="relative z-10 max-w-6xl mx-auto flex items-center justify-center gap-2 sm:gap-3.5 px-4 sm:px-12 text-center min-h-[38px]">
+        {/* Left Animated Diya Lamp */}
+        <span className="diya-icon">
+          <DiyaLampSVG id="left" />
+        </span>
 
-      {/* Center Notice Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-16">
-        {/* Row 1: Notice Badge with clean Theme Styling */}
-        <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-xs sm:text-sm font-semibold mb-1">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/40 shadow-sm text-white">
-            <Calendar className="w-4 h-4 text-amber-300 shrink-0" />
-            <span className="font-bold tracking-wide">Diwali Holiday:</span>
-            <span className="text-blue-100 hidden sm:inline">Our team will be celebrating Diwali from</span>
-            <span className="bg-amber-400 text-slate-950 font-extrabold px-2.5 py-0.5 rounded-full text-xs sm:text-sm shadow-sm whitespace-nowrap">
-              November 7–11
-            </span>
+        {/* Central Holiday Notice Text */}
+        <div className="text-xs sm:text-[13.5px] text-white font-medium leading-relaxed tracking-normal flex items-center flex-wrap justify-center gap-x-1.5 gap-y-1">
+
+          <span>Support and responses may take a little longer than usual due to our</span>
+          <span className="diwali-holiday-badge">
+            <Calendar className="w-3.5 h-3.5 inline mr-1 text-slate-800" />
+            Diwali Holiday: November 7–11
           </span>
+          <span>Thank you for your understanding.</span>
         </div>
 
-        {/* Row 2: Availability Statement */}
-        <p className="text-xs sm:text-[13px] text-blue-50/95 font-medium leading-relaxed max-w-4xl mx-auto">
-          During this time, support will be available on a limited basis, and responses may take a little longer than usual.
-        </p>
-
-        {/* Row 3: Festive Greeting with Firecracker Sparkle */}
-        <p className="text-xs sm:text-[13px] text-white font-medium mt-1">
-          Thank you for your patience and understanding.{" "}
-          <span className="inline-flex items-center gap-1 font-bold text-amber-300 tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)] whitespace-nowrap">
-            Happy Diwali! 🪔 🎆 <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
-          </span>
-        </p>
+        {/* Right Animated Diya Lamp */}
+        <span className="diya-icon">
+          <DiyaLampSVG id="right" />
+        </span>
       </div>
 
-      {/* Close / Dismiss Button */}
+      {/* Dismiss / Close Button */}
       <button
         type="button"
         onClick={() => setIsDismissed(true)}
-        className="absolute right-2 top-2 sm:right-3 sm:top-3 text-white/80 hover:text-white p-1 rounded-full hover:bg-white/20 transition-all z-20"
+        className="absolute right-2.5 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-1 rounded-full hover:bg-white/20 transition-all z-20 cursor-pointer"
         aria-label="Dismiss Diwali holiday notice"
+        title="Dismiss notice"
       >
         <X className="w-4 h-4" />
       </button>

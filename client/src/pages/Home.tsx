@@ -559,7 +559,7 @@ export default function Home() {
               </div>
 
               {/* Right Column — Slider in the media/gif area only */}
-              <div className="relative w-full lg:max-h-[585px]">
+              <div className="relative min-h-[400px] w-full lg:max-h-[585px]">
                 <div
                   className="overflow-hidden w-full transition-[height] duration-500 ease-in-out"
                   style={{
@@ -595,9 +595,9 @@ export default function Home() {
                     {/* Media Slide 1: A Top Marketplace App on GoHighLevel */}
                     <div
                       ref={slide1Ref}
-                      className="w-full shrink-0 flex flex-col items-center justify-center py-2 px-2 text-center"
+                      className="w-full shrink-0 h-auto lg:min-h-[584px] flex flex-col items-center justify-center py-2 px-2 text-center"
                     >
-                      <h2
+                      {/* <h2
                         className="text-2xl sm:text-[44px] lg:text-[44px] lg:leading-[52px] font-bold text-gray-900 leading-tight mb-4"
                         data-testid="text-hero-headline-slide2"
                       >
@@ -610,12 +610,12 @@ export default function Home() {
                             <span className="text-[#00B857]">Level</span>{" "}
                           </span>
                         </a>
-                      </h2>
-                      <div className="max-w-[260px] min-w-full lg:min-w-[550px] mx-auto lg:mb-8">
+                      </h2> */}
+                      <div className="mb-10 sm:mb-12 lg:mb-0 lg:min-h-[400px] min-w-full bg-blue-100 shadow-xl p-3 sm:p-5 border border-3 border-blue-300 rounded-3xl  mx-auto ">
                         <img
-                          src="/img/top-marketplace-app-on-gohighlevel.webp"
-                          alt="Dentrix and Open Dental to GoHighLevel patient data sync workflow"
-                          className="h-auto h-full drop-shadow-xl "
+                          src="/img/levelup-2026-marketplace-award.webp"
+                          alt="LevelUp 2026 Marketplace Award winning team"
+                          className="h-auto h-full drop-shadow-xl rounded-2xl "
                           onLoad={() => {
                             if (slide1Ref.current && slideIndex === 1) {
                               setSliderHeight(slide1Ref.current.offsetHeight);
@@ -1046,7 +1046,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               <div>
                 <div className="space-y-8">
                   <div className="flex items-start">
